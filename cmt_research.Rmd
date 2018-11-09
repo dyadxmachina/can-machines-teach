@@ -29,6 +29,16 @@ The second approach is question pattern prediction and question topic selection 
 The last approach is multi-source seq2seq learning which aims to integrate information from multiple sources to boost learning. 
 
 
+## Visual Question Answering (VQA)
+
+> Why VQA?
+
+VQA aims to enable the machine to answer the answer automatically which could in turn automated the whole question generating and evaluation process. 
+
+Before we dive deep into VQA, let's take a look at a useful mechanism that are wildly used in VQA task: Attention mechanism.
+
+Started from the question-guided attention mechanism that can adaptively learn the most relevant image regions for a given question. Then to stack multiple question-guided attention mechanisms to learn the attention in an iterative way. Also, it is possible to use bilinear features to integrate the visual features from the image spatial grids with question features to predict attention.
+
 Reference: 
 1. [A Framework for Automatic Question Generation from Text
 using Deep Reinforcement Learning](https://arxiv.org/pdf/1808.04961.pdf)
