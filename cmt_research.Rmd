@@ -1,0 +1,20 @@
+---
+title: "cmt_research"
+author: "hw"
+date: "November 9, 2018"
+output: html_document
+---
+
+# Automatic Question and Answer Generative Methods
+
+1. We can think  of it as a seq2seq learning problem; In this paper [QG-Net: A Data-Driven Question Generation Model
+for Educational Content](http://www.princeton.edu/~shitingl/papers/18l@s-qgen.pdf). They use a bi-directional LSTM network to process the input context words sequence.
+
+![ma](qgnet.png)
+
+
+Reference: 
+1. [A Framework for Automatic Question Generation from Text
+using Deep Reinforcement Learning](https://arxiv.org/pdf/1808.04961.pdf)
+2. [Learning to Ask: Neural Question Generation for
+Reading Comprehension](https://arxiv.org/pdf/1705.00106.pdf)
