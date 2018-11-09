@@ -7,6 +7,12 @@ output: html_document
 
 # Automatic Question and Answer Generative Methods
 
+##Problem Foumlation
+The goal of an automatic question generation is to generate a question Q that is syntactically and semantically correct, relevant to the context and meaningful to answer. 
+
+In order to achieve this goal,, we need to train an algorithm to learn the underlying conditional probability distribution $P_{\theta}(Q|X)$ parametrized by $\theta$. Or in other words, we can think of this problem is the one to learn a model $\theta$ during training using text-question pairs so that the probability $P_{\theta}(Q|P)$ is maximized over the given training dataset. 
+
+### Case Studies: 
 1. We can think  of it as a seq2seq learning problem; In this paper [QG-Net: A Data-Driven Question Generation Model
 for Educational Content](http://www.princeton.edu/~shitingl/papers/18l@s-qgen.pdf). They use a bi-directional LSTM network to process the input context words sequence.
 
@@ -29,18 +35,36 @@ The second approach is question pattern prediction and question topic selection 
 The last approach is multi-source seq2seq learning which aims to integrate information from multiple sources to boost learning. 
 
 
+4. In this paper [A Framework for Automatic Question Generation from Text
+using Deep Reinforcement Learning](https://arxiv.org/pdf/1808.04961.pdf) they proposed a novel way of solving this problem in which they used a reinforcement learning framework that consists of a generator and an evaluator. 
+
+They refer to the generator as the $agent$ and the $action$ of the agent is to generate the next work in the question. The probability of decoding a word $P_{\theta}(word)$ gives a stochastic policy. 
+
+The evaluator will in turn assign a reward for the output sequence predicted using the current policy of the generator. Based on the reward assigned by the evaluator, the generator updates and improves its current policy. The goal in RL-based question generation is to find a policy that can maximize the sum of the expected return at the end of the sequence generated. 
+
 ## Visual Question Answering (VQA)
 
 > Why VQA?
 
-VQA aims to enable the machine to answer the answer automatically which could in turn automated the whole question generating and evaluation process. 
+VQA aims to enable the machine to answer the question automatically which could in turn automated the whole question generating and evaluation process. 
 
-Before we dive deep into VQA, let's take a look at a useful mechanism that are wildly used in VQA task: Attention mechanism.
 
 Started from the question-guided attention mechanism that can adaptively learn the most relevant image regions for a given question. Then to stack multiple question-guided attention mechanisms to learn the attention in an iterative way. Also, it is possible to use bilinear features to integrate the visual features from the image spatial grids with question features to predict attention.
+
+Considering the questions in natural language may also contain some noise, the co-attention mechanism can jointly learn the attention for both the image and question.
+
+
+1. In this paper [Deep Attention Neural Tensor Network for
+Visual Question Answering](http://openaccess.thecvf.com/content_ECCV_2018/papers/Yalong_Bai_Deep_Attention_Neural_ECCV_2018_paper.pdf),
+
+![ma](vqa.png)
 
 Reference: 
 1. [A Framework for Automatic Question Generation from Text
 using Deep Reinforcement Learning](https://arxiv.org/pdf/1808.04961.pdf)
 2. [Learning to Ask: Neural Question Generation for
 Reading Comprehension](https://arxiv.org/pdf/1705.00106.pdf)
+3. [Deep Attention Neural Tensor Network for
+Visual Question Answering](http://openaccess.thecvf.com/content_ECCV_2018/papers/Yalong_Bai_Deep_Attention_Neural_ECCV_2018_paper.pdf)
+4. [Learning to Ask](http://www.cs.cornell.edu/~xdu/papers/acl17_dsc_poster.pdf)
+5. [TOPIC-BASED QUESTION GENERATION](https://openreview.net/pdf?id=rk3pnae0b)
