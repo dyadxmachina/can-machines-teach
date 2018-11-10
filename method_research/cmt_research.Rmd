@@ -5,6 +5,9 @@ date: "November 9, 2018"
 output: html_document
 ---
 
+
+In order to create a adequate system that can take on this mission and vision that we shared above, we certainly need to leverage the state-of-art algorithms and even more advanced ones that will be developed soon. Let's first take a look at some methods that might come handy when tackling our problem:
+
 # Automatic Question and Answer Generative Methods
 
 ##Problem Foumlation
@@ -14,15 +17,24 @@ In order to achieve this goal,, we need to train an algorithm to learn the under
 
 ### Case Studies: 
 1. We can think  of it as a seq2seq learning problem; In this paper [QG-Net: A Data-Driven Question Generation Model
-for Educational Content](http://www.princeton.edu/~shitingl/papers/18l@s-qgen.pdf). They use a bi-directional LSTM network to process the input context words sequence.
+for Educational Content](http://www.princeton.edu/~shitingl/papers/18l@s-qgen.pdf). They use a bi-directional LSTM network to process the input context words sequence. Encoding the answer into context word vectors.
 
-Encoding the answer into context word vectors 
+QG-Net generates questions by iteratively sampling question words from the conditional probability distribution $P(Q|C,A,\theta)$ where $\theta$ denotes the set of parameters. In order to construct the probability distribution, they first create a **context reader** that process each word $c_j$ in the input context and turns it into a fix-sized representation $h_j$
+
+Then, they used a **question generator** generates the question text word-by-word, given all context word representation and all question words in previous time steps. 
+
+As for the quantitative evaluation, they aimed to minimize the difference between the generated question and the true question in the training set during training. Also, they used the standard back-propagation through time with the mini-batch stochastic gradient descent algorithm to learn the model parameters. They employed teacher forcing procedure for training LSTMs. To enhance performance, they also implemented beam search, a greedy but effective approximation to exhausitively search and select the top 25 cancidate output question sentences. The final one would be the one with the lowest negative log likelihood. 
+
+The general QG-Net model Architecture is as below: 
 
 
 ![ma](qgnet.png)
 
 
+
 2. In this summary [Learning to Ask](http://www.cs.cornell.edu/~xdu/papers/acl17_dsc_poster.pdf), they used a sentence- and paragraph-level seq2seq model to read text from the input content and generate a question about the input sentence. 
+
+For the second option, we need to encode both sentence and paragraph that sentence belongs to as input, but only attending source sentence hidden states. The performance could be improved with beam search and UNK replacement. 
 
 
 3. In this paper [TOPIC-BASED QUESTION GENERATION](https://openreview.net/pdf?id=rk3pnae0b), they proposed a topic-based question generation algorithm. The algorithm will be able to take in a input sentence, a topic and a question type; then generate a word sequence related to the topic, question type and the input sentence. 
@@ -45,6 +57,8 @@ The evaluator will in turn assign a reward for the output sequence predicted usi
 ## Visual Question Answering (VQA)
 
 > Why VQA?
+
+As what we have discussed above, most Question-Answering System focuses solely on generating proper questions but not the answers. 
 
 VQA aims to enable the machine to answer the question automatically which could in turn automated the whole question generating and evaluation process. 
 
