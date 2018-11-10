@@ -1,0 +1,111 @@
+---
+title: Digital Education Footprint - Deep Learning and The Future of Education
+author:
+  - name: Fanli (Christian) Zheng
+    affiliation: dyad x machina
+    email: thechristianramsey@gmail.com
+  - name: Haohan Wang
+    affiliation: dyad x machina
+    email: haohan723@gmail.com    
+abstract: |
+  We live in a time where people can freely access high quality video lectures, how-tos, journal articles, books with a click of a button. Our education can no longer be said to mostly comprised of what we learned in school. New technologies have pushed us to learn new things we may on the fly and such motivated individuals find themselves online watching lectures about programming, complex systems, neuroscience, deep learning or a how-to in order to write an article or to better understand the world they are living in. But yet, most of what we watch or read on the web, goes unnoticed and 
+ 
+bibliography: sigproc.bib
+output: rticles::acm_article
+---
+
+
+# Introduction 
+Let's start with a future view of an individual's education. Many of us have used the internet to educate ourselves with the abundance of billions of high quality videos, papers, articles, podcasts and how-tis. Let us imagine that all of what you have learned online, from the hundreds of Youtube videos, Wikipedia articles, Nature papers, and podcasts you've read/watched/ or listened to on the web, were consolidated into what we might call a **digital education footprint**. 
+
+Our digital education footprint would sew together our online education that begins to represent how broadly and deeply we have studied many subjects. Perhaps it would begin to reveal what humans truly know rather than what a simple degree conveys us.
+ 
+Over time, it is plausible, that our digital education footprint would be the most important representation of an individuals level of education. Even more important than our primary education; it has done much to make us predictable, but it has sacrificed the true range of an individual's gained knowledge and wisdom coming from any other place than the institution is willing to give credit for. 
+
+Since we've largely rely upon large institutions to educate groups of individuals, many have grown deeply familiar with having a perfectly demarcated path towards a degree, so it has been much harder for individuals to use this abundance of knowledge to chart their own educational journey in today's fast moving world.
+
+ being   us how to the peer pressure of cohorts, self-learning  learned Imagine that if you signed up for a job, your primary consideration and also your digital education could be conveyed as a path through the web that others attempt to follow or mix and match. Now let us imagine a world where our digital education fingerprint allowed us to
+
+## Part II - Address the concerns
+  There are 3 popular concerns that I will attempt to address in this article about online learning in the present and the future. 
+  - The first concern is that the learning is often passive, 
+  - The second concern is that the information remains untested and therefore doesn't truly make the leap from information to true knowledge.
+  The third concern is that even if the two concerns above were met definitively, it would not be possible to .
+  
+  I will address each of these concerns by showing that recent deep learning advances could be combined to address all 3 concerns definitively
+
+# Concepts
+
+## Digital Education Footprint
+This footprint isn't static, it is something that evolves as you do. Not a degree but instead a representation of your journey through life and the education you equipped yourself with. 
+## Trails
+Matching people who are on similar trails and who may share your digital education footprint or yours.
+## From Data to Wisdom (DIKW)
+## Advances in machine learning
+
+## Deep Learning
+
+
+that which is outside of our formal education, was somehow sewn together into a   imagine that our education could b of all the content we consume,  we had truly learned well.
+
+Lorem ipsum dolor sit[@meier2012] amet, consectetur adipiscing[@fenner2012a] elit. Pellentesque rhoncus ut tellus eu tristique. Duis pharetra velit vitae viverra elementum. Nulla metus dui, pulvinar id enim at, pellentesque semper ipsum. Phasellus cursus dignissim ipsum, sed congue orci pretium quis. Maecenas rhoncus leo a cursus euismod. Fusce a erat eu ipsum tristique tempus at sed tortor. Aliquam erat volutpat. Donec at pretium lorem. Donec pretium nunc id nunc bibendum convallis. Phasellus quis enim id massa feugiat egestas hendrerit sollicitudin nibh. Sed blandit eros id tellus porta, eget ullamcorper urna posuere. Pellentesque laoreet lacus nibh, a mattis libero viverra sit amet. Sed vitae diam interdum, pharetra neque sit amet, dictum lectus.
+
+
+## Part I - Rethinking education
+ 
+  E2QA - a theoretical neural network architecture to generate questions and answers from video.
+  
+  
+## Part III - Supporting theories for deep learning
+
+Theory of the learnable
+Mutual Information
+Joint probability
+
+
+## Part IV - Survey of empirical results
+
+RNN / CNN
+VQA
+Encoder/Decoder
+
+## Part V - Call to action
+
+## Part VI - Evaluation
+OLD NLP - Grammar 
+Deep NLP - Word2Vec
+
+# Conclusion
+
+# References
+
+---
+references:
+- id: meier2012
+  title: Professinal Android 4 Application Development
+  author: 
+  - family: Meier
+    given: Reto
+  type: book
+  publisher: John Wiley & Sons, Inc.
+  issued:
+    year: 2012
+    month: 5
+- id: fenner2012a
+  title: One-click science marketing
+  author:
+  - family: Fenner
+    given: Martin
+  container-title: Nature Materials
+  volume: 11
+  URL: 'https://doi.org/10.1038/nmat3283'
+  DOI: 10.1038/nmat3283
+  issue: 4
+  publisher: Nature Publishing Group
+  page: 261-263
+  type: article-journal
+  issued:
+    year: 2012
+    month: 3
+...
+
