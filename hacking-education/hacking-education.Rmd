@@ -28,10 +28,11 @@ DIKW framework
 Lorem ipsum dolor sit[@meier2012] amet, consectetur adipiscing[@fenner2012a] elit. Pellentesque rhoncus ut tellus eu tristique. Duis pharetra velit vitae viverra elementum. Nulla metus dui, pulvinar id enim at, pellentesque semper ipsum. Phasellus cursus dignissim ipsum, sed congue orci pretium quis. Maecenas rhoncus leo a cursus euismod. Fusce a erat eu ipsum tristique tempus at sed tortor. Aliquam erat volutpat. Donec at pretium lorem. Donec pretium nunc id nunc bibendum convallis. Phasellus quis enim id massa feugiat egestas hendrerit sollicitudin nibh. Sed blandit eros id tellus porta, eget ullamcorper urna posuere. Pellentesque laoreet lacus nibh, a mattis libero viverra sit amet. Sed vitae diam interdum, pharetra neque sit amet, dictum lectus.
 
 
+## Part I
  
   E2QA - a theoretical neural network architecture to generate questions and answers from video.
   
-  ## Part II
+## Part II
   There are 3 popular concerns that I will attempt to address in this article about online learning in the present and the future. 
   - The first concern is that the learning is often passive, 
   - The second concern is that the information remains untested and therefore doesn't truly make the leap from information to true knowledge.
@@ -39,7 +40,7 @@ Lorem ipsum dolor sit[@meier2012] amet, consectetur adipiscing[@fenner2012a] eli
   
   I will address each of these concerns by showing that recent deep learning advances could be combined to address all 3 concerns definitively
   
-  ## Part II
+## Part III
   I will also present a survey of the current research and how we might approach bringing such a world to life.
   - Data 
   - 
