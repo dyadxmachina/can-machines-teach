@@ -9,14 +9,14 @@ author:
     email: haohan723@gmail.com    
 abstract: |
   We live in a time where people can freely access high quality video lectures, how-tos, journal articles, books with a click of a button. Our education can no longer be said to mostly comprised of what we learned in school. New technologies have pushed us to learn new things we may on the fly and such motivated individuals find themselves online watching lectures about programming, complex systems, neuroscience, deep learning or a how-to in order to write an article or to better understand the world they are living in. But yet, most of what we watch or read on the web, goes unnoticed and 
- 
+ w
 bibliography: sigproc.bib
 output: rticles::acm_article
 ---
 
 
 # Introduction 
-Let's start with a future view of one's education. Let us imagine that all of what you have learned online, from the hundreds of Youtube videos, Wikipedia articles, Nature papers, and podcasts we've read/watched/ or listened to on the web, were consolidated into what we might call a **digital education fingerprint**. 
+Let's start with one future view of one's education. Let us imagine that all of what you have learned online, from the hundreds of Youtube videos, Wikipedia articles, Nature papers, and podcasts we've read/watched/ or listened to on the web, were consolidated into what we might call a **digital education fingerprint**. 
 
 Since many of us, especially those who have moved industries or occupations, have  done so by learning online. It is plausible, that our digital education footprint learned Imagine that if you signed up for a job, your primary consideration and also your digital education could be conveyed as a path through the web that others attempt to follow or mix and match. Now let us imagine a world where our digital education fingerprint allowed us to
 
