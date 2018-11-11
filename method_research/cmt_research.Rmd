@@ -6,7 +6,9 @@ output: html_document
 ---
 
 
-In order to create a adequate system that can take on this mission and vision that we shared above, we certainly need to leverage the state-of-art algorithms and even more advanced ones that will be developed soon. Let's first take a look at some methods that might come handy when tackling our problem:
+In order to create a adequate system that can take on this mission and vision that we shared above, we certainly need to leverage the state-of-art algorithms and even more advanced ones that will be developed soon. Let's first take a look at some methods that might come handy when tackling our problem.
+
+Note that here we will mainly focus on how to possibly set our foot into this problem by exploring muliple existing deep learning algorithms in the related domains.
 
 # Automatic Question and Answer Generative Methods
 
@@ -73,7 +75,23 @@ Visual Question Answering](http://openaccess.thecvf.com/content_ECCV_2018/papers
 
 ![ma](vqa.png)
 
-Reference: 
+# Quality Evaluation 
+
+The key to create an education or a learning/teaching system is to be able to present a high quality study material and provide a high quality feedback on student's learning. 
+
+Let's begin with the first issue, we can easily identify the association of our problem with a problem that has been solved with recommender system. 
+
+As we all know that a recommender system is an intuitive line of defense against consumer over-choice given the evern growing information available on the web. As we mentioned earlier in the knowledge graph, a authoritative and personalized recommending system is essential for facilitating the learning. 
+
+Typically, a recommendation models can be classified into 3 main categories: 
+1. Collaborative filtering
+2. Content based 
+3. Hybrid recommender system 
+
+As I mentioned, here we will mainly focus on hybrid recommender system. 
+
+A
+**Reference** 
 1. [A Framework for Automatic Question Generation from Text
 using Deep Reinforcement Learning](https://arxiv.org/pdf/1808.04961.pdf)
 2. [Learning to Ask: Neural Question Generation for
@@ -82,3 +100,6 @@ Reading Comprehension](https://arxiv.org/pdf/1705.00106.pdf)
 Visual Question Answering](http://openaccess.thecvf.com/content_ECCV_2018/papers/Yalong_Bai_Deep_Attention_Neural_ECCV_2018_paper.pdf)
 4. [Learning to Ask](http://www.cs.cornell.edu/~xdu/papers/acl17_dsc_poster.pdf)
 5. [TOPIC-BASED QUESTION GENERATION](https://openreview.net/pdf?id=rk3pnae0b)
+
+
+5. [Deep Learning based Recommender System](https://arxiv.org/pdf/1707.07435.pdf)
