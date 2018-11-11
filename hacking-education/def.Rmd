@@ -21,9 +21,10 @@ Let's start with a future view of an individual's education. Many of us have use
 The **digital education footprint** would string together our online education into a concrete representation of one's online education and could be extended by more formal settings. By showcasing the broad range of individual's knowledge (making digital music) as well as the places they've went deeper than most (deep learning or philosophy of mathematics), we could begin to accept education as a life-long journey rather than a monolithic part of an individual's past. We could also begin to see a more accurate depiction of someone's education that could be updated each and everytime they educate themselves. With every new year, their footprint would evolve just as the very thread of their lives would. 
 
 In this essay, I will propose a new way to approach education which will require significant effort to bring to life the benefits of a **digital education footprint** or similar, but the benefits will surely outweigh the costs. 
-> A society where individuals do not simply compete for a degree but where they can feel safe to follow their noses and still be recognised for their trail
-> A society where an individual's knowledge is derived not from what we know about a degree
-> A society that better understands itself, through the understanding of the many journey's it's members have taken and the collective knowledge that has gone mostly unaccounted for
+
+- A society where individuals do not simply compete for a degree but where they can feel safe to follow their noses and still be recognised for their trail
+- A society where an individual's knowledge is derived not from what we know about a degree
+- A society that better understands itself, through the understanding of the many journey's it's members have taken and the collective knowledge that has gone mostly unaccounted for in today's degree based education.
 
 I will also show that this imagined future is not only **desirable** for society but also that much of it is currently feasible mainly due to the most recent advances in machine learning, and in particular deep learning, which will enable us to begin designing such a future today. 
 
@@ -37,10 +38,22 @@ I will also show that this imagined future is not only **desirable** for society
 
 ### Passive Consumption
 
+It has been argued and shown in some studies[insert studies], that many people who consume videos or other educational content online, outside the context of school, are often consuming the content passively. We define passively as not being engaged with at least 75% attention while consuming educational content This leads to what a colleague called "swiss cheese learning" which not only hurts our ability to learn. 
+> People watch videos casually and on the fly—and they rarely turn their phones sideways to do it. - Facebook Ads
+
+
+
+
 ### Untested Knowledge 
 
 ### Predictability
 
+
+
+![Image title](images/MtoQA.png)
+
+
+While I believe this is the case I will suggest a system
 
 ## Concepts 
 
