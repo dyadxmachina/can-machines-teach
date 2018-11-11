@@ -10,6 +10,10 @@ In order to create a adequate system that can take on this mission and vision th
 
 Note that here we will mainly focus on how to possibly set our foot into this problem by exploring muliple existing deep learning algorithms in the related domains.
 
+Why deep learning? 
+
+Just as any other problems that can be solved with deep learning, our problem could be simplied as a function that maps the input to the output. Deep learning is known as one of the most flexible machine learning algorithms that can learn and map the **deep representation** from the data and in turn contribute to our unique set of problems i.e. automatic question and answer gnerating or visual question answering problems. Moreover, by leveraging neural network architecture, deep nueral networks architecture can be composed into a single differentiable function and trained end-to-end and they can help identify the suitable *inductive* *biases* catered to the input data type. 
+
 # Automatic Question and Answer Generative Methods
 
 ##Problem Foumlation
@@ -75,6 +79,9 @@ Visual Question Answering](http://openaccess.thecvf.com/content_ECCV_2018/papers
 
 ![ma](vqa.png)
 
+2. In this paper [Question Type Guided Attention in Visual Question
+Answering](https://arxiv.org/pdf/1804.02088.pdf), they proposed a model called Question Type-guided Attention (QTA). This model utilizes the information of question type to dynamically balance visual features from both top-down and bottom-up orders. Meanwhile, it has a novel neural architecture that dynamically gates the conribution of ResNet and Faster R-CNN features based on the question type.
+
 # Quality Evaluation 
 
 The key to create an education or a learning/teaching system is to be able to present a high quality study material and provide a high quality feedback on student's learning. 
@@ -90,7 +97,24 @@ Typically, a recommendation models can be classified into 3 main categories:
 
 As I mentioned, here we will mainly focus on hybrid recommender system. 
 
-A
+There are a diverse array of achitectual paradigms that are closely related recommending system. Let's take a look at few of them: 
+1. Autoencoder 
+2. Convolutional Neural Network 
+3. Recurrent Neural Network 
+4. Restricted Boltzmann Machine (RBM)
+5. Adversarial Networks
+6. Attentional Models (AM)
+7. Deep Reinforcement Learning (DRL)
+
+As for the automated feedback or learning grading system, there are plenty of suggestions have been proposed as well to tackle such a question. The framework is called automated essay scoring (AES) which focuses on automatically analyzing the quality of writing and assigning a score to the text. 
+
+In terms of knowledge or learning evaluation, the format could be diversed i.e. a lecture given by the student or an short summary essay written by the student. Regardless the form, we can always convert the content into a predictable text, graphic or audible format that model can process. 
+
+As we mentioned above, for these type of task, we can implementing RNN to process the content and even enhance the model performance by adversarially craft input as this paper [Neural Automated Essay Scoring and Coherence Modeling for
+Adversarially Crafted Input](http://aclweb.org/anthology/N18-1024) illustrated.
+
+
+
 **Reference** 
 1. [A Framework for Automatic Question Generation from Text
 using Deep Reinforcement Learning](https://arxiv.org/pdf/1808.04961.pdf)
