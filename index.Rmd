@@ -13,10 +13,10 @@ bibliography:
 site: bookdown::bookdown_site
 colorlinks: yes
 biblio-style: apalike
-url: 'https\://m4dl.com'
+url: 'https\://github.com/dyadxmachina/can-machines-teach'
 github-repo: dyadxmachina/can-machines-teach
 cover-image: img/radar.png
 ---
 # Preface {-}
-![Our new paper on ](img/radar.png)
+![Our new paper on ](img/MtoQA.png)
 
