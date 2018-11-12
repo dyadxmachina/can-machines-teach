@@ -15,11 +15,15 @@ output: rticles::acm_article
 ---
 
 # Introduction 
-![Image title](img/radar.png)
+![Image title](img/MtoQA.png)
 
-Let's start with a future view of an individual's education. Many of us have used the internet to educate ourselves with the abundance of high quality videos, papers, articles, podcasts and how-tos all over the web. Let us imagine that all of what you have learned online (throughout the entirety of your life), from the hundreds of Youtube videos, Wikipedia articles, Nature papers, and podcasts you've read, watched, or listened to, were all consolidated into what we might call a **digital education footprint**. 
+Let's start with a future view of an individual's education. Many of us have used the internet to educate ourselves with the abundance of high quality videos, papers, articles, podcasts and how-tos being upload from numerous individuals, groups, and institutions like never before (60 hours of video are uploaded to youtube.com every minute). Let us imagine that all of what you have learned online, throughout the entirety of your life, from the hundreds of Youtube videos, Wikipedia articles, Nature papers, and podcasts you've read, watched, or listened to, were all consolidated into what we might call a **digital education footprint**. 
 
-The **digital education footprint** would string together our online education into a concrete representation of an individual's online education and could be extended into more formal settings. By showcasing the broad range of individual's knowledge (making digital music) as well as the places they've went deeper than most (deep learning or philosophy of mathematics), we could begin to accept education as a life-long journey rather than one monolithic part of an individual's past. This would begin to show us a more accurate depiction of individual's education that could be updated each and everytime one educates themselves. With every new year, their footprint would evolve just as the very thread of their lives would. Visualised over time, we would be able to see an individual's journey or even a whole communities. Seeing how differen
+The **digital education footprint** would string together our online education into a concrete representation of an individual's online education and could be extended into more formal settings. It's goal would be to showcase the broad range of an individual's knowledge (making digital music) as well as the places they've went deeper than most (deep learning or philosophy of mathematics). 
+
+This footprint, would be stable but always evolving as individual's update their knowledge while also being comprable to others.So instead of approaching education as a monolithic phase of our lives, this footprint would promote education as a life-long journey. 
+
+It would also (combined with traditional education) begin to show us a more accurate depiction of an individual's true knowledge. With every new year, their footprint would evolve just as the very thread of their lives would. Visualised over time, we would be able to see an individual's **knowledge journey**. This could also serve as a way for others who may be on similar **knowledge journey** or those who were looking for a change. You would be able to correlate someone's life work or occupation to their **knowledge journey** and eventually begin to find and cluster similar  journeys that could emerge through unsupervised learning leading to whole new subjects or journeys that others could follow.
 
 In this essay, I will propose a new way to approach education which will require significant effort to bring to life but I believe the benefits will surely outweigh the costs. I'll talk about how we can use machine learning and deep learning in particular to help create our **digital education footprint**, **student journeys**, and a collective human knowledge graph. This will allow us to take the space of unstructured educational content and begin to map it unto a knowledge graph and use generative models to make educational content engaging and test a student's knowledge no matter the subject. I will name a few benefits of such a future.
 
@@ -28,6 +32,32 @@ In this essay, I will propose a new way to approach education which will require
 - A society that better understands itself, through the understanding of the many journey's it's members have taken and the collective knowledge that has gone mostly unaccounted for in today's degree based education.
 
 I will also show that this imagined future is not only **desirable** for society but also that much of it is currently feasible mainly due to the most recent advances in machine learning, and in particular deep learning, which will enable us to begin designing such a future today. 
+
+# Concepts 
+
+### Digital Education Footprint
+The concept of a digital education footprint is is a custom symbol and profile that represents one's education relative to that of others. Each symbol should be somewhat unique and the profile could capture the general education as well as the intricacies. 
+
+A symbol which represents somethng as complex as one's education will likely not be enough for employeers and co-workers to understand the . A symbol must show that one is in a particular "class" while also  Symbols generally have to make trade-offs
+
+### Journeys
+![Image title](img/tsne.png)
+Image src: https://www.researchgate.net/figure/t-SNE-projection-of-the-embedding-of-all-students-in-the-dataset-Major-labels-are_fig1_323391033
+ between the complexity of what it represents and it's ability to convey , the legi from dealing with the task of reduction of info. So we introduce **Journeys** which show how someone has traversed the uy
+If most people had their digital education footprint, they would be 
+
+### Human Knowledge Graph
+![Image title](img/knowledge_graphy.png)
+The knowledge graph will be the backbone of a students journey through human knowledge. As a student continues to consume educational content, their fingerprint as wethe student watches new content they extend their knowledge graph either stre current links 
+
+
+We have so far introduced **digital education footprint** and **journeys**, which claim to be the right elements to synthesise one's education while capturing the complexity on one hand and making the individual relatable and predictable on the other hand. But how does one create a path? From video to video? From topic/subject to topic/subject? If so, how might a machine decide on the correct topic(s)? We have had plenty of advances in topic models but perhaps what we actually need to combine topic models with a graph of human knowledge. This graph, like Google or Wolfram's knowledge graph, should be generated both from the current structure of education and also driven by the unsupervised learning of new topics/subjects that do not currently exist within our current structure. 
+
+This graph would be useful so content on the web could be easily mapped to the graph adn relate one user to another as well as create trails.
+
+
+## EC2QA Network
+The last piece we'll introduce here is a novel artificial neural network that would allow us to take any unstructured educat 
 
 # Concerns
 
@@ -69,7 +99,7 @@ But it does not solve the societal issue. If you are like myself, you have watch
 
 So Online educational content consumption does not 
 
-# Universal Teaching Machine
+## Teaching Machine
 
 ![Image title](img/MtoQA.png)
 
@@ -85,22 +115,7 @@ A component of a universal teaching machine should be able to take any of the bi
 - generate a set of adequate questions and answers that test the student's (what is x? a, b, c, or d) knowledge throughout the learning session
 
 
-# Concepts 
 
-### Digital Education Footprint
-The concept of a digital education footprint is is a custom symbol and profile that represents one's education relative to that of others. Each symbol should be somewhat unique and the profile could capture the general education as well as the intricacies. 
-
-A symbol which represents somethng as complex as one's education will likely not be enough for employeers and co-workers to understand the . A symbol must show that one is in a particular "class" while also  Symbols generally have to make trade-offs
-
-### Journeys
-![Image title](img/knowledge_graphy.png)
- between the complexity of what it represents and it's ability to convey , the legi from dealing with the task of reduction of info. So we introduce **Journeys** which show how someone has traversed the uy
-If most people had their digital education footprint, they would be 
-
-### Human Knowledge Graph
-We have so far introduced **digital education footprint** and **journeys**, which claim to be the right elements to synthesis one's education. But how does one create a path? From video to video? From topic to topic? If so, how might a machine decide on the topic? We have had plenty of advances in topic models but perhaps what we actually need is a graph of human knowledge. This graph, like Google's knowledge graph, should be generated both from the current structure of education and also driven by unsupervised learning of new topics that don't exist on today's knowledge graph.
-
-This graph would be useful so content on the web could be easily mapped to the graph adn relate one user to another as well as create trails.
 
 ## From Data to Wisdom (DIKW)
 
@@ -114,15 +129,11 @@ Since we've largely rely upon large institutions to educate groups of individual
 
 
 
-## Part I - Rethinking education
- 
-  E2QA - a theoretical neural network architecture to generate questions and answers from video.
   
-  
-## Part III - Supporting theories for deep learning
+# Theories for statistical learning theory and deep learning
 
 Theory of the learnable
-Mutual Information
+Mutual Information (IT)
 Joint probability
 
 

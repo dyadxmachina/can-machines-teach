@@ -5,11 +5,12 @@ date: "November 9, 2018"
 output: html_document
 ---
 
-# IMPLEMENTING A UNIVERSAL TEACHING MACHINE
+# Implementing a Teaching Machine
 
 How might we approach designing such a system.
 
 **High level video of all the components in the abstract**
+
 ## Problem Formulation
 
 Let's begin our investigation by breaking down our high-level goal into a few sub-goals and we will then take a close look at each of them.
@@ -58,6 +59,7 @@ First question first, as we described above, we have to ask ourselves before dei
 In terms of question generation, if the questions generated are close-ended (i.e. multi-choice question), the answers can be defined easily. In turn, the evaluation is relatively easy to accomplish for our system.
 
 To promote the best learning experience and optimal learning outcome, a set of well-diversed questions have to be used to test our user's knowledge. That is to say, it is necessary to also include open-ended questions i.e. please summarize this video in 300 words into our question and answer pool.
+
 
 ## Question Generation
 
@@ -168,7 +170,7 @@ In terms of knowledge or learning evaluation, the format could be diversed i.e. 
 
 As we mentioned above, for these type of task, we can implementing RNN to process the content and even enhance the model performance by adversarially craft input as this paper [Neural Automated Essay Scoring and Coherence Modeling for
 Adversarially Crafted Input](http://aclweb.org/anthology/N18-1024) illustrated.
-
+## Summary of Learning and Feedback Networks
 
 
 # KNOWLEDGE ARCHITECT
@@ -180,6 +182,7 @@ In this paper [Generalized Embedding Model for Knowledge Graph Mining](http://ww
 
 
 In this paper [Probabilisic Knowledge Graph Embeddings](https://openreview.net/pdf?id=rJ4qXnCqFX), they explored a new type of embedding model that can link prediction in relational knowledge graph. 
+## Summary of Knowledge Architect
 
 
 # MISSION MAPPING 
@@ -226,6 +229,8 @@ There are a diverse array of achitectual paradigms that are closely related reco
 7. Deep Reinforcement Learning (DRL)
 
 
+## Summary of Learning and Feedback Networks
+
 
 
 **Reference** 
@@ -247,3 +252,8 @@ There are a diverse array of achitectual paradigms that are closely related reco
 
 
 5. [Deep Learning based Recommender System](https://arxiv.org/pdf/1707.07435.pdf)
+
+
+## Summary of Current Research and Needs
+
+# Data and Annotation
