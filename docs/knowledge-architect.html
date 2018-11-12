@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Teaching Machines - Artificial Intelligence and Education</title>
+  <meta name="description" content="learn the foundational mathematics required to learn and apply cutting edge deep learning techniques. From Aristolean logic to Jaynes theory of probability to Rosenblatt’s Perceptron and Vapnik's Statistical Learning Theory">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Teaching Machines - Artificial Intelligence and Education" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://m4dl.com" />
+  <meta property="og:image" content="https://m4dl.comimg/radar.png" />
+  <meta property="og:description" content="learn the foundational mathematics required to learn and apply cutting edge deep learning techniques. From Aristolean logic to Jaynes theory of probability to Rosenblatt’s Perceptron and Vapnik's Statistical Learning Theory" />
+  <meta name="github-repo" content="dyadxmachina/can-machines-teach" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Teaching Machines - Artificial Intelligence and Education" />
+  
+  <meta name="twitter:description" content="learn the foundational mathematics required to learn and apply cutting edge deep learning techniques. From Aristolean logic to Jaynes theory of probability to Rosenblatt’s Perceptron and Vapnik's Statistical Learning Theory" />
+  <meta name="twitter:image" content="https://m4dl.comimg/radar.png" />
+
+<meta name="author" content="Fanli (Christian) Zheng Ramsey &amp; Haohan Wang">
+
+
+<meta name="date" content="2018-11-12">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="learning-by-answering.html">
+<link rel="next" href="mission-mapping.html">
+<style type="text/css">
+p.abstract{
+  text-align: center;
+  font-weight: bold;
+}
+div.abstract{
+  margin: auto;
+  width: 90%;
+}
+</style>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128379860-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-128379860-1');
+</script>
+
+<!-- Primary Meta Tags -->
+<title>Mathematics for Deep Learning & AI — </title>
+<meta name="title" content="Mathematics for Deep Learning & AI — ">
+<meta name="description" content="New book on all the mathematics needed to design and implement deep learning systems. From logic to probability to information theory, learn the rigorous mathematics needed to be a deep learning researcher.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://m4dl.com/">
+<meta property="og:title" content="Mathematics for Deep Learning & AI — learn the math needed to design artificial neural networks">
+<meta property="og:description" content="New book on all the mathematics needed to design and implement deep learning systems. From logic to probability to information theory, learn the rigorous mathematics needed to be a deep learning researcher.">
+<meta property="og:image" content="https://m4dl.com/artwork/maths%20of%20deep%20learning.png">
+
+
+<!-- Primary Meta Tags -->
+<title>Mathematics for Deep Learning & AI — by Haohan Wang and Fanli (Christian) Zheng</title>
+<meta name="title" content="Mathematics for Deep Learning & AI — by Haohan Wang and Fanli (Christian) Zheng">
+<meta name="description" content="New book on all the mathematics needed to design and implement deep learning systems. From logic to probability to information theory, learn the rigorous mathematics needed to be a deep learning researcher.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://m4dl.com/">
+<meta property="og:title" content="Mathematics for Deep Learning & AI — by Haohan Wang and Fanli (Christian) Zheng">
+<meta property="og:description" content="New book on all the mathematics needed to design and implement deep learning systems. From logic to probability to information theory, learn the rigorous mathematics needed to be a deep learning researcher.">
+<meta property="og:image" content="https://m4dl.com/artwork/maths%20of%20deep%20learning.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://m4dl.com/">
+<meta property="twitter:title" content="Mathematics for Deep Learning & AI — by Haohan Wang and Fanli (Christian) Zheng">
+<meta property="twitter:description" content="New book on all the mathematics needed to design and implement deep learning systems. From logic to probability to information theory, learn the rigorous mathematics needed to be a deep learning researcher.">
+<meta property="twitter:image" content="https://m4dl.com/artwork/maths%20of%20deep%20learning.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://m4dl.com/">
+<meta property="twitter:title" content="Mathematics for Deep Learning & AI ">
+<meta property="twitter:description" content="New book on all the mathematics needed to design and implement deep learning systems. From logic to probability to information theory, learn the rigorous mathematics needed to be a deep learning researcher.">
+<meta property="twitter:image" content="https://m4dl.com/artwork/maths%20of%20deep%20learning.png">
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Teaching Machines: AI and Education</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="concerns.html"><a href="concerns.html"><i class="fa fa-check"></i><b>2</b> Concerns</a><ul>
+<li class="chapter" data-level="2.1" data-path="concerns.html"><a href="concerns.html#passive-consumption"><i class="fa fa-check"></i><b>2.1</b> Passive Consumption</a></li>
+<li class="chapter" data-level="2.2" data-path="concerns.html"><a href="concerns.html#untested-knowledge"><i class="fa fa-check"></i><b>2.2</b> Untested Knowledge</a></li>
+<li class="chapter" data-level="2.3" data-path="concerns.html"><a href="concerns.html#predictability"><i class="fa fa-check"></i><b>2.3</b> Predictability</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="universal-teaching-machine.html"><a href="universal-teaching-machine.html"><i class="fa fa-check"></i><b>3</b> Universal Teaching Machine</a><ul>
+<li class="chapter" data-level="3.1" data-path="universal-teaching-machine.html"><a href="universal-teaching-machine.html#the-components"><i class="fa fa-check"></i><b>3.1</b> The components</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="concepts.html"><a href="concepts.html"><i class="fa fa-check"></i><b>4</b> Concepts</a><ul>
+<li class="chapter" data-level="4.0.1" data-path="concepts.html"><a href="concepts.html#digital-education-footprint"><i class="fa fa-check"></i><b>4.0.1</b> Digital Education Footprint</a></li>
+<li class="chapter" data-level="4.0.2" data-path="concepts.html"><a href="concepts.html#journeys"><i class="fa fa-check"></i><b>4.0.2</b> Journeys</a></li>
+<li class="chapter" data-level="4.0.3" data-path="concepts.html"><a href="concepts.html#human-knowledge-graph"><i class="fa fa-check"></i><b>4.0.3</b> Human Knowledge Graph</a></li>
+<li class="chapter" data-level="4.1" data-path="concepts.html"><a href="concepts.html#from-data-to-wisdom-dikw"><i class="fa fa-check"></i><b>4.1</b> From Data to Wisdom (DIKW)</a></li>
+<li class="chapter" data-level="4.2" data-path="concepts.html"><a href="concepts.html#part-i---rethinking-education"><i class="fa fa-check"></i><b>4.2</b> Part I - Rethinking education</a></li>
+<li class="chapter" data-level="4.3" data-path="concepts.html"><a href="concepts.html#part-iii---supporting-theories-for-deep-learning"><i class="fa fa-check"></i><b>4.3</b> Part III - Supporting theories for deep learning</a></li>
+<li class="chapter" data-level="4.4" data-path="concepts.html"><a href="concepts.html#part-iv---survey-of-empirical-results"><i class="fa fa-check"></i><b>4.4</b> Part IV - Survey of empirical results</a></li>
+<li class="chapter" data-level="4.5" data-path="concepts.html"><a href="concepts.html#problem-foumlation"><i class="fa fa-check"></i><b>4.5</b> Problem Foumlation</a></li>
+<li class="chapter" data-level="4.6" data-path="concepts.html"><a href="concepts.html#why-deep-learning"><i class="fa fa-check"></i><b>4.6</b> Why deep learning?</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="learning-by-answering.html"><a href="learning-by-answering.html"><i class="fa fa-check"></i><b>5</b> LEARNING by ANSWERING</a><ul>
+<li class="chapter" data-level="5.1" data-path="learning-by-answering.html"><a href="learning-by-answering.html#question-generation"><i class="fa fa-check"></i><b>5.1</b> Question Generation</a></li>
+<li class="chapter" data-level="5.2" data-path="learning-by-answering.html"><a href="learning-by-answering.html#answer-evaluation"><i class="fa fa-check"></i><b>5.2</b> Answer Evaluation</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="learning-by-answering.html"><a href="learning-by-answering.html#close-ended-questions"><i class="fa fa-check"></i><b>5.2.1</b> Close-ended Questions</a></li>
+<li class="chapter" data-level="5.2.2" data-path="learning-by-answering.html"><a href="learning-by-answering.html#open-ended-question"><i class="fa fa-check"></i><b>5.2.2</b> Open-ended Question</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="knowledge-architect.html"><a href="knowledge-architect.html"><i class="fa fa-check"></i><b>6</b> KNOWLEDGE ARCHITECT</a></li>
+<li class="chapter" data-level="7" data-path="mission-mapping.html"><a href="mission-mapping.html"><i class="fa fa-check"></i><b>7</b> MISSION MAPPING</a><ul>
+<li class="chapter" data-level="7.1" data-path="mission-mapping.html"><a href="mission-mapping.html#part-v---call-to-action"><i class="fa fa-check"></i><b>7.1</b> Part V - Call to action</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>8</b> Conclusion</a></li>
+<li class="chapter" data-level="9" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>9</b> References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/dyadxmachina/can-machines-think" target="blank">Github</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Teaching Machines - Artificial Intelligence and Education</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="knowledge-architect" class="section level1">
+<h1><span class="header-section-number">6</span> KNOWLEDGE ARCHITECT</h1>
+<p>As I mentioned earlier, learning is a knowledge accumulation process. Knowledge itself has its unique structure that can help us learn in a most effective and productive way. Knowledge Graph is a great tool that we developed to map and present the structure of knolwedge. In shirt, knowledge graphs are collections of relational facts, where each fact states that a certrain relation holds between 2 entities.</p>
+<p>In this paper <a href="http://www.mlgworkshop.org/2018/papers/MLG2018_paper_5.pdf">Generalized Embedding Model for Knowledge Graph Mining</a>, they have presented a model for learning neural presentation of generalized knowledge graphs using a novel muli-shot unsupervised neural network model, called the <strong>Graph Embedding Network (GEN)</strong>. This model is able to learn different types of knowlege graphs from a universal perspective and it provides flexibility in learning representations that work on graphs conforming to different domains.</p>
+<p>In this paper <a href="https://openreview.net/pdf?id=rJ4qXnCqFX">Probabilisic Knowledge Graph Embeddings</a>, they explored a new type of embedding model that can link prediction in relational knowledge graph.</p>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="learning-by-answering.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="mission-mapping.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "night",
+"family": "serif",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/dyadxmachina/can-machines-think/edit/master/01-intro.Rmd",
+"text": "Edit"
+},
+"download": ["Teaching Machines - Artificial Intelligence and Education.pdf", "Teaching Machines - Artificial Intelligence and Education.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

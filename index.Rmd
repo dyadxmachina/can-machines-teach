@@ -1,0 +1,22 @@
+--- 
+title: "Teaching Machines - Artificial Intelligence and Education"
+author: "Fanli (Christian) Zheng Ramsey & Haohan Wang"
+knit: "bookdown::render_book"
+date: "`r Sys.Date()`"
+output: pdf_document
+description: learn the foundational mathematics required to learn and apply cutting edge deep learning techniques. From Aristolean logic to Jaynes theory of probability to Rosenblatt's Perceptron and Vapnik\'s Statistical Learning Theory
+documentclass: book
+link-citations: yes
+bibliography:
+- book.bib
+- packages.bib
+site: bookdown::bookdown_site
+colorlinks: yes
+biblio-style: apalike
+url: 'https\://m4dl.com'
+github-repo: dyadxmachina/can-machines-teach
+cover-image: img/radar.png
+---
+# Preface {-}
+![Our new paper on ](img/radar.png)
+

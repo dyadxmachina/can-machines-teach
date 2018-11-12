@@ -14,8 +14,10 @@ bibliography: sigproc.bib
 output: rticles::acm_article
 ---
 
+
+![Image title](img/ChtTypesRadar.png)
+
 # Introduction 
-![Image title](images/radar.png)
 
 Let's start with a future view of an individual's education. Many of us have used the internet to educate ourselves with the abundance of high quality videos, papers, articles, podcasts and how-tos all over the web. Let us imagine that all of what you have learned online (throughout the entirety of your life), from the hundreds of Youtube videos, Wikipedia articles, Nature papers, and podcasts you've read, watched, or listened to, were all consolidated into what we might call a **digital education footprint**. 
 
@@ -71,7 +73,7 @@ So Online educational content consumption does not
 
 # Universal Teaching Machine
 
-![Image title](images/MtoQA.png)
+![Image title](img/MtoQA.png)
 
 So how would a universal teaching machine eclipse these challenges? We will present a solution that meets all three criteria by introudcing a theoretical artificial network architecture to cover the first two.
 
@@ -93,7 +95,7 @@ The concept of a digital education footprint is is a custom symbol and profile t
 A symbol which represents somethng as complex as one's education will likely not be enough for employeers and co-workers to understand the . A symbol must show that one is in a particular "class" while also  Symbols generally have to make trade-offs
 
 ### Journeys
-![Image title](images/knowledge_graphy.png)
+![Image title](img/knowledge_graphy.png)
  between the complexity of what it represents and it's ability to convey , the legi from dealing with the task of reduction of info. So we introduce **Journeys** which show how someone has traversed the uy
 If most people had their digital education footprint, they would be 
 
@@ -309,6 +311,9 @@ There are a diverse array of achitectual paradigms that are closely related reco
 
 
 7. Deep Reinforcement Learning (DRL)
+
+
+
 
 **Reference** 
 
