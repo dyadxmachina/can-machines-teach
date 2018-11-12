@@ -5,45 +5,30 @@ date: "November 9, 2018"
 output: html_document
 ---
 
-# Implementing a teaching machine
+# IMPLEMENTING A UNIVERSAL TEACHING MACHINE
 
 How might we approach designing such a system.
 
 **High level video of all the components in the abstract**
-
-In order to create a concrete digital educational footprint and journeys
-
-1. given a user consumes a piece of educational content, test their knowledge. (credibility, rigour)
-2. given a piece of educational content, classify it within a knowledge graph. (relatibility, predictability)
-3. given multiple student journeys, create a way to compare, recommend, and follow, other's journey (compare, traverse, curiosity)
-4. given a student journey, collapse it into a symbol (digital education footprint) [dimensionality reducing (i.e. time, )] (relatibility, stable but evolving system )
-
-In order to create a adequate system that can take on this mission and vision that we shared above, much of it (1, 2) have been made possible with the recent breakthoughs in deep learning. A few cases (1.2, 1.4) a more advanced deep learning architecture has been proposed since it hasn't been developed yet to our knowledge. Let's first take a look at some methods that might come handy when tackling our problem.
-
-Note that we will first start with the question of how to possibly set our foot into solving this problem by exploring muliple existing deep learning models in the related domains.
-
 ## Problem Formulation
 
-Let's begin our investigate by breaking down our goal into a few sub-goals and we will then take a close look at each of them.
+Let's begin our investigation by breaking down our high-level goal into a few sub-goals and we will then take a close look at each of them.
 
-The first question that comes to us is that "how can we take an educational media (i.e. video/ audio recording or e-book) and generate the proper set of test questions and answers for the users?". As you probably have anticipated, we need to have a hybrid system that can process the media while evaluating the learning of the users.
+In order to create a concrete digital educational user footprint and journey: 
 
 
-In terms of question generation, if the questions generated are close-ended (i.e. multi-choice), the model should also be able to generate the correct answer based on the content so that it is capable of evaluating the performance of the user. 
+1. **LEARNING + FEEDBACK** -- given a user consumes a piece of educational material, reliably evaluate their knowledge and provide the feedback for improvement. (credibility, rigour) 
 
-If the questions generated are open-ended, the model should be able to evaluate the result as well and provide an approximate score or comment as the feedback. 
+2. **KNOWLEDGE ARCHITECT** -- given a piece of educational content, classify it within a knowledge graph. (relatibility, predictability)
 
-This is our first set of problems - **LEARNING & EVALUATION**. 
 
-Next, we need to consider how we can select an adequate and relevant learning masterial and generate an effecive learning map for the users based on their current progress and the general knowledge graph/map, given the ever growing amount of educational content on the web. 
+3. **MISSION MAPPING ** -- given multiple student journeys, create a way to customize their own growth journey while offereing a way for them them to compare, connect with and follow, other's journey (compare, traverse, curiosity)
 
-This is our second set of problems - **KNOWLEDGE ARCHITECT**.
 
-What's more, the knowledge graph is our ground truth and can be applied universally to some extent, but everyone's learning journey is still highly personal and custom. In terms of learning, everyone seems to have their unique set of problems that they are curious about and everyone is on their own mission towards the mastery.
+4. **COMPETENCE TRACKING** -- given a student journey, collapse it into a representative symbol(s) to help validate the progress (digital education footprint) [dimensionality reducing (i.e. time, )] (relatibility, stable but evolving system )
 
-We cannot possibly put such an online learning/teaching system into use without taking this crucial factor into our account. In order to put our hands on this set of problems, we can rely on some heuristic and models that have been developed to resolve this type of idiosymcratic issue.
+In order to create a adequate system that can take on this mission and vision that we shared above, much of it (1, 2) have been made possible with the recent breakthoughs in deep learning. A few cases like (3,4) may require a more advanced deep learning architecture that has been proposed yet to our knowledge. Let's first take a look at some methods that might come handy when tackling our problem.
 
-This is our thrid set of problems - **MISSION MAPPING**.
 
 
 ## Why deep learning? 
@@ -52,16 +37,29 @@ If you look closely at each set of questions that we listed above, it is not har
 
 To the best of our knowledge, deep learning seems to be one of the best techniques currently developed that is able to tackle such a fuzzy issue. First of all, deep learning is known as one of the most flexible machine learning algorithms that can learn and map the **deep representation** from the data and in turn contribute to our unique set of problems i.e. automatic question and answer gnerating or visual question answering problems. Moreover, by leveraging neural network architecture, deep nueral networks architecture can be composed into a single differentiable function and trained end-to-end and they can help identify the suitable *inductive* *biases* catered to the input data type. 
 
-## Rearch Decomposition 
+## Before we start...
 
-With the belief that we can and we will find a solution for such an ambitious Universal Teaching machine, we are set out to find any possible solutions that we can to help make it happen. Here I will present some research that we did in searching for the answer. 
+With the belief that we can and we will find a solution for such an ambitious Universal Teaching machine, we are set out to find any possible solutions that we can to help make it happen. Here I will walk you through some thought provinking research findings.
 
 As I mentioned above, the ultimate goal is to utilize our system to process any form of educational materials and yield expected result. To best help you comprehend the problem that we are trying to solve and the some possible solutions that we found useful, I will just start with one type of educational content - video. 
 
-# Learning by Answering
-## Question Generation
 
-Lead with video example 
+# LEARNING + FEEDBACK
+
+First question first, as we described abobe, we are asking ourselves:
+
+ >"how can we take a piece of educational material (i.e. video/ audio recording or e-book) and properly evaluate their learning and provide some effective feedbacks?". 
+ 
+ Among all the possible evaluation and feedback approaches, *Question&Answering* framework seems to be one of the most common options.
+ 
+ In achieving this task, it requires a hybrid system that can take the media in use as the input and generate a set of meaningful and relevant question and answer pairs as the output.
+
+
+In terms of question generation, if the questions generated are close-ended (i.e. multi-choice question), the answers can be defined easily. In turn, the evaluation is relatively easy to accomplish for our system.
+
+To promote the best learning experience and optimal learning outcome, a set of well-diversed questions are the prerequisite. That is to say, it is necessary to also include some open-ended questions i.e. please summarize this video for me in 300 words into our question and answer pool.
+
+## Question Generation
 
 The goal of an automatic question generation is to generate a question Q that is syntactically and semantically correct, relevant to the context and meaningful to answer. 
 
@@ -109,6 +107,7 @@ The evaluator will in turn assign a reward for the output sequence predicted usi
 
 ## Answer Evaluation 
 ### Close-ended Questions
+
 **Visual Question Answering (VQA)**
 
 As what we have discussed above, most question focuses solely on generating proper questions but not the answers. 
@@ -144,6 +143,8 @@ The idea is illustrate as below:
 #### General Question
 i.e. Give a summary of this video 
 
+At the first glance, it appears hard for our system to effectively evaluate the answers. However, this type of task is not that far-fetched by using some specifically designed deep learning frameworks.
+
 #### Specific Question
 As for the automated feedback or learning grading system, there are plenty of suggestions have been proposed as well to tackle such a question. The framework is called automated essay scoring (AES) which focuses on automatically analyzing the quality of writing and assigning a score to the text. 
 
@@ -155,6 +156,7 @@ Adversarially Crafted Input](http://aclweb.org/anthology/N18-1024) illustrated.
 
 
 # KNOWLEDGE ARCHITECT
+Next, we need to consider how we can select an adequate and relevant learning masterial and generate an effecive learning map for the users based on their current progress and the general knowledge graph/map, given the ever growing amount of educational content on the web. 
 
 As I mentioned earlier, learning is a knowledge accumulation process. Knowledge itself has its unique structure that can help us learn in a most effective and productive way. Knowledge Graph is a great tool that we developed to map and present the structure of knolwedge. In shirt, knowledge graphs are collections of relational facts, where each fact states that a certrain relation holds between 2 entities.
 
@@ -166,9 +168,10 @@ In this paper [Probabilisic Knowledge Graph Embeddings](https://openreview.net/p
 
 # MISSION MAPPING 
 
-The key to create an education or a learning/teaching system is to be able to present a high quality study material and provide a high quality feedback on student's learning. 
+The knowledge graph is our ground truth and can be applied universally to some extent, but everyone's learning journey is still highly personal and custom. In terms of learning, everyone seems to have their unique set of problems that they are curious about and everyone is on their own mission towards the mastery.
 
-Let's begin with the first issue, we can easily identify the association of our problem with a problem that has been solved with recommender system. 
+We cannot possibly put such an online learning/teaching system into use without taking this crucial factor into our account. In order to put our hands on this set of problems, we can rely on some heuristic and models that have been developed to resolve this type of idiosymcratic issue.
+
 
 As we all know that a recommender system is an intuitive line of defense against consumer over-choice given the evern growing information available on the web. As we mentioned earlier in the knowledge graph, a authoritative and personalized recommending system is essential for facilitating the learning. 
 
