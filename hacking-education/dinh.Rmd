@@ -93,10 +93,6 @@ If most people had their digital education footprint, they would be
 We have so far introduced **digital education footprint** and **journeys**, which claim to be the right elements to synthesis one's education. But how does one create a path? From video to video? From topic to topic? If so, how might a machine decide on the topic? We have had plenty of advances in topic models but perhaps what we actually need is a graph of human knowledge. This graph, like Google's knowledge graph, should be generated both from the current structure of education and also driven by unsupervised learning of new topics that don't exist on today's knowledge graph.
 
 This graph would be useful so content on the web could be easily mapped to the graph adn relate one user to another as well as create trails.
-
-## From Data to Wisdom (DIKW)
-
-
  
 Over time, it is plausible, that our digital education footprint would be the most important representation of an individuals level of education. Even more important than our primary education; it has done much to make us predictable, but it has sacrificed the true range of an individual's gained knowledge and wisdom coming from any other place than the institution is willing to give credit for. 
 
