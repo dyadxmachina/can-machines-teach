@@ -1,36 +1,27 @@
 ---
-title: Digital Education Footprint - Deep Learning and The Future of Education
-author:
-  - name: Fanli (Christian) Zheng
-    affiliation: dyad x machina
-    email: thechristianramsey@gmail.com
-  - name: Haohan Wang
-    affiliation: dyad x machina
-    email: haohan723@gmail.com    
-abstract: |
-  We live in a time where people can freely access high quality video lectures, how-tos, journal articles, books with a click of a button. Our education can no longer be said to mostly comprised of what we learned in school. New technologies have pushed us to learn new things we may on the fly and such motivated individuals find themselves online watching lectures about programming, complex systems, neuroscience, deep learning or a how-to in order to write an article or to better understand the world they are living in. But yet, most of what we watch or read on the web, goes unnoticed and 
- 
-bibliography: sigproc.bib
-output: rticles::acm_article
+title: "R Notebook"
+output:
+  html_document:
+    df_print: paged
 ---
-
 
 ![Image title](images/ChtTypesRadar.png)
 
 # Introduction 
+
 Let's start with a future view of an individual's education. Many of us have used the internet to educate ourselves with the abundance of high quality videos, papers, articles, podcasts and how-tos all over the web. Let us imagine that all of what you have learned online (throughout the entirety of your life), from the hundreds of Youtube videos, Wikipedia articles, Nature papers, and podcasts you've read, watched, or listened to, were all consolidated into what we might call a **digital education footprint**. 
 
-The **digital education footprint** would string together our online education into a concrete representation of one's online education and could be extended by more formal settings. By showcasing the broad range of individual's knowledge (making digital music) as well as the places they've went deeper than most (deep learning or philosophy of mathematics), we could begin to accept education as a life-long journey rather than a monolithic part of an individual's past. We could also begin to see a more accurate depiction of someone's education that could be updated each and everytime they educate themselves. With every new year, their footprint would evolve just as the very thread of their lives would. 
+The **digital education footprint** would string together our online education into a concrete representation of an individual's online education and could be extended into more formal settings. By showcasing the broad range of individual's knowledge (making digital music) as well as the places they've went deeper than most (deep learning or philosophy of mathematics), we could begin to accept education as a life-long journey rather than one monolithic part of an individual's past. This would begin to show us a more accurate depiction of individual's education that could be updated each and everytime one educates themselves. With every new year, their footprint would evolve just as the very thread of their lives would. Visualised over time, we would be able to see an individual's journey or even a whole communities. Seeing how differen
 
-In this essay, I will propose a new way to approach education which will require significant effort to bring to life the benefits of a **digital education footprint** or similar, but the benefits will surely outweigh the costs. 
+In this essay, I will propose a new way to approach education which will require significant effort to bring to life but I believe the costs will surely outweight the costs. I'll talk about how we can use machine learning and deep learning in particular to help create our **digital education footprint**, **student journeys**, and a collective human knowledge graph. This will allow us to take the space of unstructured educational content and begin to map it unto a knowledge graph and use generative models to make educational content engaging and test a student's knowledge no matter the subject. I will name a few benefits of such a future.
 
-- A society where individuals do not simply compete for a degree but where they can feel safe to follow their noses and still be recognised for their trail
-- A society where an individual's knowledge is derived not from what we know about a degree
+- A society where individuals do not simply compete for a degree but where they can feel safe to create their own unique journey through human knowledge and still be recognised and predictable to others
+- A society where an individual's knowledge is derived not from what we know about a degree but by their actual knowledge which is alive and therefore always evolving
 - A society that better understands itself, through the understanding of the many journey's it's members have taken and the collective knowledge that has gone mostly unaccounted for in today's degree based education.
 
 I will also show that this imagined future is not only **desirable** for society but also that much of it is currently feasible mainly due to the most recent advances in machine learning, and in particular deep learning, which will enable us to begin designing such a future today. 
 
-## Concerns
+# Concerns
 
  There are 3 popular concerns that I will attempt to address in this article about online learning in the present and the future. I will attempt to address them here and in the implementation section below.
  
@@ -38,7 +29,7 @@ I will also show that this imagined future is not only **desirable** for society
 - The second concern is that the information remains untested and therefore doesn't truly make the leap from information to true knowledge.
 - The third concern is that even if the two concerns above were met definitively, it would not be possible to .
 
-### Passive Consumption
+## Passive Consumption
 
 It has been argued and shown in some studies[insert studies], that many people who consume videos or other forms of educational content online, especially when outside the context of school, are often consuming the content passively. This leads to what a colleague called "swiss-cheese learning", where one learns a bit here and there, lacking any real rigour or depth providing very little probability of capturing the major concepts or mastering the content in any adequate sense.
 
@@ -54,19 +45,13 @@ Engagement can be increased if x, goal directed behaviour can be enhance by smal
 
 > People watch videos casually and on the fly—and they rarely turn their phones sideways to do it. - Facebook Ads
 
-
-```{r}
-
-```
-
-
-### Untested Knowledge
+## Untested Knowledge
 
 It has been argued that it is hard to verify what someone has learned while consuming educational content online. This is generally true outside of those content producers who combine content and testing (i.e. Khan Academy, Udacity, Coursera) but they are generally limited compared to the vast amount of videos that are available that lack this testing.
 
 The knowledge 
 
-### Predictability
+## Predictability
 
 Concerns #1 and #2 can be solved and it could serve the individual who is seeking to master the content of a particular or several subjects. An individual could find themselves engaging with the goal of mastering the subjects, knowing that their grasp of the knowledge would be tested. 
 
@@ -76,33 +61,36 @@ But it does not solve the societal issue. If you are like myself, you have watch
 
 So Online educational content consumption does not 
 
-# Three Pillars
+# Universal Teaching Machine
 
 ![Image title](images/MtoQA.png)
 
-So how would a universal teaching machine eclipse these challenges? We will cover all three then cover each concept in detail. Our idea of a digital education footprint,  missions, and a knowledge graph will provide us with what we need to take a first stab at encompassing a student's whole education by addressing the three concerns.
+So how would a universal teaching machine eclipse these challenges? We will present a solution that meets all three criteria by introudcing a theoretical artificial network architecture to cover the first two.
+
+neural then cover each concept in detail. Our idea of a digital education footprint,  journeys, and a knowledge graph will provide us with what we need to take a first stab at encompassing a student's whole education by addressing the three concerns.
 
 In order to take all of our videos 
 
-# Universal Teaching Machine
-A component of a universal teaching machine should be able to take any type of education content, rather it be a video and to do 3 things, 
-categorise a video into a knowledge graph using the combination of a topic model and a knowledge graph like that of Google's or Wolfram Alpha's. 
+## The components
+A component of a universal teaching machine should be able to take any of the billions of educational content online (and eventualyl off) and by using machine learning and deep learning techniques complete the following:
+- assign it to a one or more knowledge subjects (i.e. math, design, computer science)
+- generate a set of adequate questions and answers that test the student's (what is x? a, b, c, or d) knowledge throughout the learning session
 
-While I believe this is the case I will suggest a system
 
-## Concepts 
+# Concepts 
 
 ### Digital Education Footprint
 The concept of a digital education footprint is is a custom symbol and profile that represents one's education relative to that of others. Each symbol should be somewhat unique and the profile could capture the general education as well as the intricacies. 
+
 A symbol which represents somethng as complex as one's education will likely not be enough for employeers and co-workers to understand the . A symbol must show that one is in a particular "class" while also  Symbols generally have to make trade-offs
 
-### Missions
+### Journeys
 ![Image title](images/knowledge_graphy.png)
- between the complexity of what it represents and it's ability to convey , the legi from dealing with the task of reduction of info. So we introduce **Missions** which show how someone has traversed the uy
+ between the complexity of what it represents and it's ability to convey , the legi from dealing with the task of reduction of info. So we introduce **Journeys** which show how someone has traversed the uy
 If most people had their digital education footprint, they would be 
 
 ### Human Knowledge Graph
-We have so far introduced **digital education footprint** and **trails**, which claim to be the right elements to synthesis one's education. But how does one create a path? From video to video? From topic to topic? If so, how might a machine decide on the topic? We have had plenty of advances in topic models but perhaps what we actually need is a graph of human knowledge. This graph, like Google's knowledge graph, should be generated both from the current structure of education and also driven by unsupervised learning of new topics that don't exist on today's knowledge graph.
+We have so far introduced **digital education footprint** and **journeys**, which claim to be the right elements to synthesis one's education. But how does one create a path? From video to video? From topic to topic? If so, how might a machine decide on the topic? We have had plenty of advances in topic models but perhaps what we actually need is a graph of human knowledge. This graph, like Google's knowledge graph, should be generated both from the current structure of education and also driven by unsupervised learning of new topics that don't exist on today's knowledge graph.
 
 This graph would be useful so content on the web could be easily mapped to the graph adn relate one user to another as well as create trails.
 
@@ -145,34 +133,3 @@ Deep NLP - Word2Vec
 # Conclusion
 
 # References
-
----
-references:
-- id: meier2012
-  title: Professinal Android 4 Application Development
-  author: 
-  - family: Meier
-    given: Reto
-  type: book
-  publisher: John Wiley & Sons, Inc.
-  issued:
-    year: 2012
-    month: 5
-- id: fenner2012a
-  title: One-click science marketing
-  author:
-  - family: Fenner
-    given: Martin
-  container-title: Nature Materials
-  volume: 11
-  URL: 'https://doi.org/10.1038/nmat3283'
-  DOI: 10.1038/nmat3283
-  issue: 4
-  publisher: Nature Publishing Group
-  page: 261-263
-  type: article-journal
-  issued:
-    year: 2012
-    month: 3
-...
-

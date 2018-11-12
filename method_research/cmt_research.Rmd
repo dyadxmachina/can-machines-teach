@@ -1,10 +1,8 @@
 ---
-title: "cmt_research"
+title: "CMT"
 author: "hw"
 date: "November 9, 2018"
-output:
-  pdf_document: default
-  html_document: default
+output: html_document
 ---
 
 
@@ -12,20 +10,44 @@ In order to create a adequate system that can take on this mission and vision th
 
 Note that here we will mainly focus on how to possibly set our foot into this problem by exploring muliple existing deep learning algorithms in the related domains.
 
-Why deep learning? 
+## Problem Foumlation
+
+Let's begin our investigate by breaking down our goal into few sub-goals and we will then take a close look at each of them.
+
+First, we need to have a hybrid system that can process any learning media (i.e. a video, a e-book or an audio recording clip) and automatically generated a set of questions (both close ended like multi-choice question or open-ended like writing a quick summary) for the learners.
+
+If the questions generated are close-ended, the model should also be able to generate the right answer based on the context provided and evaluate the results answered by the learners. 
+
+If the questions generated are open-ended, the model should be able to evaluate the result as well and provide a approximate score as the feedback. 
+
+This is our first set of problems - **LEARNING by ANSWERING**. 
+
+Next, we need to consider how we can provide an adequate and relevant learning map for the learners based on their progress and the knowledge graph/map given that we have a ever growing amount of educational content on the web. 
+
+This is our second set of problems - **KNOWLEDGE ARCHITECT**.
+
+What's more, the knowledge graph might be universal, but everyone's learning journey is still highly personal and custom. In terms of learning, everyone seems to have their unique set of problems to solve or they are curious about and everyone is on their unique mission towards mastery.
+
+We cannot create an online learning/teaching system without taking this crucial factor into account. In order to put our hands on this set of issues, we can rely on some heuristic and models that have been developed to solve this idiosymcratic issue.
+
+This is our thrid set of problems - **MISSION MAPPING**.
+
+
+## Why deep learning? 
 
 Just as any other problems that can be solved with deep learning, our problem could be simplied as a function that maps the input to the output. Deep learning is known as one of the most flexible machine learning algorithms that can learn and map the **deep representation** from the data and in turn contribute to our unique set of problems i.e. automatic question and answer gnerating or visual question answering problems. Moreover, by leveraging neural network architecture, deep nueral networks architecture can be composed into a single differentiable function and trained end-to-end and they can help identify the suitable *inductive* *biases* catered to the input data type. 
 
-# Automatic Question and Answer Generative Methods
 
-##Problem Foumlation
+
+# LEARNING by ANSWERING
+## Question Generation
+
 The goal of an automatic question generation is to generate a question Q that is syntactically and semantically correct, relevant to the context and meaningful to answer. 
 
 In order to achieve this goal,, we need to train an algorithm to learn the underlying conditional probability distribution $P_{\theta}(Q|X)$ parametrized by $\theta$. Or in other words, we can think of this problem is the one to learn a model $\theta$ during training using text-question pairs so that the probability $P_{\theta}(Q|P)$ is maximized over the given training dataset. 
 
-### Case Studies: 
-1. We can think  of it as a seq2seq learning problem; In this paper [QG-Net: A Data-Driven Question Generation Model
-for Educational Content](http://www.princeton.edu/~shitingl/papers/18l@s-qgen.pdf). They use a bi-directional LSTM network to process the input context words sequence. Encoding the answer into context word vectors.
+** Case Studies** 
+1. We can think  of it as a seq2seq learning problem; In this paper [QG-Net: A Data-Driven Question Generation Model for Educational Content](http://www.princeton.edu/~shitingl/papers/18l@s-qgen.pdf). They use a bi-directional LSTM network to process the input context words sequence. Encoding the answer into context word vectors.
 
 QG-Net generates questions by iteratively sampling question words from the conditional probability distribution $P(Q|C,A,\theta)$ where $\theta$ denotes the set of parameters. In order to construct the probability distribution, they first create a **context reader** that process each word $c_j$ in the input context and turns it into a fix-sized representation $h_j$
 
@@ -36,7 +58,7 @@ As for the quantitative evaluation, they aimed to minimize the difference betwee
 The general QG-Net model Architecture is as below: 
 
 
-![ma](qgnet.png)
+![ma](img/qgnet.png)
 
 
 
@@ -45,14 +67,16 @@ The general QG-Net model Architecture is as below:
 For the second option, we need to encode both sentence and paragraph that sentence belongs to as input, but only attending source sentence hidden states. The performance could be improved with beam search and UNK replacement. 
 
 
+
 3. In this paper [TOPIC-BASED QUESTION GENERATION](https://openreview.net/pdf?id=rk3pnae0b), they proposed a topic-based question generation algorithm. The algorithm will be able to take in a input sentence, a topic and a question type; then generate a word sequence related to the topic, question type and the input sentence. 
 
-They are formulating a conditional likelihood objective function to achieve this goal. 
+  They are formulating a conditional likelihood objective function to achieve this goal. 
 
-Also, in the paper, they proposed a few frameworks that were used to tackle this problem. The first type is seq2seq model. This model typically uses a bidirectional LSTM as the encoder to encode a sentence and a LSTM as the decoder to generate the target question. 
-The second approach is question pattern prediction and question topic selection algorithms. It takes in an automatically selected phrase Q and fill this phrase into the pattern that was predicted from pre-mined patterns, which is not done with deep learning. 
+  Also, in the paper, they proposed a few frameworks that were used to tackle this problem. The first type   is seq2seq model. This model typically uses a bidirectional LSTM as the encoder to encode a sentence and a   LSTM as the decoder to generate the target question. 
+  The second approach is question pattern prediction and question topic selection algorithms. It takes in an   automatically selected phrase Q and fill this phrase into the pattern that was predicted from pre-mined   patterns, which is not done with deep learning. 
 
-The last approach is multi-source seq2seq learning which aims to integrate information from multiple sources to boost learning. 
+  The last approach is multi-source seq2seq learning which aims to integrate information from multiple sources to boost learning. 
+
 
 
 4. In this paper [A Framework for Automatic Question Generation from Text
@@ -62,11 +86,11 @@ They refer to the generator as the $agent$ and the $action$ of the agent is to g
 
 The evaluator will in turn assign a reward for the output sequence predicted using the current policy of the generator. Based on the reward assigned by the evaluator, the generator updates and improves its current policy. The goal in RL-based question generation is to find a policy that can maximize the sum of the expected return at the end of the sequence generated. 
 
-## Visual Question Answering (VQA)
+## Answer Evaluation 
+### Close-ended Questions
+**Visual Question Answering (VQA)**
 
-> Why VQA?
-
-As what we have discussed above, most Question-Answering System focuses solely on generating proper questions but not the answers. 
+As what we have discussed above, most question focuses solely on generating proper questions but not the answers. 
 
 VQA aims to enable the machine to answer the question automatically which could in turn automated the whole question generating and evaluation process. 
 
@@ -79,35 +103,23 @@ Considering the questions in natural language may also contain some noise, the c
 1. In this paper [Deep Attention Neural Tensor Network for
 Visual Question Answering](http://openaccess.thecvf.com/content_ECCV_2018/papers/Yalong_Bai_Deep_Attention_Neural_ECCV_2018_paper.pdf),
 
-![ma](vqa.png)
+![ma](img/vqa.png)
 
 2. In this paper [Question Type Guided Attention in Visual Question
 Answering](https://arxiv.org/pdf/1804.02088.pdf), they proposed a model called Question Type-guided Attention (QTA). This model utilizes the information of question type to dynamically balance visual features from both top-down and bottom-up orders. Meanwhile, it has a novel neural architecture that dynamically gates the conribution of ResNet and Faster R-CNN features based on the question type.
 
-# Quality Evaluation 
+#### Dual Question-Answering Model
 
-The key to create an education or a learning/teaching system is to be able to present a high quality study material and provide a high quality feedback on student's learning. 
+Both Question Generaion(QG) and Question Answering(QA) are well-defined 2 sets of models that aim to either infer a question or an answer given the counterpart based on the context. However, our goal is to have a complete automated system that can take on both roles simultaneously for us.  
 
-Let's begin with the first issue, we can easily identify the association of our problem with a problem that has been solved with recommender system. 
+There are some algorithms are designed to fulfill both roles. In this paper [Dual Ask-Answer Network for Machine Reading Comprehension](https://arxiv.org/pdf/1809.01997.pdf) they presented a model that can learn question answering and question generation simultaneousely. 
 
-As we all know that a recommender system is an intuitive line of defense against consumer over-choice given the evern growing information available on the web. As we mentioned earlier in the knowledge graph, a authoritative and personalized recommending system is essential for facilitating the learning. 
+The idea is illustrate as below: 
+![qgqa](img/qgqa.png)
 
-Typically, a recommendation models can be classified into 3 main categories: 
-1. Collaborative filtering
-2. Content based 
-3. Hybrid recommender system 
+![daan](img/daan.png)
 
-As I mentioned, here we will mainly focus on hybrid recommender system. 
-
-There are a diverse array of achitectual paradigms that are closely related recommending system. Let's take a look at few of them: 
-1. Autoencoder 
-2. Convolutional Neural Network 
-3. Recurrent Neural Network 
-4. Restricted Boltzmann Machine (RBM)
-5. Adversarial Networks
-6. Attentional Models (AM)
-7. Deep Reinforcement Learning (DRL)
-
+### Open-ended Question
 As for the automated feedback or learning grading system, there are plenty of suggestions have been proposed as well to tackle such a question. The framework is called automated essay scoring (AES) which focuses on automatically analyzing the quality of writing and assigning a score to the text. 
 
 In terms of knowledge or learning evaluation, the format could be diversed i.e. a lecture given by the student or an short summary essay written by the student. Regardless the form, we can always convert the content into a predictable text, graphic or audible format that model can process. 
@@ -116,15 +128,76 @@ As we mentioned above, for these type of task, we can implementing RNN to proces
 Adversarially Crafted Input](http://aclweb.org/anthology/N18-1024) illustrated.
 
 
+# KNOWLEDGE ARCHITECT
+
+As I mentioned earlier, learning is a knowledge accumulation process. Knowledge itself has its unique structure that can help us learn in a most effective and productive way. Knowledge Graph is a great tool that we developed to map and present the structure of knolwedge. In shirt, knowledge graphs are collections of relational facts, where each fact states that a certrain relation holds between 2 entities.
+
+In this paper [Generalized Embedding Model for Knowledge Graph Mining](http://www.mlgworkshop.org/2018/papers/MLG2018_paper_5.pdf), they have presented a model for learning neural presentation of generalized knowledge graphs using a novel muli-shot unsupervised neural network model, called the **Graph Embedding Network (GEN)**. This model is able to learn different types of knowlege graphs from a universal perspective and it provides flexibility in learning representations that work on graphs conforming to different domains. 
+
+
+In this paper [Probabilisic Knowledge Graph Embeddings](https://openreview.net/pdf?id=rJ4qXnCqFX), they explored a new type of embedding model that can link prediction in relational knowledge graph. 
+
+
+# MISSION MAPPING 
+
+The key to create an education or a learning/teaching system is to be able to present a high quality study material and provide a high quality feedback on student's learning. 
+
+Let's begin with the first issue, we can easily identify the association of our problem with a problem that has been solved with recommender system. 
+
+As we all know that a recommender system is an intuitive line of defense against consumer over-choice given the evern growing information available on the web. As we mentioned earlier in the knowledge graph, a authoritative and personalized recommending system is essential for facilitating the learning. 
+
+Typically, a recommendation models can be classified into 3 main categories: 
+
+
+1. Collaborative filtering
+
+
+2. Content based 
+
+
+3. Hybrid recommender system 
+
+As I mentioned, here we will mainly focus on hybrid recommender system. 
+
+There are a diverse array of achitectual paradigms that are closely related recommending system. Let's take a look at few of them: 
+1. Autoencoder 
+
+
+2. Convolutional Neural Network 
+
+
+3. Recurrent Neural Network 
+
+
+4. Restricted Boltzmann Machine (RBM)
+
+
+5. Adversarial Networks
+
+
+6. Attentional Models (AM)
+
+
+7. Deep Reinforcement Learning (DRL)
+
+
+
 
 **Reference** 
-1. [A Framework for Automatic Question Generation from Text
-using Deep Reinforcement Learning](https://arxiv.org/pdf/1808.04961.pdf)
-2. [Learning to Ask: Neural Question Generation for
-Reading Comprehension](https://arxiv.org/pdf/1705.00106.pdf)
-3. [Deep Attention Neural Tensor Network for
-Visual Question Answering](http://openaccess.thecvf.com/content_ECCV_2018/papers/Yalong_Bai_Deep_Attention_Neural_ECCV_2018_paper.pdf)
+
+
+1. [A Framework for Automatic Question Generation from Text using Deep Reinforcement Learning](https://arxiv.org/pdf/1808.04961.pdf)
+
+
+2. [Learning to Ask: Neural Question Generation for Reading Comprehension](https://arxiv.org/pdf/1705.00106.pdf)
+
+
+3. [Deep Attention Neural Tensor Network for Visual Question Answering](http://openaccess.thecvf.com/content_ECCV_2018/papers/Yalong_Bai_Deep_Attention_Neural_ECCV_2018_paper.pdf)
+
+
 4. [Learning to Ask](http://www.cs.cornell.edu/~xdu/papers/acl17_dsc_poster.pdf)
+
+
 5. [TOPIC-BASED QUESTION GENERATION](https://openreview.net/pdf?id=rk3pnae0b)
 
 
