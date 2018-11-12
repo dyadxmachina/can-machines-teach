@@ -6,41 +6,50 @@ output: html_document
 ---
 
 
-In order to create a adequate system that can take on this mission and vision that we shared above, we certainly need to leverage the state-of-art algorithms and even more advanced ones that will be developed soon. Let's first take a look at some methods that might come handy when tackling our problem.
+In order to create a adequate system that can take on this mission and vision that we shared above, we certainly need to leverage the state-of-art techniques and algorithms or even more advanced ones that have not be developed yet. Let's first take a look at some methods that might come handy when tackling our problem.
 
-Note that here we will mainly focus on how to possibly set our foot into this problem by exploring muliple existing deep learning algorithms in the related domains.
+Note that we will first start with the question of how to possibly set our foot into solving this problem by exploring muliple existing deep learning models in the related domains.
 
 ## Problem Foumlation
 
-Let's begin our investigate by breaking down our goal into few sub-goals and we will then take a close look at each of them.
+Let's begin our investigate by breaking down our goal into a few sub-goals and we will then take a close look at each of them.
 
-First, we need to have a hybrid system that can process any learning media (i.e. a video, a e-book or an audio recording clip) and automatically generated a set of questions (both close ended like multi-choice question or open-ended like writing a quick summary) for the learners.
+The first question that comes to us is that "how can we take an educational media (i.e. video/ audio recording or e-book) and generate the proper set of test questions and answers for the users?". As you probably have anticipated, we need to have a hybrid system that can process the media while evaluating the learning of the users.
 
-If the questions generated are close-ended, the model should also be able to generate the right answer based on the context provided and evaluate the results answered by the learners. 
 
-If the questions generated are open-ended, the model should be able to evaluate the result as well and provide a approximate score as the feedback. 
+In terms of question generation, if the questions generated are close-ended (i.e. multi-choice), the model should also be able to generate the correct answer based on the content so that it is capable of evaluating the performance of the user. 
 
-This is our first set of problems - **LEARNING by ANSWERING**. 
+If the questions generated are open-ended, the model should be able to evaluate the result as well and provide an approximate score or comment as the feedback. 
 
-Next, we need to consider how we can provide an adequate and relevant learning map for the learners based on their progress and the knowledge graph/map given that we have a ever growing amount of educational content on the web. 
+This is our first set of problems - **LEARNING & EVALUATION**. 
+
+Next, we need to consider how we can select an adequate and relevant learning masterial and generate an effecive learning map for the users based on their current progress and the general knowledge graph/map, given the ever growing amount of educational content on the web. 
 
 This is our second set of problems - **KNOWLEDGE ARCHITECT**.
 
-What's more, the knowledge graph might be universal, but everyone's learning journey is still highly personal and custom. In terms of learning, everyone seems to have their unique set of problems to solve or they are curious about and everyone is on their unique mission towards mastery.
+What's more, the knowledge graph is our ground truth and can be applied universally to some extent, but everyone's learning journey is still highly personal and custom. In terms of learning, everyone seems to have their unique set of problems that they are curious about and everyone is on their own mission towards the mastery.
 
-We cannot create an online learning/teaching system without taking this crucial factor into account. In order to put our hands on this set of issues, we can rely on some heuristic and models that have been developed to solve this idiosymcratic issue.
+We cannot possibly put such an online learning/teaching system into use without taking this crucial factor into our account. In order to put our hands on this set of problems, we can rely on some heuristic and models that have been developed to resolve this type of idiosymcratic issue.
 
 This is our thrid set of problems - **MISSION MAPPING**.
 
 
 ## Why deep learning? 
 
-Just as any other problems that can be solved with deep learning, our problem could be simplied as a function that maps the input to the output. Deep learning is known as one of the most flexible machine learning algorithms that can learn and map the **deep representation** from the data and in turn contribute to our unique set of problems i.e. automatic question and answer gnerating or visual question answering problems. Moreover, by leveraging neural network architecture, deep nueral networks architecture can be composed into a single differentiable function and trained end-to-end and they can help identify the suitable *inductive* *biases* catered to the input data type. 
+If you look closely at each set of questions that we listed above, it is not hard to find that those questions are solvable by the machines. Let's take the first problem as an example, to create a learning and evaluation system we need to somehow find the connection of the educational material we provided and the meaningful and reliable question & answer set that is associated with the content. In other words, our problem could be simplified as trying to find a function that is able to learn the relationship between our input and output and appropriately map the input to the desired output with this function. 
 
+To the best of our knowledge, deep learning seems to be one of the best techniques currently developed that is able to tackle such a fuzzy issue. First of all, deep learning is known as one of the most flexible machine learning algorithms that can learn and map the **deep representation** from the data and in turn contribute to our unique set of problems i.e. automatic question and answer gnerating or visual question answering problems. Moreover, by leveraging neural network architecture, deep nueral networks architecture can be composed into a single differentiable function and trained end-to-end and they can help identify the suitable *inductive* *biases* catered to the input data type. 
 
+## Rearch Decomposition 
+
+With the belief that we can and we will find a solution for such an ambitious Universal Teaching machine, we are set out to find any possible solutions that we can to help make it happen. Here I will present some research that we did in searching for the answer. 
+
+As I mentioned above, the ultimate goal is to utilize our system to process any form of educational materials and yield expected result. To best help you comprehend the problem that we are trying to solve and the some possible solutions that we found useful, I will just start with one type of educational content - video. 
 
 # LEARNING by ANSWERING
 ## Question Generation
+
+Lead with video example 
 
 The goal of an automatic question generation is to generate a question Q that is syntactically and semantically correct, relevant to the context and meaningful to answer. 
 
@@ -120,12 +129,17 @@ The idea is illustrate as below:
 ![daan](img/daan.png)
 
 ### Open-ended Question
+#### General Question
+i.e. Give a summary of this video 
+
+#### Specific Question
 As for the automated feedback or learning grading system, there are plenty of suggestions have been proposed as well to tackle such a question. The framework is called automated essay scoring (AES) which focuses on automatically analyzing the quality of writing and assigning a score to the text. 
 
 In terms of knowledge or learning evaluation, the format could be diversed i.e. a lecture given by the student or an short summary essay written by the student. Regardless the form, we can always convert the content into a predictable text, graphic or audible format that model can process. 
 
 As we mentioned above, for these type of task, we can implementing RNN to process the content and even enhance the model performance by adversarially craft input as this paper [Neural Automated Essay Scoring and Coherence Modeling for
 Adversarially Crafted Input](http://aclweb.org/anthology/N18-1024) illustrated.
+
 
 
 # KNOWLEDGE ARCHITECT
