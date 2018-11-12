@@ -56,7 +56,7 @@ We have so far introduced **digital education footprint** and **journeys**, whic
 This graph would be useful so content on the web could be easily mapped to the graph adn relate one user to another as well as create trails.
 
 
-# EC2QA Network
+## EC2QA Network
 The last piece we'll introduce here is a novel artificial neural network that would allow us to take any unstructured educat 
 
 # Concerns
@@ -99,7 +99,7 @@ But it does not solve the societal issue. If you are like myself, you have watch
 
 So Online educational content consumption does not 
 
-# Universal Teaching Machine
+## Teaching Machine
 
 ![Image title](img/MtoQA.png)
 
