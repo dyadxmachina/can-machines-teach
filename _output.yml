@@ -10,9 +10,6 @@ bookdown::gitbook:
         <li><a href="https://github.com/dyadxmachina/can-machines-think" target="blank">Github</a></li>
     edit: https://github.com/dyadxmachina/can-machines-think/edit/master/%s
     download: ["pdf", "epub"]
-    fontsettings:
-      theme: night
-      family: serif    
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
