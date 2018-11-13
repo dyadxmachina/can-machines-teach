@@ -15,7 +15,7 @@ colorlinks: yes
 biblio-style: apalike
 url: 'https\://github.com/dyadxmachina/can-machines-teach'
 github-repo: dyadxmachina/can-machines-teach
-cover-image: img/radar.png
+cover-image: img/MtoQA.png
 ---
 # Preface {-}
 ![Our new paper on ](img/MtoQA.png)
