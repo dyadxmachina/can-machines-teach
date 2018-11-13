@@ -76,7 +76,7 @@ In order to achieve this goal,, we need to train an algorithm to learn the under
 $$P_{\theta}(Q|X)$$
 parametrized by $\theta$. In other words, we can think of this problem as the same one that requires the model learn a function (with a set of parameters) $\theta$ during the training stage using content-question pairs so that the probability $P_{\theta}(Q|P)$ is maximized over the given training dataset. 
 
-It is also helpful to frame this problem into a seq2seq learning problem since both the input and the output is most likely a sequence of text character that the model needs to process and learn the relationship from. For this type of
+It is also helpful to frame this problem into a seq2seq learning problem since both the input and the output is most likely a sequence of text character that the model needs to process and learn the relationship from. 
 
 **Case Studies** 
 1. In this paper [QG-Net: A Data-Driven Question Generation Model for Educational Content](http://www.princeton.edu/~shitingl/papers/18l@s-qgen.pdf). They use a bi-directional LSTM network to process the input context words sequence. Encoding the answer into context word vectors.
@@ -103,12 +103,11 @@ For the second option, we need to encode both sentence and paragraph that senten
 
 They are formulating a conditional likelihood objective function to achieve this goal. 
 
-Also, in the paper, they proposed a few frameworks that were used to tackle this problem. The first type   is seq2seq model. This model typically uses a bidirectional LSTM as the encoder to encode a sentence and a   LSTM as the decoder to generate the target question. 
+Also, in the paper, they proposed a few frameworks that were used to tackle this problem. The first type   is seq2seq model. This model typically uses a bidirectional LSTM as the encoder to encode a sentence and a LSTM as the decoder to generate the target question. 
  
 The second approach is question pattern prediction and question topic selection algorithms. It takes in an   automatically selected phrase Q and fill this phrase into the pattern that was predicted from pre-mined   patterns, which is not done with deep learning. 
 
 The last approach is multi-source seq2seq learning which aims to integrate information from multiple sources to boost learning. 
-
 
 
 4. In this paper [A Framework for Automatic Question Generation from Text using Deep Reinforcement Learning](https://arxiv.org/pdf/1808.04961.pdf) they proposed a novel way of solving this problem in which they used a reinforcement learning framework that consists of a generator and an evaluator. 
@@ -117,6 +116,11 @@ They refer to the generator as the $agent$ and the $action$ of the agent is to g
 
 The evaluator will in turn assign a reward for the output sequence predicted using the current policy of the generator. Based on the reward assigned by the evaluator, the generator updates and improves its current policy. The goal in RL-based question generation is to find a policy that can maximize the sum of the expected return at the end of the sequence generated. 
 
+
+** Summary **
+
+In this QG section, we have discussed 4 algorithms. They provide us a way to frame our problem for which we can apply generative seq2seq model framework. As for our objective function, we are formuating a conditional probability distribution that is conditioned on the provided content  (i.e. the video) and answers. Typically, we can use a bi-directional LSTM as the encoder to encode the content and use a LSTM as the decoder to generate the question. 
+
 ## Answer Evaluation 
 ### Close-ended Questions
 
@@ -124,16 +128,35 @@ The evaluator will in turn assign a reward for the output sequence predicted usi
 
 As what we have covered above, most QG problem focuses solely on generating questions but not the answers based on the context. 
 
-VQA is a set of problems that focuses on providing a natural language answer given any image and any free-form natural language question. As we are managing to handle the video educational content that involves images processing, VQA would be a proper and most relevant start. By leveraging this type of algorithms, we enable the machine to have the questions ready for the generated question which could in turn automated the whole question + answering + evaluation cycle. 
+VQA is a challenging sementic task that focuses on providing a natural language answer given any image and any free-form natural language question. As we are managing to handle the video educational content that is likely to involve language processing and visual recognition tasks, VQA would be a proper and relevant start. By leveraging this type of algorithm, we enable our system to easily evaluate the answer provided by learners which could in turn automated the whole question + answering + evaluation cycle. 
 
-Since we are dealing with visual input, question-guided attention mechanism is a key component for solving this type of tasks. Started from the attention mechanism that can adaptively learn the most relevant image regions for a given question. Then to stack multiple question-guided attention mechanisms to learn the attention in an iterative way. Also, it is possible to use bilinear features to integrate the visual features from the image spatial grids with question features to predict attention. Considering the questions in natural language may also contain some noise, the co-attention mechanism can jointly learn the attention for both the image and question.
+Since we are dealing with visual input, question-guided attention mechanism is a key component for solving this type of task. Started from the attention mechanism that can adaptively learn the most relevant image regions for a given question. Then to stack multiple question-guided attention mechanisms to learn the attention in an iterative way. Also, it is possible to use bilinear features to integrate the visual features from the image spatial grids with question features to predict attention. Considering the questions in natural language may also contain some noise, the co-attention mechanism can jointly learn the attention for both the image and question.
 
 
-1. In this paper [Deep Attention Neural Tensor Network for Visual Question Answering](http://openaccess.thecvf.com/content_ECCV_2018/papers/Yalong_Bai_Deep_Attention_Neural_ECCV_2018_paper.pdf),
+1. In this paper [Deep Attention Neural Tensor Network for Visual Question Answering](http://openaccess.thecvf.com/content_ECCV_2018/papers/Yalong_Bai_Deep_Attention_Neural_ECCV_2018_paper.pdf), they proposed a novel deep attention neural tensor network that can discover the joint correlation over images, questions and answers with tensor-based representation. 
+
+
+As for their workflow, they modeled one of the pairwise interaction (i.e. between image and question) by bilinear features, which is further encoded with the thrid dimension (i.e. answer) to be a triplet using bilinear tensor product. During this step, the model takes in a question + a corresponding image + candidate answers as the input. A CNN (convolutional neural network) a GRU RNN (recurrent neural network) are used for extracting feature vectors and question respectively. Then the representation is passed on as a multi-modal features and integrated by bilinear pooling module. Moreover, they decompose the correlation of triplets by their question and answer types with a slice-wise attention module on tensor to select the most discriminative reasoning process inference. 
+
+In the end, they optimize the proposed network by learning a label regression with KL-divergence losses. 
+
+They clamined that with these techniques, they can enable scalable training and fast convergence over a large number of answer set. 
+
+During the inference stage, they feed the embeddings of all candicate answer into the network and then select the answer which has the biggest triplet relevance socre as the final answer. 
+
+The general network architecture is as follows: 
 
 ![ma](img/vqa.png)
 
-2. In this paper [Question Type Guided Attention in Visual Question Answering](https://arxiv.org/pdf/1804.02088.pdf), they proposed a model called Question Type-guided Attention (QTA). This model utilizes the information of question type to dynamically balance visual features from both top-down and bottom-up orders. Meanwhile, it has a novel neural architecture that dynamically gates the conribution of ResNet and Faster R-CNN features based on the question type.
+2. In this paper [Question Type Guided Attention in Visual Question Answering](https://arxiv.org/pdf/1804.02088.pdf), they proposed a model called Question Type-guided Attention (QTA). This model utilizes the information of question type to dynamically balance visual features from both top-down and bottom-up orders. 
+
+Finally, they propose a multi-task extension that is trained to predict question types from the lexical inputs during training which generalizes the network into applications that lack question type, with a minimal performance loss. 
+
+As for their main contribution, they focus on developing an attention mechanism that can exploit high-level semantic information on the question type to guide the visual encoding process. 
+
+Specifically, they introduced a novel VQA architecture that can dynamically gate the contribution of ResNet and Faster R-CNN features based on the question type. In turn, it allows them to integrate the information from multiple visual sources and obtain gains across all question types. 
+**Summary**
+By going through the previous examples, we can see that VQA is very particular type of algorithms that is designed to efficiently process image and text input data while making the inference based on the input. Attention is a typical mechanism applied in this type of problems. 
 
 
 #### Dual Question-Answering Model
@@ -161,8 +184,6 @@ In their task formulation part, they mentioned that they break this task into 2 
 * answer-specific question generation 
 
 
-
-
 3. In this paper [Visual Question Generation as Dual Task of Visual Question Answering](http://cvboy.com/pdf/publications/cvpr2018_iqan.pdf), they proposed an end-to-end unified model, Invertible Question Answering (iQAN) to introduce question generation as a dual task of question answering to imrpove VQA pefromance. 
 
 ### Open-ended Question
@@ -178,6 +199,8 @@ In terms of knowledge or learning evaluation, the format could be diversed i.e. 
 
 As we mentioned above, for these type of task, we can implementing RNN to process the content and even enhance the model performance by adversarially craft input as this paper [Neural Automated Essay Scoring and Coherence Modeling for
 Adversarially Crafted Input](http://aclweb.org/anthology/N18-1024) illustrated.
+
+
 ## Summary of Learning and Feedback Networks
 
 
@@ -242,11 +265,16 @@ There are a diverse array of achitectual paradigms that are closely related reco
 7. Deep Reinforcement Learning (DRL)
 
 
-## Summary of Learning and Feedback Networks
+
 
 # DIGITAL KNOWLEDGE FOOTPRINT 
 
+
+
 ## Summary of Current Research and Needs
+
+
+
 
 # Data and Annotation
 
