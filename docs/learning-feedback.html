@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="primary-concerns.html">
-<link rel="next" href="theories-for-statistical-learning-theory-and-deep-learning.html">
+<link rel="prev" href="implementing-a-teaching-machine.html">
+<link rel="next" href="knowledge-graph.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -176,21 +176,115 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="towards-an-ecoystem-of-teaching-machines" class="section level1">
-<h1><span class="header-section-number">4</span> Towards an ecoystem of teaching machines</h1>
+<div id="learning-feedback" class="section level1">
+<h1><span class="header-section-number">7</span> LEARNING + FEEDBACK</h1>
+<p>A salient question that we have to ask ourselves before deisgning such a system is that:</p>
+<blockquote>
+<p>“how can we take a piece of educational material and properly test learners’ knowledge and provide insightful feedbacks to support their learning?”.</p>
+</blockquote>
+<p>Among all the possible learning and feedback approaches, <em>Question &amp; Answer</em> framework seems to be one of the most common ones</p>
+<p>Then the next question would be,</p>
+<blockquote>
+<p>“how might we create an adequate question &amp; answering system for a piece of educational content (i.e. a video)”</p>
+</blockquote>
+<p>The answer seems obvious in this case that we need a hybrid system that can do at least 2 roles at the same time:</p>
+<ol style="list-style-type: decimal">
+<li><p>Generate common question + Answers pairs</p></li>
+<li><p>Evaluate and comment on the open-ended answers</p></li>
+</ol>
+<p>Here, we carefully split the questions into 2 distinct categories. One is regular close-ended question (i.e. multiple choise question) and the other one is open-ended question (i.e. tell me about your thoughts on this idea discussed in the video).</p>
+<p>In terms of the close-ended, the answers can be defined and evaluated easily. However, the process might be a little bit tricky when it comes to the open-ended questions.</p>
+<div id="question-generation" class="section level2">
+<h2><span class="header-section-number">7.1</span> Question Generation</h2>
+<p>First, let’s take a look at question generation (QG) problem on its own.</p>
+<p>The ideal goal of an automatic question generation is to generate a question Q that is syntactically and semantically correct, relevant to the context and meaningful to answer.</p>
+<p>In order to achieve this goal,, we need to train an algorithm to learn the underlying conditional probability distribution <span class="math display">\[P_{\theta}(Q|X)\]</span> parametrized by <span class="math inline">\(\theta\)</span>. In other words, we can think of this problem as the same one that requires the model learn a function (with a set of parameters) <span class="math inline">\(\theta\)</span> during the training stage using content-question pairs so that the probability <span class="math inline">\(P_{\theta}(Q|P)\)</span> is maximized over the given training dataset.</p>
+<p>It is also helpful to frame this problem into a seq2seq learning problem since both the input and the output is most likely a sequence of text character that the model needs to process and learn the relationship from. For this type of</p>
+<p><strong>Case Studies</strong> 1. In this paper <a href="http://www.princeton.edu/~shitingl/papers/18l@s-qgen.pdf">QG-Net: A Data-Driven Question Generation Model for Educational Content</a>. They use a bi-directional LSTM network to process the input context words sequence. Encoding the answer into context word vectors.</p>
+<p>QG-Net generates questions by iteratively sampling question words from the conditional probability distribution <span class="math inline">\(P(Q|C,A,\theta)\)</span> where <span class="math inline">\(\theta\)</span> denotes the set of parameters. In order to construct the probability distribution, they first create a <strong>context reader</strong> that process each word <span class="math inline">\(c_j\)</span> in the input context and turns it into a fix-sized representation <span class="math inline">\(h_j\)</span></p>
+<p>Then, they used a <strong>question generator</strong> generates the question text word-by-word, given all context word representation and all question words in previous time steps.</p>
+<p>As for the quantitative evaluation, they aimed to minimize the difference between the generated question and the true question in the training set during training. Also, they used the standard back-propagation through time with the mini-batch stochastic gradient descent algorithm to learn the model parameters. They employed teacher forcing procedure for training LSTMs. To enhance performance, they also implemented beam search, a greedy but effective approximation to exhausitively search and select the top 25 cancidate output question sentences. The final one would be the one with the lowest negative log likelihood.</p>
+<p>The general QG-Net model Architecture is as below:</p>
 <div class="figure">
-<img src="img/MtoQA.png" alt="Image title" />
-<p class="caption">Image title</p>
+<img src="img/qgnet.png" alt="ma" />
+<p class="caption">ma</p>
 </div>
-<p>So how would a universal teaching machine eclipse these challenges? We will present a solution that meets all three criteria by introudcing a theoretical artificial network architecture to cover the first two.</p>
-<p>neural then cover each concept in detail. Our idea of a digital education footprint, journeys, and a knowledge graph will provide us with what we need to take a first stab at encompassing a learner’s whole education by addressing the three concerns.</p>
-<p>In order to take all of our videos</p>
-<div id="the-components" class="section level2">
-<h2><span class="header-section-number">4.1</span> The components</h2>
-<p>A component of a universal teaching machine should be able to take any of the billions of educational content online (and eventualyl off) and by using machine learning and deep learning techniques complete the following: - assign it to a one or more knowledge subjects (i.e. math, design, computer science) - generate a set of adequate questions and answers that test the learner’s (what is x? a, b, c, or d) knowledge throughout the learning session</p>
-<p>Over time, it is plausible, that our digital education footprint would be the most important representation of an learners level of education. Even more important than our primary education; it has done much to make us predictable, but it has sacrificed the true range of an learner’s gained knowledge and wisdom coming from any other place than the institution is willing to give credit for.</p>
-<p>Since we’ve largely rely upon large institutions to educate groups of learners, many have grown deeply familiar with having a perfectly demarcated path towards a degree, so it has been much harder for learners to use this abundance of knowledge to chart their own educational journey in today’s fast moving world.</p>
-<p>being us how to the peer pressure of cohorts, self-learning learned Imagine that if you signed up for a job, your primary consideration and also your digital education could be conveyed as a path through the web that others attempt to follow or mix and match. Now let us imagine a world where our digital education fingerprint allowed us to</p>
+<ol start="2" style="list-style-type: decimal">
+<li>In this summary <a href="http://www.cs.cornell.edu/~xdu/papers/acl17_dsc_poster.pdf">Learning to Ask</a>, they used a sentence- and paragraph-level seq2seq model to read text from the input content and to generate a question about the input sentence.</li>
+</ol>
+<p>For the second option, we need to encode both sentence and paragraph that sentence belongs to as input, but only attending source sentence hidden states. The performance could be improved with beam search and UNK replacement.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>In this paper <a href="https://openreview.net/pdf?id=rk3pnae0b">TOPIC-BASED QUESTION GENERATION</a>, they proposed a topic-based question generation algorithm. The algorithm will be able to take in a input sentence, a topic and a question type; then generate a word sequence related to the topic, question type and the input sentence.</li>
+</ol>
+<p>They are formulating a conditional likelihood objective function to achieve this goal.</p>
+<p>Also, in the paper, they proposed a few frameworks that were used to tackle this problem. The first type is seq2seq model. This model typically uses a bidirectional LSTM as the encoder to encode a sentence and a LSTM as the decoder to generate the target question.</p>
+<p>The second approach is question pattern prediction and question topic selection algorithms. It takes in an automatically selected phrase Q and fill this phrase into the pattern that was predicted from pre-mined patterns, which is not done with deep learning.</p>
+<p>The last approach is multi-source seq2seq learning which aims to integrate information from multiple sources to boost learning.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>In this paper <a href="https://arxiv.org/pdf/1808.04961.pdf">A Framework for Automatic Question Generation from Text using Deep Reinforcement Learning</a> they proposed a novel way of solving this problem in which they used a reinforcement learning framework that consists of a generator and an evaluator.</li>
+</ol>
+<p>They refer to the generator as the <span class="math inline">\(agent\)</span> and the <span class="math inline">\(action\)</span> of the agent is to generate the next work in the question. The probability of decoding a word <span class="math inline">\(P_{\theta}(word)\)</span> gives a stochastic policy.</p>
+<p>The evaluator will in turn assign a reward for the output sequence predicted using the current policy of the generator. Based on the reward assigned by the evaluator, the generator updates and improves its current policy. The goal in RL-based question generation is to find a policy that can maximize the sum of the expected return at the end of the sequence generated.</p>
+</div>
+<div id="answer-evaluation" class="section level2">
+<h2><span class="header-section-number">7.2</span> Answer Evaluation</h2>
+<div id="close-ended-questions" class="section level3">
+<h3><span class="header-section-number">7.2.1</span> Close-ended Questions</h3>
+<p><strong>Visual Question Answering (VQA)</strong></p>
+<p>As what we have covered above, most QG problem focuses solely on generating questions but not the answers based on the context.</p>
+<p>VQA is a set of problems that focuses on providing a natural language answer given any image and any free-form natural language question. As we are managing to handle the video educational content that involves images processing, VQA would be a proper and most relevant start. By leveraging this type of algorithms, we enable the machine to have the questions ready for the generated question which could in turn automated the whole question + answering + evaluation cycle.</p>
+<p>Since we are dealing with visual input, question-guided attention mechanism is a key component for solving this type of tasks. Started from the attention mechanism that can adaptively learn the most relevant image regions for a given question. Then to stack multiple question-guided attention mechanisms to learn the attention in an iterative way. Also, it is possible to use bilinear features to integrate the visual features from the image spatial grids with question features to predict attention. Considering the questions in natural language may also contain some noise, the co-attention mechanism can jointly learn the attention for both the image and question.</p>
+<ol style="list-style-type: decimal">
+<li>In this paper <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Yalong_Bai_Deep_Attention_Neural_ECCV_2018_paper.pdf">Deep Attention Neural Tensor Network for Visual Question Answering</a>,</li>
+</ol>
+<div class="figure">
+<img src="img/vqa.png" alt="ma" />
+<p class="caption">ma</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>In this paper <a href="https://arxiv.org/pdf/1804.02088.pdf">Question Type Guided Attention in Visual Question Answering</a>, they proposed a model called Question Type-guided Attention (QTA). This model utilizes the information of question type to dynamically balance visual features from both top-down and bottom-up orders. Meanwhile, it has a novel neural architecture that dynamically gates the conribution of ResNet and Faster R-CNN features based on the question type.</li>
+</ol>
+<div id="dual-question-answering-model" class="section level4">
+<h4><span class="header-section-number">7.2.1.1</span> Dual Question-Answering Model</h4>
+<p>Both Question Generaion(QG) and Question Answering(QA) are well-defined 2 sets of models that aim to either infer a question or an answer given the counterpart based on the context. However, our goal is to have a complete automated system that can take on both roles simultaneously for us.</p>
+<p>There are some algorithms are designed to fulfill both roles.</p>
+<p>1.In this paper <a href="https://arxiv.org/pdf/1809.01997.pdf">Dual Ask-Answer Network for Machine Reading Comprehension</a> they presented a model that can learn question answering and question generation simultaneousely.</p>
+<p>The idea is illustrate as below:</p>
+<div class="figure">
+<img src="img/qgqa.png" alt="qgqa" />
+<p class="caption">qgqa</p>
+</div>
+<div class="figure">
+<img src="img/daan.png" alt="daan" />
+<p class="caption">daan</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>In this paper <a href="https://arxiv.org/pdf/1805.05942.pdf">Harvesting Paragraph-Level Question-Answer Pairs from Wikipedia</a>, they applied their question-answer pair generation system to 10000 top-ranking Wikipedia articles and create over a million question-answer pairs.</li>
+</ol>
+<p>In their task formulation part, they mentioned that they break this task into 2 sub-tasks:</p>
+<ul>
+<li><p>candidate answer extraction</p></li>
+<li><p>answer-specific question generation</p></li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>In this paper <a href="http://cvboy.com/pdf/publications/cvpr2018_iqan.pdf">Visual Question Generation as Dual Task of Visual Question Answering</a>, they proposed an end-to-end unified model, Invertible Question Answering (iQAN) to introduce question generation as a dual task of question answering to imrpove VQA pefromance.</li>
+</ol>
+</div>
+</div>
+<div id="open-ended-question" class="section level3">
+<h3><span class="header-section-number">7.2.2</span> Open-ended Question</h3>
+<div id="general-question" class="section level4">
+<h4><span class="header-section-number">7.2.2.1</span> General Question</h4>
+<p>As I mentioned aboce, one of the most general open-ended questions is to ask learner to provide a short summary of the learning material.</p>
+<p>At the first glance, it appears hard for our system to effectively evaluate the answers. However, this type of task is not that far-fetched by using some specifically designed deep learning frameworks.</p>
+</div>
+<div id="specific-question" class="section level4">
+<h4><span class="header-section-number">7.2.2.2</span> Specific Question</h4>
+<p>As for the automated feedback or learning grading system, there are plenty of suggestions have been proposed as well to tackle such a question. The framework is called automated essay scoring (AES) which focuses on automatically analyzing the quality of writing and assigning a score to the text.</p>
+<p>In terms of knowledge or learning evaluation, the format could be diversed i.e. a lecture given by the student or an short summary essay written by the student. Regardless the form, we can always convert the content into a predictable text, graphic or audible format that model can process.</p>
+<p>As we mentioned above, for these type of task, we can implementing RNN to process the content and even enhance the model performance by adversarially craft input as this paper <a href="http://aclweb.org/anthology/N18-1024">Neural Automated Essay Scoring and Coherence Modeling for Adversarially Crafted Input</a> illustrated. ## Summary of Learning and Feedback Networks</p>
+</div>
+</div>
 </div>
 </div>
             </section>
@@ -198,8 +292,8 @@
           </div>
         </div>
       </div>
-<a href="primary-concerns.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="theories-for-statistical-learning-theory-and-deep-learning.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="implementing-a-teaching-machine.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="knowledge-graph.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -229,7 +323,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/dyadxmachina/can-machines-teach/edit/master/01-intro.Rmd",
+"link": "https://github.com/dyadxmachina/can-machines-teach/edit/master/02-survey.Rmd",
 "text": "Edit"
 },
 "download": ["Teaching Machines - Artificial Intelligence and Education.pdf", "Teaching Machines - Artificial Intelligence and Education.epub"],

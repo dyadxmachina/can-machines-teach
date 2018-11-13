@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="primary-concerns.html">
-<link rel="next" href="theories-for-statistical-learning-theory-and-deep-learning.html">
+<link rel="prev" href="theories-for-statistical-learning-theory-and-deep-learning.html">
+<link rel="next" href="learning-feedback.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -176,21 +176,30 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="towards-an-ecoystem-of-teaching-machines" class="section level1">
-<h1><span class="header-section-number">4</span> Towards an ecoystem of teaching machines</h1>
-<div class="figure">
-<img src="img/MtoQA.png" alt="Image title" />
-<p class="caption">Image title</p>
+<div id="implementing-a-teaching-machine" class="section level1">
+<h1><span class="header-section-number">6</span> Implementing a Teaching Machine</h1>
+<p>How might we approach designing such a system.</p>
+<p><strong>High level video of all the components in the abstract</strong></p>
+<div id="problem-formulation" class="section level2">
+<h2><span class="header-section-number">6.1</span> Problem Formulation</h2>
+<p>Building such a digital knowledge ecosystem like the one we just visioned is not a trivial task. We would need to break this ecosystem into few key sub-elements as below so that we can set out to tackle them one by one.</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>LEARNING + FEEDBACK</strong> – given a learner consumes a piece of educational material, reliably evaluate their knowledge and provide the feedback for improvement to prevent passive consumption. (credibility, rigour)</p></li>
+<li><p><strong>KNOWLEDGE GRAPH</strong> – given a piece of educational content, classify it within a knowledge graph. (relatibility, predictability)</p></li>
+<li><p><strong>KNOLWEDGE JOURNEYS</strong> – given multiple student journeys, create a way to customize their own growth journey while offereing a way for them them to compare, connect with and follow, other’s journey (compare, traverse, curiosity)</p></li>
+<li><p><strong>DIGITAL KNOWLEDGE FOOTPRINT</strong> – given a student journey, collapse it into a representative symbol(s) to help validate the progress (digital education footprint) [dimensionality reducing (i.e. time, )] (relatibility, stable but evolving system )</p></li>
+</ol>
+<p>Much of the element #1 and #2 have been made possible with the recent breakthoughs in deep learning. A few other pieces like the element #3 and #4 may require a more advanced deep learning framework that has not been proposed yet to best resolve. Let’s first take a look at some methods that might come handy when applying to our problems.</p>
 </div>
-<p>So how would a universal teaching machine eclipse these challenges? We will present a solution that meets all three criteria by introudcing a theoretical artificial network architecture to cover the first two.</p>
-<p>neural then cover each concept in detail. Our idea of a digital education footprint, journeys, and a knowledge graph will provide us with what we need to take a first stab at encompassing a learner’s whole education by addressing the three concerns.</p>
-<p>In order to take all of our videos</p>
-<div id="the-components" class="section level2">
-<h2><span class="header-section-number">4.1</span> The components</h2>
-<p>A component of a universal teaching machine should be able to take any of the billions of educational content online (and eventualyl off) and by using machine learning and deep learning techniques complete the following: - assign it to a one or more knowledge subjects (i.e. math, design, computer science) - generate a set of adequate questions and answers that test the learner’s (what is x? a, b, c, or d) knowledge throughout the learning session</p>
-<p>Over time, it is plausible, that our digital education footprint would be the most important representation of an learners level of education. Even more important than our primary education; it has done much to make us predictable, but it has sacrificed the true range of an learner’s gained knowledge and wisdom coming from any other place than the institution is willing to give credit for.</p>
-<p>Since we’ve largely rely upon large institutions to educate groups of learners, many have grown deeply familiar with having a perfectly demarcated path towards a degree, so it has been much harder for learners to use this abundance of knowledge to chart their own educational journey in today’s fast moving world.</p>
-<p>being us how to the peer pressure of cohorts, self-learning learned Imagine that if you signed up for a job, your primary consideration and also your digital education could be conveyed as a path through the web that others attempt to follow or mix and match. Now let us imagine a world where our digital education fingerprint allowed us to</p>
+<div id="why-deep-learning" class="section level2">
+<h2><span class="header-section-number">6.2</span> Why deep learning?</h2>
+<p>If you pay close attention to each of the elements that that we listed above, it is not difficult to identify some shared properties of them that are solvable by machines. Let’s take the first problem as an example, to create a learning and feedback system, we need to first find the relationship between the educational content and the meaningful question &amp; answer pairs that is associated with the content. In other words, our problem could be simplified as trying to find a function that is capable of learning the relationship between our input and output and appropriately map the educational content to the desired question and answer pairs with this function.</p>
+<p>To the best of our knowledge, deep learning is one of the most optimal techniques currently developed to solve such an issue. First of all, deep learning is known as one of the most flexible machine learning algorithms that can learn and map the <strong>deep representation</strong> from the data. Moreover, deep nueral networks architecture can be composed into a single differentiable function and trained end-to-end until it converges. As a result, they can help identify the suitable <em>inductive</em> <em>biases</em> catered to the training data.</p>
+</div>
+<div id="before-we-start" class="section level2">
+<h2><span class="header-section-number">6.3</span> Before we start…</h2>
+<p>As what we discussed above, one of the possible and optimal solutions so far for building our ecosystem is using current state-of-art deep learning algorithms in the related domains. Here I will walk you through some thought provinking research summary in a form of survey.</p>
+<p>To best illustrate the problem and possible solutions, we will for now reduce the complexity of the problem. Keep in mind that our ultimate goal is to be able to apply our system to any type of online available educational content. As what we have mentioned earlier, educational videos seem to be one of the top options for people when it comes to knowledge consumption. Let’s explore some of the solutions that can enable us to apply our system on those video educational content.</p>
 </div>
 </div>
             </section>
@@ -198,8 +207,8 @@
           </div>
         </div>
       </div>
-<a href="primary-concerns.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="theories-for-statistical-learning-theory-and-deep-learning.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="theories-for-statistical-learning-theory-and-deep-learning.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="learning-feedback.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -229,7 +238,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/dyadxmachina/can-machines-teach/edit/master/01-intro.Rmd",
+"link": "https://github.com/dyadxmachina/can-machines-teach/edit/master/02-survey.Rmd",
 "text": "Edit"
 },
 "download": ["Teaching Machines - Artificial Intelligence and Education.pdf", "Teaching Machines - Artificial Intelligence and Education.epub"],
