@@ -1,34 +1,15 @@
----
-title: Future of Digital Education - Machine Learning, Deep Learning, and Education
-author:
-  - name: Fanli (Christian) Zheng
-    affiliation: dyad x machina
-    email: thechristianramsey@gmail.com
-  - name: Haohan Wang
-    affiliation: dyad x machina
-    email: haohan723@gmail.com    
-abstract: |
-  The **digital education footprint** would string together our online education into a concrete representation of an individual's online education and could be extended into more formal settings. It's goal would be to showcase the broad range of an individual's knowledge (making digital music) as well as the places they've went deeper than most (deep learning or philosophy of mathematics). This footprint, would be stable but always evolving as individual's update their knowledge while also being comprable to others.So instead of approaching education as a monolithic phase of our lives, this footprint would promote education as a life-long journey. It would also (combined with traditional education) begin to show us a more accurate depiction of an individual's true knowledge. With every new year, their footprint would evolve just as the very thread of their lives would. Visualised over time, we would be able to see an individual's **knowledge journey**. This could also serve as a way for others who may be on similar **knowledge journey** or those who were looking for a change. You would be able to correlate someone's life work or occupation to their **knowledge journey** and eventually begin to find and cluster similar  journeys that could emerge through unsupervised learning leading to whole new subjects or journeys that others could follow.
-In this essay, I will propose a new way to approach education which will require significant effort to bring to life but I believe the benefits will surely outweigh the costs. I'll talk about how we can use machine learning and deep learning in particular to help create our **digital education footprint**, **learner journeys**, and a collective human knowledge graph. This will allow us to take the space of unstructured educational content and begin to map it unto a knowledge graph and use generative models to make educational content engaging and test a learner's knowledge no matter the subject. I will name a few benefits of such a future.
- 
-bibliography: sigproc.bib
-output: rticles::acm_article
----
-
 # Introduction 
 ![Image title](img/MtoQA.png)
 
 Let's start with a future view of an individual's education. Many of us have used the internet to educate ourselves with the abundance of medium to high quality videos, papers, articles, podcasts and how-tos being uploaded from numerous individuals, groups, and institutions like never before (60 hours of video are uploaded to youtube.com every minute). Let us imagine that all of what you have learned online, throughout the entirety of your life, from the hundreds of Youtube videos, Wikipedia articles, Nature papers, and podcasts you've read, watched, or listened to, were all added structurally to your **education journey** and what if that could be consolidated into what we might call a **digital education footprint**. 
 
-The **digital education footprint** would tie together our **education journey** into a concrete representation of an individual's education. For most of this article we will focus on the digital side but you can easily imagine how this system could take inputs from more formal and/or offline settings. It's goal would be to showcase the broad range of an individual's true knowledge (making digital music) as well as the places they've went deeper than most (deep learning or philosophy of mathematics). 
+ The **knowlege footprint** would string together our online education into a concrete representation of an individual's full knowledge. For the purpose of this article we will talk mostly about digital knowledge acquisition and leave the reader to extend it into more offline or traditional settings. It's goal would be to showcase the broad range of an individual's knowledge (making digital music and mechatronics) as well as the places they've went deeper than most (deep learning or philosophy of mathematics). This footprint, would be stable but always evolving, allowing an individual to update their knowledge while still being comprable to others. So instead of approaching education as a monolithic phase of our lives, this footprint would promote education as a life-long journey. It would also (combined with traditional education) begin to show us a more accurate depiction of an individual's and theorefore society's collective knowledge. With every new year, their footprint would evolve and extend just as the very thread of their lives would.
+ 
+ ![Visualed over time - From arxiv](img/vizzy.png)
+ Visualised over time, we would be able to see an individual's **knowledge journey**. This could also serve as a way for others who may be on similar **knowledge journey** or those who were looking for a change. You would be able to correlate someone's life work or occupation to their **knowledge journey** and eventually begin to find and cluster similar  journeys that could emerge through unsupervised learning leading to whole new subjects or journeys that others could follow.
+ 
+In this essay, I will propose a new way to approach education which will require significant effort to bring to life but I believe the benefits will surely outweigh the costs. I'll talk about how we can use machine learning and deep learning in particular to help create and support our knowledge cosystem which includes a **digital knowledge footprint**, **knowledge journeys**, and a collective human knowledge graph. We will also introduce current trends in deep learning and a novel neural network that would allow us to take the space of unstructured educational content and begin to map it unto the human knowledge graph, use generative models to make educational content engaging, and test a learner\'s knowledge through questions and answers, no what matter the subject. I will name a few benefits of such a future.
 
-This footprint, would be stable and have shared propertie; those who are deep in math should have comprable footprints, but evolution should be a key property of the system. As the individual's update their knowledge, so to will their *digital education footprint*. This is in contrast to our current approach to education as a monolithic phase of our lives, this footprint would promote the pursuit of human knowledge as a life-long journey as it should be. 
-
-![Visualed over time - From arxiv](img/vizzy.png)
-
-Visualised over time, we would be able to see an individual's **education journey**. An individual's **education journey** along with their footprint, would provide a medium for the individual to be directed (mentors/teachers) by mentors or guides who might suggest a change of course with the goal of helping the learner to gain the right knowledge to become a competent individual or better yet to master one's self. An employee could use the **education journey** to find the best candidates for a job that puts the learner knowledge and passions to use. If one is just getting started, then one can view all of the common journey's that others have taken offline and online and correlate someone's life work or occupation to their specific **knowledge journey** to learn what they should do. Because we currently don't know what the world looks like in terms of what individuals know except their formal education, we are probably in for a surprise. We could  stretch and disrupt our current categorical buckets by showing people the common and uncommon journey's and correlate their outcomes. We could then use unsupervised learning to cluster **knowledge journeys** to create new to the world subjects and **knowledge journeys**. We can then use these synthesised journeys to better guide the individual and understand collective human knowledge. 
-
-In this essay, I will propose a new way to approach education which will require significant effort to bring to life but I believe the benefits will surely outweigh the costs. I'll talk about how we can use machine learning and deep learning in particular to help create our **digital education footprint**, **learner journeys**, and a collective human knowledge graph. This will allow us to take the space of unstructured educational content and begin to map it unto a knowledge graph and use generative models to make educational content engaging and test a learner's knowledge no matter the subject. I will name a few benefits of such a future.
 
 - A society where individuals do not simply compete for a degree but where they can feel safe to create their own unique journey through human knowledge and still be recognised and predictable to others
 - A society where an individual's knowledge is derived not from what we know about a degree but by their actual knowledge which is alive and therefore always evolving
@@ -38,28 +19,29 @@ I will also show that this imagined future is not only **desirable** for society
 
 # Concepts 
 
-### Digital Education Footprint
+## Digital Knowledge Footprint
 The concept of a digital education footprint is is a custom symbol and profile that represents one's education relative to that of others. Each symbol should be somewhat unique and the profile could capture the general education as well as the intricacies. 
 
 A symbol which represents somethng as complex as one's education will likely not be enough for employeers and co-workers to understand the . A symbol must show that one is in a particular "class" while also  Symbols generally have to make trade-offs
 
-### Journeys
+## Knowledge Journeys
 ![Image title](img/tsne.png)
 Image src: https://www.researchgate.net/figure/t-SNE-projection-of-the-embedding-of-all-learners-in-the-dataset-Major-labels-are_fig1_323391033
  between the complexity of what it represents and it's ability to convey , the legi from dealing with the task of reduction of info. So we introduce **Journeys** which show how someone has traversed the uy
 If most people had their digital education footprint, they would be 
 
-### Human Knowledge Graph
+## Collective Human Knowledge Graph
 ![Image title](img/knowledge_graphy.png)
 The knowledge graph will be the backbone of a learners journey through human knowledge. As a learner continues to consume educational content, their fingerprint as wethe learner watches new content they extend their knowledge graph either stre current links 
 
 
-We have so far introduced **digital education footprint** and **journeys**, which claim to be the right elements to synthesise one's education while capturing the complexity on one hand and making the individual relatable and predictable on the other hand. But how does one create a path? From video to video? From topic/subject to topic/subject? If so, how might a machine decide on the correct topic(s)? We have had plenty of advances in topic models but perhaps what we actually need to combine topic models with a graph of human knowledge. This graph, like Google or Wolfram's knowledge graph, should be generated both from the current structure of education and also driven by the unsupervised learning of new topics/subjects that do not currently exist within our current structure. 
+We have so far introduced **knowledge footprint** and **knowledge journeys**, which claim to be the right elements to synthesise one's education while capturing the complexity on one hand and making the individual relatable and predictable on the other hand. But how does one create a path? From video to video? From topic/subject to topic/subject? If so, how might a machine decide on the correct topic(s)? We have had plenty of advances in topic models but perhaps what we actually need to combine topic models with a graph of human knowledge. This graph, like Google or Wolfram's knowledge graph, should be generated both from the current structure of education and also driven by the unsupervised learning of new topics/subjects that do not currently exist within our current structure. 
 
 This graph would be useful so content on the web could be easily mapped to the graph adn relate one user to another as well as create trails.
 
-
-## EC2QA Network
+## Deep Learning Applications in Learning and Feedback
+### Summary
+### EC2QA Network - a novel network for educational content to questions and answers
 The last piece we'll introduce here is a novel artificial neural network that would allow us to take any unstructured educat 
 
 # Concerns
@@ -100,9 +82,7 @@ But it does not solve the societal issue. If you are like myself, you have watch
 
 
 
-So Online educational content consumption does not 
-
-## Teaching Machine
+# Towards an ecoystem of teaching machines
 
 ![Image title](img/MtoQA.png)
 
@@ -117,10 +97,6 @@ A component of a universal teaching machine should be able to take any of the bi
 - assign it to a one or more knowledge subjects (i.e. math, design, computer science)
 - generate a set of adequate questions and answers that test the learner's (what is x? a, b, c, or d) knowledge throughout the learning session
 
-
-
-
-## From Data to Wisdom (DIKW)
 
 
  
@@ -138,35 +114,4 @@ Since we've largely rely upon large institutions to educate groups of individual
 Theory of the learnable
 Mutual Information (IT)
 Joint probability
-
-
----
-references:
-- id: meier2012
-  title: Professinal Android 4 Application Development
-  author: 
-  - family: Meier
-    given: Reto
-  type: book
-  publisher: John Wiley & Sons, Inc.
-  issued:
-    year: 2012
-    month: 5
-- id: fenner2012a
-  title: One-click science marketing
-  author:
-  - family: Fenner
-    given: Martin
-  container-title: Nature Materials
-  volume: 11
-  URL: 'https://doi.org/10.1038/nmat3283'
-  DOI: 10.1038/nmat3283
-  issue: 4
-  publisher: Nature Publishing Group
-  page: 261-263
-  type: article-journal
-  issued:
-    year: 2012
-    month: 3
-...
 
