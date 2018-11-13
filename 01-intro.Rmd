@@ -1,21 +1,29 @@
 # Introduction 
 ![Image title](img/MtoQA.png)
 
-Let's start with a future view of an individual's education. Many of us have used the internet to educate ourselves with the abundance of medium to high quality videos, papers, articles, podcasts and how-tos being uploaded from numerous individuals, groups, and institutions like never before (60 hours of video are uploaded to youtube.com every minute). Let us imagine that all of what you have learned online, throughout the entirety of your life, from the hundreds of Youtube videos, Wikipedia articles, Nature papers, and podcasts you've read, watched, or listened to, were all added structurally to your **education journey** and what if that could be consolidated into what we might call a **digital education footprint**. 
+Let's start with a future view of an individual's education. Many of us have used the internet to educate ourselves with the abundance of medium to high quality videos, papers, articles, podcasts and how-tos being uploaded from numerous individuals, groups, and institutions like never before (60 hours of video are uploaded to youtube.com every minute). 
 
- The **knowlege footprint** would string together our online education into a concrete representation of an individual's full knowledge. For the purpose of this article we will talk mostly about digital knowledge acquisition and leave the reader to extend it into more offline or traditional settings. It's goal would be to showcase the broad range of an individual's knowledge (making digital music and mechatronics) as well as the places they've went deeper than most (deep learning or philosophy of mathematics). This footprint, would be stable but always evolving, allowing an individual to update their knowledge while still being comprable to others. So instead of approaching education as a monolithic phase of our lives, this footprint would promote education as a life-long journey. It would also (combined with traditional education) begin to show us a more accurate depiction of an individual's and theorefore society's collective knowledge. With every new year, their footprint would evolve and extend just as the very thread of their lives would.
+Let us imagine that all of what you have learned online, throughout the entirety of your life, from the hundreds of Youtube videos, Wikipedia articles, Nature papers, and podcasts you've read, watched, or listened to, were all added structurally to your very own **knowledge journey**, and what if that journey could be consolidated into what we might call a **knowledge footprint** that could be shared with others? Could this replace static degrees? Or augment them to be more modern?
+
+Our current approach to education is to treat education like a phase as if it only happens in one place. Watching a whole series of Youtube lectures on the Neurobiology of Depression or Discrete Mathematics goes mostly unnoticed when someone views one's resume or their degree.
+
+The ideas behind this knowledge ecosystem, present only one of many possible answers to bringing our education system into modernity. The goal would be to promote the long held idea of the life-long learner. Moving away from getting an education and recognition for a degree, to learning and being continously recognised for seeking to better understand the world for whatever the reason.
+
+The goal of the **knowledge fingerprint** would be to showcase the broad range of a learner's knowledge (from making digital music to linear algebra) as well as the places they've went deeper than most (deep learning or philosophy of mathematics). This footprint, would be stable but always evolving, allowing a learner to update their knowledge while still being comprable to others. So instead of approaching education as a monolithic phase of our lives, this footprint would promote education as a life-long journey. It would also (combined with traditional education) begin to show us a more accurate depiction of a learner's and theorefore society's collective knowledge. With every new year, their footprint would evolve and extend just as the very thread of their lives would.
  
  ![Visualed over time - From arxiv](img/vizzy.png)
- Visualised over time, we would be able to see an individual's **knowledge journey**. This could also serve as a way for others who may be on similar **knowledge journey** or those who were looking for a change. You would be able to correlate someone's life work or occupation to their **knowledge journey** and eventually begin to find and cluster similar  journeys that could emerge through unsupervised learning leading to whole new subjects or journeys that others could follow.
+ Visualised over time, we would be able to see a learner's **knowledge journey**. This could also serve as a way for others who may be on similar **knowledge journey** or those who were looking for a change to find inspiration or be apart of a cohort. You would be able to correlate someone's life work or occupation to their **knowledge journey** and eventually begin to find and cluster similar  journeys that could emerge through unsupervised learning leading to whole new subjects or journeys that others could follow.
  
 In this essay, I will propose a new way to approach education which will require significant effort to bring to life but I believe the benefits will surely outweigh the costs. I'll talk about how we can use machine learning and deep learning in particular to help create and support our knowledge cosystem which includes a **digital knowledge footprint**, **knowledge journeys**, and a collective human knowledge graph. We will also introduce current trends in deep learning and a novel neural network that would allow us to take the space of unstructured educational content and begin to map it unto the human knowledge graph, use generative models to make educational content engaging, and test a learner\'s knowledge through questions and answers, no what matter the subject. I will name a few benefits of such a future.
 
 
-- A society where individuals do not simply compete for a degree but where they can feel safe to create their own unique journey through human knowledge and still be recognised and predictable to others
-- A society where an individual's knowledge is derived not from what we know about a degree but by their actual knowledge which is alive and therefore always evolving
+- A society where learners do not simply compete for a degree but where they can feel safe to create their own unique journey through human knowledge and still be recognised and predictable to others
+- A society where a learner's knowledge is derived not from what we know about a degree but by their actual knowledge which is alive and therefore always evolving
 - A society that better understands itself, through the understanding of the many journey's it's members have taken and the collective knowledge that has gone mostly unaccounted for in today's degree based education.
 
 I will also show that this imagined future is not only **desirable** for society but also that much of it is currently feasible mainly due to the most recent advances in machine learning, and in particular deep learning, which will enable us to begin designing such a future today. 
+
+<small>*For the purpose of this article we will talk mostly about digital knowledge acquisition and leave the reader to extend the basics to knowledge obtained elsewhere.</small>
 
 # Concepts 
 
@@ -35,7 +43,7 @@ If most people had their digital education footprint, they would be
 The knowledge graph will be the backbone of a learners journey through human knowledge. As a learner continues to consume educational content, their fingerprint as wethe learner watches new content they extend their knowledge graph either stre current links 
 
 
-We have so far introduced **knowledge footprint** and **knowledge journeys**, which claim to be the right elements to synthesise one's education while capturing the complexity on one hand and making the individual relatable and predictable on the other hand. But how does one create a path? From video to video? From topic/subject to topic/subject? If so, how might a machine decide on the correct topic(s)? We have had plenty of advances in topic models but perhaps what we actually need to combine topic models with a graph of human knowledge. This graph, like Google or Wolfram's knowledge graph, should be generated both from the current structure of education and also driven by the unsupervised learning of new topics/subjects that do not currently exist within our current structure. 
+We have so far introduced **knowledge footprint** and **knowledge journeys**, which claim to be the right elements to synthesise one's education while capturing the complexity on one hand and making the learner relatable and predictable on the other hand. But how does one create a path? From video to video? From topic/subject to topic/subject? If so, how might a machine decide on the correct topic(s)? We have had plenty of advances in topic models but perhaps what we actually need to combine topic models with a graph of human knowledge. This graph, like Google or Wolfram's knowledge graph, should be generated both from the current structure of education and also driven by the unsupervised learning of new topics/subjects that do not currently exist within our current structure. 
 
 This graph would be useful so content on the web could be easily mapped to the graph adn relate one user to another as well as create trails.
 
@@ -44,7 +52,7 @@ This graph would be useful so content on the web could be easily mapped to the g
 ### EC2QA Network - a novel network for educational content to questions and answers
 The last piece we'll introduce here is a novel artificial neural network that would allow us to take any unstructured educat 
 
-# Concerns
+# Primary Concerns
 
  There are 3 popular concerns that I will attempt to address in this article about online learning in the present and the future. I will attempt to address them here and in the implementation section below.
  
@@ -76,9 +84,9 @@ The knowledge
 
 ## Predictability
 
-Concerns #1 and #2 can be solved and it could serve the individual who is seeking to master the content of a particular or several subjects. An individual could find themselves engaging with the goal of mastering the subjects, knowing that their grasp of the knowledge would be tested. 
+Concerns #1 and #2 can be solved and it could serve the learner who is seeking to master the content of a particular or several subjects. a learner could find themselves engaging with the goal of mastering the subjects, knowing that their grasp of the knowledge would be tested. 
 
-But it does not solve the societal issue. If you are like myself, you have watched more videos and read more articles online than you did when you were in school. Possibly much more. But how does one make sense of such consumption since it is largely unstructured and from various individuals and institutions. Let us take degrees and their success in making an individual's ability predictabe. A degree not only makes an individual predictable, in fact, it makes a whole class of individuals predictable on one crucial dimension. When we know one has a BA in Mathematics we know that they should have some knowledge of mathematics. We can imagine that an individual with such a degree has working knowledge of a familiar set of subjects (even if one doesn't know much about mathematics) and also the type of work they might be able to do. This is because of the traditions of our educational institutions and practices. The predictability is due to our past knowledge of what a particular subject is about and the occupational outcomes of such knowledge. The bad part is that degrees are beginning to tell less and less of the story. So for all of it's ability to reduce the complexity of gained knowledge, it is too limiting to represent a user's true level of knowledge.
+But it does not solve the societal issue. If you are like myself, you have watched more videos and read more articles online than you did when you were in school. Possibly much more. But how does one make sense of such consumption since it is largely unstructured and from various learners and institutions. Let us take degrees and their success in making a learner's ability predictabe. A degree not only makes a learner predictable, in fact, it makes a whole class of learners predictable on one crucial dimension. When we know one has a BA in Mathematics we know that they should have some knowledge of mathematics. We can imagine that a learner with such a degree has working knowledge of a familiar set of subjects (even if one doesn't know much about mathematics) and also the type of work they might be able to do. This is because of the traditions of our educational institutions and practices. The predictability is due to our past knowledge of what a particular subject is about and the occupational outcomes of such knowledge. The bad part is that degrees are beginning to tell less and less of the story. So for all of it's ability to reduce the complexity of gained knowledge, it is too limiting to represent a user's true level of knowledge.
 
 
 
@@ -100,9 +108,9 @@ A component of a universal teaching machine should be able to take any of the bi
 
 
  
-Over time, it is plausible, that our digital education footprint would be the most important representation of an individuals level of education. Even more important than our primary education; it has done much to make us predictable, but it has sacrificed the true range of an individual's gained knowledge and wisdom coming from any other place than the institution is willing to give credit for. 
+Over time, it is plausible, that our digital education footprint would be the most important representation of a learners level of education. Even more important than our primary education; it has done much to make us predictable, but it has sacrificed the true range of a learner's gained knowledge and wisdom coming from any other place than the institution is willing to give credit for. 
 
-Since we've largely rely upon large institutions to educate groups of individuals, many have grown deeply familiar with having a perfectly demarcated path towards a degree, so it has been much harder for individuals to use this abundance of knowledge to chart their own educational journey in today's fast moving world.
+Since we've largely rely upon large institutions to educate groups of learners, many have grown deeply familiar with having a perfectly demarcated path towards a degree, so it has been much harder for learners to use this abundance of knowledge to chart their own educational journey in today's fast moving world.
 
  being   us how to the peer pressure of cohorts, self-learning  learned Imagine that if you signed up for a job, your primary consideration and also your digital education could be conveyed as a path through the web that others attempt to follow or mix and match. Now let us imagine a world where our digital education fingerprint allowed us to
 

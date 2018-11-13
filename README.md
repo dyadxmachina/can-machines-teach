@@ -15,7 +15,7 @@ output: rticles::acm_article
 ---
 
 
-![Image title](img/ChtTypesRadar.png)
+![Image title](img/radar.png)
 
 # Introduction 
 
