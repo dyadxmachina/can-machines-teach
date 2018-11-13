@@ -246,7 +246,9 @@ There are a diverse array of achitectual paradigms that are closely related reco
 
 # DIGITAL KNOWLEDGE FOOTPRINT 
 
+## Summary of Current Research and Needs
 
+# Data and Annotation
 
 **Reference** 
 
@@ -269,6 +271,3 @@ There are a diverse array of achitectual paradigms that are closely related reco
 5. [Deep Learning based Recommender System](https://arxiv.org/pdf/1707.07435.pdf)
 
 
-## Summary of Current Research and Needs
-
-# Data and Annotation
