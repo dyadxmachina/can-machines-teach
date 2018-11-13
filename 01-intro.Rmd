@@ -52,7 +52,7 @@ This graph would be useful so content on the web could be easily mapped to the g
 ### EC2QA Network - a novel network for educational content to questions and answers
 The last piece we'll introduce here is a novel artificial neural network that would allow us to take any unstructured educat 
 
-# Concerns
+# Primary Concerns
 
  There are 3 popular concerns that I will attempt to address in this article about online learning in the present and the future. I will attempt to address them here and in the implementation section below.
  
