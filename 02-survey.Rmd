@@ -26,7 +26,7 @@ In order to create a concrete digital educational user footprint and journey:
 3. **MISSION MAPPING ** -- given multiple student journeys, create a way to customize their own growth journey while offereing a way for them them to compare, connect with and follow, other's journey (compare, traverse, curiosity)
 
 
-4. **COMPETENCE TRACKING** -- given a student journey, collapse it into a representative symbol(s) to help validate the progress (digital education footprint) [dimensionality reducing (i.e. time, )] (relatibility, stable but evolving system )
+4. **SOCIAL BADGE** -- given a student journey, collapse it into a representative symbol(s) to help validate the progress (digital education footprint) [dimensionality reducing (i.e. time, )] (relatibility, stable but evolving system )
 
 In order to create a adequate system that can take on this mission and vision that we shared above, much of it (1, 2) have been made possible with the recent breakthoughs in deep learning. A few cases like (3,4) may require a more advanced deep learning architecture that has been proposed yet to our knowledge. Let's first take a look at some methods that might come handy when tackling our problem.
 
@@ -40,14 +40,14 @@ To the best of our knowledge, deep learning seems to be one of the best techniqu
 
 ## Before we start...
 
-With the belief that we can and we will find a solution for such an ambitious Universal Teaching machine, we are set out to find any possible solutions that we can to help make it happen. Here I will walk you through some thought provinking research findings.
+With the belief that we can and we will find a solution for such a Teaching machine, we are set out to find the possible solutions. As what we discussed above, one of the possible and optimal solutions so far is using current state-of-art deep learning frameworks in related domains for such difficult tasks. Here I will walk you through some thought provinking research findings in a form of survey. 
 
-As I mentioned above, the ultimate goal is to utilize our system to process any form of educational materials and yield expected result. To best help you comprehend the problem that we are trying to solve and the some possible solutions that we found useful, I will just start with one type of educational content - video. 
+ To best illustrate the problem and possible solutions, I will reduce the complexity of the problem for now. Keep in mind that our ultimate goal is to be able to use our system in any type of online available educational material. For now, we will just focus on one of the most popular ones - Video educational content.  
 
 
 # LEARNING + FEEDBACK
 
-First question first, as we described abobe, we are asking ourselves:
+First question first, as we described above, we have to ask ourselves before deisgn such a system:
 
  >"how can we take a piece of educational material (i.e. video/ audio recording or e-book) and properly evaluate their learning and provide some effective feedbacks?". 
  
@@ -58,7 +58,7 @@ First question first, as we described abobe, we are asking ourselves:
 
 In terms of question generation, if the questions generated are close-ended (i.e. multi-choice question), the answers can be defined easily. In turn, the evaluation is relatively easy to accomplish for our system.
 
-To promote the best learning experience and optimal learning outcome, a set of well-diversed questions are the prerequisite. That is to say, it is necessary to also include some open-ended questions i.e. please summarize this video for me in 300 words into our question and answer pool.
+To promote the best learning experience and optimal learning outcome, a set of well-diversed questions have to be used to test our user's knowledge. That is to say, it is necessary to also include open-ended questions i.e. please summarize this video in 300 words into our question and answer pool.
 
 
 ## Question Generation
@@ -83,10 +83,9 @@ The general QG-Net model Architecture is as below:
 
 
 
-2. In this summary [Learning to Ask](http://www.cs.cornell.edu/~xdu/papers/acl17_dsc_poster.pdf), they used a sentence- and paragraph-level seq2seq model to read text from the input content and generate a question about the input sentence. 
+2. In this summary [Learning to Ask](http://www.cs.cornell.edu/~xdu/papers/acl17_dsc_poster.pdf), they used a sentence- and paragraph-level seq2seq model to read text from the input content and to generate a question about the input sentence. 
 
 For the second option, we need to encode both sentence and paragraph that sentence belongs to as input, but only attending source sentence hidden states. The performance could be improved with beam search and UNK replacement. 
-
 
 
 3. In this paper [TOPIC-BASED QUESTION GENERATION](https://openreview.net/pdf?id=rk3pnae0b), they proposed a topic-based question generation algorithm. The algorithm will be able to take in a input sentence, a topic and a question type; then generate a word sequence related to the topic, question type and the input sentence. 
@@ -134,16 +133,33 @@ Answering](https://arxiv.org/pdf/1804.02088.pdf), they proposed a model called Q
 
 Both Question Generaion(QG) and Question Answering(QA) are well-defined 2 sets of models that aim to either infer a question or an answer given the counterpart based on the context. However, our goal is to have a complete automated system that can take on both roles simultaneously for us.  
 
-There are some algorithms are designed to fulfill both roles. In this paper [Dual Ask-Answer Network for Machine Reading Comprehension](https://arxiv.org/pdf/1809.01997.pdf) they presented a model that can learn question answering and question generation simultaneousely. 
+There are some algorithms are designed to fulfill both roles. 
+
+1.In this paper [Dual Ask-Answer Network for Machine Reading Comprehension](https://arxiv.org/pdf/1809.01997.pdf) they presented a model that can learn question answering and question generation simultaneousely. 
 
 The idea is illustrate as below: 
 ![qgqa](img/qgqa.png)
 
 ![daan](img/daan.png)
 
+
+2. In this paper [Harvesting Paragraph-Level Question-Answer Pairs from Wikipedia](https://arxiv.org/pdf/1805.05942.pdf),  they applied their question-answer pair generation system to 10000 top-ranking Wikipedia articles and create over a million question-answer pairs. 
+
+In their task formulation part, they mentioned that they break this task into 2 sub-tasks: 
+
+
+* candidate answer extraction 
+
+* answer-specific question generation 
+
+
+
+
+3. In this paper [Visual Question Generation as Dual Task of Visual Question Answering](http://cvboy.com/pdf/publications/cvpr2018_iqan.pdf), they proposed an end-to-end unified model, Invertible Question Answering (iQAN) to introduce question generation as a dual task of question answering to imrpove VQA pefromance. 
+
 ### Open-ended Question
 #### General Question
-i.e. Give a summary of this video 
+As I mentioned aboce, one of the most general open-ended questions is to ask user to provide a short summary of the learning material. 
 
 At the first glance, it appears hard for our system to effectively evaluate the answers. However, this type of task is not that far-fetched by using some specifically designed deep learning frameworks.
 
