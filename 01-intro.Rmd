@@ -3,27 +3,64 @@
 
 Let's start with a future view of an individual's education. Many of us have used the internet to educate ourselves with the abundance of medium to high quality videos, papers, articles, podcasts and how-tos being uploaded from numerous individuals, groups, and institutions like never before (60 hours of video are uploaded to youtube.com every minute). 
 
-Let us imagine that all of what you have learned online, throughout the entirety of your life, from the hundreds of Youtube videos, Wikipedia articles, Nature papers, and podcasts you've read, watched, or listened to, were all added structurally to your very own **knowledge journey**, and what if that journey could be consolidated into what we might call a **knowledge footprint** that could be shared with others? Could this replace static degrees? Or augment them to be more inclusive of a learners true knowledge?
+Let us imagine that all of what you have learned online, throughout the entirety of your life, from the hundreds of Youtube videos, Wikipedia articles, Nature papers, and podcasts you've read, watched, or listened to, were all added structurally to your **knowledge journey**, and what if that journey could be consolidated into what we might call a **knowledge footprint** that could be shared with others? Could this replace static degrees? Or augment them to be more inclusive of a learner's true knowledge?
 
-Our current approach to education is to treat education like a phase as if it only happens in one place. Watching a whole series of Youtube lectures on the Neurobiology of Depression or Discrete Mathematics goes mostly unnoticed when someone views one's resume or their degree.
+Our current approach to education is to treat knowledge acquisition like a chapter in the individual's life that mostly happen in a few places. This is misleading since we accrue knowledge from everywhere and most recently the internet has become a primary source of acquisition but has gone mostly unaccounted for. Watching a whole series of Youtube lectures on the Neurobiology of Depression or Discrete Mathematics goes mostly unnoticed when someone views one's resume or by simply looking at their degree.
 
-The ideas behind this knowledge ecosystem, present only one of many possible answers to bringing our education system into modernity. The goal would be to promote the long held idea of the life-long learner. Moving away from getting an education and recognition for a degree, to learning and being continously recognised for seeking to better understand the world for whatever the reason.
-
-The goal of the **knowledge fingerprint** would be to showcase the broad range of a learner's knowledge (from making digital music to linear algebra) as well as the places they've went deeper than most (deep learning or philosophy of mathematics). This footprint, would be stable but always evolving, allowing a learner to update their knowledge while still being comprable to others. So instead of approaching education as a monolithic phase of our lives, this footprint would promote education as a life-long journey. It would also (combined with traditional education) begin to show us a more accurate depiction of a learner's and theorefore society's collective knowledge. With every new year, their footprint would evolve and extend just as the very thread of their lives would.
+The ideas behind this *knowledge ecosystem*, presents only one of many possible answers to bringing our education system into modernity. The goal of it would be to promote the long held idea of the life-long learner. Moving away from the education chapter of an individual's life to the individual as an evolving learner, learning the necessary skills for what life presents them with today. It would also (combined with traditional education) begin to show us a more accurate depiction of a learner's knowledge and theorefore that of their society's collective knowledge. 
  
  ![Visualed over time - From arxiv](img/vizzy.png)
- Visualised over time, we would be able to see a learner's **knowledge journey**. This could also serve as a way for others who may be on similar **knowledge journey** or those who were looking for a change to find inspiration or be apart of a cohort. You would be able to correlate someone's life work or occupation to their **knowledge journey** and eventually begin to find and cluster similar  journeys that could emerge through unsupervised learning leading to whole new subjects or journeys that others could follow.
+ Visualised over time, we would see a learner's so called **knowledge journey**. This could also serve as a way for others who may be on similar **knowledge journey** or those who were looking for a change to find inspiration or be apart of a cohort. You would be able to correlate someone's life work or occupation to their **knowledge journey** and eventually begin to find and cluster similar  journeys that could emerge through unsupervised learning leading to whole new subjects or journeys that others could follow.
  
-In this essay, I will propose a new way to approach education which will require significant effort to bring to life but I believe the benefits will surely outweigh the costs. I'll talk about how we can use machine learning and deep learning in particular to help create and support our knowledge cosystem which includes a **digital knowledge footprint**, **knowledge journeys**, and a collective human knowledge graph. We will also introduce current trends in deep learning and a novel neural network that would allow us to take the space of unstructured educational content and begin to map it unto the human knowledge graph, use generative models to make educational content engaging, and test a learner\'s knowledge through questions and answers, no what matter the subject. I will name a few benefits of such a future.
+In this essay, I will propose a knowledge ecosystem, a new way of approaching education that tries to take in a more accurate depiction of a learner's true knowledge. It will require significant effort to bring to life but I believe the benefits will outweigh the costs. I will talk about how we can use machine learning, deep learning in particular, to help create and support our knowledge cosystem which is made up of a **digital knowledge footprint**, **knowledge journeys**, and a collective *human knowledge graph*. We will also introduce current advances in deep learning and a novel neural network that would allow us to take the space of unstructured educational content and begin to map it unto the human knowledge graph, and how we can use generative models to test a learner\'s knowledge of recently viewed educationcal content through questions and answers, no what matter the subject. I will name a few benefits of such a future.
 
 
-- A society where learners do not simply compete for a degree but where they can feel safe to create their own unique journey through human knowledge and still be recognised and predictable to others
+- A society where learners do not simply compete for a degree but where they can feel safe to create their own unique journey through human knowledge whilst being recognised and predictable to others
 - A society where a learner's knowledge is derived not from what we know about a degree but by their actual knowledge which is alive and therefore always evolving
-- A society that better understands itself, through the understanding of the many journey's it's members have taken and the collective knowledge that has gone mostly unaccounted for in today's degree based education.
+- A society that better understands itself, through the understanding of the many journey's it's members have taken
 
-I will also show that this imagined future is not only **desirable** for society but also that much of it is currently feasible mainly due to the most recent advances in machine learning, and in particular deep learning, which will enable us to begin designing such a future today. 
+I will also show that this imagined future is not only **desirable** for society but a required future for an individual to match the pace at which we are advancing. Let us not forget, that even software engineering is being recreated with machine learning as a key pillar which has happened seemingly overnight.
+It is tantamount that we have adaptative systems that can represent our knowledge and make us predictable even as we hasten the pace at which the indiivdual learns, the future pushes us to know more than we've ever known and to be able to learn quicker than we once did
 
-<small>*For the purpose of this article we will talk mostly about digital knowledge acquisition and leave the reader to extend the basics to knowledge obtained elsewhere.</small>
+This hypothetical future isn't just conceptual, most of what I will present t you today is currently feasible due to the most recent advances in machine learning, and in particular deep learning, which will enable us to begin designing such a future today. 
+
+I will end this essay with a call to action.
+
+<small>*For the purpose of this essay we will talk mostly about digital knowledge acquisition and leave the reader to extend the basics to knowledge obtained elsewhere.</small>
+
+
+# Primary Concerns
+
+ There are 3 popular concerns that I will attempt to address in this article about online learning in the present and near future. I will attempt to address them here and in the implementation section.
+ 
+ The first concern we have is 
+ - **Passive Consumption** - most of online content is viewed passively by the learner and the result of passive consumption is that learner's do not grasp the concepts or master the content being taught.
+ - **Untested Knowledge** - even if the learner was engaged while viewing a piece of educational content their knowledge is untested and therefore it isn't clear if they've mastered the content accurately and in some sense holistically. 
+ - **Knowledge Representation** - even if the learner was engaged and their knowledge was tested, simply knowing the counts or types of video they watched doesn't make their knowledge predictable and useful to others. In fact, most people are unaware of all the content they've consumed over the years and cannot synthesise it as well as they possible could.
+ 
+## Knowledge Ecosystem Example
+
+![Knowledge Ecosystem](img/knowledgeEcosystem.png)
+
+Let us put forward an example the matches each of these concerns. But in order to do so we need to lay out the our eco
+In order to address the concerns above we have put together the basic components of this knowledge system. We have also mentioned that we will focus on the *digital* aspects as we believe it presents the biggest leap forward for knowledge representation. 
+
+An ecosystem
+
+## Passive Consumption and Untested Knowledge
+
+> How would such an ecosystem insure us against passive consumption?
+
+As you can see, I've bundled passive consumption and untested knowledge because our proposed system approaches both of these by always testing knowledge.
+
+Given a piece of educational content, our knowledge system will generate a set of questions and answers that theoretically capture the major concepts and facts that the learner should know after viewing a part or the content in whole. 
+
+You can imagine watching a Youtube video and after a learner views 15 minutes of an hour long lecture on computational complexity a quiz is presented (a set of questions and answers conditioned on the past 15 minutes of video,) and the results are recorded.  In the future we would also be able to use the knowledge graph 
+
+The knowledge system would only consider content that has been watched with some engagement or if they can test out of the content. 
+
+
+## The Problem of Knowledge Representation
 
 # Concepts 
 
@@ -51,43 +88,6 @@ This graph would be useful so content on the web could be easily mapped to the g
 ### Summary
 ### EC2QA Network - a novel network for educational content to questions and answers
 The last piece we'll introduce here is a novel artificial neural network that would allow us to take any unstructured educat 
-
-# Primary Concerns
-
- There are 3 popular concerns that I will attempt to address in this article about online learning in the present and the future. I will attempt to address them here and in the implementation section below.
- 
-- The first concern is that the learning is often passive
-- The second concern is that the information remains untested and therefore doesn't truly make the leap from information to true knowledge.
-- The third concern is that even if the two concerns above were met definitively, it would not be possible to .
-
-## Passive Consumption
-
-It has been argued and shown in some studies[insert studies], that many people who consume videos or other forms of educational content online, especially when outside the context of school, are often consuming the content passively. This leads to what a colleague called "swiss-cheese learning", where one learns a bit here and there, lacking any real rigour or depth providing very little probability of capturing the major concepts or mastering the content in any adequate sense.
-
-This is a concern that is widely observed. Passive watching is not equivelent to learning. There are many variables that are related to this including those that are cultural and biological. 
-
-Here I'll focus on two points. I argue that educational content online expects the content to help a learner reach a particular goal. There is nothing in the content itself, or the platforms, that reach out to reinforce or to verify the knowledge one has gained. 
-
-I will argue that some key elements of these features  that these issues are 
-Engagement can be increased if x, goal directed behaviour can be enhance by small learning goals.
-
-- Engagement
-- Goal-Directed
-
-> People watch videos casually and on the fly—and they rarely turn their phones sideways to do it. - Facebook Ads
-
-## Untested Knowledge
-
-It has been argued that it is hard to verify what someone has learned while consuming educational content online. This is generally true outside of those content producers who combine content and testing (i.e. Khan Academy, Udacity, Coursera) but they are generally limited compared to the vast amount of videos that are available that lack this testing.
-
-The knowledge 
-
-## Predictability
-
-Concerns #1 and #2 can be solved and it could serve the learner who is seeking to master the content of a particular or several subjects. a learner could find themselves engaging with the goal of mastering the subjects, knowing that their grasp of the knowledge would be tested. 
-
-But it does not solve the societal issue. If you are like myself, you have watched more videos and read more articles online than you did when you were in school. Possibly much more. But how does one make sense of such consumption since it is largely unstructured and from various learners and institutions. Let us take degrees and their success in making a learner's ability predictabe. A degree not only makes a learner predictable, in fact, it makes a whole class of learners predictable on one crucial dimension. When we know one has a BA in Mathematics we know that they should have some knowledge of mathematics. We can imagine that a learner with such a degree has working knowledge of a familiar set of subjects (even if one doesn't know much about mathematics) and also the type of work they might be able to do. This is because of the traditions of our educational institutions and practices. The predictability is due to our past knowledge of what a particular subject is about and the occupational outcomes of such knowledge. The bad part is that degrees are beginning to tell less and less of the story. So for all of it's ability to reduce the complexity of gained knowledge, it is too limiting to represent a user's true level of knowledge.
-
 
 
 # Towards an ecoystem of teaching machines
