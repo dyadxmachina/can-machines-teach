@@ -1,4 +1,4 @@
-book_filename: "Teaching Machines - Artificial Intelligence and Education"
+book_filename: "A Knowledge Ecosystem - Deep Learning and Education"
 delete_merged_file: true
 site: "bookdown::bookdown_site"
 output_dir: docs
