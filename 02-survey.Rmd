@@ -7,35 +7,31 @@ output: html_document
 
 # Implementing the Knowledge Ecosystem
 
-Here I’ll walk you through the possible implementations of the proposed knowledge ecosystem. I will walk you through the current research in machine learning that is relevant to each component of the knowledge ecosystem and also propose a new artificial neural network architecture called EC2VQA and one possible instansitation of that. This is not the blueprint, each of these components can be developed independently and differ from what you find here. This is a provocation for getting started on the knowledge ecosystem today.
+In this section, we are set to solve the following question: 
 
-How might we approach designing such a system.
+> How might we approach designing such a system.
 
-**High level video of all the components in the abstract**
+
+I will walk you through some possible implementations of the proposed knowledge ecosystem. I will be presenting the current research in machine learning that is relevant to each component of the knowledge ecosystem and also discuss this new artificial neural network architecture EC2VQA and one possible instansitation of that. 
+
+Note that this is not the blueprint, each of these components can be developed independently and vary from what you find here. This is a provocation for getting started on the knowledge ecosystem today.
+
 
 ## Problem Formulation
 
 
 Building such a digital knowledge ecosystem like the one we just visioned is not a trivial task. We would need to break this ecosystem into few key sub-elements as below so that we can set out to tackle them one by one.
 
-1. **LEARNING + FEEDBACK** -- given a learner consumes a piece of educational material, reliably evaluate their knowledge and provide the feedback for improvement to prevent passive consumption. (credibility, rigour) 
+1. **LEARNING + FEEDBACK** -- given a learner consumes a piece of educational content, reliably evaluate their knowledge and provide the feedback for improvement to support their learning. (credibility, rigour) 
 
-2. **KNOWLEDGE GRAPH** -- given a piece of educational content, classify it within a knowledge graph. (relatibility, predictability)
+2. **KNOWLEDGE GRAPH** --  general knowledge blueprint as a map to piece together all the content that is currently available. (relatibility, predictability)
 
+3. **KNOLWEDGE JOURNEYS** -- given a piece of educational content, classify it within a knowledge graph; given multiple learner journeys, create a way to customize their own growth journey while offereing a way for them them to compare, connect with and follow, other's journey (compare, traverse, curiosity)
 
-3. **KNOLWEDGE JOURNEYS** -- given multiple student journeys, create a way to customize their own growth journey while offereing a way for them them to compare, connect with and follow, other's journey (compare, traverse, curiosity)
+4. **KNOWLEDGE FOOTPRINT** -- given a learner's journey, collapse it into a representative symbol(s) (digital education footprint) (relatibility, stable but evolving system )
 
+Much of the element #1 and #2 have been made possible with the recent breakthoughs in machine learning especially in the filed of deep learning. A few other pieces like the element #3 and #4 may require a more advanced framework that has not been proposed yet to best resolve. Let's first take a look at some methods that might come handy when applying to our problems.
 
-4. **DIGITAL KNOWLEDGE FOOTPRINT** -- given a student journey, collapse it into a representative symbol(s) to help validate the progress (digital education footprint) [dimensionality reducing (i.e. time, )] (relatibility, stable but evolving system )
-
-Much of the element #1 and #2 have been made possible with the recent breakthoughs in deep learning. A few other pieces like the element #3 and #4 may require a more advanced deep learning framework that has not been proposed yet to best resolve. Let's first take a look at some methods that might come handy when applying to our problems.
-
-
-## Why deep learning? 
-
-If you pay close attention to each of the elements that that we listed above, it is not difficult to identify some shared properties of them that are solvable by machines. Let's take the first problem as an example, to create a learning and feedback system, we need to first find the relationship between the educational content and the meaningful question & answer pairs that is associated with the content. In other words, our problem could be simplified as trying to find a function that is capable of learning the relationship between our input and output and appropriately map the educational content to the desired question and answer pairs with this function. 
-
-To the best of our knowledge, deep learning is one of the most optimal techniques currently developed to solve such an issue. First of all, deep learning is known as one of the most flexible machine learning algorithms that can learn and map the **deep representation** from the data. Moreover, deep nueral networks architecture can be composed into a single differentiable function and trained end-to-end until it converges. As a result, they can help identify the suitable *inductive* *biases* catered to the training data. 
 
 ## Before we start...
 
@@ -48,33 +44,78 @@ As what we discussed above, one of the possible and optimal solutions so far for
 
 A salient question that we have to ask ourselves before deisgning such a system is that:
 
- >"how can we take a piece of educational content and properly test a learners' knowledge and provide insightful feedbacksto support their learning?". 
+ >"how can we take a piece of educational content and properly test a learners' knowledge and provide insightful feedbacks to support their learning?". 
  
- In previous years, deep learning research has taken up a similar problem titled question answer
+ In previous years, deep learning research has taken up a similar problem titled Question Generation (QG) and Question Answering (QA). 
  
- >Question answering (QA) is a well-researched problem in NLP. In spite of being one of the oldest
-research areas, QA has application in a wide variety of tasks, such as information retrieval and entity extraction. Recently, QA has also been used to develop dialog systems [1] and chatbots [2] designed to simulate human conversation. Traditionally, most of the research in this domain used a pipeline of conventional linguistically-based NLP techniques, such as parsing, part-of-speech tagging and coreference resolution. Many of the state-of-the-art QA systems – for example, IBM Watson [3] –use these methods.
-
-src: https://cs224d.stanford.edu/reports/StrohMathur.pdf
-
-But this usually only fits the answeringissue given a question . What we want to do is take a piece of content and generate a set of questions-answer pairs.
-
+Question Generation (QG) is part of NLP. The goal of QG is to generate questions according to some given information. It could be used in many different scenarios i.e. generating questions for reading comprehension, generating data from large scale question-answering pairs or even generating questions from images. Earlier approaches to QG mainly used human-crafted rules and patterns to transform a descriptive sentence to a related question. Recent neural network-based approaches represent the state-of-art of most of those tasks and this approach has been successfully applied to many other NLP tasks i.e. neural machine translation, summarization, etc. As the training optimization studies progress, the stability and performance improvements are gauranteed. 
  
+ 
+As for Question Answering (QA) task, it is a well-researched problem in NLP as well. Recently, QA has also been used to develop dialog systems and chatbots designed to simulate human conversation. Traditionally, most of the research used a pipeline of conventional linguistically-based NLP techniques i.e. parsing, part-of-speech tagging and coreference resolution. However, with recent developments in deep learning, neural network models have shown promise for QA. Further improvement i.e.attention mechanism and memory networks allow the network to focus on the most revevant facts such that they achieved state-of-art performance for QA.
+
+Now we have some basic understanding of these 2 problems that we will be investigaing more in depth later. Consider the next question: 
+
+
 >"what types of questions & answers would be best to test a learner's knowledge given a piece of educational content (i.e. a lecture video)"
 
-Let's say a learner is watching an deducation, then we could n, asking specific questions, or we could allow them to talk abck to us and evaluate their answers. We will approach of these here from the current research and new research needed 
-
-So the formulation for both of these is to 
-1. Generate general question + Answers pairs
-2. Generate specific question + Answers pairs
-- Multiple choice
-2. Evaluate and comment on open-ended answers 
-
-Here, we carefully split the questions into 2 distinct categories. One is regular close-ended question (i.e. multiple choise question) and the other one is open-ended question (i.e. tell me about your thoughts on this idea discussed in the video).
-
-In terms of the close-ended, the answers can be defined and evaluated easily. However, the process might be a little bit tricky when it comes to the open-ended questions.
+Let's say a learner is watching a video about hypothesis testing, after showing an example and given the data needed to test the hypothesis. Then the system will pause the video and ask: 
 
 
+1. What is the p-value for this test? (and provide multiple choices for learner to choose from)
+
+
+2. Is this a 1-sided test? (answers provided would be: YES or NO)
+
+
+3. How would you intepret the p-value in the context of this example.
+
+
+4. Based on your calculation, summarize the conclusion of this hypothesis testing for me.
+
+
+
+It is also ideal to ask learner the question as follows after showing the solution and explanation:
+
+
+5. Tell me what you have learned through this example. 
+
+
+As shown above, we would call questions #1 and #2 close-ended questions; question #3 and #4 specific open-ended questions; and question #5 a general open-ended question.
+
+So the formulation for both of these is to:
+
+1. Generate close-ended question + Answers pairs
+
+
+2. Generate specific open-ended question + Answers pairs
+
+
+3. Evaluate and comment on the general open-ended answers 
+
+
+In terms of the close-ended, the answers can be well defined and evaluated. However, the process might be a little bit tricky when it comes to the open-ended questions. We will approach each of them here from the current research.  
+
+
+## Why deep learning? 
+
+As we stated above, deep learning has achieved state-of-art performance in both QG and QA tasks. Now let's take a close look at why. 
+
+If you pay close attention to the question generation and answer generation set of problems, we can easily frame this problem into a general machine learning problem in which we need to find the relationship between the educational content and the meaningful question & answer pairs that is associated with the content. In other words, our problem could be simplified as learning a function that is capable of capture the relationship between our input and output, that is to say, appropriately map the educational content to the desired question and answer pairs with this function. 
+
+To the best of our knowledge, deep learning is one of the most optimal techniques currently developed to solve such an issue. 
+
+As we all know that machine learninag is a set of algorithms that can be used  to parse data, learn from the data, and then apply what they have learned to make intelligent decisions. Or more specifically,  
+
+Deep learning is a subset of machine learning and it belongs to a family of representation learning. Inside this family, deep learning is good at sampling the features and have additonal layers for more abstract feature learning which will support the final goal of mapping the feature to the output. 
+
+Because of the above advantages, deep learning is known as one of the most flexible machine learning algorithms that can learn and map the **deep representation** from the data. Also, deep nueral networks architecture can be composed into a single differentiable function and trained end-to-end until it converges. As a result, they can help identify the suitable *inductive* *biases* catered to the training data. 
+
+
+Moreover, deep learning outperforms other techniques when the training data size is large which fits our siutation well. We have a large amound of educational content that is currently available on the web.
+
+The large amount content creates another problem that can be avoided with deep learning as well, which is it's going to very troublesome to do feature engineering manually. When there is lack of domain understanding for feature introspection, deep learning is preferable. 
+
+In the end, deep learning really shines when it comes to many complex reserach problems such as NLP, Visual Recognition and Speech recognition. For solving our task, all those domians will possibly be invloved. 
 
 ## Question Generation
 
@@ -131,6 +172,8 @@ The evaluator will in turn assign a reward for the output sequence predicted usi
 
 In this QG section, we have discussed 4 algorithms. They provide us a way to frame our problem for which we can apply generative seq2seq model framework. As for our objective function, we are formuating a conditional probability distribution that is conditioned on the provided content  (i.e. the video) and answers. Typically, we can use a bi-directional LSTM as the encoder to encode the content and use a LSTM as the decoder to generate the question. 
 
+However, as you probabily have noticed that the above examples are focus mainly on processing the text input data instead of videos directly. It demonstrates that more reserch in this new area is needed so as to meet our particular needs. 
+
 ## Answer Evaluation 
 ### Close-ended Questions
 
@@ -168,6 +211,8 @@ Specifically, they introduced a novel VQA architecture that can dynamically gate
 **Summary**
 By going through the previous examples, we can see that VQA is very particular type of algorithms that is designed to efficiently process image and text input data while making the inference based on the input. Attention is a typical mechanism applied in this type of problems. 
 
+
+As you problem 
 
 #### Dual Question-Answering Model
 
@@ -210,14 +255,14 @@ As what have discussed above, we can see that there have been many attemps taken
 ### Open-ended Question
 Summary of 
 #### General Question
-As I mentioned aboce, one of the most general open-ended questions is to ask learner to provide a short summary of the learning material. 
+As I mentioned aboce, one of the most general open-ended questions is to ask learner to provide a short summary of the learning content. 
 
 At the first glance, it appears hard for our system to effectively evaluate the answers. However, this type of task is not that far-fetched by using some specifically designed deep learning frameworks.
 
 #### Specific Question
 As for the automated feedback or learning grading system, there are plenty of suggestions have been proposed as well to tackle such a question. The framework is called automated essay scoring (AES) which focuses on automatically analyzing the quality of writing and assigning a score to the text. 
 
-In terms of knowledge or learning evaluation, the format could be diversed i.e. a lecture given by the student or an short summary essay written by the student. Regardless the form, we can always convert the content into a predictable text, graphic or audible format that model can process. 
+In terms of knowledge or learning evaluation, the format could be diversed i.e. a lecture given by the learner or an short summary essay written by the learner. Regardless the form, we can always convert the content into a predictable text, graphic or audible format that model can process. 
 
 As we mentioned above, for these type of task, we can implementing RNN to process the content and even enhance the model performance by adversarially craft input as this paper [Neural Automated Essay Scoring and Coherence Modeling for
 Adversarially Crafted Input](http://aclweb.org/anthology/N18-1024) illustrated.
@@ -298,7 +343,7 @@ There are a diverse array of achitectual paradigms that are closely related reco
 
 
 # DIGITAL KNOWLEDGE FOOTPRINT 
-
+[dimensionality reducing (i.e. time, )] 
 
 
 ## Summary of Current Research and Needs
