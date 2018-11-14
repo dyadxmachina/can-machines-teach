@@ -22,13 +22,13 @@ Note that this is not the blueprint, each of these components can be developed i
 
 Building such a digital knowledge ecosystem like the one we just visioned is not a trivial task. We would need to break this ecosystem into few key building blocks as below so that we can set out to tackle them one by one.
 
-1. **LEARNING + FEEDBACK** -- given a learner consumes a piece of educational content, reliably evaluate their knowledge and provide the feedback for improvement to support their learning. (credibility, rigour) 
+1. **Learning + Feedback** -- given a learner consumes a piece of educational content, reliably evaluate their knowledge and provide the feedback for improvement to support their learning. (credibility, rigour) 
 
-2. **KNOWLEDGE GRAPH** --  general knowledge blueprint as a map to piece together all the content that is currently available. (relatibility, predictability)
+2. **Knowledge Graph** --  general knowledge blueprint as a map to piece together all the content that is currently available. (relatibility, predictability)
 
-3. **KNOWLEDGE JOURNEYS** -- given a piece of educational content, classify it within a knowledge graph; given multiple learner journeys, create a way to customize their own growth journey while offereing a way for them them to compare, connect with and follow, other's journey (compare, traverse, curiosity)
+3. **Knowledge Journeys** -- given a piece of educational content, classify it within a knowledge graph; given multiple learner journeys, create a way to customize their own growth journey while offereing a way for them them to compare, connect with and follow, other's journey (compare, traverse, curiosity)
 
-4. **KNOWLEDGE FOOTPRINT** -- given a learner's journey, collapse it into a representative symbol(s) (digital education footprint) (relatibility, stable but evolving system )
+4. **Knowledge Footprint** -- given a learner's journey, collapse it into a representative symbol(s) (digital education footprint) (relatibility, stable but evolving system )
 
 Much of the element #1 and #2 have been made possible with the recent breakthoughs in machine learning especially in the filed of deep learning. A few other pieces like the element #3 and #4 may require a more advanced framework that has not been proposed yet to best resolve. Let's first take a look at some methods that might come handy when applying to our problems.
 
@@ -40,7 +40,7 @@ As what we discussed above, one of the possible and optimal solutions so far for
  To best illustrate the problem and possible solutions, we will for now reduce the complexity of the problem. Keep in mind that our ultimate goal is to be able to apply our system to any type of online available educational content. As what we have mentioned earlier, educational videos seem to be one of the top options for people when it comes to knowledge acquisition. Let's explore some of the solutions that can enable us to apply our system on those video educational content.  
 
 
-## LEARNING + FEEDBACK
+## Learning + Feedback
 
 ### Question Formulation
 
@@ -283,11 +283,11 @@ They also leverage a policy-gradient reinforcement learning algorithm to overcom
 As for the training process, they first pretrain the model with cross-entropy loss and then they fine tune the model parameters with policy-gradient reinforcement learning to alleviate the exposure bias problem.  During the policy-gradient reinforcement learning algorithm, they end up adopting a similar sampling strategy as the scheduled sampling strategy for generating the sampled output. 
 
 
-##### Summary
+##### Summary [DRAFT]
 As what have discussed above, we can see that there have been many attemps taken in the recent years for handling both tasks at the same time and some significant progress have been made. 
 
 
-#### Open-ended Question
+#### Open-ended Question [DRAFT]
  
 ##### General Question
 As I mentioned aboce, one of the most general open-ended questions is to ask learner to provide a short summary of the learning content. 
@@ -305,15 +305,16 @@ As we mentioned above, for these type of task, we can implementing RNN to proces
 Adversarially Crafted Input](http://aclweb.org/anthology/N18-1024) illustrated.
 
 
-### Summary of Learning and Feedback Networks
+### Summary of Learning and Feedback Networks [DRAFT]
 
-#### summary current research
+#### Summary current research
 
 
-#### areas where new stuff needs to be made research [current reserach is promising but we need more reserach and innovation in this area]
+#### Areas where new stuff needs to be made research [current reserach is promising but we need more reserach and innovation in this area]
 #### datasets and annotaters needed 
 
-# KNOWLEDGE GRAPH
+## Knowledge Graph [DRAFT]
+
 Next, we need to consider how we can select an adequate and relevant learning masterial and generate an effecive learning map for the learners based on their current progress and the general knowledge graph/map, given the ever growing amount of educational content on the web. 
 
 As I mentioned earlier, learning is a knowledge accumulation process. Knowledge itself has its unique structure that can help us learn in a most effective and productive way. Knowledge Graph is a great tool that we developed to map and present the structure of knolwedge. In shirt, knowledge graphs are collections of relational facts, where each fact states that a certrain relation holds between 2 entities.
@@ -327,7 +328,7 @@ As I mentioned earlier, learning is a knowledge accumulation process. Knowledge 
 3. In this paper [Zero-Shot Question Generation from Knowledge Graphs for Unseen Predicates and Entity Types](http://aclweb.org/anthology/N18-1020), they presented a network that can generate question from knowledge b
 
 
-### Summary of Knowledge Graph
+### Summary of Knowledge Graph [DRAFT]
 
 
 #### summary current research
@@ -336,7 +337,7 @@ As I mentioned earlier, learning is a knowledge accumulation process. Knowledge 
 
 
 
-## KNOWLEDGE JOURNEYS
+## Knowledge Journeys [DRAFT]
 
 The knowledge graph is our ground truth and can be applied universally to some extent, but everyone's learning journey is still highly custom. In terms of learning, everyone seems to have their unique set of problems that they are curious about and everyone is on their own mission towards the mastery. As a result, their knowlege journeys could have a lot more degree of freedom depends on the learn's learning history, interests and who they are related to. 
 
@@ -393,38 +394,17 @@ There are a diverse array of achitectual paradigms that are closely related reco
 
 
 
-### Summary of Current Research and Needs
+### Summary of Current Research and Needs [DRAFT]
 
 
 
 
-## Data and Annotation
+## Data and Annotation [DRAFT]
 
 
-1. Some datasets used for QG prpblem:
-
-
-* SQuAD 
-
-
-* RACE
-
-
-
-
-2. Typical datasets used for VQA research: 
-
-
- * VQA dataset that consists of 2 subsets: real images and abstract scenes.
- 
- 
- * Compositional Language and Elementary Visual Reasoning (CLEVR) diagnostic dataset that focuses on reasoning.
- 
- 
- * Task Driven Image Understanding Challenge dataset (TDIUC); it contains images and annotations from MSCOCO and Visual genome. 
  
 
-### Reference
+### Reference [DRAFT]
 
 
 1. [A Framework for Automatic Question Generation from Text using Deep Reinforcement Learning](https://arxiv.org/pdf/1808.04961.pdf)
