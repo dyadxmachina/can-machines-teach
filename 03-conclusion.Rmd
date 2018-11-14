@@ -1,16 +1,17 @@
 # Conclusion
 
-In conclusion, 
+In conclusion, we presented a new perspective on knowledge acquistion, representation, and proposed an ecosystem that would support a modern and adaptative knowledge ecosystem.
 
+Our main task was to take an individual and begin to get a true depiction of their knowledge beyond their traditional degree which is only a small percentage of someone's education. We focused on taking the world of unstructured educational content online, and how to provide structure in the form of testing and mapping it to a knowledge graph. 
 
+There is still much research to be done in bringing to life the EC2QA network as well as the data needed and the collaboration needed amongst machine learning researchers, teachers, and designers needed.
 
-## Datasets and Annotation
-## New Network
-
+As machine learning researchers we are looking forward to building our next prototype and collaborating around this work. 
 
 # About Authors
 
 ## Haohan Wang
+
 
 ## Fanli (Christian) Zheng
 
