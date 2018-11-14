@@ -5,9 +5,9 @@ bookdown::gitbook:
   config:
     toc:
       before: |
-        <li><a href="./">Teaching Machines: AI and Education</a></li>
+        <li><a href="./">A Knowledge Ecosystem: Deep Learning and Education</a></li>
       after: |
-        <li><a href="https://github.com/dyadxmachina/can-machines-think" target="blank">Github</a></li>
+        <li><a href="https://github.com/dyadxmachina/can-machines-teach" target="blank">Github</a></li>
     edit: https://github.com/dyadxmachina/can-machines-teach/edit/master/%s
     download: ["pdf", "epub"]
 bookdown::pdf_book:
