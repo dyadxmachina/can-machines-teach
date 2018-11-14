@@ -5,7 +5,9 @@ date: "November 9, 2018"
 output: html_document
 ---
 
-# Implementing a Teaching Machine
+# Implementing the Knowledge Ecosystem
+
+Here I’ll walk you through the possible implementations of the proposed knowledge ecosystem. I will walk you through the current research in machine learning that is relevant to each component of the knowledge ecosystem and also propose a new artificial neural network architecture called EC2VQA and one possible instansitation of that. This is not the blueprint, each of these components can be developed independently and differ from what you find here. This is a provocation for getting started on the knowledge ecosystem today.
 
 How might we approach designing such a system.
 
@@ -46,25 +48,33 @@ As what we discussed above, one of the possible and optimal solutions so far for
 
 A salient question that we have to ask ourselves before deisgning such a system is that:
 
- >"how can we take a piece of educational material and properly test learners' knowledge and provide insightful feedbacks to support their learning?". 
+ >"how can we take a piece of educational content and properly test a learners' knowledge and provide insightful feedbacksto support their learning?". 
  
- Among all the possible learning and feedback approaches, *Question & Answer* framework seems to be one of the most common ones
+ In previous years, deep learning research has taken up a similar problem titled question answer
  
-Then the next question would be, 
+ >Question answering (QA) is a well-researched problem in NLP. In spite of being one of the oldest
+research areas, QA has application in a wide variety of tasks, such as information retrieval and entity extraction. Recently, QA has also been used to develop dialog systems [1] and chatbots [2] designed to simulate human conversation. Traditionally, most of the research in this domain used a pipeline of conventional linguistically-based NLP techniques, such as parsing, part-of-speech tagging and coreference resolution. Many of the state-of-the-art QA systems – for example, IBM Watson [3] –use these methods.
 
->"how might we create an adequate question & answering system for a piece of educational content (i.e. a video)"
+src: https://cs224d.stanford.edu/reports/StrohMathur.pdf
 
+But this usually only fits the answeringissue given a question . What we want to do is take a piece of content and generate a set of questions-answer pairs.
 
-The answer seems obvious in this case that we need a hybrid system that can do at least 2 roles at the same time: 
+ 
+>"what types of questions & answers would be best to test a learner's knowledge given a piece of educational content (i.e. a lecture video)"
 
-1. Generate common question + Answers pairs
+Let's say a learner is watching an deducation, then we could n, asking specific questions, or we could allow them to talk abck to us and evaluate their answers. We will approach of these here from the current research and new research needed 
 
-
-2. Evaluate and comment on the open-ended answers 
+So the formulation for both of these is to 
+1. Generate general question + Answers pairs
+2. Generate specific question + Answers pairs
+- Multiple choice
+2. Evaluate and comment on open-ended answers 
 
 Here, we carefully split the questions into 2 distinct categories. One is regular close-ended question (i.e. multiple choise question) and the other one is open-ended question (i.e. tell me about your thoughts on this idea discussed in the video).
 
 In terms of the close-ended, the answers can be defined and evaluated easily. However, the process might be a little bit tricky when it comes to the open-ended questions.
+
+
 
 ## Question Generation
 
@@ -198,6 +208,7 @@ As what have discussed above, we can see that there have been many attemps taken
 
 
 ### Open-ended Question
+Summary of 
 #### General Question
 As I mentioned aboce, one of the most general open-ended questions is to ask learner to provide a short summary of the learning material. 
 
@@ -214,6 +225,9 @@ Adversarially Crafted Input](http://aclweb.org/anthology/N18-1024) illustrated.
 
 ## Summary of Learning and Feedback Networks
 
+### summary current research
+### areas where new stuff needs to be made research [current reserach is promising but we need more reserach and innovation in this area]
+### datasets and annotaters needed 
 
 # KNOWLEDGE GRAPH
 Next, we need to consider how we can select an adequate and relevant learning masterial and generate an effecive learning map for the learners based on their current progress and the general knowledge graph/map, given the ever growing amount of educational content on the web. 
@@ -230,6 +244,10 @@ As I mentioned earlier, learning is a knowledge accumulation process. Knowledge 
 
 
 ## Summary of Knowledge Graph
+### summary current research
+### areas where new stuff needs to be made research [current reserach is promising but we need more reserach and innovation in this area]
+### datasets and annotaters needed 
+
 
 
 # KNOWLEDGE JOURNEYS
@@ -240,6 +258,7 @@ We cannot possibly put such an online learning/teaching system into use without 
 
 
 As we all know that a recommender system is an intuitive line of defense against consumer over-choice given the evern growing information available on the web. As we mentioned earlier in the knowledge graph, a authoritative and personalized recommending system is essential for facilitating the learning. 
+
 
 Typically, a recommendation models can be classified into 3 main categories: 
 

@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="learning-feedback.html">
-<link rel="next" href="knowledge-journeys-1.html">
+<link rel="prev" href="introduction.html">
+<link rel="next" href="learning-feedback.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -177,26 +177,31 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="knowledge-graph" class="section level1">
-<h1><span class="header-section-number">4</span> KNOWLEDGE GRAPH</h1>
-<p>Next, we need to consider how we can select an adequate and relevant learning masterial and generate an effecive learning map for the learners based on their current progress and the general knowledge graph/map, given the ever growing amount of educational content on the web.</p>
-<p>As I mentioned earlier, learning is a knowledge accumulation process. Knowledge itself has its unique structure that can help us learn in a most effective and productive way. Knowledge Graph is a great tool that we developed to map and present the structure of knolwedge. In shirt, knowledge graphs are collections of relational facts, where each fact states that a certrain relation holds between 2 entities.</p>
+<div id="implementing-the-knowledge-ecosystem" class="section level1">
+<h1><span class="header-section-number">2</span> Implementing the Knowledge Ecosystem</h1>
+<p>Here I’ll walk you through the possible implementations of the proposed knowledge ecosystem. I will walk you through the current research in machine learning that is relevant to each component of the knowledge ecosystem and also propose a new artificial neural network architecture called EC2VQA and one possible instansitation of that. This is not the blueprint, each of these components can be developed independently and differ from what you find here. This is a provocation for getting started on the knowledge ecosystem today.</p>
+<p>How might we approach designing such a system.</p>
+<p><strong>High level video of all the components in the abstract</strong></p>
+<div id="problem-formulation" class="section level2">
+<h2><span class="header-section-number">2.1</span> Problem Formulation</h2>
+<p>Building such a digital knowledge ecosystem like the one we just visioned is not a trivial task. We would need to break this ecosystem into few key sub-elements as below so that we can set out to tackle them one by one.</p>
 <ol style="list-style-type: decimal">
-<li><p>In this paper <a href="http://www.mlgworkshop.org/2018/papers/MLG2018_paper_5.pdf">Generalized Embedding Model for Knowledge Graph Mining</a>, they have presented a model for learning neural presentation of generalized knowledge graphs using a novel muli-shot unsupervised neural network model, called the <strong>Graph Embedding Network (GEN)</strong>. This model is able to learn different types of knowlege graphs from a universal perspective and it provides flexibility in learning representations that work on graphs conforming to different domains.</p></li>
-<li><p>In this paper <a href="https://openreview.net/pdf?id=rJ4qXnCqFX">Probabilisic Knowledge Graph Embeddings</a>, they explored a new type of embedding model that can link prediction in relational knowledge graph.</p></li>
-<li><p>In this paper <a href="http://aclweb.org/anthology/N18-1020">Zero-Shot Question Generation from Knowledge Graphs for Unseen Predicates and Entity Types</a>, they presented a network that can generate question from knowledge b</p></li>
+<li><p><strong>LEARNING + FEEDBACK</strong> – given a learner consumes a piece of educational material, reliably evaluate their knowledge and provide the feedback for improvement to prevent passive consumption. (credibility, rigour)</p></li>
+<li><p><strong>KNOWLEDGE GRAPH</strong> – given a piece of educational content, classify it within a knowledge graph. (relatibility, predictability)</p></li>
+<li><p><strong>KNOLWEDGE JOURNEYS</strong> – given multiple student journeys, create a way to customize their own growth journey while offereing a way for them them to compare, connect with and follow, other’s journey (compare, traverse, curiosity)</p></li>
+<li><p><strong>DIGITAL KNOWLEDGE FOOTPRINT</strong> – given a student journey, collapse it into a representative symbol(s) to help validate the progress (digital education footprint) [dimensionality reducing (i.e. time, )] (relatibility, stable but evolving system )</p></li>
 </ol>
-<div id="summary-of-knowledge-graph" class="section level2">
-<h2><span class="header-section-number">4.1</span> Summary of Knowledge Graph</h2>
-<div id="summary-current-research-1" class="section level3">
-<h3><span class="header-section-number">4.1.1</span> summary current research</h3>
+<p>Much of the element #1 and #2 have been made possible with the recent breakthoughs in deep learning. A few other pieces like the element #3 and #4 may require a more advanced deep learning framework that has not been proposed yet to best resolve. Let’s first take a look at some methods that might come handy when applying to our problems.</p>
 </div>
-<div id="areas-where-new-stuff-needs-to-be-made-research-current-reserach-is-promising-but-we-need-more-reserach-and-innovation-in-this-area-1" class="section level3">
-<h3><span class="header-section-number">4.1.2</span> areas where new stuff needs to be made research [current reserach is promising but we need more reserach and innovation in this area]</h3>
+<div id="why-deep-learning" class="section level2">
+<h2><span class="header-section-number">2.2</span> Why deep learning?</h2>
+<p>If you pay close attention to each of the elements that that we listed above, it is not difficult to identify some shared properties of them that are solvable by machines. Let’s take the first problem as an example, to create a learning and feedback system, we need to first find the relationship between the educational content and the meaningful question &amp; answer pairs that is associated with the content. In other words, our problem could be simplified as trying to find a function that is capable of learning the relationship between our input and output and appropriately map the educational content to the desired question and answer pairs with this function.</p>
+<p>To the best of our knowledge, deep learning is one of the most optimal techniques currently developed to solve such an issue. First of all, deep learning is known as one of the most flexible machine learning algorithms that can learn and map the <strong>deep representation</strong> from the data. Moreover, deep nueral networks architecture can be composed into a single differentiable function and trained end-to-end until it converges. As a result, they can help identify the suitable <em>inductive</em> <em>biases</em> catered to the training data.</p>
 </div>
-<div id="datasets-and-annotaters-needed-1" class="section level3">
-<h3><span class="header-section-number">4.1.3</span> datasets and annotaters needed</h3>
-</div>
+<div id="before-we-start" class="section level2">
+<h2><span class="header-section-number">2.3</span> Before we start…</h2>
+<p>As what we discussed above, one of the possible and optimal solutions so far for building our ecosystem is using current state-of-art deep learning algorithms in the related domains. Here I will walk you through some thought provinking research summary in a form of survey.</p>
+<p>To best illustrate the problem and possible solutions, we will for now reduce the complexity of the problem. Keep in mind that our ultimate goal is to be able to apply our system to any type of online available educational content. As what we have mentioned earlier, educational videos seem to be one of the top options for people when it comes to knowledge consumption. Let’s explore some of the solutions that can enable us to apply our system on those video educational content.</p>
 </div>
 </div>
             </section>
@@ -204,8 +209,8 @@
           </div>
         </div>
       </div>
-<a href="learning-feedback.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="knowledge-journeys-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="learning-feedback.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
