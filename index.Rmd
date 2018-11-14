@@ -17,6 +17,9 @@ url: 'https\://github.com/dyadxmachina/can-machines-teach'
 github-repo: dyadxmachina/can-machines-teach
 cover-image: img/MtoQA.png
 ---
+
 # Preface {-}
+
 ![ Educational Content to Question-Answer Generation ](img/MtoQA.png)
+![ Knowledge Ecosystem ](img/knowledgeEcosystem.png)
 

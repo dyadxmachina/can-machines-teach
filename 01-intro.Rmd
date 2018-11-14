@@ -19,49 +19,56 @@ The ideas behind this *knowledge ecosystem*, presents only one of many possible 
  
  For those who are looking for a change, they may find different journeys that help them decide what step to take next. You would also be able to connect someone's occupation to their **knowledge journey**. 
  
-On aggregate, we could begin to cluster similar **knowledge journeys** through unsupervised learning, which might lead to completely new journeys or combinations of subjects that others could attempt to follow.
+On aggregate, we could begin to cluster similar **knowledge journeys** through unsupervised learning, which might lead to completely new journeys or combinations of subjects at differnet levels that others may be inspired to follow.
  
-In this essay, I will propose a **knowledge ecosystem**, a new way of approaching education that attempts to build a more accurate depiction of a learner's true knowledge. It will require significant effort to bring to life but I believe the benefits will outweigh the costs. I will talk about how we can use machine learning, deep learning in particular, to help create and support our **knowledge ecosystem** which is made up of a **knowledge footprint**, **knowledge journeys**, and a **collective human knowledge graph**. We will also introduce current advances in deep learning that would enable us to take the space of unstructured educational content and begin to map it unto the human knowledge graph, and how we can use generative models to test a learner\'s knowledge of recently viewed educationcal content through questions and answers, no what matter the subject. I will name a few benefits of such a future.
+In this essay, I will propose a **knowledge ecosystem**, a new way of approaching education that attempts to build a more accurate depiction of a learner's true knowledge. It will require significant effort to bring to life but I believe the benefits will outweigh the costs. I will talk about how we can use machine learning, deep learning in particular, to help create and support a **knowledge ecosystem** which is made up of a **knowledge footprint**, **knowledge journeys**, and a **collective human knowledge graph**. We will also introduce current advances in deep learning that would enable us to take the space of unstructured educational content on the web and do the following,
+- classify content to higher level subjects
+- map content unto the human knowledge graph
+- test a learner\'s knowledge of recently viewed educationcal content through questions and answers, no what matter the subject. 
 
 
-- A society where learners do not simply compete for a degree but where they can feel safe to create their own unique journey through human knowledge whilst being recognised and predictable to others
-- A society where a learner's knowledge is derived not from what we know about a degree but by their actual knowledge which is alive and therefore always evolving
-- A society that better understands itself, through the understanding of the many journey's it's members have taken
+I will also argue that this imagined future is not only **desirable** for society but something similar is required to insure individual's knowledge are well represented in a time where the pace of change is rapidly speeding up. 
+Let us not forget, that even software engineering is currently being recreated with machine learning as a key pillar which wasn't much of a thought 5-10 years ago.
 
-I will also show that this imagined future is not only **desirable** for society but a required future for an individual to match the pace at which we are advancing. Let us not forget, that even software engineering is being recreated with machine learning as a key pillar which has happened seemingly overnight.
-It is tantamount that we have adaptative systems that can represent our knowledge and make us predictable even as we hasten the pace at which the indiivdual learns, the future pushes us to know more than we've ever known and to be able to learn quicker than we once did
+As the future pushes us forward, it is tantamount that we have adaptative systems that can represent our current knowledge and also make us predictable to others given the future pushes us to knowing more than ever and knowing who to collaborate with to apply such knowledge.
 
-This hypothetical future isn't just conceptual, most of what I will present t you today is currently feasible due to the most recent advances in machine learning, and in particular deep learning, which will enable us to begin designing such a future today. 
+This hypothetical future isn't just conceptual, most of what I will present to you today is currently feasible due to the most recent advances in machine learning, and in particular deep learning
 
-I will end this essay with a call to action.
+In the last section of this essay I will review what has been proposed and also call other researchers, teachers, and designers to collaborate on such an ecosystem, even if it is just in part. 
 
 <small>*For the purpose of this essay we will talk mostly about digital knowledge acquisition and leave the reader to extend the basics to knowledge obtained elsewhere.</small>
 
 
 # Primary Concerns
 
- There are 3 popular concerns that I will attempt to address in this article about online learning in the present and near future. I will attempt to address them here and in the implementation section.
- 
- The first concern we have is
- 
+ There are 3 popular concerns that I will attempt to address in this article about online knowledge acquisition that stand in the way of having an adaptive and reliable knowledge ecosystem. I will attempt to present a system that can sufficiently overcome each of the concerns here and in the implementation section.
+
+There are as follows:
+
 - **Passive Consumption** - most of online content is viewed passively by the learner and the result of passive consumption is that learner's do not grasp the concepts or master the content being taught.
 - **Untested Knowledge** - even if the learner was engaged while viewing a piece of educational content their knowledge is untested and therefore it isn't clear if they've mastered the content accurately and in some sense holistically. 
-- **Knowledge Representation** - even if the learner was engaged and their knowledge was tested, simply knowing the counts or types of video they watched doesn't make their knowledge predictable and useful to others. In fact, most people are unaware of all the content they've consumed over the years and cannot synthesise it as well as they possible could.
+- **Knowledge Representation** - even if the learner was engaged (1) and their knowledge was tested (2), simply knowing the counts or types of video they watched doesn't make their knowledge predictable and useful to others. In fact, even the learner may be unaware of all of what they've viewed. 
  
-## Knowledge Ecosystem Example
-
-![Knowledge Ecosystem](img/knowledgeEcosystem.png)
-
-Let us put forward an example the matches each of these concerns. But in order to do so we need to lay out the our eco
-In order to address the concerns above we have put together the basic components of this knowledge system. We have also mentioned that we will focus on the *digital* aspects as we believe it presents the biggest leap forward for knowledge representation. 
-
-An ecosystem
 
 ## Passive Consumption and Untested Knowledge
 
 > How would such an ecosystem insure us against passive consumption?
 
-As you can see, I've bundled passive consumption and untested knowledge because our proposed system approaches both of these by always testing knowledge.
+Scenario #1:
+A learner goes online and begins watching a series on Machine Learning. How do we engage and test a user's knowledge?
+
+Proposition:
+Using advances in deep learning, we propose a dual question and answer generation given the educational content. 
+
+Result:
+A learner gets a set of questions and multiple choice answers throughout the video. Keeping the user engaged and sharp to ensure they can answer each of the questions. 
+
+
+As you can see, I've bundled passive consumption and untested knowledge because our proposed ecosystem approaches both of these by always testing knowledge. I will show the current results in deep learning in the implementation stage. 
+
+## Knowledge Ecosystem Example
+
+![Knowledge Ecosystem](img/knowledgeEcosystem.png)
 
 Given a piece of educational content, our knowledge system will generate a set of questions and answers that theoretically capture the major concepts and facts that the learner should know after viewing a part or the content in whole. 
 
@@ -72,64 +79,64 @@ The knowledge system would only consider content that has been watched with some
 
 ## The Problem of Knowledge Representation
 
+> Given how many learner's online knowledge acquisition varies and has been invisible up to now, how we can best represent their knowledge?
+
+Scenario #2:
+A learner has a degree in Public Health, but since graduating, they've been studying machine learning for the last 3 years. The learner now wants to apply to a job that requires Health and Statistics. How do we represent their traditional and updated knowledge?
+
+This is a tricky problem that goes beyond any given algorithm. The exact design of a **knowledge footprint** and a **knowledge journey** has been attempted and we will not cover that in depth here. The proposed system presupposed the design of the knowledge footprint. 
+
+There are two problems,
+> how do we reduce someone's knowledge (in this case a set of educational content and their respective scores) into a symbol
+
+
+Proposition:
+We introduce **knowledge journeys** and the **knowledge graph** as a way to make sense and structure a learner's knowledge acquisition. The collective **knowledge graph** will tell us about the subject the learner is studying and we can use this to compare to others and create a relative comparison. 
+
+Result:
+Reducing a learner's **knowledge journey** into a common set of elements that makeup into their **knowledge footprint** which would look similar to those with similar journeys. 
+
+So the employeer, now familiar with the footprints can see the overlap between the current employee's and a prospective employee.
+
 # Concepts 
 
-## Digital Knowledge Footprint
-The concept of a digital education footprint is is a custom symbol and profile that represents one's education relative to that of others. Each symbol should be somewhat unique and the profile could capture the general education as well as the intricacies. 
+## Knowledge Footprint
+The concept of a knowledge footprint is a custom symbol or badge with a profile that represents one's education relative to that of others. This footprint should represent all of one's education (currently focused on digital) while balancing distinction and commonality with others.
 
-A symbol which represents somethng as complex as one's education will likely not be enough for employeers and co-workers to understand the . A symbol must show that one is in a particular "class" while also  Symbols generally have to make trade-offs
+This example from aminer is very helpful.
+![Example at aminer](img/aminer.png)
+
 
 ## Knowledge Journeys
 ![Image title](img/tsne.png)
 Image src: https://www.researchgate.net/figure/t-SNE-projection-of-the-embedding-of-all-learners-in-the-dataset-Major-labels-are_fig1_323391033
- between the complexity of what it represents and it's ability to convey , the legi from dealing with the task of reduction of info. So we introduce **Journeys** which show how someone has traversed the uy
-If most people had their digital education footprint, they would be 
+
+A **knowledge journey** is a somewhat simplified view of all of the educational content a learner has acquired over time. The journey should be a temporal representation of all of the subjects that one has viewed and been tested on. Knowledge journey's should be simple enough to compare but complex enough that the individual can go back to a particular moment in time and rewatch educationcal content they've viewed before. 
 
 ## Collective Human Knowledge Graph
 ![Image title](img/knowledge_graphy.png)
-The knowledge graph will be the backbone of a learners journey through human knowledge. As a learner continues to consume educational content, their fingerprint as wethe learner watches new content they extend their knowledge graph either stre current links 
+The collective human knowledge graph can be compared to Google's Search Knowledge Graph which points unstructured information towards structure. The graph should have all existing subjects that we are currently aware of (i.e. Abstract Mathematics, Discrete Mathematics, Statistics, Art, Sociology). Since each piece of educational content will be classified into a subject, all subjects will exist in detail within the knowledge graph. 
 
 
-We have so far introduced **knowledge footprint** and **knowledge journeys**, which claim to be the right elements to synthesise one's education while capturing the complexity on one hand and making the learner relatable and predictable on the other hand. But how does one create a path? From video to video? From topic/subject to topic/subject? If so, how might a machine decide on the correct topic(s)? We have had plenty of advances in topic models but perhaps what we actually need to combine topic models with a graph of human knowledge. This graph, like Google or Wolfram's knowledge graph, should be generated both from the current structure of education and also driven by the unsupervised learning of new topics/subjects that do not currently exist within our current structure. 
+### EC2QA Network 
+We mentioned the EC2QA network earlier because currently we would have to cobble together multiple networks to make this work. Instead we will introduce a novel network architecture, EC2QA, to solve the problem of generating a set of questions and answer pairs for any given educational content (text, video, image, pdf). 
 
-This graph would be useful so content on the web could be easily mapped to the graph adn relate one user to another as well as create trails.
+## Knowledge Ecosystem Example
 
-## Deep Learning Applications in Learning and Feedback
-### Summary
-### EC2QA Network - a novel network for educational content to questions and answers
-The last piece we'll introduce here is a novel artificial neural network that would allow us to take any unstructured educat 
-
-
-# Towards an ecoystem of teaching machines
-
-![Image title](img/MtoQA.png)
-
-So how would a universal teaching machine eclipse these challenges? We will present a solution that meets all three criteria by introudcing a theoretical artificial network architecture to cover the first two.
-
-neural then cover each concept in detail. Our idea of a digital education footprint,  journeys, and a knowledge graph will provide us with what we need to take a first stab at encompassing a learner's whole education by addressing the three concerns.
-
-In order to take all of our videos 
-
-## The components
-A component of a universal teaching machine should be able to take any of the billions of educational content online (and eventualyl off) and by using machine learning and deep learning techniques complete the following:
-- assign it to a one or more knowledge subjects (i.e. math, design, computer science)
-- generate a set of adequate questions and answers that test the learner's (what is x? a, b, c, or d) knowledge throughout the learning session
+![Knowledge Ecosystem](img/knowledgeEcosystem.png)
+Now that we are aware of each of the elements, let's talk about how they work in practice.
 
 
+A learner watches a video titled 'Depression' by Robert Sapolsky.
+- The video is classified by a neural network as [Neuroscience, Mental Health, Psychology]
+- The subjects are then mapped to the **knowledge graph** which gives us more information about each subject
+- Using EC2QA or similar, a set of questions and answers are generated for every 15* minutes of video
+A learner is present with 5 questions to answer and scores 4/5 (80%)
+- The link between user and video takes up the score
+At the end of the video, the learner records a video summary and is evaluated with a 7/10 (70%)
+- The evaluation network looks at the **semantic and conceptual mututal information** shared between the original content and the learner's video summary
+- All scores are mapped to the video and also counted at the subject level
+A learner looks at their knowledge footprint
+- All scores should be calculated against all subjects coming from the knowledge graph and compared against other learners to generate the footprint
 
- 
-Over time, it is plausible, that our digital education footprint would be the most important representation of a learners level of education. Even more important than our primary education; it has done much to make us predictable, but it has sacrificed the true range of a learner's gained knowledge and wisdom coming from any other place than the institution is willing to give credit for. 
-
-Since we've largely rely upon large institutions to educate groups of learners, many have grown deeply familiar with having a perfectly demarcated path towards a degree, so it has been much harder for learners to use this abundance of knowledge to chart their own educational journey in today's fast moving world.
-
- being   us how to the peer pressure of cohorts, self-learning  learned Imagine that if you signed up for a job, your primary consideration and also your digital education could be conveyed as a path through the web that others attempt to follow or mix and match. Now let us imagine a world where our digital education fingerprint allowed us to
-
-
-
-  
-# Theories for statistical learning theory and deep learning
-
-Theory of the learnable
-Mutual Information (IT)
-Joint probability
 
