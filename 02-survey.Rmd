@@ -186,6 +186,17 @@ In their task formulation part, they mentioned that they break this task into 2 
 
 3. In this paper [Visual Question Generation as Dual Task of Visual Question Answering](http://cvboy.com/pdf/publications/cvpr2018_iqan.pdf), they proposed an end-to-end unified model, Invertible Question Answering (iQAN) to introduce question generation as a dual task of question answering to imrpove VQA pefromance. 
 
+
+4. In this paper [A Unified Query-based Generative Model for Question Generation and Question Answering](https://arxiv.org/pdf/1709.01058.pdf), they propose a query-based generative model for solving both tasks. The model follows the classic encoder-decoder framework. The multi-perspective matching encoder that they are implementing is a bi-directional LSTM RNN model that takes a passage and a query as input and perform query understanding by matching it with the passage from multiple perspectives; The decoder is an attention-based LSTM RNN model with copy and coverage mechanism. In the QG task, a question will be generated from the model given the passge and the target answer, whereas in the QA task, the answer will be generated given the question and the passage. 
+They also leverage a policy-gradient reinforcement learning algorithm to overcome exposure bias (a major problem resulted from sequence learning with cross-entropy loss function).They case both QG and QA tasks into one process by firstly matching the input passage against the query, then generating the output based on the matching results. 
+
+As for the training process, they first pretrain the model with cross-entropy loss and then they fine tune the model parameters with policy-gradient reinforcement learning to alleviate the exposure bias problem.  During the policy-gradient reinforcement learning algorithm, they end up adopting a similar sampling strategy as the scheduled sampling strategy for generating the sampled output. 
+
+
+**Summary**
+As what have discussed above, we can see that there have been many attemps taken in the recent years for handling both tasks at the same time and some significant progress have been made. 
+
+
 ### Open-ended Question
 #### General Question
 As I mentioned aboce, one of the most general open-ended questions is to ask learner to provide a short summary of the learning material. 
