@@ -9,7 +9,7 @@ Our current approach to education is to treat knowledge acquisition like a chapt
 
 The ideas behind this *knowledge ecosystem*, presents only one of many possible answers to bringing our education system into modernity. The goal of it would be to promote the long held idea of the life-long learner. Moving away from the education chapter of an individual's life to the individual as an evolving learner, learning the necessary skills for what life presents them with today. It would also (combined with traditional education) begin to show us a more accurate depiction of a learner's knowledge and theorefore that of their society's collective knowledge. 
  
- ![Visualed over time - From arxiv](img/vizzy.png)
+ ![Example at aminer](img/aminer.png)
  Visualised over time, we would see a learner's so called **knowledge journey**. This could also serve as a way for others who may be on similar **knowledge journey** or those who were looking for a change to find inspiration or be apart of a cohort. You would be able to correlate someone's life work or occupation to their **knowledge journey** and eventually begin to find and cluster similar  journeys that could emerge through unsupervised learning leading to whole new subjects or journeys that others could follow.
  
 In this essay, I will propose a knowledge ecosystem, a new way of approaching education that tries to take in a more accurate depiction of a learner's true knowledge. It will require significant effort to bring to life but I believe the benefits will outweigh the costs. I will talk about how we can use machine learning, deep learning in particular, to help create and support our knowledge cosystem which is made up of a **digital knowledge footprint**, **knowledge journeys**, and a collective *human knowledge graph*. We will also introduce current advances in deep learning and a novel neural network that would allow us to take the space of unstructured educational content and begin to map it unto the human knowledge graph, and how we can use generative models to test a learner\'s knowledge of recently viewed educationcal content through questions and answers, no what matter the subject. I will name a few benefits of such a future.
@@ -33,10 +33,11 @@ I will end this essay with a call to action.
 
  There are 3 popular concerns that I will attempt to address in this article about online learning in the present and near future. I will attempt to address them here and in the implementation section.
  
- The first concern we have is 
- - **Passive Consumption** - most of online content is viewed passively by the learner and the result of passive consumption is that learner's do not grasp the concepts or master the content being taught.
- - **Untested Knowledge** - even if the learner was engaged while viewing a piece of educational content their knowledge is untested and therefore it isn't clear if they've mastered the content accurately and in some sense holistically. 
- - **Knowledge Representation** - even if the learner was engaged and their knowledge was tested, simply knowing the counts or types of video they watched doesn't make their knowledge predictable and useful to others. In fact, most people are unaware of all the content they've consumed over the years and cannot synthesise it as well as they possible could.
+ The first concern we have is
+ 
+- **Passive Consumption** - most of online content is viewed passively by the learner and the result of passive consumption is that learner's do not grasp the concepts or master the content being taught.
+- **Untested Knowledge** - even if the learner was engaged while viewing a piece of educational content their knowledge is untested and therefore it isn't clear if they've mastered the content accurately and in some sense holistically. 
+- **Knowledge Representation** - even if the learner was engaged and their knowledge was tested, simply knowing the counts or types of video they watched doesn't make their knowledge predictable and useful to others. In fact, most people are unaware of all the content they've consumed over the years and cannot synthesise it as well as they possible could.
  
 ## Knowledge Ecosystem Example
 
