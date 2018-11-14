@@ -100,36 +100,3 @@ This graph would be useful so content on the web could be easily mapped to the g
 The last piece we'll introduce here is a novel artificial neural network that would allow us to take any unstructured educat 
 
 
-# Towards an ecoystem of teaching machines
-
-![Image title](img/MtoQA.png)
-
-So how would a universal teaching machine eclipse these challenges? We will present a solution that meets all three criteria by introudcing a theoretical artificial network architecture to cover the first two.
-
-neural then cover each concept in detail. Our idea of a digital education footprint,  journeys, and a knowledge graph will provide us with what we need to take a first stab at encompassing a learner's whole education by addressing the three concerns.
-
-In order to take all of our videos 
-
-## The components
-A component of a universal teaching machine should be able to take any of the billions of educational content online (and eventualyl off) and by using machine learning and deep learning techniques complete the following:
-- assign it to a one or more knowledge subjects (i.e. math, design, computer science)
-- generate a set of adequate questions and answers that test the learner's (what is x? a, b, c, or d) knowledge throughout the learning session
-
-
-
- 
-Over time, it is plausible, that our digital education footprint would be the most important representation of a learners level of education. Even more important than our primary education; it has done much to make us predictable, but it has sacrificed the true range of a learner's gained knowledge and wisdom coming from any other place than the institution is willing to give credit for. 
-
-Since we've largely rely upon large institutions to educate groups of learners, many have grown deeply familiar with having a perfectly demarcated path towards a degree, so it has been much harder for learners to use this abundance of knowledge to chart their own educational journey in today's fast moving world.
-
- being   us how to the peer pressure of cohorts, self-learning  learned Imagine that if you signed up for a job, your primary consideration and also your digital education could be conveyed as a path through the web that others attempt to follow or mix and match. Now let us imagine a world where our digital education fingerprint allowed us to
-
-
-
-  
-# Theories for statistical learning theory and deep learning
-
-Theory of the learnable
-Mutual Information (IT)
-Joint probability
-
