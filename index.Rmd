@@ -1,5 +1,5 @@
 --- 
-title: "Teaching Machines - Deep Learning and Education"
+title: "A Knowledge Ecosystem - Deep Learning and Education"
 author: "Fanli (Christian) Zheng & Haohan Wang"
 knit: "bookdown::render_book"
 date: "`r Sys.Date()`"
@@ -18,5 +18,5 @@ github-repo: dyadxmachina/can-machines-teach
 cover-image: img/MtoQA.png
 ---
 # Preface {-}
-![Our new paper on ](img/MtoQA.png)
+![ Educational Content to Question-Answer Generation ](img/MtoQA.png)
 
