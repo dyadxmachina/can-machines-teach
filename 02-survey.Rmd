@@ -20,7 +20,7 @@ Note that this is not the blueprint, each of these components can be developed i
 ## Problem Formulation
 
 
-Building such a digital knowledge ecosystem like the one we just visioned is not a trivial task. We would need to break this ecosystem into few key sub-elements as below so that we can set out to tackle them one by one.
+Building such a digital knowledge ecosystem like the one we just visioned is not a trivial task. We would need to break this ecosystem into few key building blocks as below so that we can set out to tackle them one by one.
 
 1. **LEARNING + FEEDBACK** -- given a learner consumes a piece of educational content, reliably evaluate their knowledge and provide the feedback for improvement to support their learning. (credibility, rigour) 
 
@@ -33,14 +33,18 @@ Building such a digital knowledge ecosystem like the one we just visioned is not
 Much of the element #1 and #2 have been made possible with the recent breakthoughs in machine learning especially in the filed of deep learning. A few other pieces like the element #3 and #4 may require a more advanced framework that has not been proposed yet to best resolve. Let's first take a look at some methods that might come handy when applying to our problems.
 
 
-## Before we start...
+### Before we start...
 
-As what we discussed above, one of the possible and optimal solutions so far for building our ecosystem is using current state-of-art deep learning algorithms in the related domains. Here I will walk you through some thought provinking research summary in a form of survey. 
+As what we discussed above, one of the possible and optimal solutions so far for building our ecosystem is using current state-of-art deep learning algorithms in the related domains. Here I will walk you through some thought provoking research summary in a form of survey. 
 
- To best illustrate the problem and possible solutions, we will for now reduce the complexity of the problem. Keep in mind that our ultimate goal is to be able to apply our system to any type of online available educational content. As what we have mentioned earlier, educational videos seem to be one of the top options for people when it comes to knowledge consumption. Let's explore some of the solutions that can enable us to apply our system on those video educational content.  
+ To best illustrate the problem and possible solutions, we will for now reduce the complexity of the problem. Keep in mind that our ultimate goal is to be able to apply our system to any type of online available educational content. As what we have mentioned earlier, educational videos seem to be one of the top options for people when it comes to knowledge acquisition. Let's explore some of the solutions that can enable us to apply our system on those video educational content.  
 
 
-# LEARNING + FEEDBACK
+## LEARNING + FEEDBACK
+
+### Question Formulation
+
+We consider learning + feedback as a key building block of the ecosystem which is the cure for our primary concern over passive knowledge consumption and untested knowledge of learners. Here, we will be addressing this problem and its possible solutions in deatails so that we can provide our learners a credible and interactive learning + feedback experience system to best support their knowledge acuqisition. 
 
 A salient question that we have to ask ourselves before deisgning such a system is that:
 
@@ -96,7 +100,7 @@ So the formulation for both of these is to:
 In terms of the close-ended, the answers can be well defined and evaluated. However, the process might be a little bit tricky when it comes to the open-ended questions. We will approach each of them here from the current research.  
 
 
-## Why deep learning? 
+** Why deep learning? **
 
 As we stated above, deep learning has achieved state-of-art performance in both QG and QA tasks. Now let's take a close look at why. 
 
@@ -117,7 +121,7 @@ The large amount content creates another problem that can be avoided with deep l
 
 In the end, deep learning really shines when it comes to many complex reserach problems such as NLP, Visual Recognition and Speech recognition. For solving our task, all those domians will possibly be invloved. 
 
-## Question Generation
+### Question Generation
 
 First, let's take a look at question generation (QG) problem. 
 
@@ -129,7 +133,7 @@ parametrized by $\theta$. In other words, we can think of this problem as the sa
 
 It is also helpful to frame this problem into a seq2seq learning problem since both the input and the output is most likely a sequence of text character that the model needs to process and learn the relationship from. 
 
-### Case Studies
+#### Case Studies
 1. In this paper [QG-Net: A Data-Driven Question Generation Model for Educational Content](http://www.princeton.edu/~shitingl/papers/18l@s-qgen.pdf). They use a bi-directional LSTM network to process the input context words sequence. Encoding the answer into context word vectors.
 
 QG-Net generates questions by iteratively sampling question words from the conditional probability distribution $P(Q|C,A,\theta)$ where $\theta$ denotes the set of parameters. In order to construct the probability distribution, they first create a **context reader** that process each word $c_j$ in the input context and turns it into a fix-sized representation $h_j$
@@ -168,16 +172,16 @@ They refer to the generator as the $agent$ and the $action$ of the agent is to g
 The evaluator will in turn assign a reward for the output sequence predicted using the current policy of the generator. Based on the reward assigned by the evaluator, the generator updates and improves its current policy. The goal in RL-based question generation is to find a policy that can maximize the sum of the expected return at the end of the sequence generated. 
 
 
-### Summary 
+#### Summary 
 
 In this QG section, we have discussed 4 algorithms. They provide us a way to frame our problem for which we can apply generative seq2seq model framework. As for our objective function, we are formuating a conditional probability distribution that is conditioned on the provided content  (i.e. the video) and answers. Typically, we can use a bi-directional LSTM as the encoder to encode the content and use a LSTM as the decoder to generate the question. 
 
 However, as you probabily have noticed that the above examples are focus mainly on processing the text input data instead of videos directly. It demonstrates that more reserch in this new area is needed so as to meet our particular needs. 
 
-## Answer Generation 
-### Close-ended Questions
+### Answer Generation 
+#### Close-ended Questions
 
-#### Visual Question Answering (VQA)
+##### Visual Question Answering (VQA)
 
 As what we have covered above, most QG problem focuses solely on generating questions but not the answers based on the context. 
 
@@ -197,9 +201,9 @@ They clamined that with these techniques, they can enable scalable training and 
 
 During the inference stage, they feed the embeddings of all candicate answer into the network and then select the answer which has the biggest triplet relevance socre as the final answer. 
 
-The general network architecture is as follows: 
+The high-level network architecture is as follows: 
 
-![ma](img/vqa.png)
+![Deep Attention Neural Tensor Network](img/vqa.png)
 
 2. In this paper [Question Type Guided Attention in Visual Question Answering](https://arxiv.org/pdf/1804.02088.pdf), they proposed a model called Question Type-guided Attention (QTA). This model utilizes the information of question type to dynamically balance visual features from both top-down and bottom-up orders. 
 
@@ -210,33 +214,50 @@ As for their main contribution, they focus on developing an attention mechanism 
 Specifically, they introduced a novel VQA architecture that can dynamically gate the contribution of ResNet and Faster R-CNN features based on the question type. In turn, it allows them to integrate the information from multiple visual sources and obtain gains across all question types. 
 
 
-#### Video Question Answering 
+##### Video Question Answering 
 
 The recent advancements that we discussed above in VQA domain have shown some promising implication. In terms of achieving our particular goal, it is also worth mentioning that VQA might be a good start but it is not sufficient yet. To bridge this gap, let's focus our attention on some video question answering algorithms that have been proposed. 
 
 
+1. In this paper [Multi-Turn Video Question Answering via Multi-Stream Hierarchical Attention Context Network](https://www.ijcai.org/proceedings/2018/0513.pdf), they proposed a hierarchical attention context network for context-aware question understanding by modeling the hierarchically sequential conversation context structure. 
+They also incorporate the multi-step reasoning process fro the multi-stream hierarchical attention context network to enable the progressive joint representation learning of the multi-stream attentional video and context-aware question embedding. 
+
+The construct their dataset by collecting the conversational video question answering datasets from YouTubeClips and TACoS-MultiLevel in which the first one has 1987 videos and the second daaset has 1303 videos. They invite 5 pairs of crowd-sourcing workers to construct 5 different conversational dialogs. In total, they have collected 37228 video question answering pairs for TACoS-MultiLevel data and 66806 ones for YouTubeClips data. 
+
+2. In this paper [MovieQA: Understanding Stories in Movies through Question-Answering](https://arxiv.org/pdf/1512.02902.pdf), they introduced a new dataset called MovieQA dataset that can evaluate automatic story comprehension from both video and text.  
+
+They collected 408 subtitled movies and obtained their extended summaries in the form of plot synopses(movie summaries that fans write after watching the movie) from Wikipedia. They used plot synopses as a proxy for the movie. They have annotators create both quizzes and answers pairs by referring to the story plot. Time-stamp is also attached with each question. 
+
+In the second step of data collection, they used the multiple-choice answers and question collected as the input to show to the annotators. By doing so, annotators can re-formulate the question and answers while doing the sanity check. 
 
 
-
-#### Summary
+##### Summary
 By going through the previous examples, we can see that VQA is very particular type of algorithms that is designed to efficiently process image and text input data while making the inference based on the input. Attention is a typical mechanism applied in this type of problems and multiple forms of multipulation on the attention mechanism used in these models have significantly improved the model performance. 
 
-In turn, we can conclude that 
+Going from VQA to video question answering algorithm, it has been a great leap. The main insight we can directly draw from these video QA papers is that we can follow their steps to collect and annonate our training data by asking crowd-sourcing workers to construct the question and answer pairs. Also, more advanced algorithm like the one described above multi-stream hierarchical attention context network is in need for dealing with video input data in contrast to static pictures. 
 
-#### Dual Question-Answering Model
 
-Both Question Generaion(QG) and Question Answering(QA) are well-defined 2 sets of models that aim to either infer a question or an answer given the counterpart based on the context. However, our goal is to have a complete automated system that can take on both roles simultaneously for us.  
+##### Dual Question-Answering Model
+
+Both Question Generaion(QG) and Question Answering(QA) are well-defined 2 sets of models that aim to either infer a question or an answer given the counterpart based on the context. However, they are usually explored separately despite of their intrinsic complementary relationship. In our case, a sysem that can take on both roles simultaneously are needed to fully automated learning + feedback process. 
 
 There are some algorithms are designed to fulfill both roles. 
 
-1.In this paper [Dual Ask-Answer Network for Machine Reading Comprehension](https://arxiv.org/pdf/1809.01997.pdf) they presented a model that can learn question answering and question generation simultaneousely. 
+1.In this paper [Dual Ask-Answer Network for Machine Reading Comprehension](https://arxiv.org/pdf/1809.01997.pdf) they presente a model that can learn question answering and question generation simultaneousely. They tie the network components that playing the similar roles into 2 tasks to transfer cross-task knowledge during training. Then the cross-modal interaction of question, context and answer is captured with a pair of symmetric hierarchical attenion processes. 
 
-The general architecture of the model is illustrate as below: 
 
-![qgqa](img/qgqa.png)
+The high-level architecture of the model is illustrate as below: 
 
-![daan](img/daan.png)
+![Dual Ask-Answer Network 1](img/qgqa.png)
 
+![Dual Ask-Answer Network 2](img/daan.png)
+
+In short, the model is composed of embedding layer, encoding layer, attention layer and output layer. The model is fed with a question-context-answer triplet (Q,C,A) and the decoded Q and A from the output layer. Their loss function consists of 2 parts: 
+
+* The negative log-likelihood loss 
+
+
+* a coverage loss to penalize repetition of the generated text
 
 2. In this paper [Harvesting Paragraph-Level Question-Answer Pairs from Wikipedia](https://arxiv.org/pdf/1805.05942.pdf),  they applied their question-answer pair generation system to 10000 top-ranking Wikipedia articles and create over a million question-answer pairs. 
 
@@ -248,9 +269,13 @@ In their task formulation part, they mentioned that they break this task into 2 
 
 * answer-specific question generation 
 
+To achieve them, they first identify a set of question-worthy candidate answers ans = (A1, A2,...Ai). For each candidate answer Ai, they then aim to generate a question Q - a sequence of tokens y1,y2,...yn - based on the sentence S that contains candidate Ai such that Q asks about an aspect of Ai (of potential interest to a human) and Q might rely on information from sentences that preceeds S in the paragraph. Mathmatically, they compose a function $$Q = argmax_Q P(Q|S,C)$$.
 
 3. In this paper [Visual Question Generation as Dual Task of Visual Question Answering](http://cvboy.com/pdf/publications/cvpr2018_iqan.pdf), they proposed an end-to-end unified model, Invertible Question Answering (iQAN) to introduce question generation as a dual task of question answering to imrpove VQA pefromance. 
 
+In achieving their goal, they leverage dual learning framework that is proposed in machine translation area initially, which uses A-to-B and B-to-A translation models to form two closed translation loops and let them teach each other through a reinforcement learning process. 
+
+In their VQA component, given a question $q$, an RNN is used for obtaining the embedded feature **q**, and CNN is used to transform the input image $v$ into a feature map. A MUTAN-based attention module is then used to generate a question-aware visual feature $v_q$ from the image and the question. Later, another MUTAN fusion module is used for obtaining the answer feature $a\hat{}$
 
 4. In this paper [A Unified Query-based Generative Model for Question Generation and Question Answering](https://arxiv.org/pdf/1709.01058.pdf), they propose a query-based generative model for solving both tasks. The model follows the classic encoder-decoder framework. The multi-perspective matching encoder that they are implementing is a bi-directional LSTM RNN model that takes a passage and a query as input and perform query understanding by matching it with the passage from multiple perspectives; The decoder is an attention-based LSTM RNN model with copy and coverage mechanism. In the QG task, a question will be generated from the model given the passge and the target answer, whereas in the QA task, the answer will be generated given the question and the passage. 
 They also leverage a policy-gradient reinforcement learning algorithm to overcome exposure bias (a major problem resulted from sequence learning with cross-entropy loss function).They case both QG and QA tasks into one process by firstly matching the input passage against the query, then generating the output based on the matching results. 
@@ -258,18 +283,20 @@ They also leverage a policy-gradient reinforcement learning algorithm to overcom
 As for the training process, they first pretrain the model with cross-entropy loss and then they fine tune the model parameters with policy-gradient reinforcement learning to alleviate the exposure bias problem.  During the policy-gradient reinforcement learning algorithm, they end up adopting a similar sampling strategy as the scheduled sampling strategy for generating the sampled output. 
 
 
-**Summary**
+##### Summary
 As what have discussed above, we can see that there have been many attemps taken in the recent years for handling both tasks at the same time and some significant progress have been made. 
 
 
-### Open-ended Question
+#### Open-ended Question
  
-#### General Question
+##### General Question
 As I mentioned aboce, one of the most general open-ended questions is to ask learner to provide a short summary of the learning content. 
 
-At the first glance, it appears hard for our system to effectively evaluate the answers. However, this type of task is not that far-fetched by using some specifically designed deep learning frameworks.
 
-#### Specific Question
+##### Specific Question
+
+At the first glance, it appears hard for our system to effectively generate the question. However, this type of task is not that far-fetched by using some specifically designed deep learning frameworks.
+
 As for the automated feedback or learning grading system, there are plenty of suggestions have been proposed as well to tackle such a question. The framework is called automated essay scoring (AES) which focuses on automatically analyzing the quality of writing and assigning a score to the text. 
 
 In terms of knowledge or learning evaluation, the format could be diversed i.e. a lecture given by the learner or an short summary essay written by the learner. Regardless the form, we can always convert the content into a predictable text, graphic or audible format that model can process. 
@@ -278,11 +305,13 @@ As we mentioned above, for these type of task, we can implementing RNN to proces
 Adversarially Crafted Input](http://aclweb.org/anthology/N18-1024) illustrated.
 
 
-## Summary of Learning and Feedback Networks
+### Summary of Learning and Feedback Networks
 
-### summary current research
-### areas where new stuff needs to be made research [current reserach is promising but we need more reserach and innovation in this area]
-### datasets and annotaters needed 
+#### summary current research
+
+
+#### areas where new stuff needs to be made research [current reserach is promising but we need more reserach and innovation in this area]
+#### datasets and annotaters needed 
 
 # KNOWLEDGE GRAPH
 Next, we need to consider how we can select an adequate and relevant learning masterial and generate an effecive learning map for the learners based on their current progress and the general knowledge graph/map, given the ever growing amount of educational content on the web. 
@@ -298,16 +327,16 @@ As I mentioned earlier, learning is a knowledge accumulation process. Knowledge 
 3. In this paper [Zero-Shot Question Generation from Knowledge Graphs for Unseen Predicates and Entity Types](http://aclweb.org/anthology/N18-1020), they presented a network that can generate question from knowledge b
 
 
-## Summary of Knowledge Graph
+### Summary of Knowledge Graph
 
 
-### summary current research
-### areas where new stuff needs to be made research [current reserach is promising but we need more reserach and innovation in this area]
-### datasets and annotaters needed 
+#### summary current research
+#### areas where new stuff needs to be made research [current reserach is promising but we need more reserach and innovation in this area]
+#### datasets and annotaters needed 
 
 
 
-# KNOWLEDGE JOURNEYS
+## KNOWLEDGE JOURNEYS
 
 The knowledge graph is our ground truth and can be applied universally to some extent, but everyone's learning journey is still highly custom. In terms of learning, everyone seems to have their unique set of problems that they are curious about and everyone is on their own mission towards the mastery. As a result, their knowlege journeys could have a lot more degree of freedom depends on the learn's learning history, interests and who they are related to. 
 
@@ -364,16 +393,12 @@ There are a diverse array of achitectual paradigms that are closely related reco
 
 
 
-# DIGITAL KNOWLEDGE FOOTPRINT 
-[dimensionality reducing (i.e. time, )] 
-
-
-## Summary of Current Research and Needs
+### Summary of Current Research and Needs
 
 
 
 
-# Data and Annotation
+## Data and Annotation
 
 
 1. Some datasets used for QG prpblem:
@@ -399,7 +424,7 @@ There are a diverse array of achitectual paradigms that are closely related reco
  * Task Driven Image Understanding Challenge dataset (TDIUC); it contains images and annotations from MSCOCO and Visual genome. 
  
 
-**Reference** 
+### Reference
 
 
 1. [A Framework for Automatic Question Generation from Text using Deep Reinforcement Learning](https://arxiv.org/pdf/1808.04961.pdf)
