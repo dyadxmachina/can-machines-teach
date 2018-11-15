@@ -1,127 +1,64 @@
-\documentclass[]{book}
-\usepackage{lmodern}
-\usepackage{amssymb,amsmath}
-\usepackage{ifxetex,ifluatex}
-\usepackage{fixltx2e} % provides \textsubscript
-\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
-  \usepackage[T1]{fontenc}
-  \usepackage[utf8]{inputenc}
-\else % if luatex or xelatex
-  \ifxetex
-    \usepackage{mathspec}
-  \else
-    \usepackage{fontspec}
-  \fi
-  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
-\fi
-% use upquote if available, for straight quotes in verbatim environments
-\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
-% use microtype if available
-\IfFileExists{microtype.sty}{%
-\usepackage{microtype}
-\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
-}{}
-\usepackage[margin=1in]{geometry}
+\documentclass{acm_proc_article-sp}
+\usepackage[utf8]{inputenc}
+
+\renewcommand{\paragraph}[1]{\vskip 6pt\noindent\textbf{#1 }}
 \usepackage{hyperref}
-\PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
-\hypersetup{unicode=true,
-            pdftitle={A Knowledge Ecosystem - Deep Learning and Education},
-            pdfauthor={Fanli Zheng (Christian Ramsey) \& Haohan Wang},
-            colorlinks=true,
-            linkcolor=Maroon,
-            citecolor=Blue,
-            urlcolor=Blue,
-            breaklinks=true}
-\urlstyle{same}  % don't use monospace font for urls
-\usepackage{natbib}
-\bibliographystyle{apalike}
-\usepackage{longtable,booktabs}
-\usepackage{graphicx,grffile}
-\makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
-\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
-\makeatother
-% Scale images if necessary, so that they will not overflow the page
-% margins by default, and it is still possible to overwrite the defaults
-% using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
-\IfFileExists{parskip.sty}{%
-\usepackage{parskip}
-}{% else
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{6pt plus 2pt minus 1pt}
-}
-\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\usepackage{graphicx}
+\usepackage{url}
+
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\setcounter{secnumdepth}{5}
-% Redefines (sub)paragraphs to behave more like sections
-\ifx\paragraph\undefined\else
-\let\oldparagraph\paragraph
-\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
-\fi
-\ifx\subparagraph\undefined\else
-\let\oldsubparagraph\subparagraph
-\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
-\fi
 
-%%% Use protect on footnotes to avoid problems with footnotes in titles
-\let\rmarkdownfootnote\footnote%
-\def\footnote{\protect\rmarkdownfootnote}
+\title{Knowledge Acquisition - Machine Learning, Deep Learning, and Education}
 
-%%% Change title format to be more compact
-\usepackage{titling}
 
-% Create subtitle command for use in maketitle
-\newcommand{\subtitle}[1]{
-  \posttitle{
-    \begin{center}\large#1\end{center}
-    }
+% Add imagehandling
+\usepackage{graphicx}
+% Redefine \includegraphics so that, unless explicit options are
+% given, the image width will not exceed the width of the page.
+% Images get their normal width if they fit onto the page, but
+% are scaled down if they would overflow the margins.
+\makeatletter
+\def\ScaleIfNeeded{%
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
 }
+\makeatother
+\let\Oldincludegraphics\includegraphics
+{%
+ \catcode`\@=11\relax%
+ \gdef\includegraphics{\@ifnextchar[{\Oldincludegraphics}{\Oldincludegraphics[width=\ScaleIfNeeded]}}%
+}%
 
-\setlength{\droptitle}{-2em}
+\numberofauthors{2}
+\author{
+\alignauthor Fanli (Christian) Zheng \\
+        \affaddr{dyad x machina}\\
+       \email{\href{mailto:thechristianramsey@gmail.com}{\nolinkurl{thechristianramsey@gmail.com}}}
+\and \alignauthor Haohan Wang \\
+        \affaddr{dyad x machina}\\
+       \email{\href{mailto:haohan723@gmail.com}{\nolinkurl{haohan723@gmail.com}}}
+\and }
 
-  \title{A Knowledge Ecosystem - Deep Learning and Education}
-    \pretitle{\vspace{\droptitle}\centering\huge}
-  \posttitle{\par}
-    \author{Fanli Zheng (Christian Ramsey) \& Haohan Wang}
-    \preauthor{\centering\large\emph}
-  \postauthor{\par}
-      \predate{\centering\large\emph}
-  \postdate{\par}
-    \date{{[}DRAFT{]} 2018-11-14}
+\date{}
 
-\usepackage{booktabs}
+%Remove copyright shit
+\permission{}
+\conferenceinfo{} {}
+\CopyrightYear{}
+\crdata{}
 
-\usepackage{amsthm}
-\newtheorem{theorem}{Theorem}[chapter]
-\newtheorem{lemma}{Lemma}[chapter]
-\theoremstyle{definition}
-\newtheorem{definition}{Definition}[chapter]
-\newtheorem{corollary}{Corollary}[chapter]
-\newtheorem{proposition}{Proposition}[chapter]
-\theoremstyle{definition}
-\newtheorem{example}{Example}[chapter]
-\theoremstyle{definition}
-\newtheorem{exercise}{Exercise}[chapter]
-\theoremstyle{remark}
-\newtheorem*{remark}{Remark}
-\newtheorem*{solution}{Solution}
+% Pandoc syntax highlighting
+
+
 \begin{document}
 \maketitle
 
-{
-\hypersetup{linkcolor=black}
-\setcounter{tocdepth}{1}
-\tableofcontents
-}
-\chapter*{Preface}\label{preface}
-\addcontentsline{toc}{chapter}{Preface}
 
-\includegraphics{img/MtoQA.png}
-\includegraphics{img/knowledgeEcosystem.png}
-
-\chapter{Introduction}\label{introduction}
+\section{Introduction}\label{introduction}
 
 \begin{figure}
 \centering
@@ -142,7 +79,7 @@ to, were all added structurally to your \textbf{knowledge journey}, and
 what if that journey could be consolidated into what we might call a
 \textbf{knowledge footprint} that could be shared with others? Could
 this replace static degrees? Or augment them to be more inclusive of a
-learner's true knowledge? How might we test such knowledge?
+learner's true knowledge?
 
 Our current approach to education is to treat knowledge acquisition like
 a chapter in the individual's life that is limited to one or more formal
@@ -232,7 +169,7 @@ on such an ecosystem, even if it is just in part.
 knowledge acquisition and leave the reader to extend the basics to
 knowledge obtained elsewhere.
 
-\chapter{Primary Concerns}\label{primary-concerns}
+\section{Primary Concerns}\label{primary-concerns}
 
 There are 3 popular concerns that I will attempt to address in this
 article about online knowledge acquisition that stand in the way of
@@ -262,7 +199,7 @@ There are as follows:
   of what they've viewed.
 \end{itemize}
 
-\section{Passive Consumption and Untested
+\subsection{Passive Consumption and Untested
 Knowledge}\label{passive-consumption-and-untested-knowledge}
 
 \begin{quote}
@@ -284,7 +221,8 @@ because our proposed ecosystem approaches both of these by always
 testing knowledge. I will show the current results in deep learning in
 the implementation stage.
 
-\section{Knowledge Ecosystem Example}\label{knowledge-ecosystem-example}
+\subsection{Knowledge Ecosystem
+Example}\label{knowledge-ecosystem-example}
 
 \begin{figure}
 \centering
@@ -306,7 +244,7 @@ also be able to use the knowledge graph
 The knowledge system would only consider content that has been watched
 with some engagement or if they can test out of the content.
 
-\section{The Problem of Knowledge
+\subsection{The Problem of Knowledge
 Representation}\label{the-problem-of-knowledge-representation}
 
 \begin{quote}
@@ -341,9 +279,9 @@ which would look similar to those with similar journeys.
 So the employeer, now familiar with the footprints can see the overlap
 between the current employee's and a prospective employee.
 
-\chapter{Concepts}\label{concepts}
+\section{Concepts}\label{concepts}
 
-\section{Knowledge Footprint}\label{knowledge-footprint}
+\subsection{Knowledge Footprint}\label{knowledge-footprint}
 
 The concept of a knowledge footprint is a custom symbol or badge with a
 profile that represents one's education relative to that of others. This
@@ -353,7 +291,7 @@ digital) while balancing distinction and commonality with others.
 This example from aminer is very helpful.
 \includegraphics{img/aminer.png}
 
-\section{Knowledge Journeys}\label{knowledge-journeys}
+\subsection{Knowledge Journeys}\label{knowledge-journeys}
 
 \includegraphics{img/tsne.png} Image src:
 \url{https://www.researchgate.net/figure/t-SNE-projection-of-the-embedding-of-all-learners-in-the-dataset-Major-labels-are_fig1_323391033}
@@ -366,7 +304,7 @@ compare but complex enough that the individual can go back to a
 particular moment in time and rewatch educationcal content they've
 viewed before.
 
-\section{Collective Human Knowledge
+\subsection{Collective Human Knowledge
 Graph}\label{collective-human-knowledge-graph}
 
 \includegraphics{img/knowledge_graphy.png} The collective human
@@ -377,7 +315,7 @@ Mathematics, Discrete Mathematics, Statistics, Art, Sociology). Since
 each piece of educational content will be classified into a subject, all
 subjects will exist in detail within the knowledge graph.
 
-\subsection{EC2QA Network}\label{ec2qa-network}
+\subsubsection{EC2QA Network}\label{ec2qa-network}
 
 We mentioned the EC2QA network earlier because currently we would have
 to cobble together multiple networks to make this work. Instead we will
@@ -385,7 +323,7 @@ introduce a novel network architecture, EC2QA, to solve the problem of
 generating a set of questions and answer pairs for any given educational
 content (text, video, image, pdf).
 
-\section{Knowledge Ecosystem
+\subsection{Knowledge Ecosystem
 Example}\label{knowledge-ecosystem-example-1}
 
 \includegraphics{img/knowledgeEcosystem.png} Now that we are aware of
@@ -407,7 +345,7 @@ subject level A learner looks at their knowledge footprint - All scores
 should be calculated against all subjects coming from the knowledge
 graph and compared against other learners to generate the footprint
 
-\chapter{Implementing the Knowledge
+\section{Implementing the Knowledge
 Ecosystem}\label{implementing-the-knowledge-ecosystem}
 
 In this section, we are set to solve the following question:
@@ -426,7 +364,7 @@ Note that this is not the blueprint, each of these components can be
 developed independently and vary from what you find here. This is a
 provocation for getting started on the knowledge ecosystem today.
 
-\section{Problem Formulation}\label{problem-formulation}
+\subsection{Problem Formulation}\label{problem-formulation}
 
 Building such a digital knowledge ecosystem like the one we just
 visioned is not a trivial task. We would need to break this ecosystem
@@ -463,7 +401,7 @@ more advanced framework that has not been proposed yet to best resolve.
 Let's first take a look at some methods that might come handy when
 applying to our problems.
 
-\subsection{Before we start\ldots{}}\label{before-we-start}
+\subsubsection{Before we start\ldots{}}\label{before-we-start}
 
 As what we discussed above, one of the possible and optimal solutions so
 far for building our ecosystem is using current state-of-art deep
@@ -478,9 +416,9 @@ videos seem to be one of the top options for people when it comes to
 knowledge acquisition. Let's explore some of the solutions that can
 enable us to apply our system on those video educational content.
 
-\section{Learning + Feedback}\label{learning-feedback}
+\subsection{Learning + Feedback}\label{learning-feedback}
 
-\subsection{Question Formulation}\label{question-formulation}
+\subsubsection{Question Formulation}\label{question-formulation}
 
 We consider learning + feedback as a key building block of the ecosystem
 which is the cure for our primary concern over passive knowledge
@@ -632,7 +570,7 @@ reserach problems such as NLP, Visual Recognition and Speech
 recognition. For solving our task, all those domians will possibly be
 invloved.
 
-\subsection{Question Generation}\label{question-generation}
+\subsubsection{Question Generation}\label{question-generation}
 
 First, let's take a look at question generation (QG) problem.
 
@@ -653,7 +591,7 @@ since both the input and the output is most likely a sequence of text
 character that the model needs to process and learn the relationship
 from.
 
-\subsubsection{Case Studies}\label{case-studies}
+\paragraph{Case Studies}\label{case-studies}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -765,7 +703,7 @@ current policy. The goal in RL-based question generation is to find a
 policy that can maximize the sum of the expected return at the end of
 the sequence generated.
 
-\subsubsection{Summary}\label{summary}
+\paragraph{Summary}\label{summary}
 
 In this QG section, we have discussed 4 algorithms. They provide us a
 way to frame our problem for which we can apply generative seq2seq model
@@ -780,11 +718,11 @@ mainly on processing the text input data instead of videos directly. It
 demonstrates that more reserch in this new area is needed so as to meet
 our particular needs.
 
-\subsection{Answer Generation}\label{answer-generation}
+\subsubsection{Answer Generation}\label{answer-generation}
 
-\subsubsection{Close-ended Questions}\label{close-ended-questions}
+\paragraph{Close-ended Questions}\label{close-ended-questions}
 
-\paragraph{Visual Question Answering
+\subparagraph{Visual Question Answering
 (VQA)}\label{visual-question-answering-vqa}
 
 As what we have covered above, most QG problem focuses solely on
@@ -880,7 +818,7 @@ based on the question type. In turn, it allows them to integrate the
 information from multiple visual sources and obtain gains across all
 question types.
 
-\paragraph{Video Question Answering}\label{video-question-answering}
+\subparagraph{Video Question Answering}\label{video-question-answering}
 
 The recent advancements that we discussed above in VQA domain have shown
 some promising implication. In terms of achieving our particular goal,
@@ -935,7 +873,7 @@ answers and question collected as the input to show to the annotators.
 By doing so, annotators can re-formulate the question and answers while
 doing the sanity check.
 
-\paragraph{Summary}\label{summary-1}
+\subparagraph{Summary}\label{summary-1}
 
 By going through the previous examples, we can see that VQA is very
 particular type of algorithms that is designed to efficiently process
@@ -952,7 +890,7 @@ and answer pairs. Also, more advanced algorithm like the one described
 above multi-stream hierarchical attention context network is in need for
 dealing with video input data in contrast to static pictures.
 
-\paragraph{Dual Question-Answering
+\subparagraph{Dual Question-Answering
 Model}\label{dual-question-answering-model}
 
 Both Question Generaion(QG) and Question Answering(QA) are well-defined
@@ -1085,21 +1023,21 @@ problem. During the policy-gradient reinforcement learning algorithm,
 they end up adopting a similar sampling strategy as the scheduled
 sampling strategy for generating the sampled output.
 
-\paragraph{Summary {[}DRAFT{]}}\label{summary-draft}
+\subparagraph{Summary {[}DRAFT{]}}\label{summary-draft}
 
 As what have discussed above, we can see that there have been many
 attemps taken in the recent years for handling both tasks at the same
 time and some significant progress have been made.
 
-\subsubsection{Open-ended Question
+\paragraph{Open-ended Question
 {[}DRAFT{]}}\label{open-ended-question-draft}
 
-\paragraph{General Question}\label{general-question}
+\subparagraph{General Question}\label{general-question}
 
 As I mentioned aboce, one of the most general open-ended questions is to
 ask learner to provide a short summary of the learning content.
 
-\paragraph{Specific Question}\label{specific-question}
+\subparagraph{Specific Question}\label{specific-question}
 
 At the first glance, it appears hard for our system to effectively
 generate the question. However, this type of task is not that
@@ -1125,20 +1063,19 @@ adversarially craft input as this paper
 Scoring and Coherence Modeling for Adversarially Crafted Input}
 illustrated.
 
-\subsection{Summary of Learning and Feedback Networks
+\subsubsection{Summary of Learning and Feedback Networks
 {[}DRAFT{]}}\label{summary-of-learning-and-feedback-networks-draft}
 
-\subsubsection{Summary current research}\label{summary-current-research}
+\paragraph{Summary current research}\label{summary-current-research}
 
-\subsubsection{Areas where new stuff needs to be made research
-{[}current reserach is promising but we need more reserach and
-innovation in this
+\paragraph{Areas where new stuff needs to be made research {[}current
+reserach is promising but we need more reserach and innovation in this
 area{]}}\label{areas-where-new-stuff-needs-to-be-made-research-current-reserach-is-promising-but-we-need-more-reserach-and-innovation-in-this-area}
 
-\subsubsection{datasets and annotaters
+\paragraph{datasets and annotaters
 needed}\label{datasets-and-annotaters-needed}
 
-\section{Knowledge Graph {[}DRAFT{]}}\label{knowledge-graph-draft}
+\subsection{Knowledge Graph {[}DRAFT{]}}\label{knowledge-graph-draft}
 
 Next, we need to consider how we can select an adequate and relevant
 learning masterial and generate an effecive learning map for the
@@ -1177,21 +1114,20 @@ states that a certrain relation holds between 2 entities.
   from knowledge b
 \end{enumerate}
 
-\subsection{Summary of Knowledge Graph
+\subsubsection{Summary of Knowledge Graph
 {[}DRAFT{]}}\label{summary-of-knowledge-graph-draft}
 
-\subsubsection{summary current
-research}\label{summary-current-research-1}
+\paragraph{summary current research}\label{summary-current-research-1}
 
-\subsubsection{areas where new stuff needs to be made research
-{[}current reserach is promising but we need more reserach and
-innovation in this
+\paragraph{areas where new stuff needs to be made research {[}current
+reserach is promising but we need more reserach and innovation in this
 area{]}}\label{areas-where-new-stuff-needs-to-be-made-research-current-reserach-is-promising-but-we-need-more-reserach-and-innovation-in-this-area-1}
 
-\subsubsection{datasets and annotaters
+\paragraph{datasets and annotaters
 needed}\label{datasets-and-annotaters-needed-1}
 
-\section{Knowledge Journeys {[}DRAFT{]}}\label{knowledge-journeys-draft}
+\subsection{Knowledge Journeys
+{[}DRAFT{]}}\label{knowledge-journeys-draft}
 
 The knowledge graph is our ground truth and can be applied universally
 to some extent, but everyone's learning journey is still highly custom.
@@ -1262,13 +1198,13 @@ Autoencoder
   Deep Reinforcement Learning (DRL)
 \end{enumerate}
 
-\subsection{Summary of Current Research and Needs
+\subsubsection{Summary of Current Research and Needs
 {[}DRAFT{]}}\label{summary-of-current-research-and-needs-draft}
 
-\section{Data and Annotation
+\subsection{Data and Annotation
 {[}DRAFT{]}}\label{data-and-annotation-draft}
 
-\subsection{Reference {[}DRAFT{]}}\label{reference-draft}
+\subsubsection{Reference {[}DRAFT{]}}\label{reference-draft}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1292,7 +1228,7 @@ Autoencoder
   Recommender System}
 \end{enumerate}
 
-\chapter{Conclusion}\label{conclusion}
+\section{Conclusion}\label{conclusion}
 
 In conclusion, we presented a new perspective on knowledge acquistion,
 representation, and proposed an ecosystem that would support a modern
@@ -1311,16 +1247,14 @@ machine learning researchers, teachers, and designers needed.
 As machine learning researchers we are looking forward to building our
 next prototype and collaborating around this work.
 
-\chapter{About Authors}\label{about-authors}
+\section{About Authors}\label{about-authors}
 
-\section{Haohan Wang}\label{haohan-wang}
+\subsection{Haohan Wang}\label{haohan-wang}
 
-\section{Fanli Zheng (Christian
+\subsection{Fanli Zheng (Christian
 Ramsey)}\label{fanli-zheng-christian-ramsey}
 
-\chapter{References}\label{references}
-
-\bibliography{book.bib,packages.bib}
-
+\section{References}\label{references}
+\setlength{\parindent}{0in}
 
 \end{document}
