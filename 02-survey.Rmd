@@ -458,6 +458,14 @@ A graph dedicated to education should do the following:
 - Map subject with the Concepts
 
 ![Knowledge Ecosystem](img/knowledgeEcosystem.png)
+### Key Components
+Here are some key components that we found important of building an automated knowledge graph for education: 
+
+1. Entity recognition that aims to extract concept of interest from structured or unstructured data. 
+
+
+2. Relation identification that leverages on the semantic meaning of data. 
+
 
 ### Automatic Knowledge Graph Construction
 
@@ -467,14 +475,13 @@ However, we are looking for solutions that can allow us to complete our educatio
 
 There have been several papers that provide promising results to the automatation of constructing a knowledge graph. Let's take a look.
 
-### Concept Extraction
 
-### Relation Extraction
 
 ### Case Studies 
 
-1. In this paper [KnowEdu: A System to Construct Knowledge Graph for Education](https://ieeexplore.ieee.org/document/8362657)
+1. In this paper [KnowEdu: A System to Construct Knowledge Graph for Education](https://ieeexplore.ieee.org/document/8362657), they propose a system KnowEdu that can automatically construct knowledge graph for education. In short, the system is able to extract concepts of subjects or courses and then identifies the educational relations between the concepts. 
 
+More importantly, it adopts the neural sequence labeling algorithm on pedagogical data to extract instruction concepts and employs probabilistic association rule mining on learning assessment data to identify the significance of the relations. 
 
 2. In this paper [Knowledge Vault: A Web-Scale Approach to Probabilistic Knowledge Fusion](https://dejanseo.com.au/wp-content/uploads/2014/08/Knowledge-Vault-A-Web-Scale-Approach-to-Probabilistic-Knowledge-Fusion.pdf)
 
