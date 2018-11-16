@@ -13,86 +13,31 @@ $$GRAPH_{v,e} =
   e_{2,1} & e_{2,2} & \cdots & e_{2,n} \\
  \end{pmatrix}$$
 
+Google's Knowledge Graph
+Google Knowledge Vault
 
+Problem Formulation
 
+Given we've impletemented the learning and feedback module, knowing where a given piece of education content fits into the knowledge space is a vital task if we want the knowledge footprint to make a learner predictable to others as well as being able to recommend new educational content that the learner can take on successfully. We will need the following things to connect educational content.
 
-Next, we need to consider how we can select an adequate and relevant learning masterial and generate an effecive learning map for the learners based on their current progress and the general knowledge graph/map, given the ever growing amount of educational content on the web. 
+> A classifier to take a piece of educational content 
+>
 
-As I mentioned earlier, learning is a knowledge accumulation process. Knowledge itself has its unique structure that can help us learn in a most effective and productive way. Knowledge Graph is a great tool that we developed to map and present the structure of knolwedge. In shirt, knowledge graphs are collections of relational facts, where each fact states that a certrain relation holds between 2 entities.
+What we need
 
-1. In this paper [Generalized Embedding Model for Knowledge Graph Mining](http://www.mlgworkshop.org/2018/papers/MLG2018_paper_5.pdf), they have presented a model for learning neural presentation of generalized knowledge graphs using a novel muli-shot unsupervised neural network model, called the **Graph Embedding Network (GEN)**. This model is able to learn different types of knowlege graphs from a universal perspective and it provides flexibility in learning representations that work on graphs conforming to different domains. 
+A graph dedicated to education should do the following:
+- Provide flexibility for new subjects
+- Connect related subjects to each
+- Connect concepts
 
+Subject -> Concepts
 
-2. In this paper [Probabilisic Knowledge Graph Embeddings](https://openreview.net/pdf?id=rJ4qXnCqFX), they explored a new type of embedding model that can link prediction in relational knowledge graph. 
+## Automatic Knowledge Graph Construction
+There have been several papers that provide promising results to the automatation of constructing a knowledge graph but not as many in the domain of education. 
 
+## Concept Extraction
 
-3. In this paper [Zero-Shot Question Generation from Knowledge Graphs for Unseen Predicates and Entity Types](http://aclweb.org/anthology/N18-1020), they presented a network that can generate question from knowledge b
-
-
-### Summary of Knowledge Graph [DRAFT]
-
-
-#### summary current research
-#### areas where new stuff needs to be made research [current reserach is promising but we need more reserach and innovation in this area]
-#### datasets and annotaters needed 
-
-
-
-# CR Knowledge Journeys [DRAFT]
-
-The knowledge graph is our ground truth and can be applied universally to some extent, but everyone's learning journey is still highly custom. In terms of learning, everyone seems to have their unique set of problems that they are curious about and everyone is on their own mission towards the mastery. As a result, their knowlege journeys could have a lot more degree of freedom depends on the learn's learning history, interests and who they are related to. 
-
-We cannot possibly put such an online learning/teaching system into use without taking this crucial factor into our account. However, this is not a trivial problem that can be solved with 1 network or 2. 
-
-
-Let's first formulate our problem before we dive into the possible solutions. Below are few key components that we need to combine to achieve our ultimate goal which is to appropriately guide the learner through their unique knowledge journey:  
-
-1. First, we need to 
-
-
-
-
-, we can rely on some heuristic and models that have been developed to resolve this type of idiosymcratic issue.
-
-
-As we all know that a recommender system is an intuitive line of defense against consumer over-choice given the evern growing information available on the web. As we mentioned earlier in the knowledge graph, a authoritative and personalized recommending system is essential for facilitating the learning. 
-
-
-Typically, a recommendation models can be classified into 3 main categories: 
-
-
-1. Collaborative filtering
-
-
-2. Content based 
-
-
-3. Hybrid recommender system 
-
-As I mentioned, here we will mainly focus on hybrid recommender system. 
-
-There are a diverse array of achitectual paradigms that are closely related recommending system. Let's take a look at few of them: 
-1. Autoencoder 
-
-
-2. Convolutional Neural Network 
-
-
-3. Recurrent Neural Network 
-
-
-4. Restricted Boltzmann Machine (RBM)
-
-
-5. Adversarial Networks
-
-
-6. Attentional Models (AM)
-
-
-7. Deep Reinforcement Learning (DRL)
-
-
+## Relation Extraction
 
 
 ### Summary of Current Research and Needs [DRAFT]
