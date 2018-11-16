@@ -62,12 +62,11 @@ Question Generation (QG) is part of NLP. The goal of QG is to generate questions
  
 As for Question Answering (QA) task, it is a well-researched problem in NLP as well. Recently, QA has also been used to develop dialog systems and chatbots designed to simulate human conversation. Traditionally, most of the research used a pipeline of conventional linguistically-based NLP techniques i.e. parsing, part-of-speech tagging and coreference resolution. However, with recent developments in deep learning, neural network models have shown promise for QA. Further improvement i.e.attention mechanism and memory networks allow the network to focus on the most revevant facts such that they achieved state-of-art performance for QA.
 
-Now we have some basic understanding of these 2 problems that we will be investigaing more in depth later. Consider the next question: 
-
+Now we have some basic understanding of these 2 problems for which we will be expanding more in depth later. Consider the next question: 
 
 >"what types of questions & answers would be best to test a learner's knowledge given a piece of educational content (i.e. a lecture video)"
 
-Let's say a learner is watching a video about hypothesis testing, after showing an example and given the data needed to test the hypothesis. Then the system will pause the video and ask: 
+Let's say a learner is watching a video about hypothesis testing, after showing an example and giving the data needed to test the hypothesis. The system could pause the video and ask the following possible questions: 
 
 
 1. What is the p-value for this test? (and provide multiple choices for learner to choose from)
@@ -83,60 +82,60 @@ Let's say a learner is watching a video about hypothesis testing, after showing 
 
 
 
-It is also ideal to ask learner the question as follows after showing the solution and explanation:
+It is also helpful to ask learner the question as follows after showing the solution:
 
 
-5. Tell me what you have learned through this example. 
+5. Tell me what you have learned through this video or this example. 
 
 
-As shown above, we would call questions #1 and #2 close-ended questions; question #3 and #4 specific open-ended questions; and question #5 a general open-ended question.
+As shown above, we would call questions #1 and #2 the close-ended questions; question #3 and #4 the specific open-ended questions; and question #5 a general open-ended question.
 
-So the formulation for both of these is to:
-
-1. Generate close-ended question + Answers pairs
+Based the above information, we can update our question formulation into:
 
 
-2. Generate specific open-ended question + Answers pairs
+1. Generate close-ended question + answers pairs
+
+
+2. Generate specific open-ended question + answers pairs
 
 
 3. Evaluate and comment on the general open-ended answers 
 
 
-In terms of the close-ended, the answers can be well defined and evaluated. However, the process might be a little bit tricky when it comes to the open-ended questions. We will approach each of them here from the current research.  
+In terms of the close-ended, the answers can be well defined and evaluated. However, the process might be a little bit tricky when it comes to the open-ended questions. We will approach each of them here from the current research perspective.  
 
 
 ** Why deep learning? **
 
-As we stated above, deep learning has achieved state-of-art performance in both QG and QA tasks. Now let's take a close look at why. 
+As we stated above, deep learning has achieved state-of-art performance in both QG and QA tasks. But how? 
 
-If you pay close attention to the question generation and answer generation set of problems, we can easily frame this problem into a general machine learning problem in which we need to find the relationship between the educational content and the meaningful question & answer pairs that is associated with the content. In other words, our problem could be simplified as learning a function that is capable of capture the relationship between our input and output, that is to say, appropriately map the educational content to the desired question and answer pairs with this function. 
+If you pay close attention to the question generation and answer generation type of problems, you can easily reframe this problem into a general machine learning problem in which the model needs to learn the relationship between the educational content and the meaningful question & answer pairs that is associated with the content. In other words, our problem could be simplified as learning a function that is capable of capture the relationship between our input and output, or, appropriately map the educational content to the desired question and answer pairs with this function. 
 
-To the best of our knowledge, deep learning is one of the most optimal techniques currently developed to solve such an issue. 
+To the best of our knowledge, deep learning is one of the most optimal techniques currently developed to do such a job 
 
-As we all know that machine learninag is a set of algorithms that can be used  to parse data, learn from the data, and then apply what they have learned to make intelligent decisions. Or more specifically,  
-
-Deep learning is a subset of machine learning and it belongs to a family of representation learning. Inside this family, deep learning is good at sampling the features and have additonal layers for more abstract feature learning which will support the final goal of mapping the feature to the output. 
+As we all know that machine learninag is a set of algorithms that can be used to parse data, learn from the data, and then apply what they have learned to make intelligent decisions. Or more specifically, deep learning is a subset of machine learning that belongs to the family of representation learning. Inside this family, deep learning is particularly good at sampling the features and having additonal layers for more abstract feature learning. All of these features are crutial for our goal of mapping the feature to the output task. 
 
 Because of the above advantages, deep learning is known as one of the most flexible machine learning algorithms that can learn and map the **deep representation** from the data. Also, deep nueral networks architecture can be composed into a single differentiable function and trained end-to-end until it converges. As a result, they can help identify the suitable *inductive* *biases* catered to the training data. 
 
+Moreover, deep learning outperforms other techniques when the training data size is large and the advantage fits our siutation well. We could easily find a large amound of educational content available on the web.
 
-Moreover, deep learning outperforms other techniques when the training data size is large which fits our siutation well. We have a large amound of educational content that is currently available on the web.
-
-The large amount content creates another problem that can be avoided with deep learning as well, which is it's going to very troublesome to do feature engineering manually. When there is lack of domain understanding for feature introspection, deep learning is preferable. 
+The large amount content creates another problem that can be avoided with deep learning, which is it's going to be very troublesome if you plan to do feature engineering manually. When there is lack of domain understanding for feature introspection, deep learning is preferable. 
 
 In the end, deep learning really shines when it comes to many complex reserach problems such as NLP, Visual Recognition and Speech recognition. For solving our task, all those domians will possibly be invloved. 
 
+
+
 ### Question Generation
 
-First, let's take a look at question generation (QG) problem. 
+Let's begin with question generation (QG) problem. 
 
 The ideal goal of an automatic question generation is to generate a question Q that is syntactically and semantically correct, relevant to the context and meaningful to answer. 
 
 In order to achieve this goal,, we need to train an algorithm to learn the underlying conditional probability distribution
 $$P_{\theta}(Q|X)$$
-parametrized by $\theta$. In other words, we can think of this problem as the same one that requires the model learn a function (with a set of parameters) $\theta$ during the training stage using content-question pairs so that the probability $P_{\theta}(Q|P)$ is maximized over the given training dataset. 
+parametrized by $\theta$. In other words, we can think of this problem as the one that requires the model to learn a function (with a set of parameters) $\theta$ during the training stage using content-question and/or answer pairs so that the probability $P_{\theta}(Q|P)$ is maximized over the given training dataset. 
 
-It is also helpful to frame this problem into a seq2seq learning problem since both the input and the output is most likely a sequence of text character that the model needs to process and learn the relationship from. 
+It is also helpful to frame this problem into a seq2seq learning problem since both the input and the output are most likely a sequence of text character that the model needs to process and learn the relationship from. 
 
 #### Case Studies
 1. In this paper [QG-Net: A Data-Driven Question Generation Model for Educational Content](http://www.princeton.edu/~shitingl/papers/18l@s-qgen.pdf). They use a bi-directional LSTM network to process the input context words sequence. Encoding the answer into context word vectors.
@@ -366,17 +365,17 @@ Similar to the last peper, this paper shows that it is possible to generate resp
 
 ### Summary of Learning and Feedback Networks [DRAFT]
 
-Based on our previous discussion, we can find that there general QG and QA (including VQA) are the well-researched areas. The current techniques have indicate that it is feasible for us to build such a system that can generate specific question and answer pairs for our learner given they are studying an educational video. 
+Based on our previous discussion, we find that both QG and QA (including VQA) tasks have beem well-researched. A numerous of spcifically designed algorithms were presented and proved effective for solving these problems. 
 
-Some research has been done to tackle both QG and QA problems at the same time. The research we presented may not particularly focus on video content. But the implication is clear, by combining the learning and techniques we gained from the QG and QA sections separtely with some frameworks like dual learning, it is plausible for us to conclude that the coherent QG + QA system for our purpose is not far-fetched. 
+There are also some research has been done to tackle both QG and QA problems at the same time. The research we presented may not be particularly applicable to the video content. But the implication is clear, by combining some techniques we learned from the QG and QA sections separtely with some frameworks like dual learning introduced in the dual task section, it is plausible for us to conclude that the coherent QG + QA system for our purpose is not that far-fetched. 
 
-As for the research in open-ended questions, the research is significantly less which is also consistent with our common sense. However, the current developed techniques are very relevant such as AES model and open-ended question answering networks for our goal.
+As what we anticipated, the research is significantly less in the open-ended question realm. However, some techniques presented in our research finding session are very relevant such as AES model and open-ended question answering networks and could serve as a starting point for solving our problem based on our limited research. As more and more research comes out, we should be able to expect more effective solutions to be proposed soon.
 
 Current reserach is promising but we need more reserach and innovation in this area.
 
 In open-ended question section, we find that our current research cannot fully support our goal of taking in the answer in any possible formats (i.e. a short video presentation or a recording) besides writing. 
 
-Based on our research, we find it is also possible for student to pause the video and ask our system a information-seeking question and then get the answer from our system based on the curent content. More details check on this paper [QuAC : Question Answering in Context](https://arxiv.org/pdf/1808.07036.pdf).
+
 
 #### Datasets and Annotation Needed 
 
@@ -416,7 +415,7 @@ Here are 2 figures that can help you better understand their dataset:
 
 5. In this paper [Video Description: A Survey of Methods, Datasets and Evaluation Metrics](https://arxiv.org/pdf/1806.00186.pdf) mulple methods, datasets and evluation metrics for video description task in a comprehensive survey.  
 
-
+6. Based on our research, we find it is also possible for student to pause the video and ask our system a information-seeking question and then get the answer from our system based on the curent content. More details check on this paper [QuAC : Question Answering in Context](https://arxiv.org/pdf/1808.07036.pdf).
 
 ## Knowledge Graph [DRAFT]
 
