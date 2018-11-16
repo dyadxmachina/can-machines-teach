@@ -483,6 +483,17 @@ There have been several papers that provide promising results to the automatatio
 
 More importantly, it adopts the neural sequence labeling algorithm on pedagogical data to extract instruction concepts and employs probabilistic association rule mining on learning assessment data to identify the significance of the relations. 
 
+In sum, their system consists of the following modules: 
+
+* Instructional Concept Extraction Module to extract instructional concepts for a given subject or course. 
+
+
+* Educational Relation Identification Module to identify the educational relations that interlink instructional concepts to assist the learning and teaching process directly. 
+
+They used conditional random field (CRF) model for entity or terminology recognition task.
+
+
+
 2. In this paper [Knowledge Vault: A Web-Scale Approach to Probabilistic Knowledge Fusion](https://dejanseo.com.au/wp-content/uploads/2014/08/Knowledge-Vault-A-Web-Scale-Approach-to-Probabilistic-Knowledge-Fusion.pdf)
 
 
@@ -500,9 +511,13 @@ More importantly, it adopts the neural sequence labeling algorithm on pedagogica
 
 
 #### datasets and annotaters needed 
+
+
 1. [Knowledge Vault](https://ai.google/research/pubs/pub45634): A web-scale approach to probabilistic knowledge fusion 
 
 2. [Google Knowledge graph Search API](https://developers.google.com/knowledge-graph/#knowledge_graph_entities) 
+
+
 
 
 ## Knowledge Journeys [DRAFT]
