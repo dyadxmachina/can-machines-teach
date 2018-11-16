@@ -400,9 +400,10 @@ However, there are some solutions proposed to tackle this problem specifically.
 
 Other resources that could possibly help us with out tasks are as below: 
 
-3. [VideoMCC](http://videomcc.org/)
+3. [VideoMCC](http://videomcc.org/). In their paper, they have propose to cas
 
-
+4. As what we have covered earlier, this paper [MovieQA: Understanding Stories in Movies through Question-Answering](https://arxiv.org/pdf/1512.02902.pdf), they introduced a new dataset called MovieQA dataset that can evaluate automatic story comprehension from both video and text.  
+### Summary of Knowledge Graph [DRAFT]
 
 ## Knowledge Graph [DRAFT]
 
@@ -419,7 +420,6 @@ As I mentioned earlier, learning is a knowledge accumulation process. Knowledge 
 3. In this paper [Zero-Shot Question Generation from Knowledge Graphs for Unseen Predicates and Entity Types](http://aclweb.org/anthology/N18-1020), they presented a network that can generate question from knowledge b
 
 
-### Summary of Knowledge Graph [DRAFT]
 
 
 #### summary current research
