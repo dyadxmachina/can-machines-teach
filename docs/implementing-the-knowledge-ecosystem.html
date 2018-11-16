@@ -138,9 +138,7 @@
 <li class="chapter" data-level="4.2.3" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#answer-generation"><i class="fa fa-check"></i><b>4.2.3</b> Answer Generation</a></li>
 <li class="chapter" data-level="4.2.4" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#summary-of-learning-and-feedback-networks-draft"><i class="fa fa-check"></i><b>4.2.4</b> Summary of Learning and Feedback Networks [DRAFT]</a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#knowledge-graph-draft"><i class="fa fa-check"></i><b>4.3</b> Knowledge Graph [DRAFT]</a><ul>
-<li class="chapter" data-level="4.3.1" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#summary-of-knowledge-graph-draft"><i class="fa fa-check"></i><b>4.3.1</b> Summary of Knowledge Graph [DRAFT]</a></li>
-</ul></li>
+<li class="chapter" data-level="4.3" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#knowledge-graph-draft"><i class="fa fa-check"></i><b>4.3</b> Knowledge Graph [DRAFT]</a></li>
 <li class="chapter" data-level="4.4" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#knowledge-journeys-draft"><i class="fa fa-check"></i><b>4.4</b> Knowledge Journeys [DRAFT]</a><ul>
 <li class="chapter" data-level="4.4.1" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#summary-of-current-research-and-needs-draft"><i class="fa fa-check"></i><b>4.4.1</b> Summary of Current Research and Needs [DRAFT]</a></li>
 </ul></li>
@@ -150,7 +148,7 @@
 </ul></li>
 <li class="chapter" data-level="5" data-path="cr-knowledge-graph.html"><a href="cr-knowledge-graph.html"><i class="fa fa-check"></i><b>5</b> CR Knowledge Graph</a><ul>
 <li class="chapter" data-level="5.1" data-path="cr-knowledge-graph.html"><a href="cr-knowledge-graph.html#what-is-a-graph"><i class="fa fa-check"></i><b>5.1</b> What is a graph?</a><ul>
-<li class="chapter" data-level="5.1.1" data-path="cr-knowledge-graph.html"><a href="cr-knowledge-graph.html#summary-of-knowledge-graph-draft-1"><i class="fa fa-check"></i><b>5.1.1</b> Summary of Knowledge Graph [DRAFT]</a></li>
+<li class="chapter" data-level="5.1.1" data-path="cr-knowledge-graph.html"><a href="cr-knowledge-graph.html#summary-of-knowledge-graph-draft"><i class="fa fa-check"></i><b>5.1.1</b> Summary of Knowledge Graph [DRAFT]</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="cr-knowledge-journeys-draft.html"><a href="cr-knowledge-journeys-draft.html"><i class="fa fa-check"></i><b>6</b> CR Knowledge Journeys [DRAFT]</a><ul>
@@ -306,6 +304,8 @@
 <p>As what we have covered above, most QG problem focuses solely on generating questions but not the answers based on the context.</p>
 <p>VQA is a challenging research problem that focuses on providing a natural language answer given any image and any free-form natural language question. As we are managing to handle the video educational content first that is likely to involve language processing and visual recognition tasks, VQA would be a proper start for us. By leveraging this type of algorithm, we enable our system to easily evaluate the answer provided by learners which could in turn automated the whole question + answering + evaluation cycle.</p>
 <p>Since we are dealing with visual input, question-guided attention mechanism is a key component for solving this type of task. Started from the attention mechanism that can adaptively learn the most relevant image regions for a given question. Then to stack multiple question-guided attention mechanisms to learn the attention in an iterative way. Also, it is possible to use bilinear features to integrate the visual features from the image spatial grids with question features to predict attention. Considering the questions in natural language may also contain some noise, the co-attention mechanism can jointly learn the attention for both the image and question.</p>
+<div id="case-studies-1" class="section level6">
+<h6><span class="header-section-number">4.2.3.1.1.1</span> Case Studies</h6>
 <ol style="list-style-type: decimal">
 <li>In this paper <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Yalong_Bai_Deep_Attention_Neural_ECCV_2018_paper.pdf">Deep Attention Neural Tensor Network for Visual Question Answering</a>, they proposed a novel deep attention neural tensor network that can discover the joint correlation over images, questions and answers with tensor-based representation.</li>
 </ol>
@@ -325,9 +325,12 @@
 <p>As for their main contribution, they focus on developing an attention mechanism that can exploit high-level semantic information on the question type to guide the visual encoding process.</p>
 <p>Specifically, they introduced a novel VQA architecture that can dynamically gate the contribution of ResNet and Faster R-CNN features based on the question type. In turn, it allows them to integrate the information from multiple visual sources and obtain gains across all question types.</p>
 </div>
+</div>
 <div id="video-question-answering" class="section level5">
 <h5><span class="header-section-number">4.2.3.1.2</span> Video Question Answering</h5>
 <p>The recent advancements that we discussed above in VQA domain have shown some promising implication. In terms of achieving our particular goal, it is also worth mentioning that VQA might be a good start but it is not sufficient yet. To bridge this gap, let’s focus our attention on some video question answering algorithms that have been proposed.</p>
+<div id="case-studies-2" class="section level6">
+<h6><span class="header-section-number">4.2.3.1.2.1</span> Case Studies</h6>
 <ol style="list-style-type: decimal">
 <li>In this paper <a href="https://www.ijcai.org/proceedings/2018/0513.pdf">Multi-Turn Video Question Answering via Multi-Stream Hierarchical Attention Context Network</a>, they proposed a hierarchical attention context network for context-aware question understanding by modeling the hierarchically sequential conversation context structure. They also incorporate the multi-step reasoning process fro the multi-stream hierarchical attention context network to enable the progressive joint representation learning of the multi-stream attentional video and context-aware question embedding.</li>
 </ol>
@@ -338,6 +341,7 @@
 <p>They collected 408 subtitled movies and obtained their extended summaries in the form of plot synopses(movie summaries that fans write after watching the movie) from Wikipedia. They used plot synopses as a proxy for the movie. They have annotators create both quizzes and answers pairs by referring to the story plot. Time-stamp is also attached with each question.</p>
 <p>In the second step of data collection, they used the multiple-choice answers and question collected as the input to show to the annotators. By doing so, annotators can re-formulate the question and answers while doing the sanity check.</p>
 </div>
+</div>
 <div id="summary-1" class="section level5">
 <h5><span class="header-section-number">4.2.3.1.3</span> Summary</h5>
 <p>By going through the previous examples, we can see that VQA is very particular type of algorithms that is designed to efficiently process image and text input data while making the inference based on the input. Attention is a typical mechanism applied in this type of problems and multiple forms of multipulation on the attention mechanism used in these models have significantly improved the model performance.</p>
@@ -347,6 +351,8 @@
 <h5><span class="header-section-number">4.2.3.1.4</span> Dual Question-Answering Model</h5>
 <p>Both Question Generaion(QG) and Question Answering(QA) are well-defined 2 sets of models that aim to either infer a question or an answer given the counterpart based on the context. However, they are usually explored separately despite of their intrinsic complementary relationship. In our case, a sysem that can take on both roles simultaneously are needed to fully automated learning + feedback process.</p>
 <p>There are some algorithms are designed to fulfill both roles.</p>
+<div id="case-studies-3" class="section level6">
+<h6><span class="header-section-number">4.2.3.1.4.1</span> Case Studies</h6>
 <p>1.In this paper <a href="https://arxiv.org/pdf/1809.01997.pdf">Dual Ask-Answer Network for Machine Reading Comprehension</a> they presente a model that can learn question answering and question generation simultaneousely. They tie the network components that playing the similar roles into 2 tasks to transfer cross-task knowledge during training. Then the cross-modal interaction of question, context and answer is captured with a pair of symmetric hierarchical attenion processes.</p>
 <p>The high-level architecture of the model is illustrate as below:</p>
 <div class="figure">
@@ -381,6 +387,7 @@
 </ol>
 <p>As for the training process, they first pretrain the model with cross-entropy loss and then they fine tune the model parameters with policy-gradient reinforcement learning to alleviate the exposure bias problem. During the policy-gradient reinforcement learning algorithm, they end up adopting a similar sampling strategy as the scheduled sampling strategy for generating the sampled output.</p>
 </div>
+</div>
 <div id="summary-draft" class="section level5">
 <h5><span class="header-section-number">4.2.3.1.5</span> Summary [DRAFT]</h5>
 <p>As mentioned earlier, QG and QA tasks are intrinsically binded and one cannot find solution for either of them without taking the other party into account. In this section, we have discussed some approaches that many groups of people have taken to help machine learning both tasks simultaneously. Some exciting findings have been presented here. For our problem, it is very motivating to see these progress and learn from their approaches. In sum, the general setup is similar to dual learning framework, we need to tie QG and QA parts of the algorithms together. In the first diagram of the section, we can see that they connect the loss function from both sides of the model which is very similar to the strategy adopted by <a href="https://en.wikipedia.org/wiki/Generative_adversarial_network">GAN</a> (Generative adversarial network). Some advanced mechsnisms are proposed as well i.e. symmetric hierarchical attenion and policy-gradient reinforcement learning algorithm.</p>
@@ -396,9 +403,7 @@
 <p>As I mentioned above, the open-ended question could be roughly splitted into 2 categories. One is general oepn-ended questions (i.e. give me a summary of this video) or a more specific oepn-ended question (given XX contion and the rule told in the video, tell me the conclusion we can draw).</p>
 <p>Technically specking, these 2 categories are not that particular distinct since both problems require the system to be able to draw some conclusion based on the context and question provided; the answer is allowed to have a pretty high degree of freedom. In other words, our system should be able to evaluate the answer with relatively flexible rules or standards.</p>
 <p>Based our assumptions, we will just combine these 2 problems into 1 here to show some research findings that can possibly support our unified goal.</p>
-<div id="research-findings" class="section level6">
-<h6><span class="header-section-number">4.2.3.2.1.1</span> Research Findings</h6>
-<p>It may appear infeasible at the frist glance to teach a system to have answers for or even evaluate this type of problems. Or it is just an indication that we should probably reframe our issue and break it apart into smaller elements. Based on our research, we suggest thiking of this type of issue as a particular type of QA problem; the difference is that after the QA procedure, we need to match and evaluate the answers generated by machine and the learner such that we can provide an adequate feedback.</p>
+<p>It may appear unapproachable at the frist glance to teach a system to have answers for or even evaluate this type of problems. Or it is just an indication that we should probably reframe our issue and break it apart into smaller elements. Based on our research, we suggest thiking of this type of issue as a particular type of QA problem; the difference is that after the QA procedure, we need to match and evaluate the answers generated by machine and the learner such that we can provide an adequate feedback.</p>
 <p>Here we would like to start with a existing knowledge evaluation system that has been used for grading the essays automatically - Automated essay scoring (AES) which focuses on automatically analyzing the quality of writing and assigning a score to the text. AES systems may rely not only on grammars, but also on more complex features such as semantics, discourse and pragmatics. It has four general types:</p>
 <ul>
 <li><p>Essay Grade: it is known as the first AES system.</p></li>
@@ -407,6 +412,8 @@
 <li><p>IntelliMetric: it is devloped and used by the College Board for placement purposes.</p></li>
 </ul>
 <p>Enough for the introducion, let’s begin reviewing our papers.</p>
+<div id="case-studies-4" class="section level6">
+<h6><span class="header-section-number">4.2.3.2.1.1</span> Case Studies</h6>
 <ol style="list-style-type: decimal">
 <li>In this paper <a href="http://aclweb.org/anthology/N18-1024">Neural Automated Essay Scoring and Coherence Modeling for Adversarially Crafted Input</a>, they develop a network that can effectively learn connectedness features between sentences and propose a framework for integrating and jointly training the local coherence model with a state-of-art AES.</li>
 </ol>
@@ -445,8 +452,30 @@
 <p>Current reserach is promising but we need more reserach and innovation in this area.</p>
 <p>In open-ended question section, we find that our current research cannot fully support our goal of taking in the answer in any possible formats (i.e. a short video presentation or a recording) besides writing.</p>
 <p>Based on our research, we find it is also possible for student to pause the video and ask our system a information-seeking question and then get the answer from our system based on the curent content. More details check on this paper <a href="https://arxiv.org/pdf/1808.07036.pdf">QuAC : Question Answering in Context</a>.</p>
-<div id="datasets-and-annotaters-needed" class="section level4">
-<h4><span class="header-section-number">4.2.4.1</span> datasets and annotaters needed</h4>
+<div id="datasets-and-annotation-needed" class="section level4">
+<h4><span class="header-section-number">4.2.4.1</span> Datasets and Annotation Needed</h4>
+<p>In order to approach this problem from scratch, we need to create our own dataset for which we will provide some related resources to start with:</p>
+<ol style="list-style-type: decimal">
+<li><a href="https://research.google.com/youtube8m/">YouTube-8M Dataset</a>. This is a large-scale labeled video dataset that consists of millions of YouTube video IDs, with high-quality generated annotations from a diverse vocabulary of 3800+ visual entities. As you can see from its introduction, it comes with precomputed audio-visual features from billions of frames and audio segments. In short, we can expect the following content from this dataset:</li>
+</ol>
+<ul>
+<li><p>the dataset consists of 6.1M videos URLs, labeled with a vocabulary of 3863 visual entities</p></li>
+<li><p>the video-level dataset comes out to be 18 GB in size, whiel the frame-level features are approximately 1.3 TB</p></li>
+<li><p>it comes with pre-extracted audio &amp; visual features from every second of video.</p></li>
+</ul>
+<p>Though the video content is not limited to education category, we can still use it to get a strong baseline model.</p>
+<p>Naturally, the next step would be constrain our model to train on particularly educational content. The data needed for taining may include the raw video clip, annotation/caption of the whole video content, and audio part of the video.</p>
+<p>As discussed above, the video can be easily broke into a sequence of frames for process. Next, we need to get the annotion for the audio.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>In this study <a href="http://jofdl.nz/index.php/JOFDL/article/download/255/198">Video Captions for Online Courses: Do YouTube’s Auto-generated Captions Meet Deaf Students’ Needs?</a>, they studied the auto-generated captions generated on YouTube online courses. They find that, on average, there were 7.7 phrase errors per minute of a total 68 minutes video caption. It is been said, we still need to do a lot of annotion work before we can finally compose our own training dataset.</li>
+</ol>
+<p>However, there are some solutions proposed to tackle this problem specifically.</p>
+<p>Other resources that could possibly help us with out tasks are as below:</p>
+<ol start="3" style="list-style-type: decimal">
+<li><p><a href="http://videomcc.org/">VideoMCC</a>. In their paper, they have propose to cas</p></li>
+<li><p>As what we have covered earlier, this paper <a href="https://arxiv.org/pdf/1512.02902.pdf">MovieQA: Understanding Stories in Movies through Question-Answering</a>, they introduced a new dataset called MovieQA dataset that can evaluate automatic story comprehension from both video and text.<br />
+### Summary of Knowledge Graph [DRAFT]</p></li>
+</ol>
 </div>
 </div>
 </div>
@@ -459,17 +488,14 @@
 <li><p>In this paper <a href="https://openreview.net/pdf?id=rJ4qXnCqFX">Probabilisic Knowledge Graph Embeddings</a>, they explored a new type of embedding model that can link prediction in relational knowledge graph.</p></li>
 <li><p>In this paper <a href="http://aclweb.org/anthology/N18-1020">Zero-Shot Question Generation from Knowledge Graphs for Unseen Predicates and Entity Types</a>, they presented a network that can generate question from knowledge b</p></li>
 </ol>
-<div id="summary-of-knowledge-graph-draft" class="section level3">
-<h3><span class="header-section-number">4.3.1</span> Summary of Knowledge Graph [DRAFT]</h3>
 <div id="summary-current-research" class="section level4">
-<h4><span class="header-section-number">4.3.1.1</span> summary current research</h4>
+<h4><span class="header-section-number">4.3.0.1</span> summary current research</h4>
 </div>
 <div id="areas-where-new-stuff-needs-to-be-made-research-current-reserach-is-promising-but-we-need-more-reserach-and-innovation-in-this-area" class="section level4">
-<h4><span class="header-section-number">4.3.1.2</span> areas where new stuff needs to be made research [current reserach is promising but we need more reserach and innovation in this area]</h4>
+<h4><span class="header-section-number">4.3.0.2</span> areas where new stuff needs to be made research [current reserach is promising but we need more reserach and innovation in this area]</h4>
 </div>
-<div id="datasets-and-annotaters-needed-1" class="section level4">
-<h4><span class="header-section-number">4.3.1.3</span> datasets and annotaters needed</h4>
-</div>
+<div id="datasets-and-annotaters-needed" class="section level4">
+<h4><span class="header-section-number">4.3.0.3</span> datasets and annotaters needed</h4>
 </div>
 </div>
 <div id="knowledge-journeys-draft" class="section level2">
