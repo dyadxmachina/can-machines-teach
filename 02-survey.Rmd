@@ -356,7 +356,7 @@ In sum, their hredGAN combines both generative and retrieval-based multi-turn di
 
 ###### Summary 
 
-Based on our limited research, we found that it is also achievable for our system to answer open-ended questions based on the educational video and provide appropriate feedback/rating for the learner. The first article presents a newly developed AES model that can rate learner's writing. It also demonstrates a possible way of enhance the AES model by training it with the adversarially crafted input. 
+Based on our limited research, we found that it is also achievable for our system to generate the answers for open-ended questions based on the educational video and provide appropriate feedback/rating for the learner. The first paper presents a newly developed AES model that can rate learner's writing. It also demonstrates a possible way of enhance the AES model by training it with the adversarially crafted input. 
 
 In the second paper, we discuss a network that can answer the open-ended questions based on the video and a given question. Their Adaptive Hierarchical Reinforced Networks are composed of hierarchical encoder networks and the reinforced decoder networks. With their framework, we can easily extend the research topic into educational video specifially. 
 
@@ -369,7 +369,7 @@ Based on our previous discussion, we find that both QG and QA (including VQA) ta
 
 There are also some research has been done to tackle both QG and QA problems at the same time. The research we presented may not be particularly applicable to the video content. But the implication is clear, by combining some techniques we learned from the QG and QA sections separtely with some frameworks like dual learning introduced in the dual task section, it is plausible for us to conclude that the coherent QG + QA system for our purpose is not that far-fetched. 
 
-As what we anticipated, the research is significantly less in the open-ended question realm. However, some techniques presented in our research finding session are very relevant such as AES model and open-ended question answering networks and could serve as a starting point for solving our problem based on our limited research. As more and more research comes out, we should be able to expect more effective solutions to be proposed soon.
+As what we anticipated, the research is significantly less in the open-ended question realm. However, some techniques presented in our research finding session are very relevant and could certainly serve as our starting point for solving our problem such as AES model and open-ended question answering networks. As more and more research comes out, we should expect more effective solutions to come out soon.
 
 Current reserach is promising but we need more reserach and innovation in this area.
 
@@ -415,13 +415,70 @@ Here are 2 figures that can help you better understand their dataset:
 
 5. In this paper [Video Description: A Survey of Methods, Datasets and Evaluation Metrics](https://arxiv.org/pdf/1806.00186.pdf) mulple methods, datasets and evluation metrics for video description task in a comprehensive survey.  
 
-6. Based on our research, we find it is also possible for student to pause the video and ask our system a information-seeking question and then get the answer from our system based on the curent content. More details check on this paper [QuAC : Question Answering in Context](https://arxiv.org/pdf/1808.07036.pdf).
+6. Inspired by this paper [QuAC : Question Answering in Context](https://arxiv.org/pdf/1808.07036.pdf) in which they present QuAC dataset for QA in Context that contains 14K information-seeking QA dialogs such as a student who poses a sequence of freeform question to learn as much as possible about a hidden Wikipedia text or a teacher who answers the questions by providing short excerpts from the text, we are convinced that it is might also be possibleob to develop a system that can allow student to pause the video and ask our system a information-seeking question and then get the answer from our system based on the curent content. .
 
 ## Knowledge Graph [DRAFT]
 
 Next, we need to consider how we can select an adequate and relevant learning masterial and generate an effecive learning map for the learners based on their current progress and the general knowledge graph/map, given the ever growing amount of educational content on the web. 
 
 As I mentioned earlier, learning is a knowledge accumulation process. Knowledge itself has its unique structure that can help us learn in a most effective and productive way. Knowledge Graph is a great tool that we developed to map and present the structure of knolwedge. In shirt, knowledge graphs are collections of relational facts, where each fact states that a certrain relation holds between 2 entities.
+
+Now we will consider the knowledge graph as the backbone.
+
+### What is a graph?
+> Graphs are networks of dots and lines - Graph Theory (Dover Books)
+
+Mathematically speaking, graphs are mathematical structures used to model pairwise relations between objects. A graph in this context is made of vertices, nodes, or points which are connected by edges, arcs or lines. Typically a graph consists of two sets. A set of vertexes and a set of edges
+$$GRAPH_{v,e} =
+ \begin{pmatrix}
+  v_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
+  e_{2,1} & e_{2,2} & \cdots & e_{2,n} \\
+ \end{pmatrix}$$
+
+
+As for the knowledge graph, it is a knowledge base. Often when people talk about knowledge graph, they are refering to the multi-relational graph used by Google and its services to enhance search engine's results with information gathered from a variety of sources. Per Wikipeida, [Google's Knowledge Graph](https://developers.google.com/knowledge-graph/#knowledge_graph_entities) uses a graph database to provide structured and detailed information about the topic in addition to a list of links to other sites. 
+
+In general, a knowledge graph represents a knowledge domain. It connects things of different types in a systematic way. Knowledge graphs encode knowledge arranged in a network of nodes and links rather than tables and columns. With knolwedge graphs, people and machines can benefit from a dynamically growing semantic network of facts about things. In other wrods, we can use it to capture the facts related to people, processes, applications, data and many other custom ojbects as well as their relationships among them. 
+
+If you want, they can also capture evidence that can be used to attribute the strengths of these relationships. 
+
+Also, we have found a lot of applications that demonstrate that existing generic knowledge graphs have shown advantages to support semantic search(i.e. Google's Knowledge Graph), personal assistant(i.e. Apple's Siri) and deep question answering (i.e. Wolfram Alpha and IBM's Watson).
+
+### Problem Formulation
+
+Given we've impletemented the learning and feedback module, knowing where a given piece of education content fits into the knowledge space is a vital task if we want the knowledge footprint to make a learner predictable to others as well as being able to recommend new educational content that the learner can take on successfully. We will need the following things to connect educational content.
+
+> A classifier to take a piece of educational content 
+>
+
+A graph dedicated to education should do the following:
+- Provide flexibility for new subjects
+- Connect related subjects to each
+- Connect concepts related to the content 
+- Map subject with the Concepts
+
+![Knowledge Ecosystem](img/knowledgeEcosystem.png)
+
+### Automatic Knowledge Graph Construction
+
+Classic knowledge representation techniques allow a knowledge engineer o create rules that can be interpreted by a reasoner to infer new or missing triples. These rules are usually expressed through an ontology which allows for the propagation of properties from top classes to the lower classes. 
+
+However, we are looking for solutions that can allow us to complete our educational knowledge graph building process. Based on our research, generic knowledge graphs uaually cannot sufficiently support many domain-specific applications i.e. education and finding the representation of the graph to feed the triples into a machine learning or deep learning algorithm is still an open area of research. As a start, let's focus on how to automate the eduction knowledge graph construction process. 
+
+There have been several papers that provide promising results to the automatation of constructing a knowledge graph. Let's take a look.
+
+### Concept Extraction
+
+### Relation Extraction
+
+### Case Studies 
+
+1. In this paper [KnowEdu: A System to Construct Knowledge Graph for Education](https://ieeexplore.ieee.org/document/8362657)
+
+
+2. In this paper [Knowledge Vault: A Web-Scale Approach to Probabilistic Knowledge Fusion](https://dejanseo.com.au/wp-content/uploads/2014/08/Knowledge-Vault-A-Web-Scale-Approach-to-Probabilistic-Knowledge-Fusion.pdf)
+
+
 
 1. In this paper [Generalized Embedding Model for Knowledge Graph Mining](http://www.mlgworkshop.org/2018/papers/MLG2018_paper_5.pdf), they have presented a model for learning neural presentation of generalized knowledge graphs using a novel muli-shot unsupervised neural network model, called the **Graph Embedding Network (GEN)**. This model is able to learn different types of knowlege graphs from a universal perspective and it provides flexibility in learning representations that work on graphs conforming to different domains. 
 
@@ -435,10 +492,10 @@ As I mentioned earlier, learning is a knowledge accumulation process. Knowledge 
 ### Summary of Knowledge Graph [DRAFT]
 
 
-#### summary current research
-#### areas where new stuff needs to be made research [current reserach is promising but we need more reserach and innovation in this area]
 #### datasets and annotaters needed 
+1. [Knowledge Vault](https://ai.google/research/pubs/pub45634): A web-scale approach to probabilistic knowledge fusion 
 
+2. [Google Knowledge graph Search API](https://developers.google.com/knowledge-graph/#knowledge_graph_entities) 
 
 
 ## Knowledge Journeys [DRAFT]
