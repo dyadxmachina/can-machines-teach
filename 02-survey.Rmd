@@ -11,8 +11,7 @@ In this section, we are set to solve the following question:
 
 > How might we approach designing such a system.
 
-
-I will walk you through some possible implementations of the proposed knowledge ecosystem. I will be presenting the current research in machine learning that is relevant to each component of the knowledge ecosystem and also discuss this new artificial neural network architecture EC2VQA and one possible instansitation of that. 
+In this section, we will walk you through some possible implementations of the proposed knowledge ecosystem. We will be presenting the current research in machine learning that is relevant to each component of the knowledge ecosystem while aslo discussing this new artificial neural network architecture EC2VQA and one possible instansitation of that. 
 
 Note that this is not the blueprint, each of these components can be developed independently and vary from what you find here. This is a provocation for getting started on the knowledge ecosystem today.
 
@@ -20,7 +19,7 @@ Note that this is not the blueprint, each of these components can be developed i
 ## Problem Formulation
 
 
-Building such a digital knowledge ecosystem like the one we just visioned is not a trivial task. We would need to break this ecosystem into few key building blocks as below so that we can set out to tackle them one by one.
+Building such a knowledge ecosystem is not a trivial task. An necessary step of searching for the proper solutions would be trying to break the whole task into few subtasks that we can deal with separately. As what we have discussed earlier, our ecosystem could be divided into few key building blocks as below:
 
 1. **Learning + Feedback** -- given a learner consumes a piece of educational content, reliably evaluate their knowledge and provide the feedback for improvement to support their learning. (credibility, rigour) 
 
@@ -32,24 +31,30 @@ Building such a digital knowledge ecosystem like the one we just visioned is not
 
 Much of the element #1 and #2 have been made possible with the recent breakthoughs in machine learning especially in the filed of deep learning. A few other pieces like the element #3 and #4 may require a more advanced framework that has not been proposed yet to best resolve. Let's first take a look at some methods that might come handy when applying to our problems.
 
+In this section we will be primarily focus on the first 2 building blocks. 
 
 ### Before we start...
 
-As what we discussed above, one of the possible and optimal solutions so far for building our ecosystem is using current state-of-art deep learning algorithms in the related domains. Here I will walk you through some thought provoking research summary in a form of survey. 
+As what we discussed above, one of the possible and optimal solutions so far for building our ecosystem is using current state-of-art tehcniques i.e. deep learning in the related domains. Here I will walk you through some thought provoking research summary in a form of survey. 
 
- To best illustrate the problem and possible solutions, we will for now reduce the complexity of the problem. Keep in mind that our ultimate goal is to be able to apply our system to any type of online available educational content. As what we have mentioned earlier, educational videos seem to be one of the top options for people when it comes to knowledge acquisition. Let's explore some of the solutions that can enable us to apply our system on those video educational content.  
+ To best illustrate the problem and possible solutions, we will for now reduce the complexity of the problem. As what we have mentioned earlier, educational videos seem to be one of the top options for people when it comes to knowledge acquisition. Keep in mind that our ultimate goal is to be able to apply our system to any type of online available educational content.
+ 
+ Let's explore some of the solutions that can enable us to apply our system on the video educational content.  
 
 
 ## Learning + Feedback
 
 ### Question Formulation
 
-We consider learning + feedback as a key building block of the ecosystem which is the cure for our primary concern over passive knowledge consumption and untested knowledge of learners. Here, we will be addressing this problem and its possible solutions in deatails so that we can provide our learners a credible and interactive learning + feedback experience system to best support their knowledge acuqisition. 
+We consider learning + feedback as a key building block of the ecosystem which is the cure for our primary concern of  passive knowledge consumption and untested knowledge of learners. By solving this problem, our system will be able to provide our learners a credible and interactive learning experience that can best support their knowledge acuqisition. 
 
-A salient question that we have to ask ourselves before deisgning such a system is that:
+In shor, in the section we will be providing some insights on how to solve the following puzzle: 
 
  >"how can we take a piece of educational content and properly test a learners' knowledge and provide insightful feedbacks to support their learning?". 
  
+ 
+### Dive into the solutions
+
  In previous years, deep learning research has taken up a similar problem titled Question Generation (QG) and Question Answering (QA). 
  
 Question Generation (QG) is part of NLP. The goal of QG is to generate questions according to some given information. It could be used in many different scenarios i.e. generating questions for reading comprehension, generating data from large scale question-answering pairs or even generating questions from images. Earlier approaches to QG mainly used human-crafted rules and patterns to transform a descriptive sentence to a related question. Recent neural network-based approaches represent the state-of-art of most of those tasks and this approach has been successfully applied to many other NLP tasks i.e. neural machine translation, summarization, etc. As the training optimization studies progress, the stability and performance improvements are gauranteed. 
@@ -392,18 +397,26 @@ Though the video content is not limited to education category, we can still use 
 
 Naturally, the next step would be constrain our model to train on particularly educational content. The data needed for taining may include the raw video clip, annotation/caption of the whole video content, and audio part of the video. 
 
-As discussed above, the video can be easily broke into a sequence of frames for process. Next, we need to get the annotion for the audio. 
-
 2. In this study [Video Captions for Online Courses: Do YouTube’s Auto-generated Captions Meet Deaf Students’ Needs?](http://jofdl.nz/index.php/JOFDL/article/download/255/198), they studied the auto-generated captions generated on YouTube online courses. They find that, on average, there were 7.7 phrase errors per minute of a total 68 minutes video caption. It is been said, we still need to do a lot of annotion work before we can finally compose our own training dataset. 
-
-However, there are some solutions proposed to tackle this problem specifically. 
 
 Other resources that could possibly help us with out tasks are as below: 
 
-3. [VideoMCC](http://videomcc.org/). In their paper, they have propose to cas
+3. [VideoMCC](http://videomcc.org/). In their paper, they formulate Video Multiple Choice Caption (VideoMCC) as a way to assess video comprehension through an easy-to-interpret performance measure. In their paper [VideoMCC: a New Benchmark for Video Comprehension](https://arxiv.org/pdf/1606.07373.pdf) they propose to cast video understanding in the form of multiple choice tests that assess the ability of the algorithm to comprehend the semantics of the video. Example is as below: 
+
+![VideoMCC](img/mcc.png)
+
 
 4. As what we have covered earlier, this paper [MovieQA: Understanding Stories in Movies through Question-Answering](https://arxiv.org/pdf/1512.02902.pdf), they introduced a new dataset called MovieQA dataset that can evaluate automatic story comprehension from both video and text.  
-### Summary of Knowledge Graph [DRAFT]
+
+Here are 2 figures that can help you better understand their dataset: 
+
+![MovieQA_1](img/movieqa1.png)
+
+![MovieQA_2](img/movieqa2.png)
+
+5. In this paper [Video Description: A Survey of Methods, Datasets and Evaluation Metrics](https://arxiv.org/pdf/1806.00186.pdf) mulple methods, datasets and evluation metrics for video description task in a comprehensive survey.  
+
+
 
 ## Knowledge Graph [DRAFT]
 
@@ -420,6 +433,7 @@ As I mentioned earlier, learning is a knowledge accumulation process. Knowledge 
 3. In this paper [Zero-Shot Question Generation from Knowledge Graphs for Unseen Predicates and Entity Types](http://aclweb.org/anthology/N18-1020), they presented a network that can generate question from knowledge b
 
 
+### Summary of Knowledge Graph [DRAFT]
 
 
 #### summary current research
