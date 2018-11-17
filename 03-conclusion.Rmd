@@ -1,5 +1,7 @@
+
 # Challenges
-We have listed one approach to better represent a modern individual's knowledge by taking the world of unstructured educational content and generating a way to test a learner's knowledge and a way to to map the content to an education based knowledge graph. We surveyed the relevant machine and deep learning research, introduced EC2QA, a novel network for taking in educational content and generate questions, answers, as a knowledge evaluation mechanism, and introduced the knowledge system consisting of the knowledge footprint, knowledge graph, and knowledge journeys to help support a learner's knowledge acquistion, representation, and a way to look at an improved way to view society's collective knowledge.
+
+We have proposed one approach to better represent a modern individual's knowledge by taking the world of unstructured educational content (Youtube videos, Medium articles) classifying it by concepts that belong to subjects and generating a way to test a learner's knowledge by generating a set of questions and answers conditioned on the content. We surveyed some of the relevant machine and deep learning research, introduced EC2QA, a novel network for taking in educational content to generate questions, answers, and a knowledge evaluation mechanism. We then proposed to tie this sytem together as a living and breathing knowledge ecosystem consisting of an individual's knowledge footprint, mapped to a knowledge graph, visualised over time as a learner's knowledge journey. This would serve to enable independent (aspiring or current) learner's self-study that could be synthesised from their past and present knowledge. There are many challenges in coming up with solutions to enable knowledge acquistion and representation at the learner and group level. We will address some of the primary challenges to pionerring the components of the proposed knowledge ecosystem                                                        
 
 - Datasets
 -- EC2QA dataset
@@ -9,10 +11,37 @@ We have listed one approach to better represent a modern individual's knowledge 
 
 ## Creating a research dataset
 
-## Collaboration with education technologists
+### EC2QA dataset
+Deep learning techniques are predicated on the assumption that one needs enough data to train a usually large neural network effectively enough to learn a representation that captures the set of admissable functions needed to learn a set of concepts. 
+
+The EC2QA network will require a large network of [educational content, (question: answer,...)] pairs.
+
+### Pretraining
+Learning representations from more structured content might be a great place to start. Partnering with educational content providers like Udacity, Coursera, Edx, and Khan Academy would likely provide rather large datasets of educational content (mostly videos and text based readings) that usually are followed by multiple choice questions and sometimes open text answers. 
+
+The space of structured (made for Q and A especially interactively) educational content will, of course, differ in siginficant ways from the space of unstructured educational content but we believe that we can extract some of the overlap without having to amass such a large dataset for training.
+
+### Educator Enrichment
+We also need to partner with experts in many educational subjects to help us 
+
+### Minimum Viable Dataset
+
+We propse to first begin with just one subject such as psychology, neuroscience, or design as a way to get started rather than to try mapping the whole space of unstructured educational content. 
 
 
-# Conclusion
+
+
+```{r}
+text <- c("")
+text <- c("")
+```
+
+
+## Call for collaborators 
+
+We hope to bring together collaborators that would include machine learning researchers, educators, technologists, and designers to begin our first foray into a modern knowledge ecosystem. Specifically starting with the EC2QA dataset and network. 
+
+## Conclusion
 
 In conclusion, we presented a new perspective on knowledge acquistion, representation, and proposed an ecosystem that would support a modern and adaptative knowledge ecosystem.
 
