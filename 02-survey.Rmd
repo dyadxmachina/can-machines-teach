@@ -302,7 +302,7 @@ For our problem, it is very motivating to see these progress and learn from thei
 
 > Open-ended questions bring clarity.
 
-As I mentioned above, the open-ended question could be roughly splitted into 2 categories. One is general oepn-ended questions (i.e. give me a summary of this video) or a more specific oepn-ended question (given XX contion and the rule told in the video, tell me the conclusion we can draw).
+As we mentioned above, the open-ended question could be roughly splitted into 2 categories. One is general oepn-ended questions or a more specific oepn-ended question.
 
 Technically specking, these 2 categories are not that particular distinct since both problems require the system to be able to draw some conclusion based on the context and question provided; the answer is allowed to have a pretty high degree of freedom. In other words, our system should be able to evaluate the answer with relatively flexible rules or standards. 
 
