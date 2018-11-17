@@ -1,3 +1,17 @@
+# Challenges
+We have listed one approach to better represent a modern individual's knowledge by taking the world of unstructured educational content and generating a way to test a learner's knowledge and a way to to map the content to an education based knowledge graph. We surveyed the relevant machine and deep learning research, introduced EC2QA, a novel network for taking in educational content and generate questions, answers, as a knowledge evaluation mechanism, and introduced the knowledge system consisting of the knowledge footprint, knowledge graph, and knowledge journeys to help support a learner's knowledge acquistion, representation, and a way to look at an improved way to view society's collective knowledge.
+
+- Datasets
+-- EC2QA dataset
+-- Knowledge graph dataset
+- Deep Learning Architecture
+-- EC2QA network
+
+## Creating a research dataset
+
+## Collaboration with education technologists
+
+
 # Conclusion
 
 In conclusion, we presented a new perspective on knowledge acquistion, representation, and proposed an ecosystem that would support a modern and adaptative knowledge ecosystem.
@@ -8,9 +22,7 @@ There is still much research to be done in bringing to life the EC2QA network as
 
 As machine learning researchers we are looking forward to building our next prototype and collaborating around this work. 
 
-## Creating a Research Dataset
 
-## Collaboration with education technologists
 
 # About Authors
 
