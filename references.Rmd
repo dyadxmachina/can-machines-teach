@@ -1,4 +1,3 @@
-
 ---
 references:
 - id: meier2012
@@ -28,4 +27,3 @@ references:
     year: 2012
     month: 3
 ...
-

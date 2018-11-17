@@ -7,13 +7,16 @@ Our main task was to take an individual and begin to get a true depiction of the
 There is still much research to be done in bringing to life the EC2QA network as well as the data needed and the collaboration needed amongst machine learning researchers, teachers, and designers needed.
 
 As machine learning researchers we are looking forward to building our next prototype and collaborating around this work. 
-# Creating a Research Dataset
-# Collaboration with 
+
+## Creating a Research Dataset
+
+## Collaboration with education technologists
+
 # About Authors
 
 ## Haohan Wang
 ## Fanli Zheng (Christian Ramsey)
-
+## Contact
 Feel Free to contact us if you have any question:
 Visit our website dyadxmachina.com
 
