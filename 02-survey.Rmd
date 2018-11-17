@@ -504,6 +504,9 @@ In sum, their system consists of the following modules:
 Below is a block diagram of KnowEdu System.
 
 ![knowedu](img/knowedu.png)
+
+
+
 They used conditional random field (CRF) model for entity or terminology recognition task. Moreover, they adopt neural network, or more particularly Gated recurrent unit network (GRU) architecture for neural sequence labeling on educational entity extraction task. 
 
 In terms of relation identification they implement probabilistic association data mining techniques on learning assessment adata and accomplish the task of educational relation identification. 
