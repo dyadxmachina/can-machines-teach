@@ -171,7 +171,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#learning-feedback"><i class="fa fa-check"></i><b>4.2</b> Learning + Feedback</a><ul>
 <li class="chapter" data-level="4.2.1" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#question-formulation"><i class="fa fa-check"></i><b>4.2.1</b> Question Formulation</a></li>
-<li class="chapter" data-level="4.2.2" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#dive-into-the-solutions"><i class="fa fa-check"></i><b>4.2.2</b> Dive into the solutions</a></li>
+<li class="chapter" data-level="4.2.2" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#current-research"><i class="fa fa-check"></i><b>4.2.2</b> Current Research</a></li>
 <li class="chapter" data-level="4.2.3" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#question-generation"><i class="fa fa-check"></i><b>4.2.3</b> Question Generation</a></li>
 <li class="chapter" data-level="4.2.4" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#answer-generation"><i class="fa fa-check"></i><b>4.2.4</b> Answer Generation</a></li>
 <li class="chapter" data-level="4.2.5" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#summary-of-learning-and-feedback-networks-draft"><i class="fa fa-check"></i><b>4.2.5</b> Summary of Learning and Feedback Networks [DRAFT]</a></li>
@@ -179,10 +179,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="4.3" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#knowledge-graph-draft"><i class="fa fa-check"></i><b>4.3</b> Knowledge Graph [DRAFT]</a><ul>
 <li class="chapter" data-level="4.3.1" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#what-is-a-graph"><i class="fa fa-check"></i><b>4.3.1</b> What is a graph?</a></li>
 <li class="chapter" data-level="4.3.2" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#problem-formulation-2"><i class="fa fa-check"></i><b>4.3.2</b> Problem Formulation</a></li>
-<li class="chapter" data-level="4.3.3" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#key-components"><i class="fa fa-check"></i><b>4.3.3</b> Key Components</a></li>
-<li class="chapter" data-level="4.3.4" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#automatic-knowledge-graph-construction"><i class="fa fa-check"></i><b>4.3.4</b> Automatic Knowledge Graph Construction</a></li>
-<li class="chapter" data-level="4.3.5" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#case-studies-5"><i class="fa fa-check"></i><b>4.3.5</b> Case Studies</a></li>
-<li class="chapter" data-level="4.3.6" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#summary-of-knowledge-graph-draft"><i class="fa fa-check"></i><b>4.3.6</b> Summary of Knowledge Graph [DRAFT]</a></li>
+<li class="chapter" data-level="4.3.3" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#automatic-knowledge-graph-construction"><i class="fa fa-check"></i><b>4.3.3</b> Automatic Knowledge Graph Construction</a></li>
+<li class="chapter" data-level="4.3.4" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#case-studies-5"><i class="fa fa-check"></i><b>4.3.4</b> Case Studies</a></li>
+<li class="chapter" data-level="4.3.5" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#summary-of-knowledge-graph-draft"><i class="fa fa-check"></i><b>4.3.5</b> Summary of Knowledge Graph [DRAFT]</a></li>
 </ul></li>
 <li class="chapter" data-level="4.4" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#knowledge-journeys-draft"><i class="fa fa-check"></i><b>4.4</b> Knowledge Journeys [DRAFT]</a><ul>
 <li class="chapter" data-level="4.4.1" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#summary-of-current-research-and-needs-draft"><i class="fa fa-check"></i><b>4.4.1</b> Summary of Current Research and Needs [DRAFT]</a></li>
@@ -229,7 +228,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="challenges" class="section level1">
 <h1><span class="header-section-number">5</span> Challenges</h1>
-<p>We have proposed one approach to better represent a modern individual’s knowledge by taking the world of unstructured educational content (Youtube videos, Medium articles) classifying it by concepts that belong to subjects and generating a way to test a learner’s knowledge by generating a set of questions and answers conditioned on the content. We surveyed some of the relevant machine and deep learning research, introduced EC2QA, a novel network for taking in educational content to generate questions, answers, and a knowledge evaluation mechanism. We then proposed to tie this sytem together as a living and breathing knowledge ecosystem consisting of an individual’s knowledge footprint, mapped to a knowledge graph, visualised over time as a learner’s knowledge journey. This would serve to enable independent (aspiring or current) learner’s self-study that could be synthesised from their past and present knowledge. There are many challenges in coming up with solutions to enable knowledge acquistion and representation at the learner and group level. We will address some of the primary challenges to pionerring the components of the proposed knowledge ecosystem</p>
+<p>We have proposed one approach to better represent a modern individual’s knowledge by taking the world of unstructured educational content (Youtube videos, Medium articles, etc), classifying it by concepts that belong to one or more specific subjects in the knowledge graph, and generating a way to test a learner’s knowledge by having a set of questions and answers conditioned on the content. We surveyed some of the relevant machine and deep learning research, introduced EC2QA, a novel network for taking in educational content to generate questions, answers, and a knowledge evaluation mechanism. We then proposed to tie this sytem together as a living and breathing knowledge ecosystem consisting of an individual’s knowledge footprint, mapped to a knowledge graph, visualised over time as a learner’s knowledge journey. This would serve to enable independent (aspiring or current) learner’s life-long self-study that could be synthesised from their past and present knowledge. There will be many challenges in coming up with solutions to enable knowledge acquistion and representation at the learner and group level. We will address some of the primary challenges to pionerring the components of the proposed knowledge ecosystem:</p>
 <ul>
 <li>Datasets – EC2QA dataset – Knowledge graph dataset</li>
 <li>Deep Learning Architecture – EC2QA network</li>
@@ -238,25 +237,29 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h2><span class="header-section-number">5.1</span> Creating a research dataset</h2>
 <div id="ec2qa-dataset" class="section level3">
 <h3><span class="header-section-number">5.1.1</span> EC2QA dataset</h3>
-<p>The success of deep learning techniques are predicated on the assumption that one needs a significant amount of data to train a large neural network enough to learn a representation that captures the set of admissable functions needed to learn a given concept(s).</p>
-<p>The EC2QA network will require a large dataset of educational content (Youtube video or Medium article) along with a set of questions, which will have a set of correct and incorrect answers for each question.</p>
+<p>The success of deep learning techniques are predicated on the assumption that one needs a significant amount of data to train a large neural network enough to learn the representation that captures the set of admissable functions needed to learn a given concept(s).</p>
+<p>The EC2QA network will also face such a challenge and it requires a large dataset of educational content (Youtube video, Wikipedia or Medium article) along with a set of Question &amp; Answer pairs, which will have a set of correct and incorrect answers for each question.</p>
 <p><span class="math display">\[
  \{content1: \{question1: \{answer1, answer2,...\},  question2: \{answer1, answer2,...\},...\},... 
 \]</span></p>
-<p>This dataset will need to be designed in two ways. The dataset can use unstructured educational content without questions or answers to be use as a <em>education embedding</em> using unsupervised technique. It can then be pretrained on a set of structured questions and answers, then lastly trained on a original set of several (content, questions, answers) triplets.</p>
+<p>This dataset will need to be designed in two ways.</p>
+<ol style="list-style-type: decimal">
+<li><p>The dataset can use unstructured educational content without questions or answers to be used as a <em>education embedding</em> by leveraging unsupervised technique.</p></li>
+<li><p>It can then be pretrained on a set of structured questions and answers, then lastly trained on a original set of several (content, questions, answers) triplets using deep learning or other advanced techniques.</p></li>
+</ol>
 </div>
 <div id="pretraining" class="section level3">
 <h3><span class="header-section-number">5.1.2</span> Pretraining</h3>
-<p>Learning representations from more structured content might be a great place to start. Partnering with educational content providers like Udacity, Coursera, Edx, and Khan Academy would provide a rather large dataset of educational content (mostly videos and text based readings) that usually are followed by multiple choice questions and sometimes open text answers.</p>
+<p>Learning representations from more structured content might be a great place to start with. Partnering with educational content providers like Udacity, Coursera, Edx, and Khan Academy would provide a rather large dataset of educational content (mostly videos and text based readings) that usually are followed by multiple choice questions and sometimes open text answers.</p>
 <p>The space of structured (made for Q and A especially interactively) educational content will, of course, differ in siginficant ways from the space of unstructured educational content but we believe that we can extract some of the overlap without having to amass such a large dataset for training.</p>
 </div>
 <div id="educator-enrichment" class="section level3">
 <h3><span class="header-section-number">5.1.3</span> Educator Enrichment</h3>
-<p>We also need to partner with experts in many educational subjects to help us create the original</p>
+<p>We also need to partner with experts in many educational subjects to help us create the original knowledge graph.</p>
 </div>
 <div id="minimum-viable-dataset" class="section level3">
 <h3><span class="header-section-number">5.1.4</span> Minimum Viable Dataset</h3>
-<p>We propse to first begin with just one subject such as psychology, neuroscience, or design as a way to get started rather than to try mapping the whole space of unstructured educational content.</p>
+<p>We propse to first begin with just one subject such as psychology, mathematics, or design as a way as mentioned above to get started rather than to try mapping the whole space of unstructured educational content.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">text &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;&quot;</span>)
 text &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;&quot;</span>)</code></pre></div>
 </div>
@@ -267,9 +270,9 @@ text &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&q
 </div>
 <div id="conclusion" class="section level2">
 <h2><span class="header-section-number">5.3</span> Conclusion</h2>
-<p>In conclusion, we presented a new perspective on knowledge acquistion, representation, and proposed an ecosystem that would support a modern and adaptative knowledge ecosystem.</p>
+<p>In conclusion, we presented a new perspective on knowledge acquistion, representation, and proposed an ecosystem that would support a modern and adaptative knowledge ecosystem that a learner can use and rely on for their entire life-time.</p>
 <p>Our main task was to take an individual and begin to get a true depiction of their knowledge beyond their traditional degree which is only a small percentage of someone’s education. We focused on taking the world of unstructured educational content online, and how to provide structure in the form of testing and mapping it to a knowledge graph.</p>
-<p>There is still much research to be done in bringing to life the EC2QA network as well as the data needed and the collaboration needed amongst machine learning researchers, teachers, and designers needed.</p>
+<p>There is still much moreresearch to be done in bringing to life the EC2QA network as well as the data needed and the collaboration needed amongst machine learning researchers, teachers, and designers needed.</p>
 <p>As machine learning researchers we are looking forward to building our next prototype and collaborating around this work.</p>
 </div>
 </div>
