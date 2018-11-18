@@ -9,21 +9,20 @@ output: html_document
 
 In this section, we are set to solve the following question: 
 
-> How might we approach designing such a system.
+> How might we approach designing such a knowledge ecosystem?
 
-In this section, we will walk you through some possible implementations of the proposed knowledge ecosystem. We will be presenting the current research in machine learning that is relevant to each component of the knowledge ecosystem while aslo discussing this new artificial neural network architecture EC2VQA and one possible instansitation of that. 
+We will walk you through some possible implementations of the proposed knowledge ecosystem. We will be presenting the current research in machine learning that is relevant to each element of the knowledge ecosystem while aslo discussing a new artificial neural network architecture EC2QA and what would be needed to design such a network 
 
-Note that this is not the blueprint, each of these components can be developed independently and vary from what you find here. This is a provocation for getting started on the knowledge ecosystem today.
+Note that this is not a blueprint that has to be put together, but instead, each of these components can be developed independently and vary from what you find here. This is a provocation for getting started on the knowledge ecosystem today.
 
 
 ## Problem Formulation
 
-
-Building such a knowledge ecosystem is not a trivial task. An necessary step of searching for the proper solutions would be trying to break the whole task into few subtasks that we can deal with separately. As what we have discussed earlier, our ecosystem could be divided into few key building blocks as below:
+Building such a knowledge ecosystem is not a trivial task. A necessary step of searching for the proper solutions would be trying to break the whole system into independent elements that we can deal with separately. As what we have discussed earlier, we've divided the ecosystem  into the elements below:
 
 1. **Learning + Feedback** -- given a learner consumes a piece of educational content, reliably evaluate their knowledge and provide the feedback for improvement to support their learning. (credibility, rigour) 
 
-2. **Knowledge Graph** --  general knowledge blueprint as a map to piece together all the content that is currently available. (relatibility, predictability)
+2. **Knowledge Graph** --  general knowledge blueprint, as a map to piece together all the content that is currently available. (relatibility, predictability)
 
 3. **Knowledge Journeys** -- given a piece of educational content, classify it within a knowledge graph; given multiple learner journeys, create a way to customize their own growth journey while offereing a way for them them to compare, connect with and follow, other's journey (compare, traverse, curiosity)
 
@@ -35,29 +34,36 @@ In this section we will be primarily focus on the first 2 building blocks.
 
 ### Before we start...
 
-As what we discussed above, one of the possible and optimal solutions so far for building our ecosystem is using current state-of-art tehcniques i.e. deep learning in the related domains. Here I will walk you through some thought provoking research summary in a form of survey. 
+As we discussed above, one of the possible and optimal solutions so far for building our ecosystem is using current state-of-art tehcniques (i.e. deep learning) especially techniques related to education, here I will walk you through recent trends in the form of a survey. 
 
- To best illustrate the problem and possible solutions, we will for now reduce the complexity of the problem. As what we have mentioned earlier, educational videos seem to be one of the top options for people when it comes to knowledge acquisition. Keep in mind that our ultimate goal is to be able to apply our system to any type of online available educational content.
+ To best illustrate the problem and possible solutions, we could focus on the whole space of different types of educational content ranging from text to podcasts, but we will focus solely on taking educational videos (Youtube lecture or how-to videos). Videos not only happen to be complex but there are also one of the richest media types for knowledge acquisition. Keep in mind that our ultimate goal is to be able to apply our approach to any type of online educational content including open texts, digital texts, audio or podcasts.
  
- Let's explore some of the solutions that can enable us to apply our system on the video educational content.  
+ Let's explore some of the solutions that would enable us to design each element of our ecosystem.
 
 
 ## Learning + Feedback
 
+We consider learning + feedback as a key building block of the ecosystem which would settle our concerns to do with passive knowledge consumption and the untested knowledge of learners who watch such lectures. By solving this problem, our ecosystem will be able to provide our learners a credible picture of their tested knowledge and an interactive learning experience that can best support knowledge acuqisition. 
+
 ### Question Formulation
 
-We consider learning + feedback as a key building block of the ecosystem which is the cure for our primary concern of  passive knowledge consumption and untested knowledge of learners. By solving this problem, our system will be able to provide our learners a credible and interactive learning experience that can best support their knowledge acuqisition. 
+In short, in this section we will be providing some insights on how to solve the following puzzle: 
 
-In shor, in the section we will be providing some insights on how to solve the following puzzle: 
+ >"how can we take a single educational content and properly test a learner's knowledge while also providing insightful feedback to support their learning?". 
+ 
 
- >"how can we take a piece of educational content and properly test a learners' knowledge and provide insightful feedbacks to support their learning?". 
+### Current Research
+
+So our learning and feedback component should do the following 
+ > Generate a set of questions and answers for any eduational content
+ > Evaluate closed and open ended answers
+ > Provide a score for the content based on the learner's performance
  
- 
-### Dive into the solutions
+ We will now explore current research trends in deep learning that will help us solve the problem.
 
  In previous years, deep learning research has taken up a similar problem titled Question Generation (QG) and Question Answering (QA). 
  
-Question Generation (QG) is part of NLP. The goal of QG is to generate questions according to some given information. It could be used in many different scenarios i.e. generating questions for reading comprehension, generating data from large scale question-answering pairs or even generating questions from images. Earlier approaches to QG mainly used human-crafted rules and patterns to transform a descriptive sentence to a related question. Recent neural network-based approaches represent the state-of-art of most of those tasks and this approach has been successfully applied to many other NLP tasks i.e. neural machine translation, summarization, etc. As the training optimization studies progress, the stability and performance improvements are gauranteed. 
+Question Generation (QG) was originally part of NLP. The goal of QG is to generate questions according to some given information. It could be used in many different scenarios i.e. generating questions for reading comprehension, generating data from large scale question-answering pairs or even generating questions from images. Earlier approaches to QG mainly used human-crafted rules and patterns to transform a descriptive sentence to a related question. Recent neural network-based approaches represent the state-of-art of most of those tasks and this approach has been successfully applied to many other NLP tasks i.e. neural machine translation, summarization, etc. As the training optimization studies progress, the stability and performance improvements are gauranteed. 
  
  
 As for Question Answering (QA) task, it is a well-researched problem in NLP as well. Recently, QA has also been used to develop dialog systems and chatbots designed to simulate human conversation. Traditionally, most of the research used a pipeline of conventional linguistically-based NLP techniques i.e. parsing, part-of-speech tagging and coreference resolution. However, with recent developments in deep learning, neural network models have shown promise for QA. Further improvement i.e.attention mechanism and memory networks allow the network to focus on the most revevant facts such that they achieved state-of-art performance for QA.
