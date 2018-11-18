@@ -12,17 +12,23 @@ We have proposed one approach to better represent a modern individual's knowledg
 ## Creating a research dataset
 
 ### EC2QA dataset
-Deep learning techniques are predicated on the assumption that one needs enough data to train a usually large neural network effectively enough to learn a representation that captures the set of admissable functions needed to learn a set of concepts. 
+The success of deep learning techniques are predicated on the assumption that one needs a significant amount of data to train a large neural network enough to learn a representation that captures the set of admissable functions needed to learn a given concept(s). 
 
-The EC2QA network will require a large network of [educational content, (question: answer,...)] pairs.
+The EC2QA network will require a large dataset of educational content (Youtube video or Medium article) along with a set of questions,  which will have a set of correct and incorrect answers for each question.
+
+\[
+ \{content1: \{question1: \{answer1, answer2,...\},  question2: \{answer1, answer2,...\},...\},... 
+\]
+
+This dataset will need to be designed in two ways. The dataset can use unstructured educational content without questions or answers to be use as a *education embedding* using unsupervised technique. It can then be pretrained on a set of structured questions and answers, then lastly trained on a original set of several (content, questions, answers) triplets. 
 
 ### Pretraining
-Learning representations from more structured content might be a great place to start. Partnering with educational content providers like Udacity, Coursera, Edx, and Khan Academy would likely provide rather large datasets of educational content (mostly videos and text based readings) that usually are followed by multiple choice questions and sometimes open text answers. 
+Learning representations from more structured content might be a great place to start. Partnering with educational content providers like Udacity, Coursera, Edx, and Khan Academy would provide a rather large dataset of educational content (mostly videos and text based readings) that usually are followed by multiple choice questions and sometimes open text answers. 
 
 The space of structured (made for Q and A especially interactively) educational content will, of course, differ in siginficant ways from the space of unstructured educational content but we believe that we can extract some of the overlap without having to amass such a large dataset for training.
 
 ### Educator Enrichment
-We also need to partner with experts in many educational subjects to help us 
+We also need to partner with experts in many educational subjects to help us create the original  
 
 ### Minimum Viable Dataset
 
