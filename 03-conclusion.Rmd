@@ -1,8 +1,13 @@
 
-# Challenges
+# Conclusion
 
-We have proposed one approach to better represent a modern individual's knowledge by taking the world of unstructured educational content (Youtube videos, Medium articles, etc), classifying it by concepts that belong to one or more specific subjects in the knowledge graph, and generating a way to test a learner's knowledge by having a set of questions and answers conditioned on the content. We surveyed some of the relevant machine and deep learning research, introduced EC2QA, a novel network for taking in educational content to generate questions, answers, and a knowledge evaluation mechanism. We then proposed to tie this sytem together as a living and breathing knowledge ecosystem consisting of an individual's knowledge footprint, mapped to a knowledge graph, visualised over time as a learner's knowledge journey. This would serve to enable independent (aspiring or current) learner's life-long self-study that could be synthesised from their past and present knowledge. There will be many challenges in coming up with solutions to enable knowledge acquistion and representation at the learner and group level. We will address some of the primary challenges to pionerring the components of the proposed knowledge ecosystem:                                                        
+We have proposed one approach to better represent a modern individual's knowledge by taking the world of unstructured educational content (Youtube videos, Medium articles, etc), classifying it by concepts that belong to one or more specific subjects in a education-based knowledge graph, and testing a learner's knowledge by generating a set of questions and answers conditioned on the content without need for the educator to do so. We surveyed some of the relevant machine and deep learning research, introduced Educational Content to Questions and Answers (EC2QA), a novel neural network for taking in educational content and generating a set of questions, answers, and an evaluation mechanism. We then proposed to tie this sytem together as a living and breathing knowledge ecosystem consisting of an individual's knowledge footprint, mapped to a knowledge graph, visualised over time as a learner's knowledge journey. This would serve to enable independent (aspiring or current) learner's life-long self-study that would take into consideration education they acquired from unstructured sources, bridging their formal and informal knowledge. 
 
+
+# Next Steps
+Our next steps are to call for collaboration on 
+
+There will be many challenges in coming up with solutions to enable knowledge acquistion and representation at the learner and group level. We will address some of the primary challenges to pionerring the components of the proposed knowledge ecosystem:                                                        
 - Datasets
 -- EC2QA dataset
 -- Knowledge graph dataset
@@ -39,15 +44,6 @@ We also need to partner with experts in many educational subjects to help us cre
 
 We propse to first begin with just one subject such as psychology, mathematics, or design as a way as mentioned above to get started rather than to try mapping the whole space of unstructured educational content. 
 
-
-
-
-```{r}
-text <- c("")
-text <- c("")
-```
-
-
 ## Call for collaborators 
 
 We hope to bring together collaborators that would include machine learning researchers, educators, technologists, and designers to begin our first foray into a modern knowledge ecosystem. Specifically starting with the EC2QA dataset and network. 
@@ -61,8 +57,6 @@ Our main task was to take an individual and begin to get a true depiction of the
 There is still much moreresearch to be done in bringing to life the EC2QA network as well as the data needed and the collaboration needed amongst machine learning researchers, teachers, and designers needed.
 
 As machine learning researchers we are looking forward to building our next prototype and collaborating around this work. 
-
-
 
 # About Authors
 

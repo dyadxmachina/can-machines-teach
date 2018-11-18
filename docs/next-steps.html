@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="index.html">
-<link rel="next" href="primary-concerns.html">
+<link rel="prev" href="conclusion.html">
+<link rel="next" href="about-authors.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -191,44 +191,59 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introduction" class="section level1">
-<h1><span class="header-section-number">1</span> Introduction</h1>
-<div class="figure">
-<img src="img/MtoQA.png" alt="Image title" />
-<p class="caption">Image title</p>
+<div id="next-steps" class="section level1">
+<h1><span class="header-section-number">6</span> Next Steps</h1>
+<p>Our next steps are to call for collaboration on</p>
+<p>There will be many challenges in coming up with solutions to enable knowledge acquistion and representation at the learner and group level. We will address some of the primary challenges to pionerring the components of the proposed knowledge ecosystem:<br />
+- Datasets – EC2QA dataset – Knowledge graph dataset - Deep Learning Architecture – EC2QA network</p>
+<div id="creating-a-research-dataset" class="section level2">
+<h2><span class="header-section-number">6.1</span> Creating a research dataset</h2>
+<div id="ec2qa-dataset" class="section level3">
+<h3><span class="header-section-number">6.1.1</span> EC2QA dataset</h3>
+<p>The success of deep learning techniques are predicated on the assumption that one needs a significant amount of data to train a large neural network enough to learn the representation that captures the set of admissable functions needed to learn a given concept(s).</p>
+<p>The EC2QA network will also face such a challenge and it requires a large dataset of educational content (Youtube video, Wikipedia or Medium article) along with a set of Question &amp; Answer pairs, which will have a set of correct and incorrect answers for each question.</p>
+<p><span class="math display">\[
+ \{content1: \{question1: \{answer1, answer2,...\},  question2: \{answer1, answer2,...\},...\},... 
+\]</span></p>
+<p>This dataset will need to be designed in two ways.</p>
+<ol style="list-style-type: decimal">
+<li><p>The dataset can use unstructured educational content without questions or answers to be used as a <em>education embedding</em> by leveraging unsupervised technique.</p></li>
+<li><p>It can then be pretrained on a set of structured questions and answers, then lastly trained on a original set of several (content, questions, answers) triplets using deep learning or other advanced techniques.</p></li>
+</ol>
 </div>
-<p>Let’s start with a future view of an individual’s education. Many of us have used the internet to educate ourselves with the abundance of medium to high quality videos, papers, articles, podcasts and how-tos being uploaded from numerous individuals, groups, and institutions like never before (60 hours of video are uploaded to youtube.com every minute).</p>
-<p>Let us imagine that all of what you have learned online, throughout the entirety of your life, from the hundreds of Youtube videos, Wikipedia articles, Nature papers, and podcasts you’ve read, watched, or listened to, were all added structurally to your <strong>knowledge journey</strong>, and what if that journey could be consolidated into what we might call a <strong>knowledge footprint</strong> that could be shared with others? Could this replace static degrees? Or augment them to be more inclusive of a learner’s true knowledge? How might we test such knowledge? Could we even predict and provide the guidance on what an individual should be learning next to best support their knowledge acquisition?</p>
-<p>Now, let’s go back to our current approach to education. Many of us treat knowledge acquisition like a chapter in the individual’s life that is limited to one or more formal places i.e. universities. This is misleading since we accrue knowledge from everywhere and most recently the internet has become a primary source of knowledge acquisition but has gone mostly unaccounted for in terms of recognition (i.e. watching a whole series of Youtube lectures on the Neurobiology of Depression or Discrete Mathematics goes mostly unnoticed when someone views one’s resume or by simply looking at their degree.). The current approach makes it much harder for people to switch to working and exploring the domains or professional fields outside of their degree area. Knowing rigourous mathematics and not having a degree in it, is said to be surprising, therefore the current “thumbnail view” of an individual’s knowlede is neccessarily inadequate to the new mediums of knowledge acquisition.</p>
-<div class="figure">
-<img src="img/aminer.png" alt="Example at aminer" />
-<p class="caption">Example at aminer</p>
+<div id="pretraining" class="section level3">
+<h3><span class="header-section-number">6.1.2</span> Pretraining</h3>
+<p>Learning representations from more structured content might be a great place to start with. Partnering with educational content providers like Udacity, Coursera, Edx, and Khan Academy would provide a rather large dataset of educational content (mostly videos and text based readings) that usually are followed by multiple choice questions and sometimes open text answers.</p>
+<p>The space of structured (made for Q and A especially interactively) educational content will, of course, differ in siginficant ways from the space of unstructured educational content but we believe that we can extract some of the overlap without having to amass such a large dataset for training.</p>
 </div>
-<p>The ideas behind this <em>knowledge ecosystem</em>, presents only one of many possible solutions to bringing our education system into modernity. The goal of it would be to promote the long held idea of the life-long learner. Moving away from the “education chapter”&quot; of an individual’s life to the individual as an evolving learner; learning the necessary skills for what life presents them with today or might tomorrow. It would (combined with traditional education) show us a more accurate depiction of a learner’s knowledge and theorefore that of a society’s collective knowledge.</p>
-<p>Visualised over time, we could begin to capture a learner’s so called <strong>knowledge journey</strong>. Composed of every piece of content they’ve gained knowledge from mapped to the <em>human knowledge graph</em>. Showing how an individual has traversed through the world of human knowledge.</p>
-<p>This would also serve as a way for others, who may be on a similar <strong>knowledge journey</strong> to connect with their cohort. This could be the start of meetups, study groups, and so on.</p>
-<p>For those who are looking for a change, they may find different journeys that help them decide what step to take next. You would also be able to connect someone’s occupation to their <strong>knowledge journey</strong>.</p>
-<p>On aggregate, we could begin to cluster similar <strong>knowledge journeys</strong> through unsupervised learning, which might lead to completely new journeys or combinations of subjects at differnet levels that others may be inspired to follow.</p>
-<p>In this essay, we will propose a <strong>knowledge ecosystem</strong>, a new way of approaching education that attempts to build a more accurate depiction of a learner’s true knowledge. It will require significant effort to bring to life but we believe the benefits will outweigh the costs. We will talk about how we can use machine learning, deep learning in particular, to help create and support a <strong>knowledge ecosystem</strong> which is made up of a <strong>knowledge footprint</strong>, <strong>knowledge journeys</strong>, and a <strong>collective human knowledge graph</strong>. We will also introduce current advances in deep learning that would enable us to take the space of unstructured educational content on the web and do the following,</p>
-<ul>
-<li><p>classify content to higher level subjects</p></li>
-<li><p>map content unto the human knowledge graph</p></li>
-<li><p>test a learner's knowledge of recently viewed educationcal content through questions and answers, no what matter the subject.</p></li>
-</ul>
-<p>We will also argue that this imagined future is not only <strong>desirable</strong> for society but something similar is required to ensure individual’s knowledge are well represented in a time where the pace of change is rapidly speeding up.</p>
-<p>Let us not forget, that even software engineering is currently being recreated with machine learning as a key pillar which wasn’t much of a thought 5-10 years ago.</p>
-<p>As the future pushes us forward, it is tantamount that we have adaptative systems that can represent our current knowledge and also make us predictable to others given the future pushes us to knowing more than ever and knowing who to collaborate with to apply such knowledge.</p>
-<p>This hypothetical future isn’t just conceptual, most of what we will present to you today is currently feasible due to the most recent advances in machine learning, and in particular deep learning</p>
-<p>In the last section of this essay I will review what has been proposed and also call other researchers, teachers, and designers to collaborate on such an ecosystem, even if it is just in part.</p>
-<p><small>*For the purpose of this essay we will talk mostly about digital knowledge acquisition and leave the reader to extend the basics to knowledge obtained elsewhere.</small></p>
+<div id="educator-enrichment" class="section level3">
+<h3><span class="header-section-number">6.1.3</span> Educator Enrichment</h3>
+<p>We also need to partner with experts in many educational subjects to help us create the original knowledge graph.</p>
+</div>
+<div id="minimum-viable-dataset" class="section level3">
+<h3><span class="header-section-number">6.1.4</span> Minimum Viable Dataset</h3>
+<p>We propse to first begin with just one subject such as psychology, mathematics, or design as a way as mentioned above to get started rather than to try mapping the whole space of unstructured educational content.</p>
+</div>
+</div>
+<div id="call-for-collaborators" class="section level2">
+<h2><span class="header-section-number">6.2</span> Call for collaborators</h2>
+<p>We hope to bring together collaborators that would include machine learning researchers, educators, technologists, and designers to begin our first foray into a modern knowledge ecosystem. Specifically starting with the EC2QA dataset and network.</p>
+</div>
+<div id="conclusion-1" class="section level2">
+<h2><span class="header-section-number">6.3</span> Conclusion</h2>
+<p>In conclusion, we presented a new perspective on knowledge acquistion, representation, and proposed an ecosystem that would support a modern and adaptative knowledge ecosystem that a learner can use and rely on for their entire life-time.</p>
+<p>Our main task was to take an individual and begin to get a true depiction of their knowledge beyond their traditional degree which is only a small percentage of someone’s education. We focused on taking the world of unstructured educational content online, and how to provide structure in the form of testing and mapping it to a knowledge graph.</p>
+<p>There is still much moreresearch to be done in bringing to life the EC2QA network as well as the data needed and the collaboration needed amongst machine learning researchers, teachers, and designers needed.</p>
+<p>As machine learning researchers we are looking forward to building our next prototype and collaborating around this work.</p>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="primary-concerns.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="conclusion.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="about-authors.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -258,7 +273,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/dyadxmachina/can-machines-teach/edit/master/01-intro.Rmd",
+"link": "https://github.com/dyadxmachina/can-machines-teach/edit/master/03-conclusion.Rmd",
 "text": "Edit"
 },
 "download": ["A Knowledge Ecosystem - Deep Learning and Education.pdf", "A Knowledge Ecosystem - Deep Learning and Education.epub"],
