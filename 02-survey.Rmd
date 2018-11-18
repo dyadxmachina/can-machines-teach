@@ -72,14 +72,12 @@ Now we have some basic understanding of these 2 problems for which we will be ex
 
 >"what types of questions & answers would be best to test a learner's knowledge given a piece of educational content (i.e. a lecture video)"
 
-Let's say a learner is watching a video about hypothesis testing, after showing an example and giving the data needed to test the hypothesis. The system could pause the video and ask the following possible questions: 
+Let's say a learner is watching a video about hypothesis testing, midway through the video the educator shows an example and provides the data needed to test the hypothesis. It would be ideal if during this time the learner's knowledge is tested with the following possible questions: 
 
-
+** UPDATE EXAMPLE TO BE MORE TOPIC OR CONCEPT BASED **
 1. What is the p-value for this test? (and provide multiple choices for learner to choose from)
 
-
 2. Is this a 1-sided test? (answers provided would be: YES or NO)
-
 
 3. How would you intepret the p-value in the context of this example.
 
@@ -117,19 +115,21 @@ As we stated above, deep learning has achieved state-of-art performance in both 
 
 If you pay close attention to the question generation and answer generation type of problems, you can easily reframe this problem into a general machine learning problem in which the model needs to learn the relationship between the educational content and the meaningful question & answer pairs that is associated with the content. In other words, our problem could be simplified as learning a function that is capable of capture the relationship between our input and output, or, appropriately map the educational content to the desired question and answer pairs with this function. 
 
-To the best of our knowledge, deep learning is one of the most optimal techniques currently developed to do such a job 
+To the best of our knowledge, deep learning is one of the most optimal techniques currently developed to learn such complex representations of complex data such as video lectures. 
 
-As we all know that machine learninag is a set of algorithms that can be used to parse data, learn from the data, and then apply what they have learned to make intelligent decisions. Or more specifically, deep learning is a subset of machine learning that belongs to the family of representation learning. Inside this family, deep learning is particularly good at sampling the features and having additonal layers for more abstract feature learning. All of these features are crutial for our goal of mapping the feature to the output task. 
 
-Because of the above advantages, deep learning is known as one of the most flexible machine learning algorithms that can learn and map the **deep representation** from the data. Also, deep nueral networks architecture can be composed into a single differentiable function and trained end-to-end until it converges. As a result, they can help identify the suitable *inductive* *biases* catered to the training data. 
+*** bs **
+Machine learning is a set of algorithms that can be used to parse data, learn from the data, and then apply what they have learned to make intelligent decisions. Or more specifically, deep learning is a subset of machine learning that belongs to the family of representation learning. Inside this family, deep learning is particularly good at sampling the features and having additonal layers for more abstract feature learning. All of these features are crutial for our goal of mapping the feature to the output task. 
 
-Moreover, deep learning outperforms other techniques when the training data size is large and the advantage fits our siutation well. We could easily find a large amound of educational content available on the web.
+Because of the above advantages, deep learning is known as one of the most flexible machine learning algorithms that can learn and map a **deep representation** of supervised concepts within the data. Deep nueral network architecture can be composed into a single differentiable function and trained end-to-end until it converges. As a result, they can help identify the suitable *inductive* *biases* catered to the training data. 
+
+** this isn't leveraging the true advantages of why deep learning. Advances in vision and the ability to learn representation isn't well defined here **
+Moreover, deep learning outperforms other techniques when the training data is large and the advantage fits our siutation well. We could easily find a large amound of educational content available on the web.
 
 The large amount content creates another problem that can be avoided with deep learning, which is it's going to be very troublesome if you plan to do feature engineering manually. When there is lack of domain understanding for feature introspection, deep learning is preferable. 
 
-In the end, deep learning really shines when it comes to many complex reserach problems such as NLP, Visual Recognition and Speech recognition. For solving our task, all those domians will possibly be invloved. 
-
-
+** complex research ? huh? ** 
+In the end, deep learning really shines when it comes to many complex research problems such as NLP, Visual Recognition and Speech recognition. For solving our task, all those domians will possibly be invloved. 
 
 ### Question Generation
 
@@ -138,12 +138,15 @@ Let's begin with question generation (QG) problem.
 The ideal goal of an automatic question generation is to generate a question Q that is syntactically and semantically correct, relevant to the context and meaningful to answer. 
 
 In order to achieve this goal,, we need to train an algorithm to learn the underlying conditional probability distribution
+
 $$P_{\theta}(Q|X)$$
+
 parametrized by $\theta$. In other words, we can think of this problem as the one that requires the model to learn a function (with a set of parameters) $\theta$ during the training stage using content-question and/or answer pairs so that the probability $P_{\theta}(Q|P)$ is maximized over the given training dataset. 
 
 It is also helpful to frame this problem into a seq2seq learning problem since both the input and the output are most likely a sequence of text character that the model needs to process and learn the relationship from. 
 
 #### Case Studies
+
 1. In this paper [QG-Net: A Data-Driven Question Generation Model for Educational Content](http://www.princeton.edu/~shitingl/papers/18l@s-qgen.pdf). They use a bi-directional LSTM network to process the input context words sequence. Encoding the answer into context word vectors.
 
 QG-Net generates questions by iteratively sampling question words from the conditional probability distribution $P(Q|C,A,\theta)$ where $\theta$ denotes the set of parameters. In order to construct the probability distribution, they first create a **context reader** that process each word $c_j$ in the input context and turns it into a fix-sized representation $h_j$
@@ -189,6 +192,8 @@ In this QG section, we have discussed 4 algorithms. They provide us a way to fra
 However, as you probabily have noticed that the above examples are focus mainly on processing the text input data instead of videos directly. It demonstrates that more reserch in this new area is needed so as to meet our particular needs. 
 
 ### Answer Generation 
+** add intro to answer generation **
+
 #### Close-ended Questions
 
 ##### Visual Question Answering (VQA)
@@ -204,13 +209,9 @@ Since we are dealing with visual input, question-guided attention mechanism is a
 1. In this paper [Deep Attention Neural Tensor Network for Visual Question Answering](http://openaccess.thecvf.com/content_ECCV_2018/papers/Yalong_Bai_Deep_Attention_Neural_ECCV_2018_paper.pdf), they proposed a novel deep attention neural tensor network that can discover the joint correlation over images, questions and answers with tensor-based representation. 
 
 
-As for their workflow, they modeled one of the pairwise interaction (i.e. between image and question) by bilinear features, which is further encoded with the thrid dimension (i.e. answer) to be a triplet using bilinear tensor product. During this step, the model takes in a question + a corresponding image + candidate answers as the input. A CNN (convolutional neural network) a GRU RNN (recurrent neural network) are used for extracting feature vectors and question respectively. Then the representation is passed on as a multi-modal features and integrated by bilinear pooling module. Moreover, they decompose the correlation of triplets by their question and answer types with a slice-wise attention module on tensor to select the most discriminative reasoning process inference. 
+As for their workflow, they modeled one of the pairwise interaction (i.e. between image and question) by bilinear features, which is further encoded with the third dimension (i.e. answer) to be a triplet using bilinear tensor product. During this step, the model takes in a question + a corresponding image + candidate answers as the input. A CNN (convolutional neural network) a GRU RNN (recurrent neural network) are used for extracting feature vectors and question respectively. Then the representation is passed on as a multi-modal features and integrated by bilinear pooling module. Moreover, they decompose the correlation of triplets by their question and answer types with a slice-wise attention module on tensor to select the most discriminative reasoning process inference. 
 
-In the end, they optimize the proposed network by learning a label regression with KL-divergence losses. 
-
-They clamined that with these techniques, they can enable scalable training and fast convergence over a large number of answer set. 
-
-During the inference stage, they feed the embeddings of all candicate answer into the network and then select the answer which has the biggest triplet relevance socre as the final answer. 
+In the end, they optimize the proposed network by learning a label regression with KL-divergence losses. They claimed that with these techniques, they can enable scalable training and fast convergence over a large number of answer set. During the inference stage, they feed the embeddings of all candicate answer into the network and then select the answer which has the biggest triplet relevance socre as the final answer. 
 
 The high-level network architecture is as follows: 
 
@@ -231,8 +232,7 @@ The recent advancements that we discussed above in VQA domain have shown some pr
 
 ###### Case Studies
 
-1. In this paper [Multi-Turn Video Question Answering via Multi-Stream Hierarchical Attention Context Network](https://www.ijcai.org/proceedings/2018/0513.pdf), they proposed a hierarchical attention context network for context-aware question understanding by modeling the hierarchically sequential conversation context structure. 
-They also incorporate the multi-step reasoning process fro the multi-stream hierarchical attention context network to enable the progressive joint representation learning of the multi-stream attentional video and context-aware question embedding. 
+1. In this paper [Multi-Turn Video Question Answering via Multi-Stream Hierarchical Attention Context Network](https://www.ijcai.org/proceedings/2018/0513.pdf), they proposed a hierarchical attention context network for context-aware question understanding by modeling the hierarchically sequential conversation context structure. They also incorporate the multi-step reasoning process fro the multi-stream hierarchical attention context network to enable the progressive joint representation learning of the multi-stream attentional video and context-aware question embedding. 
 
 The construct their dataset by collecting the conversational video question answering datasets from YouTubeClips and TACoS-MultiLevel in which the first one has 1987 videos and the second daaset has 1303 videos. They invite 5 pairs of crowd-sourcing workers to construct 5 different conversational dialogs. In total, they have collected 37228 video question answering pairs for TACoS-MultiLevel data and 66806 ones for YouTubeClips data. 
 
@@ -241,7 +241,6 @@ The construct their dataset by collecting the conversational video question answ
 They collected 408 subtitled movies and obtained their extended summaries in the form of plot synopses(movie summaries that fans write after watching the movie) from Wikipedia. They used plot synopses as a proxy for the movie. They have annotators create both quizzes and answers pairs by referring to the story plot. Time-stamp is also attached with each question. 
 
 In the second step of data collection, they used the multiple-choice answers and question collected as the input to show to the annotators. By doing so, annotators can re-formulate the question and answers while doing the sanity check. 
-
 
 ##### Summary
 By going through the previous examples, we can see that VQA is very particular type of algorithms that is designed to efficiently process image and text input data while making the inference based on the input. Attention is a typical mechanism applied in this type of problems and multiple forms of multipulation on the attention mechanism used in these models have significantly improved the model performance. 
@@ -268,20 +267,16 @@ The high-level architecture of the model is illustrate as below:
 
 In short, the model is composed of embedding layer, encoding layer, attention layer and output layer. The model is fed with a question-context-answer triplet (Q,C,A) and the decoded Q and A from the output layer. Their loss function consists of 2 parts: 
 
-* The negative log-likelihood loss 
-
-
-* a coverage loss to penalize repetition of the generated text
+- negative log-likelihood loss 
+- a coverage loss to penalize repetition of the generated text
 
 2. In this paper [Harvesting Paragraph-Level Question-Answer Pairs from Wikipedia](https://arxiv.org/pdf/1805.05942.pdf),  they applied their question-answer pair generation system to 10000 top-ranking Wikipedia articles and create over a million question-answer pairs. 
 
 In their task formulation part, they mentioned that they break this task into 2 sub-tasks: 
 
 
-* candidate answer extraction 
-
-
-* answer-specific question generation 
+- candidate answer extraction 
+- answer-specific question generation 
 
 To achieve them, they first identify a set of question-worthy candidate answers ans = (A1, A2,...Ai). For each candidate answer Ai, they then aim to generate a question Q - a sequence of tokens y1,y2,...yn - based on the sentence S that contains candidate Ai such that Q asks about an aspect of Ai (of potential interest to a human) and Q might rely on information from sentences that preceeds S in the paragraph. Mathmatically, they compose a function $$Q = argmax_Q P(Q|S,C)$$.
 
