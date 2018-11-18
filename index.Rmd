@@ -1,5 +1,5 @@
 --- 
-title: "A Knowledge Ecosystem - Deep Learning and Education"
+title: "Knowledge Ecosystem - Deep Learning and Education"
 author: "Fanli Zheng  (Christian) & Haohan Wang"
 knit: "bookdown::render_book"
 date: "[DRAFT] `r Sys.Date()`"
@@ -22,8 +22,6 @@ cover-image: img/MtoQA.png
 ![ Knowledge Ecosystem ](img/knowledgeEcosystem.png)
 
 ```{r echo=FALSE, results="asis"}
-
 library(readr)
 cat( paste( readLines( "mailchimp.html" , warn = FALSE) ) )
-
 ```
