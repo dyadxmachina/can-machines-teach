@@ -1,7 +1,7 @@
 
 # Challenges
 
-We have proposed one approach to better represent a modern individual's knowledge by taking the world of unstructured educational content (Youtube videos, Medium articles) classifying it by concepts that belong to subjects and generating a way to test a learner's knowledge by generating a set of questions and answers conditioned on the content. We surveyed some of the relevant machine and deep learning research, introduced EC2QA, a novel network for taking in educational content to generate questions, answers, and a knowledge evaluation mechanism. We then proposed to tie this sytem together as a living and breathing knowledge ecosystem consisting of an individual's knowledge footprint, mapped to a knowledge graph, visualised over time as a learner's knowledge journey. This would serve to enable independent (aspiring or current) learner's self-study that could be synthesised from their past and present knowledge. There are many challenges in coming up with solutions to enable knowledge acquistion and representation at the learner and group level. We will address some of the primary challenges to pionerring the components of the proposed knowledge ecosystem                                                        
+We have proposed one approach to better represent a modern individual's knowledge by taking the world of unstructured educational content (Youtube videos, Medium articles, etc), classifying it by concepts that belong to one or more specific subjects in the knowledge graph, and generating a way to test a learner's knowledge by having a set of questions and answers conditioned on the content. We surveyed some of the relevant machine and deep learning research, introduced EC2QA, a novel network for taking in educational content to generate questions, answers, and a knowledge evaluation mechanism. We then proposed to tie this sytem together as a living and breathing knowledge ecosystem consisting of an individual's knowledge footprint, mapped to a knowledge graph, visualised over time as a learner's knowledge journey. This would serve to enable independent (aspiring or current) learner's life-long self-study that could be synthesised from their past and present knowledge. There will be many challenges in coming up with solutions to enable knowledge acquistion and representation at the learner and group level. We will address some of the primary challenges to pionerring the components of the proposed knowledge ecosystem:                                                        
 
 - Datasets
 -- EC2QA dataset
@@ -12,27 +12,32 @@ We have proposed one approach to better represent a modern individual's knowledg
 ## Creating a research dataset
 
 ### EC2QA dataset
-The success of deep learning techniques are predicated on the assumption that one needs a significant amount of data to train a large neural network enough to learn a representation that captures the set of admissable functions needed to learn a given concept(s). 
+The success of deep learning techniques are predicated on the assumption that one needs a significant amount of data to train a large neural network enough to learn the representation that captures the set of admissable functions needed to learn a given concept(s). 
 
-The EC2QA network will require a large dataset of educational content (Youtube video or Medium article) along with a set of questions,  which will have a set of correct and incorrect answers for each question.
+The EC2QA network will also face such a challenge and it requires a large dataset of educational content (Youtube video, Wikipedia or Medium article) along with a set of Question & Answer pairs,  which will have a set of correct and incorrect answers for each question.
 
 \[
  \{content1: \{question1: \{answer1, answer2,...\},  question2: \{answer1, answer2,...\},...\},... 
 \]
 
-This dataset will need to be designed in two ways. The dataset can use unstructured educational content without questions or answers to be use as a *education embedding* using unsupervised technique. It can then be pretrained on a set of structured questions and answers, then lastly trained on a original set of several (content, questions, answers) triplets. 
+This dataset will need to be designed in two ways.
+
+1. The dataset can use unstructured educational content without questions or answers to be used as a *education embedding* by leveraging unsupervised technique.
+
+
+2. It can then be pretrained on a set of structured questions and answers, then lastly trained on a original set of several (content, questions, answers) triplets using deep learning or other advanced techniques. 
 
 ### Pretraining
-Learning representations from more structured content might be a great place to start. Partnering with educational content providers like Udacity, Coursera, Edx, and Khan Academy would provide a rather large dataset of educational content (mostly videos and text based readings) that usually are followed by multiple choice questions and sometimes open text answers. 
+Learning representations from more structured content might be a great place to start with. Partnering with educational content providers like Udacity, Coursera, Edx, and Khan Academy would provide a rather large dataset of educational content (mostly videos and text based readings) that usually are followed by multiple choice questions and sometimes open text answers. 
 
 The space of structured (made for Q and A especially interactively) educational content will, of course, differ in siginficant ways from the space of unstructured educational content but we believe that we can extract some of the overlap without having to amass such a large dataset for training.
 
 ### Educator Enrichment
-We also need to partner with experts in many educational subjects to help us create the original  
+We also need to partner with experts in many educational subjects to help us create the original knowledge graph. 
 
 ### Minimum Viable Dataset
 
-We propse to first begin with just one subject such as psychology, neuroscience, or design as a way to get started rather than to try mapping the whole space of unstructured educational content. 
+We propse to first begin with just one subject such as psychology, mathematics, or design as a way as mentioned above to get started rather than to try mapping the whole space of unstructured educational content. 
 
 
 
@@ -49,11 +54,11 @@ We hope to bring together collaborators that would include machine learning rese
 
 ## Conclusion
 
-In conclusion, we presented a new perspective on knowledge acquistion, representation, and proposed an ecosystem that would support a modern and adaptative knowledge ecosystem.
+In conclusion, we presented a new perspective on knowledge acquistion, representation, and proposed an ecosystem that would support a modern and adaptative knowledge ecosystem that a learner can use and rely on for their entire life-time. 
 
 Our main task was to take an individual and begin to get a true depiction of their knowledge beyond their traditional degree which is only a small percentage of someone's education. We focused on taking the world of unstructured educational content online, and how to provide structure in the form of testing and mapping it to a knowledge graph. 
 
-There is still much research to be done in bringing to life the EC2QA network as well as the data needed and the collaboration needed amongst machine learning researchers, teachers, and designers needed.
+There is still much moreresearch to be done in bringing to life the EC2QA network as well as the data needed and the collaboration needed amongst machine learning researchers, teachers, and designers needed.
 
 As machine learning researchers we are looking forward to building our next prototype and collaborating around this work. 
 

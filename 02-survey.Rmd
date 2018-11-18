@@ -459,29 +459,22 @@ Given we've impletemented the learning and feedback module, knowing where a give
 
 A graph dedicated to education should do the following:
 
-* Provide flexibility for new subjects
+
+* Provide flexibility to add new subjects
 
 
 * Connect related subjects to each
 
 
+* Map concepts with the subject
+
+
 * Connect concepts related to the content 
 
 
-* Map subject with the Concepts
 
 ![Knowledge Ecosystem](img/knowledgeEcosystem.png)
 
-
-
-
-### Key Components
-Here are some key components that we found important of building an automated knowledge graph for education: 
-
-1. Entity recognition that aims to extract concept of interest from structured or unstructured data. 
-
-
-2. Relation identification that leverages on the semantic meaning of data. 
 
 
 ### Automatic Knowledge Graph Construction
@@ -550,8 +543,27 @@ As what we discussed above, the first paper introduces a system that almost exac
 
 The last 2 papers demonstrate the progress that has been made in KG embedding learning domain. As mentioned above, as one of the most effective methods in representing knowledge graphs. The development of this field may offer some great implication for the future KG automation and acquisition work/research. 
 
+#### Key Components  
+Here are some key components that we found important of building an automated knowledge graph for education: 
 
-#### Aatasets and Annotaters needed 
+1. Entity recognition that aims to extract concept of interest from structured or unstructured data. 
+
+
+2. Relation identification that leverages on the semantic meaning of data. 
+
+#### Possible Next Steps 
+
+Here are some of our research summary regarding the steps of creating such an educational knowledge graph:
+
+1. In terms of entity recognition task, We need to first get the data from some reliable open sementic sources i.e. Wikipedia or Freebase. Or we can crawl the data online on our own to find high quality training data. In the next section we will be listing out some resources that might help.
+
+2. Next, we need to create the model to map the relation among the entities. There are plenty of great github that we can use to help us with this task. Or we can use some tools developed for this purpose i.e. node.js and Wolfram Mathematica embedded symbolic functions or just Tensorflow. The typically techniques we will employ are NLP and semantic data tagging or labeling techniques. 
+
+
+3. Naturally, after the entity extraction and relationship mapping we will visualize our map.
+
+
+#### Datasets and Annotaters needed 
 
 
 1. [Knowledge Vault](https://ai.google/research/pubs/pub45634): A web-scale approach to probabilistic knowledge fusion. In this paper [Knowledge Vault: A Web-Scale Approach to Probabilistic Knowledge Fusion](https://dejanseo.com.au/wp-content/uploads/2014/08/Knowledge-Vault-A-Web-Scale-Approach-to-Probabilistic-Knowledge-Fusion.pdf), they introduce Knowledge Vault that combines extraction from Web content (obained through analysis of text, tabular data, page structure, and human annotation) with prior knowledge derived from existing knowledge repositories. 
@@ -560,7 +572,13 @@ They employ a supervised machine learning models for fusing these distinct infor
 
 2. [Google Knowledge graph Search API](https://developers.google.com/knowledge-graph/#knowledge_graph_entities).
 
+Below are some resources that might be helpful for starting such a job from scrath: 
 
+3. [Understand how structured data works](https://developers.google.com/search/docs/guides/intro-structured-data) by Google.
+
+4. [Wikipedia](wikipedia.com)
+
+5. [Freebase](Freebase.com)
 
 
 ## Knowledge Journeys [DRAFT]
