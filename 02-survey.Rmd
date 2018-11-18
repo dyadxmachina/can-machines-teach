@@ -195,7 +195,6 @@ Since we are dealing with visual input, question-guided attention mechanism is a
 
 ###### Case Studies
 
-
 1. In this paper [Deep Attention Neural Tensor Network for Visual Question Answering](http://openaccess.thecvf.com/content_ECCV_2018/papers/Yalong_Bai_Deep_Attention_Neural_ECCV_2018_paper.pdf), they proposed a novel deep attention neural tensor network that can discover the joint correlation over images, questions and answers with tensor-based representation. 
 
 
