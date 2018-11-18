@@ -23,3 +23,9 @@ cover-image: img/MtoQA.png
 ![ Educational Content to Question-Answer Generation ](img/MtoQA.png)
 ![ Knowledge Ecosystem ](img/knowledgeEcosystem.png)
 
+```{r echo=FALSE, results="asis"}
+
+library(readr)
+cat( paste( readLines( "mailchimp.html" , warn = FALSE) ) )
+
+```
