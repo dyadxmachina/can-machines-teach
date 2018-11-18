@@ -75,14 +75,20 @@ Now we have some basic understanding of these 2 problems for which we will be ex
 Let's say a learner is watching a video about hypothesis testing, midway through the video the educator shows an example and provides the data needed to test the hypothesis. It would be ideal if during this time the learner's knowledge is tested with the following possible questions: 
 
 ** UPDATE EXAMPLE TO BE MORE TOPIC OR CONCEPT BASED **
-1. What is the p-value for this test? (and provide multiple choices for learner to choose from)
+
+
+1. What is the definition of the p-value? (and provide multiple choices for learner to choose from)
+
 
 2. Is this a 1-sided test? (answers provided would be: YES or NO)
+
+
 
 3. How would you intepret the p-value in the context of this example.
 
 
-4. Based on your calculation, summarize the conclusion of this hypothesis testing for me.
+
+4. What is the difference beween null hypothesis and alternative hypothesis based on your understanding?
 
 
 
@@ -118,18 +124,15 @@ If you pay close attention to the question generation and answer generation type
 To the best of our knowledge, deep learning is one of the most optimal techniques currently developed to learn such complex representations of complex data such as video lectures. 
 
 
-*** bs **
-Machine learning is a set of algorithms that can be used to parse data, learn from the data, and then apply what they have learned to make intelligent decisions. Or more specifically, deep learning is a subset of machine learning that belongs to the family of representation learning. Inside this family, deep learning is particularly good at sampling the features and having additonal layers for more abstract feature learning. All of these features are crutial for our goal of mapping the feature to the output task. 
+By definition, machine learning is subfiled of Artificial Intelligence that uses statistical learning techniques to give the machine the ability to learn from the data. It explores the algorithms that can be used to parse data, learn from the data, and then apply what they have learned to make intelligent decisions. Or more specifically, deep learning is a subset of machine learning that belongs to the family of representation learning. Inside this family, deep learning is particularly good at sampling the features and having additonal layers for more abstract feature learning. All of these features are crutial for our goal of mapping the feature to the output task. 
 
 Because of the above advantages, deep learning is known as one of the most flexible machine learning algorithms that can learn and map a **deep representation** of supervised concepts within the data. Deep nueral network architecture can be composed into a single differentiable function and trained end-to-end until it converges. As a result, they can help identify the suitable *inductive* *biases* catered to the training data. 
 
-** this isn't leveraging the true advantages of why deep learning. Advances in vision and the ability to learn representation isn't well defined here **
 Moreover, deep learning outperforms other techniques when the training data is large and the advantage fits our siutation well. We could easily find a large amound of educational content available on the web.
 
 The large amount content creates another problem that can be avoided with deep learning, which is it's going to be very troublesome if you plan to do feature engineering manually. When there is lack of domain understanding for feature introspection, deep learning is preferable. 
 
-** complex research ? huh? ** 
-In the end, deep learning really shines when it comes to many complex research problems such as NLP, Visual Recognition and Speech recognition. For solving our task, all those domians will possibly be invloved. 
+In the end, deep learning really shines when it comes to many specialized research problems such as NLP, Visual Recognition and Speech recognition. For solving our task, all those domians will possibly be invloved. 
 
 ### Question Generation
 
@@ -191,8 +194,30 @@ In this QG section, we have discussed 4 algorithms. They provide us a way to fra
 
 However, as you probabily have noticed that the above examples are focus mainly on processing the text input data instead of videos directly. It demonstrates that more reserch in this new area is needed so as to meet our particular needs. 
 
-### Answer Generation 
-** add intro to answer generation **
+### Question Answering 
+Now, let's move on to our question answering (QA) step. The general goal of a QA model is to predict an answer to the question based on the information found in the passage, given a passage and a question. 
+
+Here are the overview of a basic QA model's implementation [@qa_imp]: 
+
+1. Build representation for the passage and the question separately.
+
+
+2. Incorporate the question information into the passage.
+
+
+3. Get the final representation of the passage by directly matching it against itself
+
+
+4. Generate the answer
+
+
+And the typical techniques applied for solving such a problem includ: 
+
+* Embedding 
+
+* Encoder Decoder 
+
+* Attention Mechanism 
 
 #### Close-ended Questions
 
