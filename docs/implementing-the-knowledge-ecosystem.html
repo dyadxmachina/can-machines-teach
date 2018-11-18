@@ -139,10 +139,9 @@
 <li class="chapter" data-level="2.3" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#knowledge-graph-draft"><i class="fa fa-check"></i><b>2.3</b> Knowledge Graph [DRAFT]</a><ul>
 <li class="chapter" data-level="2.3.1" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#what-is-a-graph"><i class="fa fa-check"></i><b>2.3.1</b> What is a graph?</a></li>
 <li class="chapter" data-level="2.3.2" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#problem-formulation-2"><i class="fa fa-check"></i><b>2.3.2</b> Problem Formulation</a></li>
-<li class="chapter" data-level="2.3.3" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#key-components"><i class="fa fa-check"></i><b>2.3.3</b> Key Components</a></li>
-<li class="chapter" data-level="2.3.4" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#automatic-knowledge-graph-construction"><i class="fa fa-check"></i><b>2.3.4</b> Automatic Knowledge Graph Construction</a></li>
-<li class="chapter" data-level="2.3.5" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#case-studies-5"><i class="fa fa-check"></i><b>2.3.5</b> Case Studies</a></li>
-<li class="chapter" data-level="2.3.6" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#summary-of-knowledge-graph-draft"><i class="fa fa-check"></i><b>2.3.6</b> Summary of Knowledge Graph [DRAFT]</a></li>
+<li class="chapter" data-level="2.3.3" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#automatic-knowledge-graph-construction"><i class="fa fa-check"></i><b>2.3.3</b> Automatic Knowledge Graph Construction</a></li>
+<li class="chapter" data-level="2.3.4" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#case-studies-5"><i class="fa fa-check"></i><b>2.3.4</b> Case Studies</a></li>
+<li class="chapter" data-level="2.3.5" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#summary-of-knowledge-graph-draft"><i class="fa fa-check"></i><b>2.3.5</b> Summary of Knowledge Graph [DRAFT]</a></li>
 </ul></li>
 <li class="chapter" data-level="2.4" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#knowledge-journeys-draft"><i class="fa fa-check"></i><b>2.4</b> Knowledge Journeys [DRAFT]</a><ul>
 <li class="chapter" data-level="2.4.1" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#summary-of-current-research-and-needs-draft"><i class="fa fa-check"></i><b>2.4.1</b> Summary of Current Research and Needs [DRAFT]</a></li>
@@ -529,32 +528,24 @@
 </blockquote>
 <p>A graph dedicated to education should do the following:</p>
 <ul>
-<li><p>Provide flexibility for new subjects</p></li>
+<li><p>Provide flexibility to add new subjects</p></li>
 <li><p>Connect related subjects to each</p></li>
+<li><p>Map concepts with the subject</p></li>
 <li><p>Connect concepts related to the content</p></li>
-<li><p>Map subject with the Concepts</p></li>
 </ul>
 <div class="figure">
 <img src="img/knowledgeEcosystem.png" alt="Knowledge Ecosystem" />
 <p class="caption">Knowledge Ecosystem</p>
 </div>
 </div>
-<div id="key-components" class="section level3">
-<h3><span class="header-section-number">2.3.3</span> Key Components</h3>
-<p>Here are some key components that we found important of building an automated knowledge graph for education:</p>
-<ol style="list-style-type: decimal">
-<li><p>Entity recognition that aims to extract concept of interest from structured or unstructured data.</p></li>
-<li><p>Relation identification that leverages on the semantic meaning of data.</p></li>
-</ol>
-</div>
 <div id="automatic-knowledge-graph-construction" class="section level3">
-<h3><span class="header-section-number">2.3.4</span> Automatic Knowledge Graph Construction</h3>
+<h3><span class="header-section-number">2.3.3</span> Automatic Knowledge Graph Construction</h3>
 <p>Classic knowledge representation techniques allow a knowledge engineer o create rules that can be interpreted by a reasoner to infer new or missing triples(subject, predicate, object). These rules are usually expressed through an ontology which allows for the propagation of properties from top classes to the lower classes.</p>
 <p>However, we are looking for solutions that can allow us to complete our educational knowledge graph building process. Based on our research, generic knowledge graphs uaually cannot sufficiently support many domain-specific applications i.e. education and finding the representation of the graph to feed the triples into a machine learning or deep learning algorithm is still an open area of research. As a start, let’s focus on how to automate the eduction knowledge graph construction process.</p>
 <p>There have been several papers that provide promising results to the automatation of constructing a knowledge graph. Let’s take a look.</p>
 </div>
 <div id="case-studies-5" class="section level3">
-<h3><span class="header-section-number">2.3.5</span> Case Studies</h3>
+<h3><span class="header-section-number">2.3.4</span> Case Studies</h3>
 <ol style="list-style-type: decimal">
 <li>In this paper <a href="https://ieeexplore.ieee.org/document/8362657">KnowEdu: A System to Construct Knowledge Graph for Education</a>, they propose a system KnowEdu that can automatically construct knowledge graph for education. In short, the system is able to extract concepts of subjects or courses and then identifies the educational relations between the concepts.</li>
 </ol>
@@ -590,18 +581,41 @@
 <p>As a result, their model shows experimentally new state-of-art results in link prediction task.</p>
 </div>
 <div id="summary-of-knowledge-graph-draft" class="section level3">
-<h3><span class="header-section-number">2.3.6</span> Summary of Knowledge Graph [DRAFT]</h3>
+<h3><span class="header-section-number">2.3.5</span> Summary of Knowledge Graph [DRAFT]</h3>
 <p>Based on our research, we are very pleased to see some great progress has been made to bridge the KG automation process with deep learning and other machine learning techniques.</p>
 <p>As what we discussed above, the first paper introduces a system that almost exactly matches our goal. The carefully walk us through the current progress and possible solutions for solving each obstacles in developing such a educational knowledge graph. For the instructional concept extraction task, they use both CRF model and neural sequence labeling algorithm to achieve a high performance. They employ probabilistic association rule mining on learning assessment data to identify the relations with educational significance.</p>
 <p>The last 2 papers demonstrate the progress that has been made in KG embedding learning domain. As mentioned above, as one of the most effective methods in representing knowledge graphs. The development of this field may offer some great implication for the future KG automation and acquisition work/research.</p>
-<div id="aatasets-and-annotaters-needed" class="section level4">
-<h4><span class="header-section-number">2.3.6.1</span> Aatasets and Annotaters needed</h4>
+<div id="key-components" class="section level4">
+<h4><span class="header-section-number">2.3.5.1</span> Key Components</h4>
+<p>Here are some key components that we found important of building an automated knowledge graph for education:</p>
+<ol style="list-style-type: decimal">
+<li><p>Entity recognition that aims to extract concept of interest from structured or unstructured data.</p></li>
+<li><p>Relation identification that leverages on the semantic meaning of data.</p></li>
+</ol>
+</div>
+<div id="possible-next-steps" class="section level4">
+<h4><span class="header-section-number">2.3.5.2</span> Possible Next Steps</h4>
+<p>Here are some of our research summary regarding the steps of creating such an educational knowledge graph:</p>
+<ol style="list-style-type: decimal">
+<li><p>In terms of entity recognition task, We need to first get the data from some reliable open sementic sources i.e. Wikipedia or Freebase. Or we can crawl the data online on our own to find high quality training data. In the next section we will be listing out some resources that might help.</p></li>
+<li><p>Next, we need to create the model to map the relation among the entities. There are plenty of great github that we can use to help us with this task. Or we can use some tools developed for this purpose i.e. node.js and Wolfram Mathematica embedded symbolic functions or just Tensorflow. The typically techniques we will employ are NLP and semantic data tagging or labeling techniques.</p></li>
+<li><p>Naturally, after the entity extraction and relationship mapping we will visualize our map.</p></li>
+</ol>
+</div>
+<div id="datasets-and-annotaters-needed" class="section level4">
+<h4><span class="header-section-number">2.3.5.3</span> Datasets and Annotaters needed</h4>
 <ol style="list-style-type: decimal">
 <li><a href="https://ai.google/research/pubs/pub45634">Knowledge Vault</a>: A web-scale approach to probabilistic knowledge fusion. In this paper <a href="https://dejanseo.com.au/wp-content/uploads/2014/08/Knowledge-Vault-A-Web-Scale-Approach-to-Probabilistic-Knowledge-Fusion.pdf">Knowledge Vault: A Web-Scale Approach to Probabilistic Knowledge Fusion</a>, they introduce Knowledge Vault that combines extraction from Web content (obained through analysis of text, tabular data, page structure, and human annotation) with prior knowledge derived from existing knowledge repositories.</li>
 </ol>
 <p>They employ a supervised machine learning models for fusing these distinct information sources. As a result, their system can automatically construct a web-scale probabilistic knowledge base.</p>
 <ol start="2" style="list-style-type: decimal">
 <li><a href="https://developers.google.com/knowledge-graph/#knowledge_graph_entities">Google Knowledge graph Search API</a>.</li>
+</ol>
+<p>Below are some resources that might be helpful for starting such a job from scrath:</p>
+<ol start="3" style="list-style-type: decimal">
+<li><p><a href="https://developers.google.com/search/docs/guides/intro-structured-data">Understand how structured data works</a> by Google.</p></li>
+<li><p><a href="wikipedia.com">Wikipedia</a></p></li>
+<li><p><a href="Freebase.com">Freebase</a></p></li>
 </ol>
 </div>
 </div>
