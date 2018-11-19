@@ -136,7 +136,7 @@
 <li class="chapter" data-level="4.2.1" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#question-formulation"><i class="fa fa-check"></i><b>4.2.1</b> Question Formulation</a></li>
 <li class="chapter" data-level="4.2.2" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#current-research"><i class="fa fa-check"></i><b>4.2.2</b> Current Research</a></li>
 <li class="chapter" data-level="4.2.3" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#question-generation"><i class="fa fa-check"></i><b>4.2.3</b> Question Generation</a></li>
-<li class="chapter" data-level="4.2.4" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#answer-generation"><i class="fa fa-check"></i><b>4.2.4</b> Answer Generation</a></li>
+<li class="chapter" data-level="4.2.4" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#question-answering"><i class="fa fa-check"></i><b>4.2.4</b> Question Answering</a></li>
 <li class="chapter" data-level="4.2.5" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#summary-of-learning-and-feedback-networks-draft"><i class="fa fa-check"></i><b>4.2.5</b> Summary of Learning and Feedback Networks [DRAFT]</a></li>
 </ul></li>
 <li class="chapter" data-level="4.3" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#knowledge-graph-draft"><i class="fa fa-check"></i><b>4.3</b> Knowledge Graph [DRAFT]</a><ul>
@@ -239,11 +239,12 @@
 <p>“what types of questions &amp; answers would be best to test a learner’s knowledge given a piece of educational content (i.e. a lecture video)”</p>
 </blockquote>
 <p>Let’s say a learner is watching a video about hypothesis testing, midway through the video the educator shows an example and provides the data needed to test the hypothesis. It would be ideal if during this time the learner’s knowledge is tested with the following possible questions:</p>
-<p>** UPDATE EXAMPLE TO BE MORE TOPIC OR CONCEPT BASED ** 1. What is the p-value for this test? (and provide multiple choices for learner to choose from)</p>
-<ol start="2" style="list-style-type: decimal">
+<p>** UPDATE EXAMPLE TO BE MORE TOPIC OR CONCEPT BASED **</p>
+<ol style="list-style-type: decimal">
+<li><p>What is the definition of the p-value? (and provide multiple choices for learner to choose from)</p></li>
 <li><p>Is this a 1-sided test? (answers provided would be: YES or NO)</p></li>
 <li><p>How would you intepret the p-value in the context of this example.</p></li>
-<li><p>Based on your calculation, summarize the conclusion of this hypothesis testing for me.</p></li>
+<li><p>What is the difference beween null hypothesis and alternative hypothesis based on your understanding?</p></li>
 </ol>
 <p>It is also helpful to ask learner the question as follows after showing the solution:</p>
 <ol start="5" style="list-style-type: decimal">
@@ -261,11 +262,11 @@
 <p>As we stated above, deep learning has achieved state-of-art performance in both QG and QA tasks. But how?</p>
 <p>If you pay close attention to the question generation and answer generation type of problems, you can easily reframe this problem into a general machine learning problem in which the model needs to learn the relationship between the educational content and the meaningful question &amp; answer pairs that is associated with the content. In other words, our problem could be simplified as learning a function that is capable of capture the relationship between our input and output, or, appropriately map the educational content to the desired question and answer pairs with this function.</p>
 <p>To the best of our knowledge, deep learning is one of the most optimal techniques currently developed to learn such complex representations of complex data such as video lectures.</p>
-<p>*** bs ** Machine learning is a set of algorithms that can be used to parse data, learn from the data, and then apply what they have learned to make intelligent decisions. Or more specifically, deep learning is a subset of machine learning that belongs to the family of representation learning. Inside this family, deep learning is particularly good at sampling the features and having additonal layers for more abstract feature learning. All of these features are crutial for our goal of mapping the feature to the output task.</p>
+<p>By definition, machine learning is subfiled of Artificial Intelligence that uses statistical learning techniques to give the machine the ability to learn from the data. It explores the algorithms that can be used to parse data, learn from the data, and then apply what they have learned to make intelligent decisions. Or more specifically, deep learning is a subset of machine learning that belongs to the family of representation learning. Inside this family, deep learning is particularly good at sampling the features and having additonal layers for more abstract feature learning. All of these features are crutial for our goal of mapping the feature to the output task.</p>
 <p>Because of the above advantages, deep learning is known as one of the most flexible machine learning algorithms that can learn and map a <strong>deep representation</strong> of supervised concepts within the data. Deep nueral network architecture can be composed into a single differentiable function and trained end-to-end until it converges. As a result, they can help identify the suitable <em>inductive</em> <em>biases</em> catered to the training data.</p>
-<p>** this isn’t leveraging the true advantages of why deep learning. Advances in vision and the ability to learn representation isn’t well defined here ** Moreover, deep learning outperforms other techniques when the training data is large and the advantage fits our siutation well. We could easily find a large amound of educational content available on the web.</p>
+<p>Moreover, deep learning outperforms other techniques when the training data is large and the advantage fits our siutation well. We could easily find a large amound of educational content available on the web.</p>
 <p>The large amount content creates another problem that can be avoided with deep learning, which is it’s going to be very troublesome if you plan to do feature engineering manually. When there is lack of domain understanding for feature introspection, deep learning is preferable.</p>
-<p>** complex research ? huh? ** In the end, deep learning really shines when it comes to many complex research problems such as NLP, Visual Recognition and Speech recognition. For solving our task, all those domians will possibly be invloved.</p>
+<p>In the end, deep learning really shines when it comes to many specialized research problems such as NLP, Visual Recognition and Speech recognition. For solving our task, all those domians will possibly be invloved.</p>
 </div>
 <div id="question-generation" class="section level3">
 <h3><span class="header-section-number">4.2.3</span> Question Generation</h3>
@@ -311,9 +312,22 @@
 <p>However, as you probabily have noticed that the above examples are focus mainly on processing the text input data instead of videos directly. It demonstrates that more reserch in this new area is needed so as to meet our particular needs.</p>
 </div>
 </div>
-<div id="answer-generation" class="section level3">
-<h3><span class="header-section-number">4.2.4</span> Answer Generation</h3>
-<p>** add intro to answer generation **</p>
+<div id="question-answering" class="section level3">
+<h3><span class="header-section-number">4.2.4</span> Question Answering</h3>
+<p>Now, let’s move on to our question answering (QA) step. The general goal of a QA model is to predict an answer to the question based on the information found in the passage, given a passage and a question.</p>
+<p>Here are the overview of a basic QA model’s implementation <span class="citation">(<span class="citeproc-not-found" data-reference-id="qa_imp"><strong>???</strong></span>)</span>:</p>
+<ol style="list-style-type: decimal">
+<li><p>Build representation for the passage and the question separately.</p></li>
+<li><p>Incorporate the question information into the passage.</p></li>
+<li><p>Get the final representation of the passage by directly matching it against itself</p></li>
+<li><p>Generate the answer</p></li>
+</ol>
+<p>And the typical techniques applied for solving such a problem includ:</p>
+<ul>
+<li><p>Embedding</p></li>
+<li><p>Encoder Decoder</p></li>
+<li><p>Attention Mechanism</p></li>
+</ul>
 <div id="close-ended-questions" class="section level4">
 <h4><span class="header-section-number">4.2.4.1</span> Close-ended Questions</h4>
 <div id="visual-question-answering-vqa" class="section level5">
