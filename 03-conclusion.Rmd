@@ -1,43 +1,58 @@
 
-# Challenges
+# Next Steps
 
-We have proposed one approach to better represent a modern individual's knowledge by taking the world of unstructured educational content (Youtube videos, Medium articles, etc), classifying it by concepts that belong to one or more specific subjects in the knowledge graph, and generating a way to test a learner's knowledge by having a set of questions and answers conditioned on the content. We surveyed some of the relevant machine and deep learning research, introduced EC2QA, a novel network for taking in educational content to generate questions, answers, and a knowledge evaluation mechanism. We then proposed to tie this sytem together as a living and breathing knowledge ecosystem consisting of an individual's knowledge footprint, mapped to a knowledge graph, visualised over time as a learner's knowledge journey. This would serve to enable independent (aspiring or current) learner's life-long self-study that could be synthesised from their past and present knowledge. There will be many challenges in coming up with solutions to enable knowledge acquistion and representation at the learner and group level. We will address some of the primary challenges to pionerring the components of the proposed knowledge ecosystem:                                                        
+We have proposed one approach to better represent a modern individual's knowledge by taking the world of unstructured educational content (Youtube videos, Medium articles, etc), classifying it by concepts that belong to one or more subjects from a education-based knowledge graph, and testing a learner's knowledge by generating a set of questions and answers conditioned on the content without the need for the educator to do so. We surveyed some of the relevant machine and deep learning research, introduced Educational Content to Questions and Answers (EC2QA) network, a novel neural network for taking in educational content and generating a set of questions, answers, and an evaluating a learner's knowledge acquisition.
 
+We then proposed to tie these components together as an adaptive knowledge ecosystem consisting of an individual's knowledge footprint, mapped to a knowledge graph, visualised over time as a learner's knowledge journey. This would serve to enable independent (aspiring or current) learner's numerious benefits in their life-long self-study that can take into consideration education they acquired from unstructured sources, thereby formalising their informal knowledge.
+
+
+## Challenges
+
+There will be many challenges in coming up with solutions to enable knowledge acquistion and representation at the learner and group level. We will address some of the primary challenges to pionerring the components of the proposed knowledge ecosystem:                                                        
 - Datasets
 -- EC2QA dataset
 -- Knowledge graph dataset
 - Deep Learning Architecture
 -- EC2QA network
 
-## Creating a research dataset
+For our purposes we will focus on the EC2QA network and dataset as the primary focus for next steps.
 
-### EC2QA dataset
-The success of deep learning techniques are predicated on the assumption that one needs a significant amount of data to train a large neural network enough to learn the representation that captures the set of admissable functions needed to learn a given concept(s). 
+## EC2QA dataset
+The success of deep learning techniques are predicated on the assumption that one needs a significant amount of data to train a large neural network enough to learn the representation that captures the set of admissable functions needed to learn a given concept(s).
 
 The EC2QA network will also face such a challenge and it requires a large dataset of educational content (Youtube video, Wikipedia or Medium article) along with a set of Question & Answer pairs,  which will have a set of correct and incorrect answers for each question.
 
 \[
- \{content1: \{question1: \{answer1, answer2,...\},  question2: \{answer1, answer2,...\},...\},... 
+ \{content1: \{question1: \{answer1, answer2,...\},  question2: \{answer1, answer2,...\},...\},...
 \]
 
-This dataset will need to be designed in two ways.
+This dataset could go through the following process to lower the amount of data needed and utilise the intrinsic structure of educational content.
 
-1. The dataset can use unstructured educational content without questions or answers to be used as a *education embedding* by leveraging unsupervised technique.
+```{r ec2qa dataset, message=FALSE, warning=FALSE, paged.print=FALSE, echo=FALSE}
+library(readr)
+library(knitr)
+kable(read.csv('img/ec2qa_dataset.csv', check.names = FALSE))
+
+```
 
 
-2. It can then be pretrained on a set of structured questions and answers, then lastly trained on a original set of several (content, questions, answers) triplets using deep learning or other advanced techniques. 
+1. The network can be trained on unstructured educational content without questions or answers to create an *education embedding* by leveraging unsupervised techniques like autoencoder or variational autoencoder (VAE). This requires a dataset of educational content, possibly many types. This could also be semi-supervised by supervising the media type and learning representations for the types of educational content.
 
-### Pretraining
-Learning representations from more structured content might be a great place to start with. Partnering with educational content providers like Udacity, Coursera, Edx, and Khan Academy would provide a rather large dataset of educational content (mostly videos and text based readings) that usually are followed by multiple choice questions and sometimes open text answers. 
+2. The network can then be trained on **existing** educational content that already has preexisting questions and answers for each part of the content (i.e. Khan Academy, Udacity, Coursera). The domain of structured educational content is in fact very different from the unstructured content and may hinder the network but we believe it might be the case that it helps. This is worth experimenting with.
 
-The space of structured (made for Q and A especially interactively) educational content will, of course, differ in siginficant ways from the space of unstructured educational content but we believe that we can extract some of the overlap without having to amass such a large dataset for training.
+3. The final step is annotating a set of unstructured educational content with questions and answers.
+This will be the primary data that we use to train and test the model's performance.
 
-### Educator Enrichment
-We also need to partner with experts in many educational subjects to help us create the original knowledge graph. 
 
-### Minimum Viable Dataset
+## Education Partners
+The second step requires a large amount of educational content paired with question and answer sets. This data is rich and informative and could help map the unstructured world. Most of these sets have been created by educators and their efforts could be used to help. We would need to partner with large educational institutions (Udacity, Coursera, MOOCs, Edx, Khan Academy's) to work with the dataset and also collaborate on how we annotate the space of unstructured educational content.
 
-We propse to first begin with just one subject such as psychology, mathematics, or design as a way as mentioned above to get started rather than to try mapping the whole space of unstructured educational content. 
+## Educator Enrichment
+The third and final dataset that would be needed, remains the most important component as well as being the most time and labour intensive. Partnering with educators and subject matter experts to source the subspace of unstructured educational content and create questions and answers, we would eventually arrive at a curated dataset that would train our model.
+
+## Minimum Viable Dataset (*This term is coined by IDEO*)
+
+We propose to narrow the problem space and jumpstart research in this area by focusing on only one subject (i.e. psychology, mathematics, or design) rather than to try to take on mapping the whole space of unstructured educational content. This drastically reduces the data that is needed and the number of experts and partners needed to kickstart the initiative.
 
 
 
@@ -48,21 +63,21 @@ text <- c("")
 ```
 
 
-## Call for collaborators 
+## Call for collaborators
 
-We hope to bring together collaborators that would include machine learning researchers, educators, technologists, and designers to begin our first foray into a modern knowledge ecosystem. Specifically starting with the EC2QA dataset and network. 
+We hope to bring together collaborators that would include machine learning researchers, educators, technologists, and designers to begin our first foray into a modern knowledge ecosystem. Specifically starting with the EC2QA dataset and network, one education subject, and a educational partner.
+
+Please email us at hahohanfanli@gmail.com with the subject Knowledge Graph Initiative.
 
 ## Conclusion
 
-In conclusion, we presented a new perspective on knowledge acquistion, representation, and proposed an ecosystem that would support a modern and adaptative knowledge ecosystem that a learner can use and rely on for their entire life-time. 
+In conclusion, we presented a new perspective on knowledge acquistion, representation, and proposed an ecosystem that would support a modern and adaptative knowledge ecosystem that a learner can use and rely on for their entire life-time.
 
-Our main task was to take an individual and begin to get a true depiction of their knowledge beyond their traditional degree which is only a small percentage of someone's education. We focused on taking the world of unstructured educational content online, and how to provide structure in the form of testing and mapping it to a knowledge graph. 
+Our main task was to take an individual and begin to get a true depiction of their knowledge beyond their traditional degree which is only a small percentage of someone's education. We focused on taking the world of unstructured educational content online, and how to provide structure in the form of testing and mapping it to a knowledge graph.
 
-There is still much moreresearch to be done in bringing to life the EC2QA network as well as the data needed and the collaboration needed amongst machine learning researchers, teachers, and designers needed.
+There is still much moreresearch to be done in bringing to life the Educational Content to Questions and Answers (EC2QA) neural networksas well as the data needed and the collaboration required amongst machine learning researchers, teachers, and designers,
 
-As machine learning researchers we are looking forward to building our next prototype and collaborating around this work. 
-
-
+As deep learning researchers, we are looking forward to design or seeing others design the minimum viable dataset and architecture motivate by this work.
 
 # About Authors
 
@@ -75,7 +90,3 @@ Visit our website dyadxmachina.com
 Haohan Wang: haohan723@gmail.com
 
 Christian Fanli Ramsey: thechristianramsey@gmail.com
-
-# References
-
-
