@@ -3,6 +3,7 @@ delete_merged_file: true
 site: "bookdown::bookdown_site"
 output_dir: docs
 output:
+  rticles::acm_article:
   bookdown::gitbook:
     lib_dir: assets
     split_by: section
