@@ -1,9 +1,3 @@
----
-title: "CMT"
-author: "hw"
-date: "November 9, 2018"
-output: html_document
----
 
 # Implementing the Knowledge Ecosystem
 
