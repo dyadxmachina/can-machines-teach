@@ -67,6 +67,7 @@ Please email us at [two@dyadxmachina.com](two@dyadxmachina.com) with the subject
 ```{r echo=FALSE, results="asis"}
 library(readr)
 cat( paste( readLines( "mailchimp.html" , warn = FALSE) ) )
+cat("<br/>")
 ```
 
 ## Conclusion
