@@ -6,21 +6,21 @@ Let's start with a future view of an individual's education. Many of us have use
 Let us imagine that all of what you have learned online, throughout the entirety of your life, from the hundreds of Youtube videos, Wikipedia articles, Nature papers, and podcasts you've read, watched, or listened to, were all added structurally to your **knowledge journey**, and what if that journey could be consolidated into what we might call a **knowledge footprint** that could be shared with others? Could this replace static degrees? Or augment them to be more inclusive of a learner's true knowledge? How might we test such knowledge? Could we even predict and provide the guidance on what an individual should be learning next to best support their knowledge acquisition?
 
 
-Now, let's go back to our current approach to education. Many of us treat knowledge acquisition like a chapter in the individual's life that is limited to one or more formal places i.e. universities. This is misleading since we accrue knowledge from everywhere and most recently the internet has become a primary source of knowledge acquisition but has gone mostly unaccounted for in terms of recognition (i.e. watching a whole series of Youtube lectures on the Neurobiology of Depression or Discrete Mathematics goes mostly unnoticed when someone views one's resume or by simply looking at their degree). The current approach makes it much harder for people to switch to working and exploring the domains or professional fields outside of their degree area. Knowing rigourous mathematics and not having a degree in it, is said to be surprising, therefore the current "thumbnail view" of an individual's knowlede is neccessarily inadequate to the new mediums of knowledge acquisition.
+Now, let's go back to our current approach to education. Many of us treat knowledge acquisition like a chapter in the individual's life that is limited to one or more formal places i.e. universities. This is misleading since we accrue knowledge from everywhere and most recently the internet has become a primary source of knowledge acquisition but has gone mostly unaccounted for in terms of recognition (i.e. watching a whole series of Youtube lectures on the Neurobiology of Depression or Discrete Mathematics goes mostly unnoticed when someone views one's resume or by simply looking at their degree). The current approach makes it much harder for people to switch to working and exploring the domains or professional fields outside of their degree area. Knowing rigourous mathematics and not having a degree in it, is said to be surprising, therefore the current "thumbnail view" of an individual's knowledge is necessarily inadequate to the new mediums of knowledge acquisition.
 
-![Example at aminer](img/aminer.png)
+![Example at aminer.com](img/aminer.png)
 
-The ideas behind this *knowledge ecosystem*, presents only one of many possible solutions to bringing our education system into modernity. The goal of it would be to promote the long held idea of the **life-long learner**. Moving away from the "education chapter"" of an individual's life to the individual as an evolving learner; learning the necessary skills for what life presents them with today or might tomorrow. It would (combined with traditional education) show us a more accurate depiction of a learner's knowledge and theorefore that of a society's collective knowledge. 
+The ideas behind this *knowledge ecosystem*, presents only one of many possible solutions to bringing our education system into modernity. The goal of it would be to promote the long held idea of the **life-long learner**. Moving away from the "education chapter"" of an individual's life to the individual as an evolving learner; learning the necessary skills for what life presents them with today or might tomorrow. It would (combined with traditional education) show us a more accurate depiction of a learner's knowledge and therefore that of a society's collective knowledge. 
  
  
  Visualised over time, we could begin to capture a learner's so called **knowledge journey**.
  Composed of every piece of content they've gained knowledge from mapped to the *human knowledge graph*. Showing how an individual has traversed through the world of human knowledge.
  
- This would also serve as a way for others, who may be on a similar **knowledge journey** to connect with their cohort. This could be the start of meetups, study groups, and so on.
+ This would also serve as a way for others, who may be on a similar **knowledge journey** to connect with "their" cohort which may not need to be bounded by geography or demography. This could be the start of meetups, study groups, flexible class models and so on.
  
  For those who are looking for a change, they may find different journeys that help them decide what step to take next. You would also be able to connect someone's occupation to their **knowledge journey**. 
  
-On aggregate, we could begin to cluster similar **knowledge journeys** through unsupervised learning, which might lead to completely new journeys or combinations of subjects at differnet levels that others may be inspired to follow.
+On aggregate, we could begin to cluster similar **knowledge journeys** through unsupervised learning, which might lead to completely new journeys or combinations of subjects at different levels that others may be inspired to follow.
  
 In this essay, we will propose a **knowledge ecosystem**, a new way of approaching education that attempts to build a more accurate depiction of a learner's true knowledge. It will require significant effort to bring to life but we believe the benefits will outweigh the costs. We will talk about how we can use machine learning, deep learning in particular, to help create and support a **knowledge ecosystem** which is made up of the learner's **knowledge footprint**, **knowledge journeys**, and a **collective human knowledge graph**. We will introduce current advances in deep learning that would enable us to take the space of unstructured educational content on the web and do the following,
 
@@ -31,14 +31,14 @@ In this essay, we will propose a **knowledge ecosystem**, a new way of approachi
 - map content unto the human knowledge graph
 
 
-- test a learner\'s knowledge of recently viewed educationcal content through questions and answers, no what matter the subject. 
+- test a learner\'s knowledge of recently viewed educational content through questions and answers, no what matter the subject. 
 
 
 We will also argue that this imagined future is not only **desirable** for society but something similar is required to ensure individual's knowledge are well represented in a time where the pace of change is rapidly speeding up. 
 
 Let us not forget, that even software engineering is currently being recreated with machine learning as a key pillar which wasn't much of a thought 5-10 years ago.
 
-It is going to be tantamount if we have an adaptative systems that can represent our current knowledge and also make us predictable to others given the future pushes us to knowing more than ever and knowing who to collaborate with to apply such knowledge.
+It is going to be tantamount if we have an adaptive systems that can represent our current knowledge and also make us predictable to others given the future pushes us to knowing more than ever and knowing who to collaborate with to apply such knowledge.
 
 This hypothetical future isn't just conceptual, most of what we will present to you today is currently feasible due to the most recent advances in machine learning, and in particular deep learning
 
@@ -86,7 +86,7 @@ As you can see, we've bundled passive consumption and untested knowledge because
 
 Given a piece of educational content, our knowledge system will generate a set of questions and answers that theoretically capture the major concepts and facts that the learner should know after viewing a part or the content in whole. 
 
-You can imagine watching a Youtube video and after a learner views 15 minutes of an hour long lecture on computational complexity a quiz is presented (i.e. a set of questions and answers conditioned on the past 15 minutes of video), and the results are recorded.  In the future we would also be able to use the knowledge graph to bring in learner's existing knowledge in order to generate more complex questions and answers based on his/her previous knowledge and the current educational concpets. 
+You can imagine watching a Youtube video and after a learner views 15 minutes of an hour long lecture on computational complexity a quiz is presented (i.e. a set of questions and answers conditioned on the past 15 minutes of video), and the results are recorded.  In the future we would also be able to use the knowledge graph to bring in learner's existing knowledge in order to generate more complex questions and answers based on his/her previous knowledge and the current educational concepts. 
 
 As the first step, our knowledge system would only consider content that has been watched with some engagement for now. 
 
@@ -123,8 +123,8 @@ The concept of a knowledge footprint is a custom symbol or badge with a profile 
 
 In turn, this footprint should be able to represent all of one's education (currently focused on digital) while balancing distinction and commonality with others.
 
-This example from Aminer is very helpful.
-![Example at aminer](img/aminer.png)
+*This example from Aminer is a good visual for a knowledge footprint and journey.*
+![Example at aminer.com](img/aminer.png)
 
 
 ## Knowledge Journeys
@@ -132,7 +132,7 @@ This example from Aminer is very helpful.
 
 Image src: https://www.researchgate.net/figure/t-SNE-projection-of-the-embedding-of-all-learners-in-the-dataset-Major-labels-are_fig1_323391033
 
-A **knowledge journey** is a somewhat holistic view of all of the educational content a learner has acquired over time. The journey should be a temporal representation of all of the subjects that one has viewed and been tested on. Knowledge journey should be simple enough to comprehend and compare but complex enough that the individual can go back to any particular moment in time and review the educationcal content they've viewed before. Coupled with the knowledge graph, it can also shed light on the possible next education content that a learner should be or would be interested learning.
+A **knowledge journey** is a somewhat holistic view of all of the educational content a learner has acquired over time. The journey should be a temporal representation of all of the subjects that one has viewed and been tested on. Knowledge journey should be simple enough to comprehend and compare but complex enough that the individual can go back to any particular moment in time and review the educational content they've viewed before. Coupled with the knowledge graph, it can also shed light on the possible next education content that a learner should be or would be interested learning.
 
 This concept also helps address the knowledge representation concern. This time instead of capturing a consolidated snapshot of one's current knowledge, this concept takes a temporal route to capture one's entire learning path.
 
@@ -147,7 +147,7 @@ On the other hand, we could also use these subjects that are associated with tha
 ### EC2QA Network 
 We mentioned the EC2QA network earlier because currently we would have to cobble together multiple networks to make this work. Instead we will introduce a novel network framework, EC2QA, to solve the problem of generating questions and answer pairs for any given educational content (text, video, image, pdf, etc). 
 
-The possible implementation solutions are introduced in the implemention section. 
+The possible implementation solutions are introduced in the implementation section. 
 
 ## Knowledge Ecosystem by Example
 
@@ -171,7 +171,7 @@ A learner is present with 5 questions to answer and scores 4/5 (80%).
 
 At the end of the video, the learner records a video summary and is evaluated with a score 7/10 (70%).
 
-- The evaluation network looks at the **semantic and conceptual mututal information** shared between the original content and the learner's video summary;
+- The evaluation network looks at the **semantic and conceptual mutual information** shared between the original content and the learner's video summary;
 
 - All scores are mapped to the video and also counted at the subject level;
 
