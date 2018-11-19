@@ -1,6 +1,7 @@
 
 # Next Steps
 
+## Overview
 We have proposed one approach to better represent a modern individual's knowledge by taking the world of unstructured educational content (Youtube videos, Medium articles, etc), classifying it by concepts that belong to one or more subjects from a education-based knowledge graph, and testing a learner's knowledge by generating a set of questions and answers conditioned on the content without the need for the educator to do so. We surveyed some of the relevant machine and deep learning research, introduced Educational Content to Questions and Answers (EC2QA) network, a novel neural network for taking in educational content and generating a set of questions, answers, and an evaluating a learner's knowledge acquisition.
 
 We then proposed to tie these components together as an adaptive knowledge ecosystem consisting of an individual's knowledge footprint, mapped to a knowledge graph, visualised over time as a learner's knowledge journey. This would serve to enable independent (aspiring or current) learner's numerious benefits in their life-long self-study that can take into consideration education they acquired from unstructured sources, thereby formalising their informal knowledge.
@@ -50,24 +51,21 @@ The second step requires a large amount of educational content paired with quest
 ## Educator Enrichment
 The third and final dataset that would be needed, remains the most important component as well as being the most time and labour intensive. Partnering with educators and subject matter experts to source the subspace of unstructured educational content and create questions and answers, we would eventually arrive at a curated dataset that would train our model.
 
-## Minimum Viable Dataset (*This term is coined by IDEO*)
+## Minimum Viable Dataset
 
 We propose to narrow the problem space and jumpstart research in this area by focusing on only one subject (i.e. psychology, mathematics, or design) rather than to try to take on mapping the whole space of unstructured educational content. This drastically reduces the data that is needed and the number of experts and partners needed to kickstart the initiative.
-
-
-
-
-```{r}
-text <- c("")
-text <- c("")
-```
 
 
 ## Call for collaborators
 
 We hope to bring together collaborators that would include machine learning researchers, educators, technologists, and designers to begin our first foray into a modern knowledge ecosystem. Specifically starting with the EC2QA dataset and network, one education subject, and a educational partner.
 
-Please email us at hahohanfanli@gmail.com with the subject Knowledge Graph Initiative.
+Please email us at [haohanfanli@gmail.com](hahohanfanli@gmail.com) with the subject Knowledge Graph Initiative or leave your email below.
+
+```{r echo=FALSE, results="asis"}
+library(readr)
+cat( paste( readLines( "mailchimp.html" , warn = FALSE) ) )
+```
 
 ## Conclusion
 
