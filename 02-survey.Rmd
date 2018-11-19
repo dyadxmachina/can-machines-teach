@@ -80,8 +80,6 @@ Now we have some basic understanding of these 2 problems for which we will be ex
 
 Let's say a learner is watching a video about hypothesis testing, midway through the video the educator shows an example and provides the data needed to test the hypothesis. It would be ideal if during this time the learner's knowledge is tested with the following possible questions: 
 
-** UPDATE EXAMPLE TO BE MORE TOPIC OR CONCEPT BASED **
-
 
 1. What is the definition of the p-value? (and provide multiple choices for learner to choose from)
 
@@ -323,11 +321,11 @@ They also leverage a policy-gradient reinforcement learning algorithm to overcom
 As for the training process, they first pretrain the model with cross-entropy loss and then they fine tune the model parameters with policy-gradient reinforcement learning to alleviate the exposure bias problem.  During the policy-gradient reinforcement learning algorithm, they end up adopting a similar sampling strategy as the scheduled sampling strategy for generating the sampled output. 
 
 
-##### Summary [DRAFT]
+##### Summary 
  As mentioned earlier, QG and QA tasks are intrinsically binded and one cannot find solution for either of them without taking the other party into account. In this section, we have discussed some approaches that many groups of people have taken to help machine learning both tasks simultaneously. Some exciting findings have been presented here. 
 For our problem, it is very motivating to see these progress and learn from their approaches. In sum, the general setup is similar to dual learning framework, we need to tie QG and QA parts of the algorithms together. In the first diagram of the section, we can see that they connect the loss function from both sides of the model which is very similar to the strategy adopted by [GAN](https://en.wikipedia.org/wiki/Generative_adversarial_network) (Generative adversarial network). Some advanced mechsnisms are proposed as well i.e. symmetric hierarchical attenion and policy-gradient reinforcement learning algorithm. 
 
-#### Open-ended Question [DRAFT]
+#### Open-ended Question 
 
 ##### Problem Formulation 
 
@@ -394,7 +392,7 @@ In the second paper, we discuss a network that can answer the open-ended questio
 Similar to the last peper, this paper shows that it is possible to generate responses conditioned on the context. By leveraging conditional GAN model framework, their model's performance is significantly improved. 
 
 
-### Summary of Learning and Feedback Networks [DRAFT]
+### Summary of Learning and Feedback Networks 
 
 Based on our previous discussion, we find that both QG and QA (including VQA) tasks have beem well-researched. A numerous of spcifically designed algorithms were presented and proved effective for solving these problems. 
 
@@ -560,9 +558,9 @@ As a result, their model shows experimentally new state-of-art results in link p
 
 
 
-### Summary of Knowledge Graph [DRAFT]
+### Summary of Knowledge Graph 
 
-Based on our research, we are very pleased to see some great progress has been made to bridge the KG automation process with deep learning and other machine learning techniques. 
+Based on our research, we are very pleased to see some great progress has been made on bridging the KG automation process with deep learning and other machine learning techniques. 
 
 As what we discussed above, the first paper introduces a system that almost exactly matches our goal. The carefully walk us through the current progress and possible solutions for solving each obstacles in developing such a educational knowledge graph. For the instructional concept extraction task, they use both CRF model and neural sequence labeling algorithm to achieve a high performance. They employ probabilistic association rule mining on learning assessment data to identify the relations with educational significance. 
 
@@ -606,37 +604,41 @@ Below are some resources that might be helpful for starting such a job from scra
 5. [Freebase](Freebase.com)
 
 
-## Knowledge Journeys [DRAFT]
+## Knowledge Journeys 
 
-The knowledge graph is our ground truth and can be applied universally to some extent, but everyone's learning journey is still highly custom. In terms of learning, everyone seems to have their unique set of problems that they are curious about and everyone is on their own mission towards the mastery. As a result, their knowlege journeys could have a lot more degree of freedom depends on the learn's learning history, interests and who they are related to each other in this ecosystem. 
+The collective knowledge graph is our 'ground truth' that can be used to serve every learner in the ecosystem and be applied universally to some extent, but everyone's learning journey is still highly custom. Everyone seems to have their unique set of problems that they are curious about and they will end up taking on their own missions towards the mastery. As a result, their knowlege journeys will have a lot degree of freedom depends on their learning history, interests and who they are related to. 
 
-We cannot possibly put such an online learning/teaching system into use without taking this crucial factor into our account. However, this is not a trivial problem that can be solved with 1 network or 2. 
+We cannot possibly put such an online educational ecosystem into use without taking this crucial factor into our account. 
 
+Let's first formulate our problem. Below are few key components of such a task:  
 
-Let's first formulate our problem before we dive into the possible solutions. Below are few key components that we need to combine to achieve our ultimate goal of appropriately guiding the learner through his/her unique knowledge journey:  
-
-1. First, we need to have a system that can match all the content that a learner has aquired with the collective educational knowledge grahp. 
+1. First, we need to have a system that can match all the content that a learner has aquired with the collective educational knowledge graph;
 
 2. Geneate their personal knowledge graph with the timestamps on each content and the subject(s) it belongs to;
 
-3. Unfold the timestamps, a system will map the previous generated static knowlege graph onto a timeline that can display a learner's knowledge as a personal knowledge acquisition storyline/gallary that is available for the learner or other learners to look through.
+3. Unfold the timestamps and map the previous generated static knowlege graph onto a timeline that can display a learner's knowledge as a personal knowledge acquisition storyline/gallary;
+
+4. Adaptively update the journey along with a learner's learning progress.
+
+As the outcome, a learner's knowledge journey will be available anytime for the learner to review the content that he/she has learned at any past moment and for others to look into the details of one's journey.
 
 
 
 ## Knowledge Footprint 
 
-Just a quick review of this concept we introduced earlier, knowledge footprint is going to be presented as a badge or symbol as shown before to represent someone's knowledge at any moment. In a sense, it will evolve when a learner is proceeding his/her learning journey. By consolidating such symbol(s), a learn can easily understand and timely make a change to alter their knowledge state for the future. Moerever, the learner's knowledge 'status' at any moment become sharable and comparable with other learners. 
+Just a quick review of this concept we introduced earlier, knowledge footprint is going to be presented as a badge or a symbol to represent someone's knowledge state at a fix point in time. In a sense, this thumbnail view of a learner's knoweldge will evolve and change when a learner continues his/her learning journey. By constructing such symbol(s), a learn can easily understand their current knowledge states relatively to their past and others and timely make an adjustment to alter their future learning plan. 
 
-In terms of the techniques that can be applied for this task, as mentioned ealier, we would primarily consider unsupervised learning and dimentionality reduction type of algorithms to help us uncover and represent the visible and invisible dimentions of a learner's knowledge state. 
+In terms of the techniques that can be applied for this task, we would primarily consider unsupervised learning and dimentionality reduction algorithms to help us uncover and represent the visible and invisible dimentions of a learner's knowledge journey and state. Also, we believe it is going to be a teamwork that requires people like machine learning and deep learning researchers, educators, and designers to work collaboratively to ensure the optimal outcome.  
 
 
+Note that we will not discuss the detailed research findings or implementation steps of the last 2 elements in this essay. We will leave these areas for our future reserach. 
 
 ### Possible Next Step
 
-As a reasonable next step, we would also like our system to be personalized so as to provide guidance for a learner along with their knowledge journey given that our system has already encoded and possessed the information of a learner's footprint and journey. A recommender system could be taking into account for handling such a job since it is an intuitive line of defense against consumer over-choice given the evern growing information available on the web. As we mentioned earlier in the knowledge graph, an authoritative and personalized recommending system is essential for facilitating the learning. 
+As a reasonable next step, we would also like our system to be as personalized as possible so as to provide guidance for a learner along their knowledge journey, given that our system has already encoded and possessed the information of a learner's footprint and journey.
+
+In this case, a recommender system might be a desirable choice for handling such a job since it is an intuitive line of defense against consumer over-choice given the ever growing educational content available on the web. 
 
 
-
-In this section, we will not introduce the detailed research findings or go too deep into the detailed implementation steps of the last 2 elements. We will leave these areas for our future reserach and we believe it is going to be a collaborative team work that requires people like researchers, teachers, and designers to be invloved.  
 
 
