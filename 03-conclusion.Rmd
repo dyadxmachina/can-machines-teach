@@ -75,7 +75,7 @@ In conclusion, we presented a new perspective on knowledge acquistion, represent
 
 Our main task was to take an individual and begin to get a true depiction of their knowledge beyond their traditional degree which is only a small percentage of someone's education. We focused on taking the world of unstructured educational content online, and how to provide structure in the form of testing and mapping it to a knowledge graph.
 
-There is still much moreresearch to be done in bringing to life the Educational Content to Questions and Answers (EC2QA) neural networksas well as the data needed and the collaboration required amongst machine learning researchers, teachers, and designers,
+There is still much more research to be done in bringing to life the Educational Content to Questions and Answers (EC2QA) neural networksas well as the data needed and the collaboration required amongst machine learning researchers, teachers, and designers,
 
 As deep learning researchers, we are looking forward to design or seeing others design the minimum viable dataset and architecture motivate by this work.
 
