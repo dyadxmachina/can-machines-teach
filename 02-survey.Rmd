@@ -608,17 +608,25 @@ Below are some resources that might be helpful for starting such a job from scra
 
 ## Knowledge Journeys [DRAFT]
 
-The knowledge graph is our ground truth and can be applied universally to some extent, but everyone's learning journey is still highly custom. In terms of learning, everyone seems to have their unique set of problems that they are curious about and everyone is on their own mission towards the mastery. As a result, their knowlege journeys could have a lot more degree of freedom depends on the learn's learning history, interests and who they are related to. 
+The knowledge graph is our ground truth and can be applied universally to some extent, but everyone's learning journey is still highly custom. In terms of learning, everyone seems to have their unique set of problems that they are curious about and everyone is on their own mission towards the mastery. As a result, their knowlege journeys could have a lot more degree of freedom depends on the learn's learning history, interests and who they are related to each other in this ecosystem. 
 
 We cannot possibly put such an online learning/teaching system into use without taking this crucial factor into our account. However, this is not a trivial problem that can be solved with 1 network or 2. 
 
 
-Let's first formulate our problem before we dive into the possible solutions. Below are few key components that we need to combine to achieve our ultimate goal which is to appropriately guide the learner through their unique knowledge journey:  
+Let's first formulate our problem before we dive into the possible solutions. Below are few key components that we need to combine to achieve our ultimate goal of appropriately guiding the learner through his/her unique knowledge journey:  
 
-1. First, we need to 
+1. First, we need to have a system that can match all the content that a learner has aquired with the collective educational knowledge grahp. 
+
+2. Geneate their personal knowledge graph with the timestamps on each content and the subject(s) it belongs to;
+
+3. Unfold the timestamps, a system will map the previous generated static knowlege graph onto a timeline that can display a learner's knowledge as a personal knowledge acquisition storyline/gallary that is available for the learner or other learners to look through.
+
+
+## Knowledge Footprint 
 
 
 
+In this section, we will not go too deep into the detailed implemention steps of the last 2 elements. We believe it is going to need a group team work i.e. desing
 
 , we can rely on some heuristic and models that have been developed to resolve this type of idiosymcratic issue.
 
