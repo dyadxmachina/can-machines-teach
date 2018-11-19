@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="implementing-the-knowledge-ecosystem.html">
-<link rel="next" href="about-the-authors.html">
+<link rel="prev" href="next-steps.html">
+<link rel="next" href="references.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -186,113 +186,16 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="next-steps" class="section level1">
-<h1><span class="header-section-number">5</span> Next Steps</h1>
-<div id="overview" class="section level2">
-<h2><span class="header-section-number">5.1</span> Overview</h2>
-<p>We have now proposed one approach to better represent a modern individual’s knowledge by taking the world of unstructured educational content (Youtube videos, Medium articles, etc), classifying it by it’s concepts which belong to one or more subjects from a education-based knowledge graph. We’ve introduced learning and feedback by testing a learner’s knowledge by generating a set of questions and answers conditioned on an educational content without the need for the educator to include questions and answers.</p>
-<p>We surveyed some of the relevant machine and deep learning research, proposed the Educational Content to Questions and Answers (EC2QA) network, a novel neural network for taking in any type of educational content and generating a set of questions, answers, and evaluation of a learner’s knowledge understanding.</p>
-<p>We then proposed to tie these components together as an adaptive knowledge ecosystem consisting of an individual’s knowledge footprint, mapped to a central knowledge graph, visualised over time as a learner’s knowledge journey. This would serve to enable the independent (aspiring or current) learner to pursue their life-long self-study. It would take into consideration the education they acquired from unstructured sources, thereby formalising their informal knowledge for themselves and others.</p>
-</div>
-<div id="challenges" class="section level2">
-<h2><span class="header-section-number">5.2</span> Challenges</h2>
-<p>There will be many challenges in coming up with solutions to enable knowledge acquisition and representation at the learner and group level. We will address some of the primary challenges to designing the components of the proposed knowledge ecosystem:</p>
-<ul>
-<li>Datasets – EC2QA dataset – Knowledge graph dataset</li>
-<li>Deep Learning Architecture – EC2QA network</li>
-</ul>
-<p>For our purposes we will focus on the EC2QA network and dataset as the main focus for our next steps.</p>
-</div>
-<div id="ec2qa-dataset" class="section level2">
-<h2><span class="header-section-number">5.3</span> EC2QA dataset</h2>
-<p>The success of deep learning techniques are predicated on the assumption that one needs a significant amount of data to train a large neural network to learn the representation that captures the set of admissible functions needed to learn a given set of concepts.</p>
-<p>The EC2QA network will also face the same challenges it requires a large dataset of educational content (i.e. Youtube videos, Wikipedia pages or Medium articles) along with a set of questions, which will have a set of correct and incorrect answers for each question.</p>
-<p><span class="math display">\[
- \{content1: \{question1: \{answer1, answer2,...\},  question2: \{answer1, answer2,...\},...\},...
-\]</span></p>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Educational Content</th>
-<th align="left">Concepts</th>
-<th align="left">Subjects</th>
-<th align="left">Questions and Answer Pairs</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">Robert Sapolsky Human Behavioral Biology Lecture 1: [[[0,23,435……]]]</td>
-<td align="left">neurobiology, neurological disease, gene, nature vs nuture, hormones</td>
-<td align="left">Neurobiology, Biology, Neuroscience, Behavioral Science</td>
-<td align="left">{ “What is the definition of human behavioral biology “: correct_answer: “”, in_answer: “}</td>
-</tr>
-<tr class="even">
-<td align="left">Robert Sapolsky Human Behavioral Biology Lecture 1: [[[0,23,435……]]]</td>
-<td align="left">neurobiology, neurological disease, gene, nature vs nuture, hormones</td>
-<td align="left">Neurobiology, Biology, Neuroscience, Behavioral Science</td>
-<td align="left">{ “What are some cons for categorical thinking? “: correct_answer: “”, in_answer: “}</td>
-</tr>
-</tbody>
-</table>
-<p>There are many approaches to decreasing the amount of data needed while still learning a good representation of the set of concepts the architecture needs to learn. We will present an approach that we believe best utilises the intrinsic structure of educational content and using the minimal amount of data.</p>
-<ol style="list-style-type: decimal">
-<li><p>The network can be trained on unstructured educational content without questions or answers to create an <em>education embedding</em> by leveraging unsupervised techniques like variational auto-encoder (VAE). This requires a dataset of educational content, possibly many media types(audio/video/text). This could also be done by using a semi-supervised technique by supervising the media type and learning representations for the types of educational content.</p></li>
-<li><p>The network can then be trained on <strong>existing</strong> educational content that <em>already</em> has preexisting questions and answers for specific parts of the content (i.e. Khan Academy, Udacity, Coursera). The domain of structured educational content is surely very different from the unstructured content and may hinder the network but we believe it might be the case that it helps more than it hinders but we cannot guarantee this so it is worth experimenting.</p></li>
-<li><p>The final step is annotating a set of unstructured educational content with questions and answers.</p></li>
-</ol>
-</div>
-<div id="education-partners" class="section level2">
-<h2><span class="header-section-number">5.4</span> Education Partners</h2>
-<p>The second step above requires a large amount of existing educational content paired with existing questions and answers. This data is rich and informative; it could help us learn an early representation and use less of our original dataset (#3) for learning such a representations. Most of these datasets have been created by experts and educators and their efforts could be valuable for our model to learn from. For this purpose, we would need to partner with large (in terms of library of content) educational institutions (i.e. Udacity, Coursera, MOOCs, Edx, Khan Academy) to work with their datasets for pretraining and collaborate on how we annotate the space of unstructured educational content.</p>
-</div>
-<div id="educator-enrichment" class="section level2">
-<h2><span class="header-section-number">5.5</span> Educator Enrichment</h2>
-<p>The third and final dataset that would be used as our primary data source to train and test the model’s performance, remains the most important component as well as being the most time and labour intensive. Partnering with educators and subject matter experts to source the subspace of unstructured educational content and to create questions and answers, we would eventually arrive at a curated dataset that our model would be primarily trained on. The end result would be a new benchmark that other researchers can begin to build newer architectures to make progress on the problem domain.</p>
-</div>
-<div id="minimum-viable-dataset-benchmark" class="section level2">
-<h2><span class="header-section-number">5.6</span> Minimum Viable Dataset (Benchmark)</h2>
-<p>We propose to narrow the problem space and jumpstart research in this area by focusing on only one subject (i.e. psychology, mathematics, or design) rather than to try to take on mapping the whole space of unstructured educational content. This drastically reduces the data that is needed and the number of experts and partners needed to kickstart the initiative.</p>
-</div>
-<div id="call-for-collaborators" class="section level2">
-<h2><span class="header-section-number">5.7</span> Call for collaborators</h2>
-<p>We hope to bring together collaborators that would include machine learning researchers, educators, technologists, and designers to begin our first foray into a modern knowledge ecosystem. Specifically starting with the EC2QA dataset and network, one education subject, and an educational partner.</p>
-<p>Please email us at <a href="two@dyadxmachina.com" class="uri">two@dyadxmachina.com</a> with the subject <em>Knowledge Graph Initiative</em> or leave your email below.</p>
-<div id="mc_embed_signup">
-<form action="https://thechristianramsey.us6.list-manage.com/subscribe/post?u=e9cb6ddb243f988842739d69a&amp;id=09893f5522" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-<div id="mc_embed_signup_scroll">
-<h3>
-We are looking for educators, researchers, and designers to collaborate. Send us your email to stay updated
-</h3>
-<div class="mc-field-group">
-<label for="mce-EMAIL">Email Address <span class="asterisk">*</span> </label> <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-</div>
-<div id="mce-responses" class="clear">
-<div id="mce-error-response" class="response" style="display:none">
+<div id="about-the-authors" class="section level1">
+<h1><span class="header-section-number">6</span> About the Authors</h1>
+<p>Independent deep learning researchers focused on using machine learning for the good of humanity and beyond.</p>
+<div id="haohan-wang" class="section level2">
+<h2><span class="header-section-number">6.1</span> Haohan Wang</h2>
+<p><a href="https://www.linkedin.com/in/haohanw">LinkedIn</a> ## Fanli Zheng (Christian Ramsey) <a href="https://www.linkedin.com/in/christianramsey/">LinkedIn</a> ## Contact Feel Free to contact us if you have any question:</p>
+<p>Visit our website <a href="dyadxmachina.com">dyad x machina</a></p>
+<p>Haohan Wang: <a href="mailto:haohan723@gmail.com">haohan723@gmail.com</a></p>
+<p>Fanli Zheng (Christian): <a href="mailto:thechristianramsey@gmail.com">thechristianramsey@gmail.com</a></p>
 
-</div>
-<div id="mce-success-response" class="response" style="display:none">
-
-</div>
-</div>
-<div style="position: absolute; left: -5000px;" aria-hidden="true">
-<input type="text" name="b_e9cb6ddb243f988842739d69a_09893f5522" tabindex="-1" value="">
-</div>
-<div class="clear">
-<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-</div>
-</div>
-</form>
-</div>
-<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-<script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-</div>
-<div id="conclusion" class="section level2">
-<h2><span class="header-section-number">5.8</span> Conclusion</h2>
-<p>In conclusion, we presented a new perspective on knowledge acquisition and representation, and proposed an ecosystem that would support a modern and adoptive knowledge ecosystem that a learner can use and rely on through their entire educational life-time.</p>
-<p>Our main task was to take an individual and begin to get a true depiction of their knowledge beyond their traditional degree, which is only a small percentage of someone’s education.</p>
-<p>We focused on taking the world of unstructured educational content online, and how to provide structure in the form of testing and mapping it to a knowledge graph.</p>
-<p>There is still much more research to be done in bringing to life the Educational Content to Questions and Answers (EC2QA) neural networks as well as the data needed for training and the collaboration required amongst machine learning researchers, teachers, and designers,</p>
-<p>As deep learning researchers, we are looking forward to designing or seeing others design the minimum viable dataset, benchmark, and architecture motivated by this work.</p>
 </div>
 </div>
             </section>
@@ -300,8 +203,8 @@ We are looking for educators, researchers, and designers to collaborate. Send us
           </div>
         </div>
       </div>
-<a href="implementing-the-knowledge-ecosystem.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="about-the-authors.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="next-steps.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
