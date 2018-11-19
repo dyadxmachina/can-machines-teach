@@ -622,83 +622,21 @@ Let's first formulate our problem before we dive into the possible solutions. Be
 3. Unfold the timestamps, a system will map the previous generated static knowlege graph onto a timeline that can display a learner's knowledge as a personal knowledge acquisition storyline/gallary that is available for the learner or other learners to look through.
 
 
+
 ## Knowledge Footprint 
 
+Just a quick review of this concept we introduced earlier, knowledge footprint is going to be presented as a badge or symbol as shown before to represent someone's knowledge at any moment. In a sense, it will evolve when a learner is proceeding his/her learning journey. By consolidating such symbol(s), a learn can easily understand and timely make a change to alter their knowledge state for the future. Moerever, the learner's knowledge 'status' at any moment become sharable and comparable with other learners. 
 
-
-In this section, we will not go too deep into the detailed implemention steps of the last 2 elements. We believe it is going to need a group team work i.e. desing
-
-, we can rely on some heuristic and models that have been developed to resolve this type of idiosymcratic issue.
-
-
-As we all know that a recommender system is an intuitive line of defense against consumer over-choice given the evern growing information available on the web. As we mentioned earlier in the knowledge graph, a authoritative and personalized recommending system is essential for facilitating the learning. 
-
-
-Typically, a recommendation models can be classified into 3 main categories: 
-
-
-1. Collaborative filtering
-
-
-2. Content based 
-
-
-3. Hybrid recommender system 
-
-As I mentioned, here we will mainly focus on hybrid recommender system. 
-
-There are a diverse array of achitectual paradigms that are closely related recommending system. Let's take a look at few of them: 
-1. Autoencoder 
-
-
-2. Convolutional Neural Network 
-
-
-3. Recurrent Neural Network 
-
-
-4. Restricted Boltzmann Machine (RBM)
-
-
-5. Adversarial Networks
-
-
-6. Attentional Models (AM)
-
-
-7. Deep Reinforcement Learning (DRL)
+In terms of the techniques that can be applied for this task, as mentioned ealier, we would primarily consider unsupervised learning and dimentionality reduction type of algorithms to help us uncover and represent the visible and invisible dimentions of a learner's knowledge state. 
 
 
 
+### Possible Next Step
 
-### Summary of Current Research and Needs [DRAFT]
-
-
-
-
-## Data and Annotation [DRAFT]
+As a reasonable next step, we would also like our system to be personalized so as to provide guidance for a learner along with their knowledge journey given that our system has already encoded and possessed the information of a learner's footprint and journey. A recommender system could be taking into account for handling such a job since it is an intuitive line of defense against consumer over-choice given the evern growing information available on the web. As we mentioned earlier in the knowledge graph, an authoritative and personalized recommending system is essential for facilitating the learning. 
 
 
- 
 
-### Reference [DRAFT]
-
-
-1. [A Framework for Automatic Question Generation from Text using Deep Reinforcement Learning](https://arxiv.org/pdf/1808.04961.pdf)
-
-
-2. [Learning to Ask: Neural Question Generation for Reading Comprehension](https://arxiv.org/pdf/1705.00106.pdf)
-
-
-3. [Deep Attention Neural Tensor Network for Visual Question Answering](http://openaccess.thecvf.com/content_ECCV_2018/papers/Yalong_Bai_Deep_Attention_Neural_ECCV_2018_paper.pdf)
-
-
-4. [Learning to Ask](http://www.cs.cornell.edu/~xdu/papers/acl17_dsc_poster.pdf)
-
-
-5. [TOPIC-BASED QUESTION GENERATION](https://openreview.net/pdf?id=rk3pnae0b)
-
-
-5. [Deep Learning based Recommender System](https://arxiv.org/pdf/1707.07435.pdf)
+In this section, we will not introduce the detailed research findings or go too deep into the detailed implementation steps of the last 2 elements. We will leave these areas for our future reserach and we believe it is going to be a collaborative team work that requires people like researchers, teachers, and designers to be invloved.  
 
 
