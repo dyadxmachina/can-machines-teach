@@ -96,6 +96,43 @@
 <meta property="twitter:image" content="https://dyadxmachina.github.io/can-machines-teach/img/MtoQA.png">
 
 
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -131,7 +168,7 @@
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#learning-feedback"><i class="fa fa-check"></i><b>2.2</b> Learning + Feedback</a><ul>
 <li class="chapter" data-level="2.2.1" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#question-formulation"><i class="fa fa-check"></i><b>2.2.1</b> Question Formulation</a></li>
-<li class="chapter" data-level="2.2.2" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#current-research"><i class="fa fa-check"></i><b>2.2.2</b> Current Research</a></li>
+<li class="chapter" data-level="2.2.2" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#overview"><i class="fa fa-check"></i><b>2.2.2</b> Overview</a></li>
 <li class="chapter" data-level="2.2.3" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#question-generation"><i class="fa fa-check"></i><b>2.2.3</b> Question Generation</a></li>
 <li class="chapter" data-level="2.2.4" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#question-answering"><i class="fa fa-check"></i><b>2.2.4</b> Question Answering</a></li>
 <li class="chapter" data-level="2.2.5" data-path="implementing-the-knowledge-ecosystem.html"><a href="implementing-the-knowledge-ecosystem.html#summary-of-learning-and-feedback-networks-draft"><i class="fa fa-check"></i><b>2.2.5</b> Summary of Learning and Feedback Networks [DRAFT]</a></li>
@@ -200,7 +237,7 @@
 <p>The success of deep learning techniques are predicated on the assumption that one needs a significant amount of data to train a large neural network enough to learn the representation that captures the set of admissable functions needed to learn a given concept(s).</p>
 <p>The EC2QA network will also face such a challenge and it requires a large dataset of educational content (Youtube video, Wikipedia or Medium article) along with a set of Question &amp; Answer pairs, which will have a set of correct and incorrect answers for each question.</p>
 <p><span class="math display">\[
- \{content1: \{question1: \{answer1, answer2,...\},  question2: \{answer1, answer2,...\},...\},... 
+ \{content1: \{question1: \{answer1, answer2,...\},  question2: \{answer1, answer2,...\},...\},...
 \]</span></p>
 <p>This dataset could go through the following process to lower the amount of data needed and utilise the intrinsic structure of educational content.</p>
 <table>
@@ -244,6 +281,8 @@
 <div id="minimum-viable-dataset-this-term-is-coined-by-ideo" class="section level2">
 <h2><span class="header-section-number">3.5</span> Minimum Viable Dataset (<em>This term is coined by IDEO</em>)</h2>
 <p>We propose to narrow the problem space and jumpstart research in this area by focusing on only one subject (i.e. psychology, mathematics, or design) rather than to try to take on mapping the whole space of unstructured educational content. This drastically reduces the data that is needed and the number of experts and partners needed to kickstart the initiative.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">text &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;&quot;</span>)
+text &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;&quot;</span>)</code></pre></div>
 </div>
 <div id="call-for-collaborators" class="section level2">
 <h2><span class="header-section-number">3.6</span> Call for collaborators</h2>
@@ -254,7 +293,7 @@
 <h2><span class="header-section-number">3.7</span> Conclusion</h2>
 <p>In conclusion, we presented a new perspective on knowledge acquistion, representation, and proposed an ecosystem that would support a modern and adaptative knowledge ecosystem that a learner can use and rely on for their entire life-time.</p>
 <p>Our main task was to take an individual and begin to get a true depiction of their knowledge beyond their traditional degree which is only a small percentage of someone’s education. We focused on taking the world of unstructured educational content online, and how to provide structure in the form of testing and mapping it to a knowledge graph.</p>
-<p>There is still much moreresearch to be done in bringing to life the Educational Content to Questions and Answers (EC2QA) neural networksas well as the data needed and the collaboration required amongst machine learning researchers, teachers, and designers,</p>
+<p>There is still much more research to be done in bringing to life the Educational Content to Questions and Answers (EC2QA) neural networksas well as the data needed and the collaboration required amongst machine learning researchers, teachers, and designers,</p>
 <p>As deep learning researchers, we are looking forward to design or seeing others design the minimum viable dataset and architecture motivate by this work.</p>
 </div>
 </div>
