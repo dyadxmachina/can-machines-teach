@@ -1,5 +1,5 @@
 # Introduction 
-![Image title](img/MtoQA.png)
+![EC2QA Network](img/MtoQA.png)
 
 ## A Future
 Let's start with a future view of an individual's education. Many of us have used the internet to educate ourselves with the abundance of medium to high quality videos, papers, articles, podcasts and how-tos being uploaded from numerous individuals, groups, and institutions like never before (60 hours of video are uploaded to youtube.com every minute).
