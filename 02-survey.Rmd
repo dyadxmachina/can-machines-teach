@@ -52,12 +52,18 @@ In short, in this section we will be providing some insights on how to solve the
  >"how can we take a single educational content and properly test a learner's knowledge while also providing insightful feedback to support their learning?". 
  
 
-### Current Research
+### Overview
 
 So our learning and feedback component should do the following 
- > Generate a set of questions and answers for any eduational content
- > Evaluate closed and open ended answers
- > Provide a score for the content based on the learner's performance
+
+
+1. Generate a set of questions and answers for any eduational content
+ 
+ 
+2. Evaluate closed and open ended answers
+ 
+ 
+3. Provide a score for the content based on the learner's performance
  
  We will now explore current research trends in deep learning that will help us solve the problem.
 
