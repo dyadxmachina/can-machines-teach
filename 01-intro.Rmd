@@ -1,11 +1,13 @@
 # Introduction 
 ![Image title](img/MtoQA.png)
 
+## A Future
 Let's start with a future view of an individual's education. Many of us have used the internet to educate ourselves with the abundance of medium to high quality videos, papers, articles, podcasts and how-tos being uploaded from numerous individuals, groups, and institutions like never before (60 hours of video are uploaded to youtube.com every minute).
 
 Let us imagine that all of what you have learned online, throughout the entirety of your life, from the hundreds of Youtube videos, Wikipedia articles, Nature papers, and podcasts you've read, watched, or listened to, were all added structurally to your **knowledge journey**, and what if that journey could be consolidated into what we might call a **knowledge footprint** that could be shared with others? Could this replace static degrees? Or augment them to be more inclusive of a learner's true knowledge? How might we test such knowledge? Could we even predict and provide the guidance on what an individual should be learning next to best support their knowledge acquisition?
 
 
+## A Comparison
 Now, let's go back to our current approach to education. Many of us treat knowledge acquisition like a chapter in the individual's life that is limited to one or more formal places i.e. universities. This is misleading since we accrue knowledge from everywhere and most recently the internet has become a primary source of knowledge acquisition but has gone mostly unaccounted for in terms of recognition (i.e. watching a whole series of Youtube lectures on the Neurobiology of Depression or Discrete Mathematics goes mostly unnoticed when someone views one's resume or by simply looking at their degree). The current approach makes it much harder for people to switch to working and exploring the domains or professional fields outside of their degree area. Knowing rigourous mathematics and not having a degree in it, is said to be surprising, therefore the current "thumbnail view" of an individual's knowledge is necessarily inadequate to the new mediums of knowledge acquisition.
 
 ![Example at aminer.com](img/aminer.png)
@@ -20,8 +22,9 @@ The ideas behind this *knowledge ecosystem*, presents only one of many possible 
  
  For those who are looking for a change, they may find different journeys that help them decide what step to take next. You would also be able to connect someone's occupation to their **knowledge journey**. 
  
-On aggregate, we could begin to cluster similar **knowledge journeys** through unsupervised learning, which might lead to completely new journeys or combinations of subjects at different levels that others may be inspired to follow.
+On aggregate, we could begin to cluster similar **knowledge journeys** through unsupervised learning, which might lead to completely new journeys that others may be inspired to follow.
  
+## Knowledge Ecosystem
 In this essay, we will propose a **knowledge ecosystem**, a new way of approaching education that attempts to build a more accurate depiction of a learner's true knowledge. It will require significant effort to bring to life but we believe the benefits will outweigh the costs. We will talk about how we can use machine learning, deep learning in particular, to help create and support a **knowledge ecosystem** which is made up of the learner's **knowledge footprint**, **knowledge journeys**, and a **collective human knowledge graph**. We will introduce current advances in deep learning that would enable us to take the space of unstructured educational content on the web and do the following,
 
 
@@ -144,7 +147,7 @@ The collective human knowledge graph can be compared to Google's Search Knowledg
 On the other hand, we could also use these subjects that are associated with that piece of content to help create the knowledge footprint for the learner. 
 
 
-### EC2QA Network 
+## EC2QA Network 
 We mentioned the EC2QA network earlier because currently we would have to cobble together multiple networks to make this work. Instead we will introduce a novel network framework, EC2QA, to solve the problem of generating questions and answer pairs for any given educational content (text, video, image, pdf, etc). 
 
 The possible implementation solutions are introduced in the implementation section. 
