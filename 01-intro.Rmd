@@ -132,7 +132,7 @@ This example from Aminer is very helpful.
 
 Image src: https://www.researchgate.net/figure/t-SNE-projection-of-the-embedding-of-all-learners-in-the-dataset-Major-labels-are_fig1_323391033
 
-A **knowledge journey** is a somewhat holistic view of all of the educational content a learner has acquired over time. The journey should be a temporal representation of all of the subjects that one has viewed and been tested on. Knowledge journey should be simple enough to comprehend and compare but complex enough that the individual can go back to any particular moment in time and review the educationcal content they've viewed before. 
+A **knowledge journey** is a somewhat holistic view of all of the educational content a learner has acquired over time. The journey should be a temporal representation of all of the subjects that one has viewed and been tested on. Knowledge journey should be simple enough to comprehend and compare but complex enough that the individual can go back to any particular moment in time and review the educationcal content they've viewed before. Coupled with the knowledge graph, it can also shed light on the possible next education content that a learner should be or would be interested learning.
 
 This concept also helps address the knowledge representation concern. This time instead of capturing a consolidated snapshot of one's current knowledge, this concept takes a temporal route to capture one's entire learning path.
 
