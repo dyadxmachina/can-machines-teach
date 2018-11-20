@@ -2,7 +2,7 @@
 # Next Steps
 
 ## Overview
-We have now proposed one approach to better represent a modern individual's knowledge by taking the world of unstructured educational content (Youtube videos, Medium articles, etc), classifying it by it's concepts which belong to one or more subjects from a education-based knowledge graph. We've introduced learning and feedback by testing a learner's knowledge by generating a set of questions and answers conditioned on an educational content without the need for the educator to include questions and answers. 
+We have now proposed one approach to better represent a modern individual's knowledge by taking the world of unstructured educational content (Youtube videos, Medium articles, etc), classifying it by it's concepts which belong to one or more subjects from a education-based knowledge graph. We've introduced learning + feedback by testing a learner's knowledge by generating a set of questions and answers conditioned on an educational content without the need for the educator to include questions and answers. 
 
 We surveyed some of the relevant machine and deep learning research, proposed the Educational Content to Questions and Answers (EC2QA) network, a novel neural network for taking in any type of educational content and generating a set of questions, answers, and evaluation of a learner's knowledge understanding.
 

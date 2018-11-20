@@ -165,7 +165,7 @@ A learner watches a video titled 'Depression' by Robert Sapolsky.
 
 - The subjects and the content are then mapped to the **collective knowledge graph** to continuously update it as more information collected about each subject;
 
-- Using EC2QA or similar, a set of questions and answers are generated say every 15* minutes of the video;
+- Using **EC2QA** or similar, a set of questions and answers are generated say every 15* minutes of the video;
 
 - A learner is present with 5 questions to answer and scores 4/5 (80%).
 

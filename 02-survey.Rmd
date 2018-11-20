@@ -11,7 +11,7 @@ We will take a tour through a relevant set of implementations of the elements wi
 
 Building such a knowledge ecosystem is not a trivial task. A necessary step of searching for the proper solutions would be trying to break the whole system into independent elements that we can deal with separately. As we discussed earlier, we've divided the ecosystem into the elements below:
 
-1. **Learning + Feedback** -- given a learner views a single educational content, reliably evaluate their knowledge and provide feedback for improvement to support learning (credibility, rigour) 
+1. **Learning + Feedback [EC2QA]** -- given a learner views a single educational content, reliably evaluate their knowledge and provide feedback for improvement to support learning (credibility, rigour) 
 
 2. **Knowledge Graph** --  relate any educational content to a concept which belongs to a particular subject, (relatibility, predictability)
 
@@ -30,7 +30,7 @@ As discussed above, recent trends in deep learning have produced state-of-art re
 Let us now explore some of the recent results that would enable us to design the first two (#1 & #2) elements of our ecosystem.
 
 
-## Learning + Feedback
+## Learning + Feedback [EC2QA]
 
 
 ### Question Formulation
