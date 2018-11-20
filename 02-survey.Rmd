@@ -180,7 +180,7 @@ In this QG section, we have discussed 3 different algorithms. Based on our learn
 ### Question Answering 
 Now, let's move on to our question answering (QA) task. The general goal of a QA model is to predict an answer to a question based on the information found in the passage, given a passage and a question. By solving this task, our system should be able to easily evaluate the answer provided by learners and achieve the full automation of the learning + feedback cycle.
 
-Here are the overview of a basic QA model's implementation [@qa_imp]: 
+Here are the overview of a basic QA model's [implementation](@qa_imp): 
 
 1. Build representation for the passage and the question separately;
 
