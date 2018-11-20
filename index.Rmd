@@ -1,22 +1,11 @@
 --- 
 title: "Knowledge Ecosystem - Deep Learning and Education"
+author: "Fanli Zheng  (Christian) & Haohan Wang"
 knit: "bookdown::render_book"
 date: "[DRAFT] `r Sys.Date()`"
-output:
-  bookdown::pdf_book:
-    base_format: rticles::acm_article
-  bookdown::pdf_document2:
-      base_format: rticles::acm_article    
-author:
-  - name: Fanli (Christian) Zheng
-    affiliation: dyad x machina
-    email: thechristianramsey@gmail.com
-  - name: Haohan Wang
-    affiliation: dyad x machina
-    email: haohan723@gmail.com    
-# output: rticles::springer_article
+output: pdf_document
 # output: rticles::acm_article
-description: Lets start with a future view of an individuals education. Many of us have the internet to educate ourselves with the abundance of medium to high quality videos, papers, articles, podcasts and how-tos being uploaded from numerous individuals, groups, and institutions like never before. Let us imagine that all of what you have learned online, throughout the entirety of your life, from the hundreds of Youtube videos, Wikipedia articles, Nature papers, and podcasts you've read, watched, or listened to, were all added structurally to your education journey and what if that could be consolidated into what we might call a digital education footprint. 
+description: Lets start with a future view of an individuals education. Many have used the internet to educate ourselves with the abundance of medium to high quality videos, papers, articles, podcasts and how-tos being uploaded from numerous individuals, groups, and institutions like never before. Let us imagine that all of what you have learned online, throughout the entirety of your life, from the hundreds of Youtube videos, Wikipedia articles, Nature papers, and podcasts you've read, watched, or listened to, were all added structurally to your education journey and what if that could be consolidated into what we might call a digital education footprint. 
 documentclass: book
 link-citations: yes
 bibliography: [book.bib]
