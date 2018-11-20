@@ -33,7 +33,7 @@ The EC2QA network will also face the same challenges it requires a large dataset
 ```{r ec2qa dataset, message=FALSE, warning=FALSE, paged.print=FALSE, echo=FALSE}
 library(readr)
 library(knitr)
-kable(read.csv('img/ec2qa_dataset.csv', check.names = FALSE))
+kable(head(read.csv('img/ec2qa_dataset.csv', check.names = FALSE),1))
 
 ```
 
