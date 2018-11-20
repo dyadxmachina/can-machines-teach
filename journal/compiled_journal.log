@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  20 NOV 2018 09:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  20 NOV 2018 14:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**A_Knowledge_Ecosystem_-_Deep_Learning_and_Education.tex
-(./A_Knowledge_Ecosystem_-_Deep_Learning_and_Education.tex
+**compiled_journal.tex
+(./compiled_journal.tex
 LaTeX2e <2018-04-01> patch level 2
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (./acm_proc_article-sp.cls (/usr/local/texlive/2018/texmf-dist/tex/latex/graphi
@@ -272,8 +272,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip44
 )
-No file A_Knowledge_Ecosystem_-_Deep_Learning_and_Education.aux.
-\openout1 = `A_Knowledge_Ecosystem_-_Deep_Learning_and_Education.aux'.
+No file compiled_journal.aux.
+\openout1 = `compiled_journal.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
 LaTeX Font Info:    ... okay on input line 57.
@@ -334,7 +334,7 @@ LaTeX Info: Redefining \ref on input line 57.
 LaTeX Info: Redefining \pageref on input line 57.
 LaTeX Info: Redefining \nameref on input line 57.
 \@outlinefile=\write3
-\openout3 = `A_Knowledge_Ecosystem_-_Deep_Learning_and_Education.out'.
+\openout3 = `compiled_journal.out'.
 
 LaTeX Font Info:    Try loading font information for U+msa on input line 59.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -355,23 +355,204 @@ File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 <img/MtoQA.png, id=6, 3509.11pt x 2122.93124pt>
 File: img/MtoQA.png Graphic file (type png)
 <use img/MtoQA.png>
-Package pdftex.def Info: img/MtoQA.png  used on input line 61.
+Package pdftex.def Info: img/MtoQA.png  used on input line 64.
 (pdftex.def)             Requested size: 240.0pt x 145.18668pt.
 <img/knowledgeEcosystem.png, id=8, 1015.795pt x 880.28876pt>
 File: img/knowledgeEcosystem.png Graphic file (type png)
 <use img/knowledgeEcosystem.png>
-Package pdftex.def Info: img/knowledgeEcosystem.png  used on input line 62.
+Package pdftex.def Info: img/knowledgeEcosystem.png  used on input line 65.
 (pdftex.def)             Requested size: 240.0pt x 207.98274pt.
+File: img/MtoQA.png Graphic file (type png)
+<use img/MtoQA.png>
+Package pdftex.def Info: img/MtoQA.png  used on input line 71.
+(pdftex.def)             Requested size: 240.0pt x 145.18668pt.
+[1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+
+ <./img/MtoQA.png
+
+pdfTeX warning: pdflatex (file ./img/MtoQA.png): large interlaced PNG might cau
+se out of memory (use non-interlaced PNG to fix this)
+> <./img/knowledgeEcosystem.png>]
+<img/aminer.png, id=27, 772.8875pt x 221.82875pt>
+File: img/aminer.png Graphic file (type png)
+<use img/aminer.png>
+Package pdftex.def Info: img/aminer.png  used on input line 113.
+(pdftex.def)             Requested size: 240.0pt x 68.88127pt.
+
+Overfull \hbox (8.52188pt too wide) in paragraph at lines 218--223
+\T1/aer/m/n/9 sim-ply know-ing the counts or types of video they watched
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.223 \end{itemize}
+                    [2 <./img/aminer.png>]
+Overfull \hbox (4.98991pt too wide) in paragraph at lines 226--226
+[]\secfnt Passive Con-sump-tion and Untested Knowl-
+ []
+
+
+Overfull \hbox (13.68678pt too wide) in paragraph at lines 242--246
+\T1/aer/m/n/9 untested knowl-edge be-cause our pro-posed ecosys-tem ap-proaches
+
+ []
+
+File: img/knowledgeEcosystem.png Graphic file (type png)
+<use img/knowledgeEcosystem.png>
+Package pdftex.def Info: img/knowledgeEcosystem.png  used on input line 252.
+(pdftex.def)             Requested size: 240.0pt x 207.98274pt.
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.324 
+       [3]
+File: img/aminer.png Graphic file (type png)
+<use img/aminer.png>
+Package pdftex.def Info: img/aminer.png  used on input line 330.
+(pdftex.def)             Requested size: 240.0pt x 68.88127pt.
+
+Overfull \hbox (90.79988pt too wide) in paragraph at lines 330--331
+\T1/aer/m/it/9 foot-print and jour-ney. [] 
+ []
+
+<img/tsne.png, id=45, 853.1875pt x 621.32124pt>
+File: img/tsne.png Graphic file (type png)
+<use img/tsne.png>
+Package pdftex.def Info: img/tsne.png  used on input line 336.
+(pdftex.def)             Requested size: 240.0pt x 174.77461pt.
+
+Overfull \hbox (367.43451pt too wide) in paragraph at lines 340--342
+\T1/aer/m/n/9 Image src: []$\T1/aett/m/n/9 https : / / www . researchgate . net
+ / figure / t-[]SNE-[]projection-[]of-[]the-[]embedding-[]of-[]all-[]learners-[
+]in-[]the-[]dataset-[]Major-[]labels-[]are _
+ []
+
+<img/knowledge_graphy.png, id=47, 216.81pt x 158.84344pt>
+File: img/knowledge_graphy.png Graphic file (type png)
+<use img/knowledge_graphy.png>
+Package pdftex.def Info: img/knowledge_graphy.png  used on input line 363.
+(pdftex.def)             Requested size: 216.80946pt x 158.85031pt.
+
+Overfull \hbox (8.67369pt too wide) in paragraph at lines 367--374
+\T1/aer/m/n/9 un-struc-tured in-for-ma-tion to-wards struc-ture. The graph shou
+ld
+ []
+
+File: img/knowledgeEcosystem.png Graphic file (type png)
+<use img/knowledgeEcosystem.png>
+Package pdftex.def Info: img/knowledgeEcosystem.png  used on input line 395.
+(pdftex.def)             Requested size: 240.0pt x 207.98274pt.
+
+Overfull \hbox (6.17322pt too wide) in paragraph at lines 409--412
+[]\T1/aer/m/n/9 The sub-jects are then mapped to the \T1/aer/bx/n/9 knowl-edge 
+graph
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.422 \end{itemize}
+                    [4 <./img/tsne.png> <./img/knowledge_graphy.png>]
+Overfull \hbox (1.61943pt too wide) in paragraph at lines 429--433
+\T1/aer/bx/n/9 con-cep-tual mu-tual in-for-ma-tion \T1/aer/m/n/9 shared be-twee
+n the
+ []
+
+
+Overfull \hbox (4.589pt too wide) in paragraph at lines 442--445
+\T1/aer/m/n/9 com-ing from the knowl-edge graph and com-pared against
+ []
+
+
+Overfull \hbox (43.93938pt too wide) in paragraph at lines 448--448
+[]\secfnt IMPLEMENTING THE KNOWL-EDGE ECOSYS-
+ []
+
+
+Overfull \hbox (8.9355pt too wide) in paragraph at lines 523--526
+\T1/aer/m/n/9 pro-vid-ing in-sight-ful feed-back to sup-port their learn-
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.528 \subsubsection{The Approach}
+                                  \label{the-approach} [5]
+Overfull \hbox (1.2848pt too wide) in paragraph at lines 618--621
+\T1/aer/m/n/9 ended ques-tions; and ques-tion #5 a gen-eral open-ended ques-
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.654 
+       [6]
+Overfull \hbox (3.434pt too wide) in paragraph at lines 677--681
+[]\T1/aer/m/n/9 Specifically, deep learn-ing out-per-forms other tech-niques wh
+en
+ []
+
+
+Overfull \hbox (19.80661pt too wide) in paragraph at lines 687--691
+\T1/aer/m/n/9 Recog-ni-tion and Speech recog-ni-tion. For cre-at-ing our ecosye
+stem,
+ []
+
+
+Overfull \hbox (13.12007pt too wide) in paragraph at lines 711--715
+[]\T1/aer/m/n/9 We can also think of this prob-lem as a typ-i-cal seq2seq (sequ
+ence-
+ []
+
+
+Overfull \hbox (10.30145pt too wide) in paragraph at lines 730--735
+\T1/aer/m/n/9 the prob-a-bil-ity dis-tri-bu-tion, they first cre-ate a \T1/aer/
+bx/n/9 con-text reader
+ []
+
+<img/qgnet.png, id=92, 844.15375pt x 393.47pt>
+File: img/qgnet.png Graphic file (type png)
+<use img/qgnet.png>
+Package pdftex.def Info: img/qgnet.png  used on input line 754.
+(pdftex.def)             Requested size: 240.0pt x 111.86392pt.
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.769 \end{enumerate}
+                      [7 <./img/qgnet.png>]
+Overfull \hbox (4.36478pt too wide) in paragraph at lines 788--790
+[]\T1/aer/m/n/9 The last ap-proach is \T1/aer/m/it/9 multi-source seq2seq learn
+-ing \T1/aer/m/n/9 which
+ []
+
+
+Overfull \hbox (2.83406pt too wide) in paragraph at lines 797--801
+\T1/aer/m/n/9 Gen-er-a-tion from Text us-ing Deep Re-in-force-ment Learn-
+ []
+
+
+Overfull \hbox (7.89804pt too wide) in paragraph at lines 797--801
+\T1/aer/m/n/9 ing[], they im-ple-ment a re-in-force-ment learn-ing(RF) frame-
+ []
+
 ! Undefined control sequence.
-l.76 \chapter
-             {Introduction}\label{introduction} 
+l.863 \subparagraph
+                   {Visual Question Answering 
 Here is how much of TeX's memory you used:
- 6232 strings out of 492649
- 88567 string characters out of 6129622
- 176077 words of memory out of 5000000
- 10047 multiletter control sequences out of 15000+600000
- 36840 words of font info for 50 fonts, out of 8000000 for 9000
+ 6323 strings out of 492649
+ 89432 string characters out of 6129622
+ 184027 words of memory out of 5000000
+ 10067 multiletter control sequences out of 15000+600000
+ 48939 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,11n,29p,296b,437s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,11n,29p,261b,437s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 !  ==> Fatal error occurred, no output PDF file produced!

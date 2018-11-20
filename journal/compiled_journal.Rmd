@@ -1,0 +1,31 @@
+---
+title: Knowledge Acquisition
+author:
+  - name: Fanli (Christian) Zheng
+    affiliation: dyad x machina
+    email: thechristianramsey@gmail.com
+  - name: Haohan Wang
+    affiliation: dyad x machina
+    email: haohan723@gmail.com    
+abstract: | 
+output: rticles::acm_article
+
+---
+
+# Preface {-}
+
+![ Educational Content to Question-Answer Generation ](img/MtoQA.png)
+![ Knowledge Ecosystem ](img/knowledgeEcosystem.png) 
+
+```{r child = '../01-intro.Rmd'}
+```
+
+```{r child = '../02-survey.Rmd'}
+```
+
+
+```{r child = '../03-conclusion.Rmd'}
+```
+
+```{r child = '../04-references.Rmd'}
+```

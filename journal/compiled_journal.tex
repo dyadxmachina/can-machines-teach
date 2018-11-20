@@ -9,7 +9,7 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
-\title{Knowledge Ecosystem - Deep Learning and Education}
+\title{Knowledge Acquisition}
 
 
 % Add imagehandling
@@ -43,7 +43,7 @@
        \email{\href{mailto:haohan723@gmail.com}{\nolinkurl{haohan723@gmail.com}}}
 \and }
 
-\date{{[}DRAFT{]} 2018-11-20}
+\date{}
 
 %Remove copyright shit
 \permission{}
@@ -58,22 +58,13 @@
 \maketitle
 
 
+\section*{Preface}\label{preface}
+\addcontentsline{toc}{section}{Preface}
+
 \includegraphics{img/MtoQA.png}
 \includegraphics{img/knowledgeEcosystem.png}
 
-\hypertarget{mc_embed_signup}{}
-\hypertarget{mc_embed_signup_scroll}{}
-We are looking for educators, researchers, and designers to collaborate.
-Send us your email to stay updated
-
-Email Address *
-
-\hypertarget{mce-responses}{}
-\hypertarget{mce-error-response}{}
-
-\hypertarget{mce-success-response}{}
-
-\chapter{Introduction}\label{introduction}
+\section{Introduction}\label{introduction}
 
 \begin{figure}
 \centering
@@ -81,7 +72,7 @@ Email Address *
 \caption{EC2QA Network}
 \end{figure}
 
-\section{A Future}\label{a-future}
+\subsection{A Future}\label{a-future}
 
 Let's start with a future view of an individual's education. Many of us
 have used the internet to educate ourselves with the abundance of medium
@@ -100,7 +91,7 @@ learner's true knowledge? How might we test such knowledge? Could we
 even predict and provide the guidance on what an individual should be
 learning next to best support their knowledge acquisition?
 
-\section{A Comparison}\label{a-comparison}
+\subsection{A Comparison}\label{a-comparison}
 
 Now, let's go back to our current approach to education. Many of us
 treat knowledge acquisition like a chapter in the individual's life that
@@ -152,7 +143,7 @@ On aggregate, we could begin to cluster similar \textbf{knowledge
 journeys} through unsupervised learning, which might lead to completely
 new journeys that others may be inspired to follow.
 
-\section{Knowledge Ecosystem}\label{knowledge-ecosystem}
+\subsection{Knowledge Ecosystem}\label{knowledge-ecosystem}
 
 In this essay, we will propose a \textbf{knowledge ecosystem}, a new way
 of approaching education that attempts to build a more accurate
@@ -202,7 +193,7 @@ on such an ecosystem, even if it is just in part.
 knowledge acquisition and leave the reader to extend the basics to
 knowledge obtained elsewhere.
 
-\chapter{Primary Concerns}\label{primary-concerns}
+\section{Primary Concerns}\label{primary-concerns}
 
 There are 3 main concerns that we will attempt to address in this
 article about online knowledge acquisition that stand in the way of
@@ -231,7 +222,7 @@ There are as follows:
   of what they've viewed.
 \end{itemize}
 
-\section{Passive Consumption and Untested
+\subsection{Passive Consumption and Untested
 Knowledge}\label{passive-consumption-and-untested-knowledge}
 
 \begin{quote}
@@ -253,7 +244,8 @@ because our proposed ecosystem approaches both of these by always
 testing knowledge. We will show the current research results in deep
 learning in the implementation section.
 
-\section{Knowledge Ecosystem Example}\label{knowledge-ecosystem-example}
+\subsection{Knowledge Ecosystem
+Example}\label{knowledge-ecosystem-example}
 
 \begin{figure}
 \centering
@@ -278,7 +270,7 @@ concepts.
 As the first step, our knowledge system would only consider content that
 has been watched with some engagement for now.
 
-\section{The Problem of Knowledge
+\subsection{The Problem of Knowledge
 Representation}\label{the-problem-of-knowledge-representation}
 
 \begin{quote}
@@ -318,12 +310,12 @@ As a result, the employer, now familiar with the footprints can check
 the overlap between the current employee's and a prospective employee's
 to support their decision making.
 
-\chapter{Concepts}\label{concepts}
+\section{Concepts}\label{concepts}
 
 As mentioned above, we will be introducing a few novel concepts that we
 believe are the key components of such an educational ecosystem.
 
-\section{Knowledge Footprint}\label{knowledge-footprint}
+\subsection{Knowledge Footprint}\label{knowledge-footprint}
 
 The concept of a knowledge footprint is a custom symbol or badge with a
 profile that represents one's education relative to that of others. This
@@ -337,7 +329,7 @@ commonality with others.
 \emph{This example from Aminer is a good visual for a knowledge
 footprint and journey.} \includegraphics{img/aminer.png}
 
-\section{Knowledge Journeys}\label{knowledge-journeys}
+\subsection{Knowledge Journeys}\label{knowledge-journeys}
 
 \begin{figure}
 \centering
@@ -363,7 +355,7 @@ This time instead of capturing a consolidated snapshot of one's current
 knowledge, this concept takes a temporal route to capture one's entire
 learning path.
 
-\section{Collective Human Knowledge
+\subsection{Collective Human Knowledge
 Graph}\label{collective-human-knowledge-graph}
 
 \begin{figure}
@@ -373,18 +365,18 @@ Graph}\label{collective-human-knowledge-graph}
 \end{figure}
 
 The collective human knowledge graph can be compared to Google's Search
-Knowledge Graph {[}{\textbf{???}}{]} which points unstructured
-information towards structure. The graph should have all existing
-subjects that we are currently aware of (i.e.~Mathematics, Computer
-Science, Art, and Sociology, etc). Since each piece of educational
-content will be classified into one more more sub-subject(s), all
-subjects will exist in detail within the knowledge graph.
+Knowledge Graph {[}@googlekg{]} which points unstructured information
+towards structure. The graph should have all existing subjects that we
+are currently aware of (i.e.~Mathematics, Computer Science, Art, and
+Sociology, etc). Since each piece of educational content will be
+classified into one more more sub-subject(s), all subjects will exist in
+detail within the knowledge graph.
 
 On the other hand, we could also use these subjects that are associated
 with that piece of content to help create the knowledge footprint for
 the learner.
 
-\section{EC2QA Network}\label{ec2qa-network}
+\subsection{EC2QA Network}\label{ec2qa-network}
 
 We mentioned the EC2QA network earlier because currently we would have
 to cobble together multiple networks to make this work. Instead we will
@@ -395,7 +387,7 @@ generating questions and answer pairs for any given educational content
 The possible implementation solutions are introduced in the
 implementation section.
 
-\section{Knowledge Ecosystem by
+\subsection{Knowledge Ecosystem by
 Example}\label{knowledge-ecosystem-by-example}
 
 \begin{figure}
@@ -452,7 +444,7 @@ A learner looks at their knowledge footprint.
   footprint.
 \end{itemize}
 
-\chapter{Implementing the Knowledge
+\section{Implementing the Knowledge
 Ecosystem}\label{implementing-the-knowledge-ecosystem}
 
 In this section, we set out to answer the following question:
@@ -468,7 +460,7 @@ propose a new artificial neural network architecture, Educational
 Content to Question Answer (EC2QA) network, with the details needed to
 design such a network.
 
-\section{Problem Formulation}\label{problem-formulation}
+\subsection{Problem Formulation}\label{problem-formulation}
 
 Building such a knowledge ecosystem is not a trivial task. A necessary
 step of searching for the proper solutions would be trying to break the
@@ -506,7 +498,7 @@ the elements together to our knowledge. We see \#3 and \#4 as design
 problems to be approached from the bottom up. In this section we will
 focus on the first two (\#1 \& \#2) elements.
 
-\subsection{Before we start\ldots{}}\label{before-we-start}
+\subsubsection{Before we start\ldots{}}\label{before-we-start}
 
 As discussed above, recent trends in deep learning have produced
 state-of-art results on relevant tasks that we will cover below.
@@ -520,9 +512,9 @@ texts, audio or podcasts.
 Let us now explore some of the recent results that would enable us to
 design the first two (\#1 \& \#2) elements of our ecosystem.
 
-\section{Learning + Feedback}\label{learning-feedback}
+\subsection{Learning + Feedback}\label{learning-feedback}
 
-\subsection{Question Formulation}\label{question-formulation}
+\subsubsection{Question Formulation}\label{question-formulation}
 
 In short, in this section we will be providing some insights on how to
 solve the following puzzle:
@@ -533,7 +525,7 @@ learner's knowledge while also providing insightful feedback to support
 their learning?''.
 \end{quote}
 
-\subsection{The Approach}\label{the-approach}
+\subsubsection{The Approach}\label{the-approach}
 
 We consider learning + feedback as a key component of the ecosystem
 which would settle our concerns with the issues of passive knowledge
@@ -564,7 +556,7 @@ will help us solve the problem.
 In previous years, deep learning research has taken up a similar problem
 titled Question Generation (QG) and Question Answering (QA).
 
-\subsection{Question \& Answer
+\subsubsection{Question \& Answer
 Generation}\label{question-answer-generation}
 
 Question Generation (QG) was originally part of NLP. The goal of QG is
@@ -645,7 +637,7 @@ and evaluated. However, the process might be a little bit tricky when it
 comes to the open-ended ones. We will approach each of them here from
 the current research perspective.
 
-\subsubsection{Why deep learning?}\label{why-deep-learning}
+\paragraph{Why deep learning?}\label{why-deep-learning}
 
 As we stated above, deep learning has achieved state-of-art performance
 in both QG and QA tasks. But how?
@@ -697,7 +689,7 @@ specialized research problems such as NLP, Visual Recognition and Speech
 recognition. For creating our ecosyestem, all those domains will
 possibly be involved.
 
-\subsection{Question Generation}\label{question-generation}
+\subsubsection{Question Generation}\label{question-generation}
 
 Let's begin with question generation (QG) task.
 
@@ -721,7 +713,7 @@ We can also think of this problem as a typical seq2seq
 output are a sequence of text character that the model needs to process
 and learn from.
 
-\subsubsection{Case Studies}\label{case-studies}
+\paragraph{Case Studies}\label{case-studies}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -820,7 +812,7 @@ updates and improves its current policy. In short, the goal in RL-based
 question generation is to find a policy that can maximize the sum of the
 \emph{expected return} at the end of the sequence generation.
 
-\subsubsection{Summary}\label{summary}
+\paragraph{Summary}\label{summary}
 
 In this QG section, we have discussed 3 different algorithms. Based on
 our learning, we can conclude that a generative seq2seq model might be a
@@ -830,7 +822,7 @@ conditioned on the provided content (i.e.~the video) and answers. As
 suggested, we can use a bi-directional LSTM RNN as the encoder to encode
 the content and use a LSTM RNN as the decoder to generate the question.
 
-\subsection{Question Answering}\label{question-answering}
+\subsubsection{Question Answering}\label{question-answering}
 
 Now, let's move on to our question answering (QA) task. The general goal
 of a QA model is to predict an answer to a question based on the
@@ -840,7 +832,7 @@ answer provided by learners and achieve the full automation of the
 learning + feedback cycle.
 
 Here are the overview of a basic QA model's implementation
-{[}{\textbf{???}}{]}:
+{[}@qa\_imp{]}:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -866,9 +858,9 @@ And the typical mechanims applied for solving such a problem include:
   Attention Mechanism
 \end{itemize}
 
-\subsubsection{Close-ended Questions}\label{close-ended-questions}
+\paragraph{Close-ended Questions}\label{close-ended-questions}
 
-\paragraph{Visual Question Answering
+\subparagraph{Visual Question Answering
 (VQA)}\label{visual-question-answering-vqa}
 
 VQA is a challenging research problem that focuses on providing a
@@ -877,7 +869,7 @@ language question. As we are managing to handle the video educational
 content first, our problem will include both NLP and visual recognition
 tasks. Therefore, VQA should be a great area to start with.
 
-\subparagraph{Case Studies}\label{case-studies-1}
+Case Studies
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -997,7 +989,7 @@ answers and question collected as the input to show to a different group
 of annotators. By doing so, annotators could re-formulate the question
 and answers for the sanity check.
 
-\paragraph{Summary}\label{summary-1}
+\subparagraph{Summary}\label{summary-1}
 
 By going through the previous examples, we can see that VQA and few
 similar algorithms introduced before are designed to efficiently process
@@ -1016,7 +1008,7 @@ algorithm like the one described above multi-stream hierarchical
 attention context network is in need for dealing with video input data
 in contrast to static pictures.
 
-\paragraph{Dual Question-Answering
+\subparagraph{Dual Question-Answering
 Model}\label{dual-question-answering-model}
 
 Both Question Generaion(QG) and Question Answering(QA) are well-defined
@@ -1028,7 +1020,7 @@ simultaneously.
 
 Let's look into a few algorithms are designed for this.
 
-\subparagraph{Case Studies}\label{case-studies-2}
+Case Studies
 
 1.In this paper \href{https://arxiv.org/pdf/1809.01997.pdf}{Dual
 Ask-Answer Network for Machine Reading Comprehension}, they present a
@@ -1160,7 +1152,7 @@ up adopting a similar sampling strategy as the scheduled sampling
 strategy for generating the sampled output during the reinforcement
 learning process.
 
-\paragraph{Summary}\label{summary-2}
+\subparagraph{Summary}\label{summary-2}
 
 As mentioned earlier, QG and QA tasks are intrinsically bounded and one
 cannot find solution for either of them without taking the other party
@@ -1181,9 +1173,9 @@ similar to the strategy adopted by
 as well for effectively solving these tasks i.e.~symmetric hierarchical
 attention and policy-gradient reinforcement learning algorithm.
 
-\subsubsection{Open-ended Question}\label{open-ended-question}
+\paragraph{Open-ended Question}\label{open-ended-question}
 
-\paragraph{Problem Formulation}\label{problem-formulation-1}
+\subparagraph{Problem Formulation}\label{problem-formulation-1}
 
 \begin{quote}
 Open-ended questions bring clarity.
@@ -1235,7 +1227,7 @@ discourse and pragmatics. It has four general types:
 Below are some research findings we consider as useful for our unified
 goal.
 
-\subparagraph{Case Studies}\label{case-studies-3}
+Case Studies
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1324,7 +1316,7 @@ the special design of the model is that the generator and the
 discriminator share the context and word embedding and this allows for
 joint end-to-end training using back-propagation.
 
-\subparagraph{Summary}\label{summary-3}
+Summary
 
 Based on our limited research, we found that it is achievable for our
 system to generate the answers for open-ended questions based on the
@@ -1346,7 +1338,7 @@ generate responses conditioned on the context. By leveraging conditional
 GAN model framework, their model's performance is significantly
 improved.
 
-\subsection{Summary of Learning and Feedback
+\subsubsection{Summary of Learning and Feedback
 Networks}\label{summary-of-learning-and-feedback-networks}
 
 Based on our previous discussion, we find that both QG and QA (including
@@ -1365,8 +1357,8 @@ in this area.
 However, we are confident that by combining some techniques introduced
 before to create such a coherent EC2QA network is not that far-fetched.
 
-\subsubsection{Datasets and Annotation
-Needed}\label{datasets-and-annotation-needed}
+\paragraph{Datasets and Annotation
+Suggested}\label{datasets-and-annotation-suggested}
 
 In order to approach this problem from scratch, we need to create our
 own dataset for which we will provide some related resources to start
@@ -1400,10 +1392,10 @@ with:
 Though the video content is not limited to education category, we can
 still use it to get a strong baseline model.
 
-Naturally, the next step would be constrain our model to train on
-particularly educational content. The data needed for training may
+Naturally, the next step would be to constrain our model to train
+particularly on educational content. The data needed for training may
 include the raw video clip, annotation/caption of the whole video
-content, and audio part of the video.
+content, and question + answer pairs (including the time stamps).
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1415,23 +1407,23 @@ content, and audio part of the video.
   Captions for Online Courses: Do YouTube's Auto-generated Captions Meet
   Deaf Students' Needs?}, they studied auto-generated captions generated
   on YouTube online courses. They find that, on average, there were 7.7
-  phrase errors per minute of a total 68 minutes video caption. We still
-  need to do a lot of annotation work before we can finally compose our
-  own training dataset.
+  phrase errors per minute of a total 68 minutes video caption. It
+  implies that we cannot rely on the automated caption of the video, a
+  lot more mannual efforts are needed to fix this problem.
 \end{enumerate}
 
-Other resources that could possibly help us with out tasks are as below:
+Some other resources that might help:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \setcounter{enumi}{2}
 \tightlist
 \item
-  \href{http://videomcc.org/}{VideoMCC}. In their paper, they formulate
-  Video Multiple Choice Caption (VideoMCC) as a way to assess video
+  \href{http://videomcc.org/}{VideoMCC}. They formulate \emph{Video
+  Multiple Choice Caption (VideoMCC)} as a way to assess video
   comprehension through an easy-to-interpret performance measure. In
   their paper \href{https://arxiv.org/pdf/1606.07373.pdf}{VideoMCC: a
-  New Benchmark for Video Comprehension} they propose to cast video
+  New Benchmark for Video Comprehension}, they propose to cast video
   understanding in the form of multiple choice tests that assess the
   ability of the algorithm to comprehend the semantics of the video.
   Example is as below:
@@ -1448,14 +1440,14 @@ Other resources that could possibly help us with out tasks are as below:
 \setcounter{enumi}{3}
 \tightlist
 \item
-  As what we have covered earlier, this paper
+  As what we have covered earlier, in this paper
   \href{https://arxiv.org/pdf/1512.02902.pdf}{MovieQA: Understanding
-  Stories in Movies through Question-Answering}, they introduced a new
-  dataset called MovieQA dataset that can evaluate automatic story
-  comprehension from both video and text.
+  Stories in Movies through Question-Answering}, they introduce a new
+  dataset called MovieQA that can evaluate automatic story comprehension
+  from both video and text.
 \end{enumerate}
 
-Here are 2 figures that can help you better understand their dataset:
+The 2 figures below can offer a better illustration:
 
 \begin{figure}
 \centering
@@ -1474,40 +1466,36 @@ Here are 2 figures that can help you better understand their dataset:
 \setcounter{enumi}{4}
 \item
   In this paper \href{https://arxiv.org/pdf/1806.00186.pdf}{Video
-  Description: A Survey of Methods, Datasets and Evaluation Metrics}
-  multiple methods, datasets and evaluation metrics for video
-  description task in a comprehensive survey.
+  Description: A Survey of Methods, Datasets and Evaluation Metrics},
+  they present multiple methods, datasets and evaluation metrics for
+  video description task in a comprehensive survey.
 \item
-  Inspired by this paper
-  \href{https://arxiv.org/pdf/1808.07036.pdf}{QuAC : Question Answering
-  in Context} in which they present QuAC dataset for QA in Context that
-  contains 14K information-seeking QA dialogs such as a student who
-  poses a sequence of freeform question to learn as much as possible
-  about a hidden Wikipedia text or a teacher who answers the questions
-  by providing short excerpts from the text, we are convinced that it is
-  might also be possible to develop a system that can allow student to
-  pause the video and ask our system a information-seeking question and
-  then get the answer from our system based on the current content. .
+  Lastly, in this paper \href{https://arxiv.org/pdf/1808.07036.pdf}{QuAC
+  : Question Answering in Context}, they present a \emph{QuAC} dataset
+  for QA task in Context that contains 14K information-seeking QA
+  dialogs such as a student who poses a sequence of freeform question to
+  learn as much as possible about a hidden Wikipedia text or a teacher
+  who answers the questions by providing short excerpts from the text.
+  Inspired by their idea and effort, we imagine that it is might be
+  possible to develop a system that can also allow the learners to pause
+  the video and to ask a information-seeking question. As a result, our
+  system will find the answer based on the current content.
 \end{enumerate}
 
-\section{Knowledge Graph}\label{knowledge-graph}
+\subsection{Knowledge Graph}\label{knowledge-graph}
 
-Next, we need to consider how we can select an adequate and relevant
-learning material and generate an effective learning map for the
-learners based on their current progress and the general knowledge
-graph/map, given the ever growing amount of educational content on the
-web.
+Learning is a knowledge accumulation process. To create an effective
+education system requires us to first figure out what is `knowledge' and
+how we can represent the knowledge. \emph{Knowledge Graph} as one of the
+tools that was developed to better help us understand and represent the
+`knowledge' in the world. You can think of knowledge graphs as a
+collections of relational facts, where each fact states that a certain
+relation holds between 2 entities.
 
-As I mentioned earlier, learning is a knowledge accumulation process.
-Knowledge itself has its unique structure that can help us learn in a
-most effective and productive way. Knowledge Graph is a great tool that
-we developed to map and present the structure of knowledge. In shirt,
-knowledge graphs are collections of relational facts, where each fact
-states that a certain relation holds between 2 entities.
+In this part, we will be discussion how we can create our own knowledge
+graph to bring our ecosystem alive.
 
-Now we will consider the knowledge graph as the backbone.
-
-\subsection{What is a graph?}\label{what-is-a-graph}
+\subsubsection{What is a graph?}\label{what-is-a-graph}
 
 \begin{quote}
 Graphs are networks of dots and lines - Graph Theory (Dover Books)
@@ -1517,50 +1505,62 @@ Mathematically speaking, graphs are mathematical structures used to
 model pairwise relations between objects. A graph in this context is
 made of vertices, nodes, or points which are connected by edges, arcs or
 lines. Typically a graph consists of two sets. A set of vertexes and a
-set of edges \[GRAPH_{v,e} =
+set of edges as below:
+
+\[GRAPH_{v,e} =
  \begin{pmatrix}
   v_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
   e_{2,1} & e_{2,2} & \cdots & e_{2,n} \\
  \end{pmatrix}\]
 
+\subsubsection{What is a Knowledge
+Graph(KG)?}\label{what-is-a-knowledge-graphkg}
+
 As for the knowledge graph, it is a graph representation of a knowledge
-base. Often when people talk about a knowledge graph, they are referring
-to the multi-relational graph used by Google and its services to enhance
-search engine's results with information gathered from a variety of
-sources. Per Wikipedia,
+base. One of the most popular knoweldge graph is the multi-relational
+graph used by Google and its services to enhance search engine's results
+with information gathered from a variety of sources. Per Wikipedia,
 \href{https://developers.google.com/knowledge-graph/\#knowledge_graph_entities}{Google's
 Knowledge Graph} uses a graph database to provide structured and
 detailed information about the topic in addition to a list of links to
 other sites.
 
 In general, a knowledge graph represents a knowledge domain. It connects
-things of different types in a systematic way. Knowledge graphs encode
-knowledge arranged in a network of nodes and links rather than tables
-and columns. With knowledge graphs, people and machines can benefit from
-a dynamically growing semantic network of facts about things. In other
-words, we can use it to capture the facts related to people, processes,
-applications, data and many other custom objects as well as their
-relationships among them.
+the objects and facts of different types in a systematic way. Knowledge
+graphs encode knowledge arranged in a network of nodes and links rather
+than tables and columns. With knowledge graphs, people and machines can
+easily capture and utilize a dynamically growing semantic network of
+facts about things. In other words, we can use it to connect the facts
+related to people, processes, applications, data and many other custom
+objects as well as their relationships among them with a structured
+knowledge graph.
 
-Also, we have found a lot of applications that demonstrate that existing
-generic knowledge graphs have shown advantages to support semantic
+Also, plenty of applications have used knowledge graph successfully and
+efficiently for a variety of purposes i.e.~to support semantic
 search(i.e.~Google's Knowledge Graph), personal assistant(i.e.~Apple's
 Siri) and deep question answering (i.e.~Wolfram Alpha and IBM's Watson).
 
-\subsection{Problem Formulation}\label{problem-formulation-2}
+\subsubsection{Problem Formulation}\label{problem-formulation-2}
 
 Given we've implemented the learning and feedback module, knowing where
 a given piece of education content fits into the knowledge space is a
 vital task if we want the knowledge footprint to make a learner
 predictable to others as well as being able to recommend new educational
 content that the learner can take on successfully. We will need the
-following things to connect educational content.
+following things to connect our educational content.
 
-\begin{quote}
-A classifier to take a piece of educational content
-\end{quote}
+\begin{itemize}
+\item
+  A classifier to take a piece of educational content
+\item
+  A hierarchical algorithm that can map the relationship of the related
+  content based on their hierarchy in the knowledge graph
+\item
+  (optional) A probabilistic algorithm i.e.~Bayesian network to map the
+  strength/significance of their relationship with each other
+\end{itemize}
 
-A graph dedicated to education should do the following:
+In our case, a graph dedicated to education should do the following:
 
 \begin{itemize}
 \item
@@ -1573,13 +1573,10 @@ A graph dedicated to education should do the following:
   Connect concepts related to the content
 \end{itemize}
 
-\begin{figure}
-\centering
-\includegraphics{img/knowledgeEcosystem.png}
-\caption{Knowledge Ecosystem}
-\end{figure}
+As shown before, here is how our graph will be used to support our
+ecosystem as a whole: \includegraphics{img/knowledgeEcosystem.png}
 
-\subsection{Automatic Knowledge Graph
+\subsubsection{Automatic Knowledge Graph
 Construction}\label{automatic-knowledge-graph-construction}
 
 Classic knowledge representation techniques allow a knowledge engineer
@@ -1588,18 +1585,32 @@ missing triples(subject, predicate, object). These rules are usually
 expressed through an ontology which allows for the propagation of
 properties from top classes to the lower classes.
 
-However, we are looking for solutions that can allow us to complete our
-educational knowledge graph construction process. Based on our research,
-generic knowledge graphs usually cannot sufficiently support many
-domain-specific applications i.e.~education and finding the
-representation of the graph to feed the triples into a machine learning
-algorithm is still an open area of research. As a start, let's focus on
-how to automate the education knowledge graph construction process.
+However, we are looking for the solutions that can allow us to complete
+our educational knowledge graph construction process automatically.
+Based on our research, generic knowledge graphs usually cannot
+sufficiently support many domain-specific applications (i.e.~education)
+and finding the representation of the graph to feed the triples into a
+machine learning algorithm is still an open area of research.
 
-There have been several papers that provide promising results to the
-automation of constructing a knowledge graph. Let's take a look.
+As a start, let's focus on how we can automate our knowledge graph
+construction process.
 
-\subsection{Case Studies}\label{case-studies-4}
+\paragraph{Key Components}\label{key-components}
+
+Here are some key components that worth highlighting before we dive deep
+into the possible solutions:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Entity recognition} that aims to extract concept of interest
+  from structured or unstructured data;
+\item
+  \textbf{Relation identification} that leverages on the semantic
+  meaning of data.
+\end{enumerate}
+
+\subsubsection{Case Studies}\label{case-studies-4}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1608,16 +1619,16 @@ automation of constructing a knowledge graph. Let's take a look.
   In this paper
   \href{https://ieeexplore.ieee.org/document/8362657}{KnowEdu: A System
   to Construct Knowledge Graph for Education}, the authors propose a
-  system, titled KnowEdu, that can automatically construct a knowledge
-  graph for education. In short, the system is able to extract concepts
-  of subjects or courses and then identifies the educational relations
-  between the concepts.
+  system, titled \textbf{KnowEdu}, that can automatically construct a
+  knowledge graph for education. In short, the system is able to extract
+  concepts of subjects or courses and then identifies the educational
+  relations between the concepts.
 \end{enumerate}
 
-More importantly, it adopts the neural sequence labeling algorithm on
-pedagogical data to extract instruction concepts. They then employ
-probabilistic association rule mining on learning assessment data to
-identify the significance of each of the relations.
+More importantly, it adopts the \emph{neural sequence labeling
+algorithm} on pedagogical data to extract instruction concepts. They
+then employ \emph{probabilistic association rule mining} on learning
+assessment data to identify the significance of each of the relations.
 
 In sum, their system consists of the following modules:
 
@@ -1631,7 +1642,7 @@ In sum, their system consists of the following modules:
   and teaching process directly.
 \end{itemize}
 
-Below is a block diagram of KnowEdu System.
+Below is a block diagram of the KnowEdu System.
 
 \begin{figure}
 \centering
@@ -1639,10 +1650,11 @@ Below is a block diagram of KnowEdu System.
 \caption{knowedu}
 \end{figure}
 
-They used conditional random field (CRF) model for entity or terminology
-recognition task. Moreover, they adopt neural network, or more
-particularly Gated recurrent unit network (GRU) architecture for neural
-sequence labeling on educational entity extraction task.
+Here are some algorithms they employ, they use a \emph{conditional
+random field (CRF)} model for entity or terminology recognition task.
+They adopt a neural network, or more particularly Gated recurrent unit
+network (GRU) architecture for neural sequence labeling on educational
+entity extraction task.
 
 In terms of relation identification they implement probabilistic
 association data mining techniques on learning assessment adata and
@@ -1657,15 +1669,14 @@ system.
 \caption{knowledge\_graph}
 \end{figure}
 
-Below are some approaches related to knowledge graph (KG) embedding
-which is used to embed components of a KG including entities and
-relations into continuous vector space so as to simply the manipulation
-while preserving the inherent structure of a KG.
+Below are some papers related to Knowledge Graph embedding which is used
+to embed components of a KG including entities and relations into
+continuous vector space so as to simply the manipulation while
+preserving the inherent structure of a KG.
 
-As for its benefits and importance for our task, it can help with a
-variety of downstream tasks i.e.~KG completion and relation extraction,
-and hence be used to drastically improve the information acquisition
-speed for KG.
+As for its benefits, it can help with numeraous downstream tasks i.e.~KG
+completion and relation extraction, and hence be used to drastically
+improve the knowledge acquisition and mapping speed for our KG.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1674,9 +1685,9 @@ speed for KG.
 \item
   In this paper
   \href{http://www.mlgworkshop.org/2018/papers/MLG2018_paper_5.pdf}{Generalized
-  Embedding Model for Knowledge Graph Mining}, they have presented a
-  model for learning neural presentation of generalized knowledge graphs
-  using a novel multi-shot unsupervised neural network model, called the
+  Embedding Model for Knowledge Graph Mining}, they present a model for
+  learning neural presentation of generalized knowledge graphs using a
+  novel \emph{multi-shot unsupervised neural network} model, called the
   \textbf{Graph Embedding Network (GEN)}. This model is able to learn
   different types of knowlege graphs from a universal perspective and it
   provides flexibility in learning representations that work on graphs
@@ -1684,10 +1695,10 @@ speed for KG.
 \end{enumerate}
 
 In developing their model, they extend the traditional one-shot
-supervised learning mechanism by introducing a multi-shot unsupervised
-learning framework where a 2-layer MLP network for every shot. This
-framework can in turn be used to accommodate both homogeneous and
-heterogeneous networks.
+supervised learning mechanism by introducing a \emph{multi-shot
+unsupervised learning} framework where a 2-layer MLP network for every
+shot. This framework can in turn be used to accommodate both homogeneous
+and heterogeneous networks.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1697,91 +1708,78 @@ heterogeneous networks.
   In this paper
   \href{https://openreview.net/pdf?id=rJ4qXnCqFX}{Probabilistic
   Knowledge Graph Embeddings}, they explored a new type of embedding
-  model that can link prediction in relational knowledge graph. They
-  start from a problem that even large knowledge graphs typically
-  contain only few facts per entity, leading effectively to a small data
-  problem where parameter uncertainty matters. As for the solution, they
-  suggest that the knowledge graphs should be treated within a Bayesian
-  framework.
+  model that can link prediction in relational knowledge graph. They are
+  set out to solve a question with their approach that even large
+  knowledge graphs typically contain only few facts per entity, leading
+  effectively to a small data problem where parameter uncertainty
+  matters. As for the solution, they suggest that the knowledge graphs
+  should be treated within a \emph{Bayesian} framework.
 \end{enumerate}
 
-In short, they present a probabilistic interpretation of existing
+In short, they present a \emph{probabilistic interpretation} of existing
 knowledge graph embedding models. By reformulating the models like
 ComplEx and DistMult, they construct the generative models for
 relational facts.
 
-They also apply stochastic variational inference to estimate an
+They also apply \emph{stochastic variational inference} to estimate an
 approximate posterior for each entity and relation embedding in the
 knowledge graph. By doing so, they can estimate the uncertainty, but
-more importantly, they can use gradient-based hyperparameter
-optimization by stochastic gradient descent on the optimized variational
-bound.
+more importantly, it allows them to use gradient-based hyperparameter
+optimization with stochastic gradient descent on the optimized
+variational bound.
 
 As a result, their model shows experimentally new state-of-art results
 in link prediction task.
 
-\subsection{Summary of Knowledge
-Graph}\label{summary-of-knowledge-graph}
+\subsubsection{Summary}\label{summary-4}
 
-Based on our research, there has been much progress in automated
-knowledge graph construction applied to the education domain using deep
-learning and other machine learning techniques.
+A significant amount progress has been made in automating knowledge
+graph using deep learning and other machine learning techniques based on
+our research.
 
 The first paper introduces a system that almost exactly matches our
-goal. The authors carefully walk us through the current progress and
-possible solutions for solving each of the obstacles in developing a
-education based knowledge graph. For the instructional concept
-extraction task, they use both CRF model and neural sequence labeling
-algorithm to achieve high performance. They employ probabilistic
-association rule mining on learning assessment data to identify the
+goal. They also demonstrate the current progress and possible solutions
+for solving each of the obstacles in developing an education based
+knowledge graph.In sum, for the instructional concept extraction task,
+they use a CRF model and a neural sequence labeling algorithm and they
+have proved effective for the task. They adopt a probabilistic data
+mining technique in learning assessment data to approximate the
 relations with educational significance.
 
 The last 2 papers demonstrate the progress that has been made in KG
-embedding learning domain. As mentioned above, as one of the most
-effective methods in representing knowledge graphs.
+embedding learning domain. As mentioned above, it is one of the most
+effective methods in representing knowledge graphs. It is an indication
+that we should implement this approach to represent our knowledge graph
+for the future knowledge acquisition, maintenance and continuous
+mulnipulation purposes.
 
-\subsubsection{Key Components}\label{key-components}
-
-Here are some key components that we found important of building an
-automated knowledge graph for education:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  Entity recognition that aims to extract concept of interest from
-  structured or unstructured data.
-\item
-  Relation identification that leverages on the semantic meaning of
-  data.
-\end{enumerate}
-
-\subsubsection{Possible Next Steps}\label{possible-next-steps}
-
-Here are some of our research summary regarding the steps of creating
-such an educational knowledge graph:
+\paragraph{Key Takeaways}\label{key-takeaways}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
   In terms of entity recognition task, We need to first get the data
-  from some reliable open semantic sources i.e.~Wikipedia or Freebase.
-  Or we can crawl the data online on our own to find high quality
-  training data. In the next section we will be listing out some
-  resources that might help.
+  from the reliable open semantic sources i.e.~Wikipedia or Freebase. Or
+  we can crawl the data on our own to collect more high quality training
+  data.
 \item
-  Next, we need to create the model to map the relation among the
-  entities. There are plenty of great github that we can use to help us
-  with this task. Or we can use some tools developed for this purpose
-  i.e.~node.js and Wolfram Mathematica embedded symbolic functions or
-  just TensorFlow. The typically techniques we will employ are NLP and
-  semantic data tagging or labeling techniques.
+  Next, we need to apply the models to extract and map the entities.
+  Besides the models mentioned above, there are plenty of great githubs
+  that we can refer to to help us with this task. Or we can look for the
+  tools developed for this task i.e. \emph{node.js} and \emph{Wolfram
+  Mathematica embedded symbolic functions} or just simply build your own
+  with \emph{TensorFlow}. Some useful techniques that we should keep in
+  mind are NLP and semantic data tagging/labeling techniques.
 \item
-  Naturally, after the entity extraction and relationship mapping we
-  will visualize our map.
+  After the entity extraction and mapping, we need one or more
+  algorithms to learn and capture the relationship among all entities
+  i.e.~a probabilistic model.
+\item
+  The last but the not the least, visuallize our map.
 \end{enumerate}
 
-\subsubsection{Datasets and Annotation Needed
-needed}\label{datasets-and-annotation-needed-needed}
+\paragraph{Datasets and Annotation
+Suggested}\label{datasets-and-annotation-suggested-1}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1791,10 +1789,10 @@ needed}\label{datasets-and-annotation-needed-needed}
   web-scale approach to probabilistic knowledge fusion. In this paper
   \href{https://dejanseo.com.au/wp-content/uploads/2014/08/Knowledge-Vault-A-Web-Scale-Approach-to-Probabilistic-Knowledge-Fusion.pdf}{Knowledge
   Vault: A Web-Scale Approach to Probabilistic Knowledge Fusion}, they
-  introduce Knowledge Vault that combines extraction from Web content
-  (obtained through analysis of text, tabular data, page structure, and
-  human annotation) with prior knowledge derived from existing knowledge
-  repositories.
+  introduce the \textbf{Knowledge Vault} that combines extraction from
+  the Web content (obtained through analysis of text, tabular data, page
+  structure, and human annotation) with prior knowledge derived from
+  existing knowledge repositories.
 \end{enumerate}
 
 They employ a supervised machine learning models for fusing these
@@ -1804,103 +1802,100 @@ automatically construct a web-scale probabilistic knowledge base.
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \setcounter{enumi}{1}
-\tightlist
 \item
   \href{https://developers.google.com/knowledge-graph/\#knowledge_graph_entities}{Google
   Knowledge graph Search API}.
-\end{enumerate}
-
-Below are some resources that might be helpful for starting such a job
-from scratch:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{2}
-\item
-  \href{https://developers.google.com/search/docs/guides/intro-structured-data}{Understand
-  how structured data works} by Google.
 \item
   \href{wikipedia.com}{Wikipedia}
 \item
   \href{Freebase.com}{Freebase}
 \end{enumerate}
 
-\section{Knowledge Journeys}\label{knowledge-journeys-1}
+\subsection{Knowledge Journeys}\label{knowledge-journeys-1}
 
-The collective knowledge graph is our `ground truth' that can be used to
-serve every learner in the ecosystem and be applied universally to some
-extent, but everyone's learning journey is still unique to the learner.
-Everyone seems to have their unique set of problems that they are
-curious about and they will end up taking on their own journey towards
-the mastery. As a result, their knowledge journeys will need several
-degrees of freedom to represent learner's history, interests, and whom
-they are similar to.
+The collective knowledge graph is our ecosystem's backboen that can be
+used to serve every learner and to be applied universally to some
+extent, but a learner's learning journey is highly personal and unique
+at the individual's level. Every learner enter the system with their own
+set of problems that they are curious about and their specific missions
+towards the mastery. As a result, their knowledge journeys should vary
+significantly. As for our role, we need to ensure we have a system that
+can handle this high degrees of freedom. Or more ideally, to adaptively
+represent and learn from a learner's history, interests, and whom they
+are related to to best support their knowledge acquisition adventure.
 
-We cannot possibly put such an online educational ecosystem into use
-without taking this crucial factor into our account.
+\subsubsection{Problem Formulation}\label{problem-formulation-3}
 
-Let's first formulate our problem. Below are few key components of such
-a task:
+Below are few primary components we believe are the keys for dealing
+with such a task:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
   First, we need to have a system that can match all the content that a
-  learner has acquired with the collective educational knowledge graph;
+  learner has acquired back to the collective educational knowledge
+  graph;
 \item
   Generate their personal knowledge graph with the timestamps on each
   content and the subject(s) it belongs to;
 \item
   Unfold the timestamps and map the previous generated static knowledge
-  graph onto a timeline that can display a learner's knowledge as a
-  personal knowledge acquisition storyline/gallery;
+  graph onto a timeline and display a learner's knowledge as a personal
+  knowledge acquisition storyline/gallery;
 \item
   Adaptively update the journey along with a learner's learning
   progress.
 \end{enumerate}
 
 As the outcome, a learner's knowledge journey will be available anytime
-for the learner to review the content that he/she has learned at any
-past moment and for others to look into the details of one's journey.
+for the learner to look through and it makes it possible for them to
+easily go back in time to review a particular piece of content they have
+learned and for others to unfold their learning journey along the
+timeline for more details.
 
-\section{Knowledge Footprint}\label{knowledge-footprint-1}
+\subsection{Knowledge Footprint}\label{knowledge-footprint-1}
 
-Just a quick review of this concept we introduced earlier, knowledge
-footprint is going to be presented as a badge or a symbol to represent
-someone's knowledge state at a fix point in time. In a sense, this
-thumbnail view of a learner's knowledge will evolve and change when a
-learner continues his/her learning journey. By constructing such
-symbol(s), a learn can easily understand their current knowledge states
-relatively to their past and others and timely make an adjustment to
-alter their future learning plan.
+Just a quick review of this concept that we introduced in the first
+section, knowledge footprint is going to shown up as one ore more badges
+or symbols that is/are used to represent a learner's knowledge at a
+specific point in time. In a sense, this thumbnail view of a learner's
+knowledge will continuously evolve and change when a learner proceeds
+his/her learning journey. By constructing such symbol(s), a learn can
+easily understand their current knowledge profile relatively to their
+past and to others so as to timely make an adjustment to alter their
+future learning plan.
 
-In terms of the techniques that can be applied for this task, we would
-primarily consider unsupervised learning and dimensionality reduction
-algorithms to help us uncover and represent the visible and invisible
-dimensions of a learner's knowledge journey and state. Also, we believe
-it is going to be a teamwork that requires people like machine learning
-and deep learning researchers, educators, and designers to work
-collaboratively to ensure the optimal outcome.
+As for the implmentation, we would consider using the unsupervised
+learning and dimensionality reduction techniques to help uncover and
+represent the visible and invisible dimensions of a learner's knowledge
+journey. In turn, the model can consolidate and collapse the journey
+into one or more symbols to accurately represent a learner's current
+knowledge profile. Still, it is not a trivial task and we believe it is
+going to be a teamwork that requires people like machine learning and
+deep learning researchers, educators, and designers to work
+collaboratively for the best possible outcomes.
 
 Note that we will not discuss the detailed research findings or
-implementation steps of the last 2 elements in this essay. We will leave
-these areas for our future research.
+implementation steps of Knowledge Journeys and Knowledge Footprint
+elements in this essay. We will leave these areas for our future
+research.
 
-\subsection{Possible Next Steps}\label{possible-next-steps-1}
+\subsubsection{Possible Next Steps}\label{possible-next-steps}
 
 As a reasonable next step, we would also like our system to be as
 personalized as possible so as to provide guidance for a learner along
 their knowledge journey, given that our system has already encoded and
-possessed the information of a learner's footprint and journey.
+possessed the information of a learner's knowledge footprint and
+journey.
 
 In this case, a recommender system might be a desirable choice for
 handling such a job since it is an intuitive line of defense against
 consumer over-choice given the ever growing educational content
 available on the web.
 
-\chapter{Next Steps}\label{next-steps}
+\section{Next Steps}\label{next-steps}
 
-\section{Overview}\label{overview}
+\subsection{Overview}\label{overview}
 
 We have now proposed one approach to better represent a modern
 individual's knowledge by taking the world of unstructured educational
@@ -1926,7 +1921,7 @@ into consideration the education they acquired from unstructured
 sources, thereby formalising their informal knowledge for themselves and
 others.
 
-\section{Challenges}\label{challenges}
+\subsection{Challenges}\label{challenges}
 
 There will be many challenges in coming up with solutions to enable
 knowledge acquisition and representation at the learner and group level.
@@ -1944,7 +1939,7 @@ components of the proposed knowledge ecosystem:
 For our purposes we will focus on the EC2QA network and dataset as the
 main focus for our next steps.
 
-\section{EC2QA dataset}\label{ec2qa-dataset}
+\subsection{EC2QA dataset}\label{ec2qa-dataset}
 
 The success of deep learning techniques are predicated on the assumption
 that one needs a significant amount of data to train a large neural
@@ -2004,7 +1999,7 @@ the minimal amount of data.
   with questions and answers.
 \end{enumerate}
 
-\section{Education Partners}\label{education-partners}
+\subsection{Education Partners}\label{education-partners}
 
 The second step above requires a large amount of existing educational
 content paired with existing questions and answers. This data is rich
@@ -2018,7 +2013,7 @@ Khan Academy) to work with their datasets for pretraining and
 collaborate on how we annotate the space of unstructured educational
 content.
 
-\section{Educator Enrichment}\label{educator-enrichment}
+\subsection{Educator Enrichment}\label{educator-enrichment}
 
 The third and final dataset that would be used as our primary data
 source to train and test the model's performance, remains the most
@@ -2030,7 +2025,7 @@ would be primarily trained on. The end result would be a new benchmark
 that other researchers can begin to build newer architectures to make
 progress on the problem domain.
 
-\section{Minimum Viable Dataset
+\subsection{Minimum Viable Dataset
 (Benchmark)}\label{minimum-viable-dataset-benchmark}
 
 We propose to narrow the problem space and jumpstart research in this
@@ -2040,7 +2035,7 @@ unstructured educational content. This drastically reduces the data that
 is needed and the number of experts and partners needed to kickstart the
 initiative.
 
-\section{Call for collaborators}\label{call-for-collaborators}
+\subsection{Call for collaborators}\label{call-for-collaborators}
 
 We hope to bring together collaborators that would include machine
 learning researchers, educators, technologists, and designers to begin
@@ -2063,7 +2058,7 @@ Email Address *
 
 \hypertarget{mce-success-response}{}
 
-\section{Conclusion}\label{conclusion}
+\subsection{Conclusion}\label{conclusion}
 
 In conclusion, we presented a new perspective on knowledge acquisition
 and representation, and proposed an ecosystem that would support a
@@ -2087,12 +2082,12 @@ As deep learning researchers, we are looking forward to designing or
 seeing others design the minimum viable dataset, benchmark, and
 architecture motivated by this work.
 
-\chapter{About the Authors}\label{about-the-authors}
+\section{About the Authors}\label{about-the-authors}
 
 Independent deep learning researchers focused on using machine learning
 for the good of humanity and beyond.
 
-\section{Haohan Wang}\label{haohan-wang}
+\subsection{Haohan Wang}\label{haohan-wang}
 
 \href{https://www.linkedin.com/in/haohanw}{LinkedIn} \#\# Fanli Zheng
 (Christian Ramsey)
