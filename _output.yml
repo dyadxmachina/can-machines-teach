@@ -10,10 +10,13 @@ bookdown::gitbook:
         <li><a href="https://github.com/dyadxmachina/can-machines-teach" target="blank">Github</a></li>
     edit: https://github.com/dyadxmachina/can-machines-teach/edit/master/%s
     download: ["pdf", "epub"]
+bookdown::epub_book: default
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
   latex_engine: xelatex
   citation_package: natbib
   keep_tex: yes
-bookdown::epub_book: default
+  base_format: rticles::acm_article
+bookdown::pdf_document2:
+    base_format: rticles::acm_article    
