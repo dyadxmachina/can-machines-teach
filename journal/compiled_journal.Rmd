@@ -1,5 +1,5 @@
 ---
-title: Knowledge Acquisition
+title: Knowledge Ecosystem - Deep Learning and Education
 author:
   - name: Fanli (Christian) Zheng
     affiliation: dyad x machina
@@ -12,9 +12,6 @@ output: rticles::acm_article
 
 ---
 
-# Preface {-}
-
-![ Educational Content to Question-Answer Generation ](img/MtoQA.png)
 ![ Knowledge Ecosystem ](img/knowledgeEcosystem.png) 
 
 ```{r child = '../01-intro.Rmd'}

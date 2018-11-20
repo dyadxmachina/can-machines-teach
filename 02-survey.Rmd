@@ -1,5 +1,5 @@
 
-# Implementing the Knowledge Ecosystem
+# Implementation
 
 In this section, we set out to answer the following question: 
 
