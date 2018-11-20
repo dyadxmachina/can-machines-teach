@@ -1,0 +1,40 @@
+--- 
+title: "Knowledge Ecosystem"
+# author: "Fanli Zheng  (Christian) & Haohan Wang"
+knit: "bookdown::render_book"
+date: "[Draft] `r Sys.Date()`"
+# output: pdf_document
+# output: rticles::acm_article
+description: Lets start with a future view of an individuals education. Many have used the internet to educate ourselves with the abundance of medium to high quality videos, papers, articles, podcasts and how-tos being uploaded from numerous individuals, groups, and institutions like never before. Let us imagine that all of what you have learned online, throughout the entirety of your life, from the hundreds of Youtube videos, Wikipedia articles, Nature papers, and podcasts you've read, watched, or listened to, were all added structurally to your education journey and what if that could be consolidated into what we might call a digital education footprint. 
+documentclass: book
+link-citations: yes
+bibliography: [book.bib]
+biblio-style: apalike
+site: bookdown::bookdown_site
+colorlinks: yes
+url: 'https\://github.com/dyadxmachina/can-machines-teach'
+github-repo: dyadxmachina/can-machines-teach
+cover-image: img/MtoQA.png
+author:
+  - name: Fanli (Christian) Zheng
+    affiliation: dyad x machina
+    email: thechristianramsey@gmail.com
+  - name: Haohan Wang
+    affiliation: dyad x machina
+    email: haohan723@gmail.com    
+abstract: |
+output: rticles::acm_article
+
+---
+
+# Preface {-}
+
+![ Educational Content to Question-Answer Generation ](img/MtoQA.png)
+![ Knowledge Ecosystem ](img/knowledgeEcosystem.png)
+
+```{r echo=FALSE, results="asis"}
+library(readr)
+cat( paste( readLines( "mailchimp.html" , warn = FALSE) ) )
+```
+
+
