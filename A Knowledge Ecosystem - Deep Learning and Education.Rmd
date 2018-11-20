@@ -1,5 +1,20 @@
----
-title: Knowledge Acquisition - Machine Learning, Deep Learning, and Education
+--- 
+title: "Knowledge Ecosystem - Deep Learning and Education"
+# author: "Fanli Zheng  (Christian) & Haohan Wang"
+knit: "bookdown::render_book"
+date: "[DRAFT] `r Sys.Date()`"
+# output: pdf_document
+# output: rticles::acm_article
+description: Lets start with a future view of an individuals education. Many have used the internet to educate ourselves with the abundance of medium to high quality videos, papers, articles, podcasts and how-tos being uploaded from numerous individuals, groups, and institutions like never before. Let us imagine that all of what you have learned online, throughout the entirety of your life, from the hundreds of Youtube videos, Wikipedia articles, Nature papers, and podcasts you've read, watched, or listened to, were all added structurally to your education journey and what if that could be consolidated into what we might call a digital education footprint. 
+documentclass: book
+link-citations: yes
+bibliography: [book.bib]
+biblio-style: apalike
+# site: bookdown::bookdown_site
+colorlinks: yes
+url: 'https\://github.com/dyadxmachina/can-machines-teach'
+github-repo: dyadxmachina/can-machines-teach
+cover-image: img/MtoQA.png
 author:
   - name: Fanli (Christian) Zheng
     affiliation: dyad x machina
@@ -12,14 +27,22 @@ output: rticles::acm_article
 
 ---
 
-![ Knowledge Ecosystem ](../img/knowledgeEcosystem.png)
+
+
+![ Educational Content to Question-Answer Generation ](img/MtoQA.png)
+![ Knowledge Ecosystem ](img/knowledgeEcosystem.png)
+
+```{r echo=FALSE, results="asis"}
+library(readr)
+cat( paste( readLines( "mailchimp.html" , warn = FALSE) ) )
+```
 
 
 
 <!--chapter:end:index.Rmd-->
 
 # Introduction 
-![EC2QA Network](../img/MtoQA.png)
+![EC2QA Network](img/MtoQA.png)
 
 ## A Future
 Let's start with a future view of an individual's education. Many of us have used the internet to educate ourselves with the abundance of medium to high quality videos, papers, articles, podcasts and how-tos being uploaded from numerous individuals, groups, and institutions like never before (60 hours of video are uploaded to youtube.com every minute).
@@ -30,7 +53,7 @@ Let us imagine that all of what you have learned online, throughout the entirety
 ## A Comparison
 Now, let's go back to our current approach to education. Many of us treat knowledge acquisition like a chapter in the individual's life that is limited to one or more formal places i.e. universities. This is misleading since we accrue knowledge from everywhere and most recently the internet has become a primary source of knowledge acquisition but has gone mostly unaccounted for in terms of recognition (i.e. watching a whole series of Youtube lectures on the Neurobiology of Depression or Discrete Mathematics goes mostly unnoticed when someone views one's resume or by simply looking at their degree). The current approach makes it much harder for people to switch to working and exploring the domains or professional fields outside of their degree area. Knowing rigourous mathematics and not having a degree in it, is said to be surprising, therefore the current "thumbnail view" of an individual's knowledge is necessarily inadequate to the new mediums of knowledge acquisition.
 
-![Example at aminer.com](../img/aminer.png)
+![Example at aminer.com](img/aminer.png)
 
 The ideas behind this *knowledge ecosystem*, presents only one of many possible solutions to bringing our education system into modernity. The goal of it would be to promote the long held idea of the **life-long learner**. Moving away from the "education chapter"" of an individual's life to the individual as an evolving learner; learning the necessary skills for what life presents them with today or might tomorrow. It would (combined with traditional education) show us a more accurate depiction of a learner's knowledge and therefore that of a society's collective knowledge. 
  
@@ -105,7 +128,7 @@ As you can see, we've bundled passive consumption and untested knowledge because
 
 ## Knowledge Ecosystem Example
 
-![Knowledge Ecosystem](../img/knowledgeEcosystem.png)
+![Knowledge Ecosystem](img/knowledgeEcosystem.png)
 
 Given a piece of educational content, our knowledge system will generate a set of questions and answers that theoretically capture the major concepts and facts that the learner should know after viewing a part or the content in whole. 
 
@@ -147,11 +170,11 @@ The concept of a knowledge footprint is a custom symbol or badge with a profile 
 In turn, this footprint should be able to represent all of one's education (currently focused on digital) while balancing distinction and commonality with others.
 
 *This example from Aminer is a good visual for a knowledge footprint and journey.*
-![Example at aminer.com](../img/aminer.png)
+![Example at aminer.com](img/aminer.png)
 
 
 ## Knowledge Journeys
-![Image title](../img/tsne.png)
+![Image title](img/tsne.png)
 
 Image src: https://www.researchgate.net/figure/t-SNE-projection-of-the-embedding-of-all-learners-in-the-dataset-Major-labels-are_fig1_323391033
 
@@ -160,7 +183,7 @@ A **knowledge journey** is a somewhat holistic view of all of the educational co
 This concept also helps address the knowledge representation concern. This time instead of capturing a consolidated snapshot of one's current knowledge, this concept takes a temporal route to capture one's entire learning path.
 
 ## Collective Human Knowledge Graph
-![Image title](../img/knowledge_graphy.png)
+![Image title](img/knowledge_graphy.png)
 
 The collective human knowledge graph can be compared to Google's Search Knowledge Graph [@googlekg] which points unstructured information towards structure. The graph should have all existing subjects that we are currently aware of (i.e. Mathematics, Computer Science, Art, and Sociology, etc). Since each piece of educational content will be classified into one more more sub-subject(s), all subjects will exist in detail within the knowledge graph. 
 
@@ -174,7 +197,7 @@ The possible implementation solutions are introduced in the implementation secti
 
 ## Knowledge Ecosystem by Example
 
-![Knowledge Ecosystem](../img/knowledgeEcosystem.png)
+![Knowledge Ecosystem](img/knowledgeEcosystem.png)
 
 
 Now that we are aware of each of the elements, let's talk about how they work in practice.
@@ -357,7 +380,7 @@ As for the quantitative evaluation, they aim to minimize the difference between 
 The high-level QG-Net architecture is as below: 
 
 
-![ma](../img/qgnet.png)
+![ma](img/qgnet.png)
 
 
 2. In this paper [TOPIC-BASED QUESTION GENERATION](https://openreview.net/pdf?id=rk3pnae0b), they propose a topic-based question generation algorithm. The algorithm is able to take in a input sentence, a topic and a question type and generate a word sequence related to the topic, question type and the input sentence. 
@@ -380,7 +403,7 @@ They refer to *the generator* part of the model as the $agent$ and the $action$ 
 *The evaluator* part of the model will in turn assign a $reward$ for the output sequence predicted using the current $policy$ by the generator. Based on the reward assigned by the evaluator, the generator updates and improves its current policy. In short, the goal in RL-based question generation is to find a policy that can maximize the sum of the *expected return* at the end of the sequence generation. 
 
 
-#### Summary of QG
+#### Summary 
 
 In this QG section, we have discussed 3 different algorithms. Based on our learning, we can conclude that a generative seq2seq model might be a suggested model for this task. As for our objective function, we should be foumulating a conditional probability distribution that is conditioned on the provided content  (i.e. the video) and answers. As suggested, we can use a bi-directional LSTM RNN as the encoder to encode the content and use a LSTM RNN as the decoder to generate the question. 
 
@@ -411,8 +434,8 @@ And the typical mechanims applied for solving such a problem include:
 * Attention Mechanism 
 
 #### Close-ended Questions
-Meed 
-##### Visual Question Answering
+
+##### Visual Question Answering (VQA)
 
 VQA is a challenging research problem that focuses on providing a natural language answer given any image and any free-form natural language question. As we are managing to handle the video educational content first, our problem will include both NLP and visual recognition tasks. Therefore, VQA should be a great area to start with. 
 
@@ -427,7 +450,7 @@ In the end, they optimize the proposed network by learning a label regression wi
 
 The high-level network architecture is as follows: 
 
-![Deep Attention Neural Tensor Network](../img/vqa.png)
+![Deep Attention Neural Tensor Network](img/vqa.png)
 
 2. In this paper [Question Type Guided Attention in Visual Question Answering](https://arxiv.org/pdf/1804.02088.pdf), they propose a model called **Question Type-guided Attention (QTA)**. This model utilizes the information of question type to dynamically balance visual features from both top-down and bottom-up orders. 
 
@@ -448,8 +471,7 @@ They collect 408 subtitled movies and obtained their extended summaries in the f
 
 In the second step of data collection, they used the multiple-choice answers and question collected as the input to show to a different group of annotators. By doing so, annotators could re-formulate the question and answers for the sanity check. 
 
-**Summary of CEQs**
-
+##### Summary
 By going through the previous examples, we can see that VQA and few similar algorithms introduced before are designed to efficiently process image and text input data while making the inference based on the input.
 
 Few main insights learned through the research. First, key components for creating and trainnig a VQA model such as feature selection, feature pooling and specifically designed attention mechanism. The input of the mode is typically a video clip + question + answer pairs. A CNN and sometimes a RNN is needed for such a task. 
@@ -457,7 +479,7 @@ Few main insights learned through the research. First, key components for creati
 Another important learning is that we can follow the steps they take to collect and annotate our training data by asking crowd-sourcing workers to construct the question and answer pairs. Also, more advanced algorithm like the one described above multi-stream hierarchical attention context network is in need for dealing with video input data in contrast to static pictures. 
 
 
-### Dual QA
+##### Dual Question-Answering Model
 
 Both Question Generaion(QG) and Question Answering(QA) are well-defined 2 sets of problems that aim to either infer a question or an answer given the counterpart based on the context. However, they are usually explored separately despite of their intrinsic complementary relationship. In our case, a system needs to take on both roles simultaneously.
 
@@ -472,9 +494,9 @@ Then *the cross-modal interaction* of question, context and answer is captured w
 
 The high-level architecture of the model is illustrated as below: 
 
-![Dual Ask-Answer Network 1](../img/qgqa.png)
+![Dual Ask-Answer Network 1](img/qgqa.png)
 
-![Dual Ask-Answer Network 2](../img/daan.png)
+![Dual Ask-Answer Network 2](img/daan.png)
 
 In short, the model is composed of the following components: embedding layer, encoding layer, attention layer and output layer. The model is fed with a question-context-answer triplet $(Q,C,A)$ and the decoded Q and A from the output layer. Their loss function consists of 2 parts: 
 
@@ -509,7 +531,7 @@ They case both QG and QA tasks into one process by firstly matching the input pa
 As for the training, they first pretrain the model with cross-entropy loss and then they fine tune the model parameters with policy-gradient reinforcement learning to alleviate the exposure bias problem. They end up adopting a similar sampling strategy as the scheduled sampling strategy for generating the sampled output during the reinforcement learning process.
 
 
-#### Summary of Closed Ended
+##### Summary 
  As mentioned earlier, QG and QA tasks are intrinsically bounded and one cannot find solution for either of them without taking the other party into account. 
  
  In this section, we have discussed some approaches that many groups of people have taken to help machine operate on both tasks simultaneously. Some exciting findings have been presented here. 
@@ -518,7 +540,7 @@ For our problem, it is very motivating to see these progress and learn from thei
 
 #### Open-ended Question 
 
-#### Problem Formulation 
+##### Problem Formulation 
 
 > Open-ended questions bring clarity.
 
@@ -565,7 +587,7 @@ They present the adaptive hierarchical encoder network to learn the joint repres
 
 The framework of **Adaptive Hierarchical Reinforced Networks** is are below: 
 
-![Open-Ended Long-form Video QA Network](../img/oe.png)
+![Open-Ended Long-form Video QA Network](img/oe.png)
 
 The first part of the model is the hierarchical encoder networks that learn the joint representation of multimodal attentional video and textual question with adaptive video segmentation.
 
@@ -579,7 +601,7 @@ During the inference step, *noise sampling* is conditioned on the dialogue histo
 In sum, their hredGAN combines both generative and retrieval-based multi-turn dialogue systems to improve the model's performance. One of the special design of the model is that the generator and the discriminator share the context and word embedding and this allows for joint end-to-end training using back-propagation. 
 
 
-###### Summary of Open Ended Questions
+###### Summary 
 
 Based on our limited research, we found that it is achievable for our system to generate the answers for open-ended questions based on the educational video and provide appropriate feedback/rating based on the current techniques. The first paper presents a newly developed AES model that can rate learner's writing by taking into account some special standand. It also demonstrates a possible way of enhance the AES model by training it with the adversarially crafted input. 
 
@@ -624,16 +646,16 @@ Other resources that could possibly help us with out tasks are as below:
 
 3. [VideoMCC](http://videomcc.org/). In their paper, they formulate Video Multiple Choice Caption (VideoMCC) as a way to assess video comprehension through an easy-to-interpret performance measure. In their paper [VideoMCC: a New Benchmark for Video Comprehension](https://arxiv.org/pdf/1606.07373.pdf) they propose to cast video understanding in the form of multiple choice tests that assess the ability of the algorithm to comprehend the semantics of the video. Example is as below: 
 
-![VideoMCC](../img/mcc.png)
+![VideoMCC](img/mcc.png)
 
 
 4. As what we have covered earlier, this paper [MovieQA: Understanding Stories in Movies through Question-Answering](https://arxiv.org/pdf/1512.02902.pdf), they introduced a new dataset called MovieQA dataset that can evaluate automatic story comprehension from both video and text.  
 
 Here are 2 figures that can help you better understand their dataset: 
 
-![MovieQA_1](../img/movieqa1.png)
+![MovieQA_1](img/movieqa1.png)
 
-![MovieQA_2](../img/movieqa2.png)
+![MovieQA_2](img/movieqa2.png)
 
 5. In this paper [Video Description: A Survey of Methods, Datasets and Evaluation Metrics](https://arxiv.org/pdf/1806.00186.pdf) multiple methods, datasets and evaluation metrics for video description task in a comprehensive survey.  
 
@@ -688,7 +710,7 @@ A graph dedicated to education should do the following:
 
 
 
-![Knowledge Ecosystem](../img/knowledgeEcosystem.png)
+![Knowledge Ecosystem](img/knowledgeEcosystem.png)
 
 
 
@@ -717,7 +739,7 @@ In sum, their system consists of the following modules:
 
 Below is a block diagram of KnowEdu System.
 
-![knowedu](../img/knowedu.png)
+![knowedu](img/knowedu.png)
 
 
 
@@ -727,7 +749,7 @@ In terms of relation identification they implement probabilistic association dat
 
 A snapshot of the knowledge graph for mathematics generated by knowedu system.
 
-![knowledge_graph](../img/kg.png)
+![knowledge_graph](img/kg.png)
 
 
 Below are some approaches related to knowledge graph (KG) embedding which is used to embed components of a KG including entities and relations into continuous vector space so as to simply the manipulation while preserving the inherent structure of a KG. 
@@ -868,7 +890,7 @@ The EC2QA network will also face the same challenges it requires a large dataset
 ```{r ec2qa dataset, message=FALSE, warning=FALSE, paged.print=FALSE, echo=FALSE}
 library(readr)
 library(knitr)
-kable(head(read.csv('../img/ec2qa_dataset.csv', check.names = FALSE),1), format = "latex" )
+kable(head(read.csv('img/ec2qa_dataset.csv', check.names = FALSE),1))
 
 ```
 
@@ -899,6 +921,11 @@ We hope to bring together collaborators that would include machine learning rese
 
 Please email us at [two@dyadxmachina.com](two@dyadxmachina.com) with the subject *Knowledge Graph Initiative* or leave your email below.
 
+```{r echo=FALSE, results="asis"}
+library(readr)
+cat( paste( readLines( "mailchimp.html" , warn = FALSE) ) )
+cat("<br/>")
+```
 
 ## Conclusion
 
