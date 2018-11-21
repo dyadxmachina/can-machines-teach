@@ -613,7 +613,7 @@ A collective knowledge graph is our ecosystem's backboen. It can be applied univ
 
 ### Problem Formulation
 
-Below are few primary components we believe are the keys for dealing with such a task:  
+Below are few key makeups of our knowedge journeys:  
 
 1. First, we need to have a system that can match all the content that a learner has acquired back to the collective educational knowledge graph;
 
