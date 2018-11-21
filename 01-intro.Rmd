@@ -9,12 +9,7 @@ Let us imagine that all of what you have learned online, throughout the entirety
 
 ## A Comparison
 Now, let's go back to our current approach to education. Many of us treat knowledge acquisition like a chapter in the individual's life that is limited to one or more formal places i.e. universities. This is misleading since we accrue knowledge from everywhere and most recently the internet has become a primary source of knowledge acquisition but has gone mostly unaccounted for in terms of recognition (i.e. watching a whole series of Youtube lectures on the Information Theory or Discrete Mathematics goes mostly unnoticed when someone views one's resume or by simply looking at their degree). The current approach makes it much harder for people to switch to working and exploring the domains or professional fields outside of their degree area. Knowing rigourous mathematics and not having a degree in it, is said to be surprising, therefore the current "thumbnail view" of an individual's knowledge is necessarily inadequate to the new mediums of knowledge acquisition.
-
-
-
 ![Example at aminer.com](img/aminer.png)
-
-
 The ideas behind this *knowledge ecosystem*, presents only one of many possible solutions to bringing our education system into modernity. The goal of it would be to promote the long held idea of the **life-long learner**. Moving away from the "education chapter"" of an individual's life to the individual as an evolving learner; learning the necessary skills for what life presents them with today or might tomorrow. It would (combined with traditional education) show us a more accurate depiction of a learner's knowledge and therefore that of a society's collective knowledge. 
  
  
@@ -129,7 +124,7 @@ The concept of a knowledge footprint is one or more custom symbol(s) or badge(s)
 In turn, this footprint should encapsulate the information of all of one's education (currently focused on digital) while balancing distinction and commonality with others.
 
 
-```{r fig.width=3, fig.height=30,echo=FALSE}
+```{r fig.height=3,echo=FALSE}
 library(png)
 library(grid)
 img <- readPNG("img/aminer.png")
