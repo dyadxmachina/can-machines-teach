@@ -62,7 +62,7 @@ We propose to narrow the problem space and jumpstart research in this area by fo
 
 We hope to bring together collaborators that would include machine learning researchers, educators, technologists, and designers to begin our first foray into a modern knowledge ecosystem. Specifically starting with the EC2QA dataset and network, one education subject, and at least one educational partner.
 
-Please email us at [two@dyadxmachina.com](two@dyadxmachina.com) with the subject *Knowledge Graph Initiative* or leave your email below for collaboration.
+Please email us at [two@dyadxmachina.com](two@dyadxmachina.com) with the subject *Knowledge Ecosystem Initiative* or leave your email below for collaboration.
 
 ```{r echo=FALSE, results="asis"}
 library(readr)
@@ -72,13 +72,13 @@ cat("<br/>")
 
 ## Conclusion
 
-In conclusion, we presented a new perspective on knowledge acquisition and representation, and proposed the concept of a modern and adoptive knowledge ecosystem that a learner can rely on through their entire educational life-time.
+In conclusion, we presented a new perspective on knowledge acquisition and representation, and proposed the concept of a modern and adoptive *knowledge ecosystem* that a learner can rely on through their entire educational life-time.
 
-Our main task was to take an individual and begin to get a true depiction of their knowledge beyond their traditional degree, which is only a small percentage of someone's education.
+Our main task was to take an individual and begin to get a true depiction of their knowledge beyond their traditional degree, which is only a small percentage of one's education.
 
-We focused on taking the world of unstructured educational content online, and providing structure in the form of testing and mapping it to a knowledge graph.
+We focused on taking the world of unstructured educational content online, and providing structure in the form of testing and mapping it to a *knowledge graph*. We introduced the ideas of **knowledge journeys** and **knowledge graph** as means to make sense and structure a learner's knowledge acquisition from 2 different perspectives.
 
-There is still much more research to be done in bringing to life the Educational Content to Questions and Answers (EC2QA) neural networks as well our ultimate knowledge ecosystem and the collaboration required amongst machine learning researchers, educators, and designers,
+There is still much more research to be done in bringing to life the *Educational Content to Questions and Answers (EC2QA)* neural networks as well our ultimate knowledge ecosystem and collaboration required amongst machine learning researchers, educators, and designers,
 
 As deep learning researchers, we are looking forward to designing or seeing others design the minimum viable dataset, benchmark, and architecture motivated by this work.
 

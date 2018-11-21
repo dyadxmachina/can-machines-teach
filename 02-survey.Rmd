@@ -152,7 +152,7 @@ The high-level QG-Net architecture is as below:
 ![ma](img/qgnet.png)
 
 
-2. In this paper [TOPIC-BASED QUESTION GENERATION](https://openreview.net/pdf?id=rk3pnae0b), they propose a topic-based question generation algorithm. The algorithm is able to take in a input sentence, a topic and a question type and generate a word sequence related to the topic, question type and the input sentence. 
+2. In this paper [Topic-based Question Generation](https://openreview.net/pdf?id=rk3pnae0b), they propose a topic-based question generation algorithm. The algorithm is able to take in a input sentence, a topic and a question type and generate a word sequence related to the topic, question type and the input sentence. 
 
 They formulate a conditional likelihood objective function as mentioned before to the model to learn. 
 
@@ -173,7 +173,7 @@ They refer to *the generator* part of the model as the $agent$ and the $action$ 
 
 
 
-** Summary **
+**Summary**
 
 In this QG section, we have discussed 3 different algorithms. Based on our learning, we can conclude that a generative seq2seq model might be a suggested model for this task. As for our objective function, we should be foumulating a conditional probability distribution that is conditioned on the provided content  (i.e. the video) and answers. As suggested, we can use a bi-directional LSTM RNN as the encoder to encode the content and use a LSTM RNN as the decoder to generate the question. 
 
@@ -203,7 +203,7 @@ And the typical mechanims applied for solving such a problem include:
 
 * Attention Mechanism 
 
-***
+
 
 **Close-ended Questions**
 
@@ -243,7 +243,7 @@ They collect 408 subtitled movies and obtained their extended summaries in the f
 
 In the second step of data collection, they used the multiple-choice answers and question collected as the input to show to a different group of annotators. By doing so, annotators could re-formulate the question and answers for the sanity check. 
 
-** Summary **
+**Summary**
 
 By going through the previous examples, we can see that VQA and few similar algorithms introduced before are designed to efficiently process image and text input data while making the inference based on the input.
 
@@ -251,7 +251,7 @@ Few main insights learned through the research. First, key components for creati
 
 Another important learning is that we can follow the steps they take to collect and annotate our training data by asking crowd-sourcing workers to construct the question and answer pairs. Also, more advanced algorithm like the one described above multi-stream hierarchical attention context network is in need for dealing with video input data in contrast to static pictures. 
 
-***
+
 
 **Dual Question-Answering Model**
 
@@ -305,7 +305,7 @@ They case both QG and QA tasks into one process by firstly matching the input pa
 As for the training, they first pretrain the model with cross-entropy loss and then they fine tune the model parameters with policy-gradient reinforcement learning to alleviate the exposure bias problem. They end up adopting a similar sampling strategy as the scheduled sampling strategy for generating the sampled output during the reinforcement learning process.
 
 
-** Summary ** 
+**Summary** 
  
  As mentioned earlier, QG and QA tasks are intrinsically bounded and one cannot find solution for either of them without taking the other party into account. 
  
@@ -313,7 +313,7 @@ As for the training, they first pretrain the model with cross-entropy loss and t
  
 For our problem, it is very motivating to see these progress and learn from their approaches. In sum, our general setup is similar to dual learning framework, we need to tie QG and QA part of the algorithms together. In the first diagram of the section, we can see that they connect the loss function from both sides of the model and it is very similar to the strategy adopted by [GAN](https://en.wikipedia.org/wiki/Generative_adversarial_network) (Generative adversarial network). Some advanced mechanisms are proposed as well for effectively solving these tasks i.e. symmetric hierarchical attention and policy-gradient reinforcement learning algorithm. 
 
-***
+
 
 **Open-ended Question** 
 
@@ -377,7 +377,7 @@ During the inference step, *noise sampling* is conditioned on the dialogue histo
 In sum, their hredGAN combines both generative and retrieval-based multi-turn dialogue systems to improve the model's performance. One of the special design of the model is that the generator and the discriminator share the context and word embedding and this allows for joint end-to-end training using back-propagation. 
 
 
-** Summary **
+**Summary**
 
 Based on our limited research, we found that it is achievable for our system to generate the answers for open-ended questions based on the educational video and provide appropriate feedback/rating based on the current techniques. The first paper presents a newly developed AES model that can rate learner's writing by taking into account some special standand. It also demonstrates a possible way of enhance the AES model by training it with the adversarially crafted input. 
 
