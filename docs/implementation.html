@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Knowledge Ecosystem - Deep Learning and Education</title>
   <meta name="description" content="Lets start with a future view of an individuals education. Many have used the internet to educate ourselves with the abundance of medium to high quality videos, papers, articles, podcasts and how-tos being uploaded from numerous individuals, groups, and institutions like never before. Let us imagine that all of what you have learned online, throughout the entirety of your life, from the hundreds of Youtube videos, Wikipedia articles, Nature papers, and podcasts you’ve read, watched, or listened to, were all added structurally to your education journey and what if that could be consolidated into what we might call a digital education footprint.">
-  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
   <meta property="og:title" content="Knowledge Ecosystem - Deep Learning and Education" />
   <meta property="og:type" content="book" />
@@ -34,6 +34,7 @@
 <link rel="next" href="next-steps.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
@@ -393,7 +394,9 @@
 <li>candidate answer extraction</li>
 <li>answer-specific question generation</li>
 </ul>
-<p>To complete the tasks, they first identify a set of question-worthy candidate answer set <span class="math inline">\(ans = (A1, A2,...Ai)\)</span>. For each candidate answer <span class="math inline">\(A_i\)</span>, they then aim to generate a question <span class="math inline">\(Q\)</span> -a sequence of tokens <span class="math inline">\({y1,y2,...yn}\)</span> - based on the sentence S that contains candidate <span class="math inline">\(A_i\)</span> such that - Q asks about an aspect of <span class="math inline">\(A_i\)</span> (of potential interest to a human) - Q might rely on information from sentences that precedes S in the paragraph. Mathematically, they compose a function <span class="math display">\[Q = argmax_Q P(Q|S,C)\]</span>.</p>
+<p>To complete the tasks, they first identify a set of question-worthy candidate answer set <span class="math inline">\(ans = (A1, A2,...Ai)\)</span>. For each candidate answer <span class="math inline">\(A_i\)</span>, they then aim to generate a question <span class="math inline">\(Q\)</span> -a sequence of tokens <span class="math inline">\({y1,y2,...yn}\)</span> - based on the sentence S that contains candidate <span class="math inline">\(A_i\)</span> such that
+- Q asks about an aspect of <span class="math inline">\(A_i\)</span> (of potential interest to a human)
+- Q might rely on information from sentences that precedes S in the paragraph. Mathematically, they compose a function <span class="math display">\[Q = argmax_Q P(Q|S,C)\]</span>.</p>
 <ol start="3" style="list-style-type: decimal">
 <li>In this paper <a href="http://cvboy.com/pdf/publications/cvpr2018_iqan.pdf">Visual Question Generation as Dual Task of Visual Question Answering</a>, they propose an end-to-end unified model, <strong>Invertible Question Answering (iQAN)</strong> to introduce question generation as a dual task of question answering to improve VQA performance.</li>
 </ol>
@@ -542,7 +545,8 @@
 <li><p>Map concepts with the subject</p></li>
 <li><p>Connect concepts related to the content</p></li>
 </ul>
-<p>As shown before, here is how our graph will be used to support our ecosystem as a whole: <img src="img/knowledgeEcosystem.png" alt="Knowledge Ecosystem" /></p>
+<p>As shown before, here is how our graph will be used to support our ecosystem as a whole:
+<img src="img/knowledgeEcosystem.png" alt="Knowledge Ecosystem" /></p>
 </div>
 <div id="automatic-knowledge-graph-construction" class="section level3">
 <h3><span class="header-section-number">4.3.4</span> Automatic Knowledge Graph Construction</h3>
@@ -672,7 +676,7 @@ gitbook.start({
 "google": false,
 "linkedin": false,
 "weibo": false,
-"instapper": false,
+"instapaper": false,
 "vk": false,
 "all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
@@ -684,6 +688,10 @@ gitbook.start({
 "edit": {
 "link": "https://github.com/dyadxmachina/can-machines-teach/edit/master/02-survey.Rmd",
 "text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
 },
 "download": ["A Knowledge Ecosystem - Deep Learning and Education.pdf", "A Knowledge Ecosystem - Deep Learning and Education.epub"],
 "toc": {
@@ -698,8 +706,8 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
-    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');
     script.src = src;

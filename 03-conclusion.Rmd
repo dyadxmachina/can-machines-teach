@@ -27,17 +27,25 @@ The success of deep learning techniques are predicated on the assumption that on
 The EC2QA network will also face the same challenges. It requires a large dataset of educational content (i.e. Youtube videos, Wikipedia pages, Medium articles) along with a set of questions that have a set of correct and incorrect answers for each question.
 
 \[
- \{content1: \{question1: \{answer1, answer2,...\},  question2: \{answer1, answer2,...\},...\},...
+ \{content1: \{question1: \{answer1, answer2,...\},...
 \]
 
-```{r ec2qa dataset, message=FALSE, warning=FALSE, paged.print=FALSE, echo=FALSE}
-library(readr)
-library(knitr)
-kable(head(read.csv('img/ec2qa_dataset.csv', check.names = FALSE),1), format = "latex")
 
+```{r ec2qadataset, message=FALSE, warning=FALSE, paged.print=FALSE, echo=FALSE}
+library(readr)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(pander)
+
+devtools::install_github("rstudio/radix")
+
+dt <- head(read.csv('img/ec2qa_dataset.csv', check.names = FALSE), 2)
+
+knitr::kable(dt[-2], format = "latex") 
 ```
 
-However, there are many approaches we can leverage to decreasing the amount of data needed while still learning a good representation of the concepts for the task. We will present an approach that we believe can best utilise the intrinsic structure of educational content and use the minimal amount of data.
+However, there are many approaches we can decreate the amount of data needed while still learning a good representation of the concepts. We will present an approach that we believe can best utilise the intrinsic structure of educational content and use the minimal amount of data.
 
 1. The network can be trained on unstructured educational content without questions or answers to create an *education embedding* by employing unsupervised techniques like variational auto-encoder (VAE). This requires a dataset of educational content, possibly many media types(audio/video/text). This could also be done by using a semi-supervised technique by supervising the media type and learning representations for the types of educational content.
 

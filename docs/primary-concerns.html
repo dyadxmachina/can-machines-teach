@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Knowledge Ecosystem - Deep Learning and Education</title>
   <meta name="description" content="Lets start with a future view of an individuals education. Many have used the internet to educate ourselves with the abundance of medium to high quality videos, papers, articles, podcasts and how-tos being uploaded from numerous individuals, groups, and institutions like never before. Let us imagine that all of what you have learned online, throughout the entirety of your life, from the hundreds of Youtube videos, Wikipedia articles, Nature papers, and podcasts you’ve read, watched, or listened to, were all added structurally to your education journey and what if that could be consolidated into what we might call a digital education footprint.">
-  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
   <meta property="og:title" content="Knowledge Ecosystem - Deep Learning and Education" />
   <meta property="og:type" content="book" />
@@ -34,6 +34,7 @@
 <link rel="next" href="concepts.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
@@ -210,9 +211,12 @@
 <blockquote>
 <p>How would such an ecosystem insure us against passive consumption?</p>
 </blockquote>
-<p><strong>Scenario #1</strong> A learner goes online and begins watching a series on Machine Learning. How do we engage and test a user’s knowledge?</p>
-<p><em>Proposition:</em> Using advances in deep learning, we propose a dual question and answer generation framework given the educational content.</p>
-<p><em>Result:</em> A learner gets a set of questions and multiple choice answers throughout the video. Keeping the user engaged and sharp to ensure they can answer each of the questions.</p>
+<p><strong>Scenario #1</strong>
+A learner goes online and begins watching a series on Machine Learning. How do we engage and test a user’s knowledge?</p>
+<p><em>Proposition:</em>
+Using advances in deep learning, we propose a dual question and answer generation framework given the educational content.</p>
+<p><em>Result:</em>
+A learner gets a set of questions and multiple choice answers throughout the video. Keeping the user engaged and sharp to ensure they can answer each of the questions.</p>
 <p>As you can see, we’ve bundled passive consumption and untested knowledge because our proposed ecosystem approaches both of these by always testing the knowledge.</p>
 </div>
 <div id="knowledge-ecosystem-example" class="section level2">
@@ -230,14 +234,17 @@
 <blockquote>
 <p>Given most learner’s online knowledge acquisition varies and has been invisible up to now, how we can best represent their knowledge?</p>
 </blockquote>
-<p><strong>Scenario #2</strong> A learner has a degree in Public Health, but since graduating, he has been studying machine learning for the last 3 years. The learner now wants to apply to a job that requires the skills in both Health and Machine Learning. How do we represent their traditional and updated knowledge?</p>
+<p><strong>Scenario #2</strong>
+A learner has a degree in Public Health, but since graduating, he has been studying machine learning for the last 3 years. The learner now wants to apply to a job that requires the skills in both Health and Machine Learning. How do we represent their traditional and updated knowledge?</p>
 <p>This is a tricky problem that goes beyond any given algorithm. The exact design of a <strong>knowledge footprint</strong> and a <strong>knowledge journey</strong> has been attempted and we will not cover that in depth here. The proposed system presupposes the design of the knowledge footprint.</p>
 <p>There is another problem:</p>
 <blockquote>
 <p>how do we reduce someone’s knowledge (in this case a set of educational content and their respective scores) into a symbol that is representative of his/her current knowledge and could be shared across?</p>
 </blockquote>
-<p><em>Proposition:</em> We introduce <strong>knowledge journeys</strong> and the <strong>knowledge graph</strong> as a way to make sense and structure a learner’s knowledge acquisition. The collective <strong>knowledge graph</strong> will tell us about the subject the learner is studying and we can use this to compare to others and create a relative comparison.</p>
-<p><em>Result:</em> Reducing a learner’s <strong>knowledge journey</strong> into a common set of dimensions that makeup into their <strong>knowledge footprint</strong> which would look similar to those with similar journeys.</p>
+<p><em>Proposition:</em>
+We introduce <strong>knowledge journeys</strong> and the <strong>knowledge graph</strong> as a way to make sense and structure a learner’s knowledge acquisition. The collective <strong>knowledge graph</strong> will tell us about the subject the learner is studying and we can use this to compare to others and create a relative comparison.</p>
+<p><em>Result:</em>
+Reducing a learner’s <strong>knowledge journey</strong> into a common set of dimensions that makeup into their <strong>knowledge footprint</strong> which would look similar to those with similar journeys.</p>
 <p>As a result, the employer, now familiar with the footprints can check the overlap between the current employee’s and a prospective employee’s to support their decision making.</p>
 </div>
 </div>
@@ -267,7 +274,7 @@ gitbook.start({
 "google": false,
 "linkedin": false,
 "weibo": false,
-"instapper": false,
+"instapaper": false,
 "vk": false,
 "all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
@@ -279,6 +286,10 @@ gitbook.start({
 "edit": {
 "link": "https://github.com/dyadxmachina/can-machines-teach/edit/master/01-intro.Rmd",
 "text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
 },
 "download": ["A Knowledge Ecosystem - Deep Learning and Education.pdf", "A Knowledge Ecosystem - Deep Learning and Education.epub"],
 "toc": {
@@ -293,8 +304,8 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
-    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');
     script.src = src;

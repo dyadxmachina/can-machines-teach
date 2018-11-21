@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Knowledge Ecosystem - Deep Learning and Education</title>
   <meta name="description" content="Lets start with a future view of an individuals education. Many have used the internet to educate ourselves with the abundance of medium to high quality videos, papers, articles, podcasts and how-tos being uploaded from numerous individuals, groups, and institutions like never before. Let us imagine that all of what you have learned online, throughout the entirety of your life, from the hundreds of Youtube videos, Wikipedia articles, Nature papers, and podcasts you’ve read, watched, or listened to, were all added structurally to your education journey and what if that could be consolidated into what we might call a digital education footprint.">
-  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
   <meta property="og:title" content="Knowledge Ecosystem - Deep Learning and Education" />
   <meta property="og:type" content="book" />
@@ -34,6 +34,7 @@
 <link rel="next" href="about-the-authors.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
@@ -208,8 +209,11 @@
 <h2><span class="header-section-number">5.2</span> Challenges</h2>
 <p>There will be many challenges in coming up with solutions to enable knowledge acquisition and representation at the learner and group level. We will address some of the primary challenges to designing the components of the proposed knowledge ecosystem:</p>
 <ul>
-<li>Datasets – EC2QA dataset – Knowledge graph dataset</li>
-<li>Deep Learning Architecture – EC2QA network</li>
+<li>Datasets
+– EC2QA dataset
+– Knowledge graph dataset</li>
+<li>Deep Learning Architecture
+– EC2QA network</li>
 </ul>
 <p>For our purposes we will focus on the EC2QA network and dataset as the main focus from here.</p>
 </div>
@@ -218,10 +222,10 @@
 <p>The success of deep learning techniques are predicated on the assumption that one needs a significant amount of data to train a large neural network to learn the representation that can capture a set of admissible functions needed to learn the given concepts.</p>
 <p>The EC2QA network will also face the same challenges. It requires a large dataset of educational content (i.e. Youtube videos, Wikipedia pages, Medium articles) along with a set of questions that have a set of correct and incorrect answers for each question.</p>
 <p><span class="math display">\[
- \{content1: \{question1: \{answer1, answer2,...\},  question2: \{answer1, answer2,...\},...\},...
+ \{content1: \{question1: \{answer1, answer2,...\},...
 \]</span></p>
 
-<p>However, there are many approaches we can leverage to decreasing the amount of data needed while still learning a good representation of the concepts for the task. We will present an approach that we believe can best utilise the intrinsic structure of educational content and use the minimal amount of data.</p>
+<p>However, there are many approaches we can decreate the amount of data needed while still learning a good representation of the concepts. We will present an approach that we believe can best utilise the intrinsic structure of educational content and use the minimal amount of data.</p>
 <ol style="list-style-type: decimal">
 <li><p>The network can be trained on unstructured educational content without questions or answers to create an <em>education embedding</em> by employing unsupervised techniques like variational auto-encoder (VAE). This requires a dataset of educational content, possibly many media types(audio/video/text). This could also be done by using a semi-supervised technique by supervising the media type and learning representations for the types of educational content.</p></li>
 <li><p>The network can then be trained on <strong>existing</strong> educational content that <em>already</em> has preexisting questions and answers for specific parts of the content (i.e. Khan Academy, Udacity, Coursera). The domain of structured educational content is surely very different from the unstructured content and may hinder the network but we believe it might be the case that it helps more than it hinders so it is worth experimenting.</p></li>
@@ -243,7 +247,7 @@
 <div id="call-for-collaborators" class="section level2">
 <h2><span class="header-section-number">5.7</span> Call for collaborators</h2>
 <p>We hope to bring together collaborators that would include machine learning researchers, educators, technologists, and designers to begin our first foray into a modern knowledge ecosystem. Specifically starting with the EC2QA dataset and network, one education subject, and at least one educational partner.</p>
-<p>Please email us at <a href="two@dyadxmachina.com" class="uri">two@dyadxmachina.com</a> with the subject <em>Knowledge Graph Initiative</em> or leave your email below for collaboration.</p>
+<p>Please email us at <a href="two@dyadxmachina.com">two@dyadxmachina.com</a> with the subject <em>Knowledge Graph Initiative</em> or leave your email below for collaboration.</p>
 <div id="mc_embed_signup">
 <form action="https://thechristianramsey.us6.list-manage.com/subscribe/post?u=e9cb6ddb243f988842739d69a&amp;id=09893f5522" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 <div id="mc_embed_signup_scroll">
@@ -309,7 +313,7 @@ gitbook.start({
 "google": false,
 "linkedin": false,
 "weibo": false,
-"instapper": false,
+"instapaper": false,
 "vk": false,
 "all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
@@ -321,6 +325,10 @@ gitbook.start({
 "edit": {
 "link": "https://github.com/dyadxmachina/can-machines-teach/edit/master/03-conclusion.Rmd",
 "text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
 },
 "download": ["A Knowledge Ecosystem - Deep Learning and Education.pdf", "A Knowledge Ecosystem - Deep Learning and Education.epub"],
 "toc": {
@@ -335,8 +343,8 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
-    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');
     script.src = src;

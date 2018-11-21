@@ -10,7 +10,7 @@ documentclass: book
 link-citations: yes
 bibliography: [book.bib]
 biblio-style: apalike
-# site: bookdown::bookdown_site
+site: bookdown::bookdown_site
 colorlinks: yes
 url: 'https\://github.com/dyadxmachina/can-machines-teach'
 github-repo: dyadxmachina/can-machines-teach
