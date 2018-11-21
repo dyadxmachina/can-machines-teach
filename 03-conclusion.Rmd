@@ -128,6 +128,8 @@ Feel Free to contact us if you have any questions!
 
 + Our Website [dyad x machina](dyadxmachina.com)
 
++ Our Hub [dyad x machina projects](https://dyadxmachina.github.io/hub/)
+
 + Our Github [dyadxmachina](https://github.com/dyadxmachina)
 
 + Our Book [Mathematics for Deep Learning and Artificial Intelligence](m4dl.com)
