@@ -499,6 +499,8 @@ In our case, a graph dedicated to education should do the following:
 
 
 As shown before, here is how our graph will be used to support our ecosystem as a whole: 
+
+
 ![Knowledge Ecosystem](img/knowledgeEcosystem.png)
 
 
