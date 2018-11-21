@@ -20,7 +20,7 @@ abstract: |
 output: 
   radix::radix_article:
     toc: true
-    toc_depth: 1
+    toc_depth: 2
 bibliography: book.bib
 citation_url: https://dyadxmachina.github.io/can-machines-teach
 ---
@@ -36,7 +36,4 @@ citation_url: https://dyadxmachina.github.io/can-machines-teach
 ```{r child = '../03-conclusion.Rmd'}
 ```
 
-```{r child = '../04-references.Rmd'}
-```
 
-[@xinyadu] [@zichaowang] [@structureddata] [@vishwajeet]
