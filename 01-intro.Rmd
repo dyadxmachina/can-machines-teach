@@ -1,5 +1,5 @@
 # Introduction 
-![EC2QA Network](img/MtoQA.png)
+![DeepEdu Network](img/MtoQA.png)
 
 ## A Future
 Let's start with a future view of an individual's education. Many of us have used the internet to educate ourselves with the abundance of medium from high quality videos, papers, articles, podcasts to how-tos being uploaded from numerous individuals, groups, and institutions like never before (60 hours of video are uploaded to youtube.com every minute).
@@ -149,8 +149,8 @@ The collective human knowledge graph can be compared to [Google's Search Knowled
 On the other hand, we could also use these subjects that are associated with that piece of content to help create the knowledge footprint for the learner. 
 
 
-## EC2QA Network 
-We showed our idea of this novel EC2QA network earlier because currently we would have to cobble together multiple networks to make this work. Instead we can use one network framework, EC2QA, to solve the problem of generating questions and answer pairs for any given educational content (text, video, image, pdf, etc). 
+## DeepEdu Network 
+We showed our idea of this novel DeepEdu network earlier because currently we would have to cobble together multiple networks to make this work. Instead we can use one network framework, DeepEdu, to solve the problem of generating questions and answer pairs for any given educational content (text, video, image, pdf, etc). 
 
 The possible implementation solutions are introduced in the implementation section. 
 
@@ -168,7 +168,7 @@ A learner watches a video titled 'Depression' by Robert Sapolsky.
 
 - The subjects and the content are then mapped to the **collective knowledge graph** to continuously update it as more information collected about each subject;
 
-- Using **EC2QA** or similar, a set of questions and answers are generated say every 15* minutes of the video;
+- Using **DeepEdu** or similar, a set of questions and answers are generated say every 15* minutes of the video;
 
 - A learner is present with 5 questions to answer and scores 4/5 (80%).
 

@@ -23,6 +23,3 @@ bibliography: book.bib
 
 ```{r child = '../03-conclusion.Rmd'}
 ```
-
-```{r child = '../04-references.Rmd'}
-```
