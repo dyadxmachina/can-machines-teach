@@ -102,17 +102,22 @@ Independent deep learning researchers focused on using machine learning for the 
 
 ## Haohan Wang
 [LinkedIn](https://www.linkedin.com/in/haohanw)
-
+[Tumblr](https://haohanwang.tumblr.com/)
+[Github](https://github.com/haohanwang23)
+**Email**: haohan723@gmail.com
 
 ## Fanli Zheng (Christian Ramsey)
 [LinkedIn](https://www.linkedin.com/in/christianramsey/)
+[Tumblr](https://anthrochristianramsey.tumblr.com/)
+[Github](https://github.com/christianramsey)
+**Email**: thechristianramsey@gmail.com
 
+## Contact Us
+Feel Free to contact us if you have any questions!
 
-## Contact
-Feel Free to contact us if you have any questions:
++ Our Website [dyad x machina](dyadxmachina.com)
 
-+ Visit our website [dyad x machina](dyadxmachina.com)
++ Our Github [dyadxmachina](https://github.com/dyadxmachina)
 
-+ **Haohan Wang**: haohan723@gmail.com
++ Our Book [Mathematics for Deep Learning and Artificial Intelligence](m4dl.com)
 
-+ **Fanli Zheng (Christian)**: thechristianramsey@gmail.com
