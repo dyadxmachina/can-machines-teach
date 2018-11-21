@@ -479,7 +479,7 @@ Given we've implemented the learning and feedback module, knowing where a given 
 
 * A hierarchical algorithm that can map the relationship of the related content based on their hierarchy in the knowledge graph
 
-* (optional)  A probabilistic algorithm i.e. Bayesian network to map the strength/significance of their relationship with each other
+* (optional) A probabilistic algorithm i.e. Bayesian network to map the strength/significance of their relationship with each other
 
 
 In our case, a graph dedicated to education should do the following:
