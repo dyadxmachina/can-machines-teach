@@ -142,7 +142,7 @@ We can also think of this problem as a typical seq2seq (sequence-to-sequence) le
 
 **Case Studies**
 
-1. In this paper [QG-Net: A Data-Driven Question Generation Model for Educational Content](http://www.princeton.edu/~shitingl/papers/18l@s-qgen.pdf). They use a bi-directional LSTM network to process the input context words sequence. Encoding the answer into context word vectors.
+1. In this paper [QG-Net: A Data-Driven Question Generation Model for Educational Content](http://www.princeton.edu/~shitingl/papers/18l@s-qgen.pdf) [@zichaowang]. They use a bi-directional LSTM network to process the input context words sequence. Encoding the answer into context word vectors.
 
 QG-Net generates questions by iteratively sampling question words from the conditional probability distribution $$P(Q|C,A,\theta)$$ where $\theta$ denotes a set of parameters. In order to construct the probability distribution, they first create a **context reader** that process each word $c_j$ in the input context and turns it into a fix-sized representation $h_j$
 
@@ -156,7 +156,7 @@ The high-level QG-Net architecture is as below:
 ![ma](img/qgnet.png)
 
 
-2. In this paper [Topic-based Question Generation](https://openreview.net/pdf?id=rk3pnae0b), they propose a topic-based question generation algorithm. The algorithm is able to take in a input sentence, a topic and a question type and generate a word sequence related to the topic, question type and the input sentence. 
+2. In this paper [Topic-based Question Generation](https://openreview.net/pdf?id=rk3pnae0b) [@anonymous], they propose a topic-based question generation algorithm. The algorithm is able to take in a input sentence, a topic and a question type and generate a word sequence related to the topic, question type and the input sentence. 
 
 They formulate a conditional likelihood objective function as mentioned before to the model to learn. 
 
@@ -169,7 +169,7 @@ Also, they go through a few general frameworks that have been employed for solvi
 * The last approach is *multi-source seq2seq learning* which aims to integrate information from multiple sources to boost learning. 
 
 
-3. In this paper [A Framework for Automatic Question Generation from Text using Deep Reinforcement Learning](https://arxiv.org/pdf/1808.04961.pdf), they implement a reinforcement learning(RF) framework that consists of a generator and an evaluator for this task. 
+3. In this paper [A Framework for Automatic Question Generation from Text using Deep Reinforcement Learning](https://arxiv.org/pdf/1808.04961.pdf) [@vishwajeet], they implement a reinforcement learning(RF) framework that consists of a generator and an evaluator for this task. 
 
 They refer to *the generator* part of the model as the $agent$ and the $action$ of the agent is to generate the next work in the question. The probability of decoding a word is $$P_{\theta}(word)$$ with a stochastic policy. 
 
@@ -219,7 +219,7 @@ VQA is a challenging research problem that focuses on providing a natural langua
 
 **Case Studies**
 
-1. In this paper [Deep Attention Neural Tensor Network for Visual Question Answering](http://openaccess.thecvf.com/content_ECCV_2018/papers/Yalong_Bai_Deep_Attention_Neural_ECCV_2018_paper.pdf), they propose a novel *deep attention neural tensor network* that can discover the joint correlation over images, questions and answers with tensor-based representation. 
+1. In this paper [Deep Attention Neural Tensor Network for Visual Question Answering](http://openaccess.thecvf.com/content_ECCV_2018/papers/Yalong_Bai_Deep_Attention_Neural_ECCV_2018_paper.pdf) [@yalong], they propose a novel *deep attention neural tensor network* that can discover the joint correlation over images, questions and answers with tensor-based representation. 
 
 As for their workflow, they model one of the pairwise interaction (i.e. between image and question) by **bilinear features**, which is further encoded with the third dimension (i.e. answer) to be a triplet using bilinear tensor product. During this step, the model takes in a question + a corresponding image + candidate answers as the input. A CNN (convolutional neural network) a GRU RNN are used for extracting feature vectors and question respectively. Then the representation is passed on as a *multi-modal feature* and integrated by a **bilinear pooling** module. Moreover, they decompose the correlation of triplets by their question and answer types with a **slice-wise attention module** on tensor to select the most discriminative reasoning process inference. 
 
@@ -238,11 +238,11 @@ As for their main contribution, they focus on developing an attention mechanism 
 Specifically, they introduce a novel VQA architecture that can dynamically gate the contribution of ResNet and Faster R-CNN features based on the question type. In turn, it allows them to integrate the information from multiple visual sources and obtain gains across all question types. 
 
 
-3. In this paper [Multi-Turn Video Question Answering via Multi-Stream Hierarchical Attention Context Network](https://www.ijcai.org/proceedings/2018/0513.pdf), they propose a hierarchical attention context network for context-aware question understanding by modeling the hierarchically sequential conversation context structure. They incorporate the multi-step reasoning process into **the multi-stream hierarchical attention context network** to enable the progressive joint representation learning of the multi-stream attentional video and context-aware question embedding. 
+3. In this paper [Multi-Turn Video Question Answering via Multi-Stream Hierarchical Attention Context Network](https://www.ijcai.org/proceedings/2018/0513.pdf) [@yangshi], they propose a hierarchical attention context network for context-aware question understanding by modeling the hierarchically sequential conversation context structure. They incorporate the multi-step reasoning process into **the multi-stream hierarchical attention context network** to enable the progressive joint representation learning of the multi-stream attentional video and context-aware question embedding. 
 
 To construct their dataset, they collect the conversational video question answering datasets from [YouTubeClips](http://upplysingaoflun.ecn.purdue.edu/~yu239/) and [TACoS-MultiLevel](https://www.mpi-inf.mpg.de/departments/computer-vision-and-multimodal-computing/research/vision-and-language/tacos-multi-level-corpus/). The first dataset has 1987 videos and the second dataset has 1303 videos. They invite 5 pairs of crowd-sourcing workers to construct 5 different conversational dialogs. In total, they have collected 37228 video question answering pairs for TACoS-MultiLevel data and 66806 ones for YouTubeClips data. 
 
-4. In this paper [MovieQA: Understanding Stories in Movies through Question-Answering](https://arxiv.org/pdf/1512.02902.pdf), they construct a new dataset ** MovieQA** dataset that can be used to evaluate automatic story comprehension from both video and text.  
+4. In this paper [MovieQA: Understanding Stories in Movies through Question-Answering](https://arxiv.org/pdf/1512.02902.pdf) [@makarand], they construct a new dataset ** MovieQA** dataset that can be used to evaluate automatic story comprehension from both video and text.  
 
 They collect 408 subtitled movies and obtained their extended summaries in the form of **plot synopses**(movie summaries that fans write after watching the movie) from Wikipedia. They used plot synopses as a proxy for the movie. They have annotators create both quizzes and answers pairs by referring to the story plot. Time-stamp is also attached with each question and answer pair. 
 
@@ -267,7 +267,7 @@ Let's look into a few algorithms are designed for this.
 
 **Case Studies**
 
-1.In this paper [Dual Ask-Answer Network for Machine Reading Comprehension](https://arxiv.org/pdf/1809.01997.pdf), they present a model that can learn question answering and question generation simultaneously. They tie the network components that playing the similar roles into 2 tasks to transfer cross-task knowledge during training. 
+1.In this paper [Dual Ask-Answer Network for Machine Reading Comprehension](https://arxiv.org/pdf/1809.01997.pdf) [@xiaohan], they present a model that can learn question answering and question generation simultaneously. They tie the network components that playing the similar roles into 2 tasks to transfer cross-task knowledge during training. 
 
 Then *the cross-modal interaction* of question, context and answer is captured with a pair of **symmetric hierarchical attention** processes. 
 
@@ -283,7 +283,7 @@ In short, the model is composed of the following components: embedding layer, en
 - negative log-likelihood loss 
 - a coverage loss to penalize repetition of the generated text
 
-2. In this paper [Harvesting Paragraph-Level Question-Answer Pairs from Wikipedia](https://arxiv.org/pdf/1805.05942.pdf), they apply their question-answer pair generation system to 10000 top-ranking Wikipedia articles and create over a million question-answer pairs. 
+2. In this paper [Harvesting Paragraph-Level Question-Answer Pairs from Wikipedia](https://arxiv.org/pdf/1805.05942.pdf) [@duxinya], they apply their question-answer pair generation system to 10000 top-ranking Wikipedia articles and create over a million question-answer pairs. 
 
 In their task formulation part, they clarify that they break this task into 2 sub-tasks: 
 
@@ -294,13 +294,13 @@ To complete the tasks, they first identify a set of question-worthy candidate an
 - Q asks about an aspect of $A_i$ (of potential interest to a human) 
 - Q might rely on information from sentences that precedes S in the paragraph. Mathematically, they compose a function $$Q = argmax_Q P(Q|S,C)$$.
 
-3. In this paper [Visual Question Generation as Dual Task of Visual Question Answering](http://cvboy.com/pdf/publications/cvpr2018_iqan.pdf), they propose an end-to-end unified model, **Invertible Question Answering (iQAN)** to introduce question generation as a dual task of question answering to improve VQA performance. 
+3. In this paper [Visual Question Generation as Dual Task of Visual Question Answering](http://cvboy.com/pdf/publications/cvpr2018_iqan.pdf) [@liyikang], they propose an end-to-end unified model, **Invertible Question Answering (iQAN)** to introduce question generation as a dual task of question answering to improve VQA performance. 
 
 In achieving their goal, they leverage the **dual learning** framework that is proposed in machine translation area initially, which uses $A-to-B$ and $B-to-A$ translation models to form two closed translation loops and let them teach each other through a *reinforcement learning process*. 
 
 In their VQA component, given a question $q$, an RNN is used for obtaining the embedded feature **q**, and CNN is used to transform the input image $v$ into a feature map. A *MUTAN-based attention module* is then used to generate a question-aware visual feature $v_q$ from the image and the question. Later, another *MUTAN fusion module* is used for obtaining the answer feature $a\hat{}$
 
-4. In this paper [A Unified Query-based Generative Model for Question Generation and Question Answering](https://arxiv.org/pdf/1709.01058.pdf), they propose a query-based generative model for solving both tasks. The model follows the classic *encoder-decoder* framework. The **multi-perspective matching encoder** that they are implementing is a bi-directional LSTM RNN model that takes a passage and a query as input and perform query understanding by matching it with the passage from multiple perspectives; 
+4. In this paper [A Unified Query-based Generative Model for Question Generation and Question Answering](https://arxiv.org/pdf/1709.01058.pdf) [@songlinfeng], they propose a query-based generative model for solving both tasks. The model follows the classic *encoder-decoder* framework. The **multi-perspective matching encoder** that they are implementing is a bi-directional LSTM RNN model that takes a passage and a query as input and perform query understanding by matching it with the passage from multiple perspectives; 
 
 The decoder is an **attention-based LSTM RNN** model with *copy and coverage* mechanism. In the QG task, a question will be generated from the model given the passage and the target answer; whereas in the QA task, the answer will be generated given the question and the passage. 
 
@@ -355,14 +355,14 @@ Below are some research findings we consider as useful for our unified goal.
 
 **Case Studies**
 
-1. In this paper [Neural Automated Essay Scoring and Coherence Modeling for Adversarially Crafted Input](http://aclweb.org/anthology/N18-1024), they develop a network that can effectively learn connectedness features between sentences and propose a framework for integrating and jointly training the local coherence model with a state-of-art AES. 
+1. In this paper [Neural Automated Essay Scoring and Coherence Modeling for Adversarially Crafted Input](http://aclweb.org/anthology/N18-1024) [@youmna], they develop a network that can effectively learn connectedness features between sentences and propose a framework for integrating and jointly training the local coherence model with a state-of-art AES. 
 
 They examine the robustness of the AES model on adversarially crafted input and specifically focus on input related to local coherence; A local coherence model can evaluate the writing based on its ability to rank coherently ordered sequence of sentences higher than their counterparts. 
 
 The models they used are *Local Coherence (LC)* model and LSTM AES model. The first model has 2 main parts: sentence representation and clique representation; and he second model is a combined model that does vector concatenation and joint learning.
 
 
-2. In this paper [Open-Ended Long-form Video Question Answering via Adaptive Hierarchical Reinforced Networks](https://www.ijcai.org/proceedings/2018/0512.pdf), they study the problem of open-ended video question answering from the viewpoint of the *adaptive hierarchical reinforced encoder-decoder network* learning. 
+2. In this paper [Open-Ended Long-form Video Question Answering via Adaptive Hierarchical Reinforced Networks](https://www.ijcai.org/proceedings/2018/0512.pdf) [@zhaozhou], they study the problem of open-ended video question answering from the viewpoint of the *adaptive hierarchical reinforced encoder-decoder network* learning. 
 
 They present the adaptive hierarchical encoder network to learn the joint representation of the long-form video contents according to the question with adaptive video segmentation. They also develop the reinforced decoder network to generate the neural language answer for open-ended video question answering. Meanwhile, they construct a large-scale dataset for open-ended long-form video QA and validate the effectiveness of the proposed method. 
 
@@ -376,7 +376,7 @@ The first part of the model is the hierarchical encoder networks that learn the 
 The second part is the reinforced decoder networks that generate the natural language answers for open-ended video question answering. 
 
 
-3. In this paper, [Multi-turn Dialogue Response Generation in an Adversarial Learning Framework](https://arxiv.org/pdf/1805.11752.pdf), they propose an adversarial learning approach that can generate multi-turn dialogue responses. The network framework that they introduce is call *hredGAN* that is based on *conditional GANs*. The generator part of the model is a modified **hierarchical recurrent encoder-decoder network (HRED)** and the discriminator is a word-level bi-directional LSTM RNN that shares context and word embedding with the generator. 
+3. In this paper, [Multi-turn Dialogue Response Generation in an Adversarial Learning Framework](https://arxiv.org/pdf/1805.11752.pdf) [@oluwatobi], they propose an adversarial learning approach that can generate multi-turn dialogue responses. The network framework that they introduce is call *hredGAN* that is based on *conditional GANs*. The generator part of the model is a modified **hierarchical recurrent encoder-decoder network (HRED)** and the discriminator is a word-level bi-directional LSTM RNN that shares context and word embedding with the generator. 
 
 During the inference step, *noise sampling* is conditioned on the dialogue history and is used to perturb the generator's latent space for generating possible responses. The final response is the one ranked the best by the discriminator. 
 
@@ -408,7 +408,7 @@ However, we are confident that by combining some techniques introduced before to
 
 In order to approach this problem from scratch, we need to create our own dataset for which we will provide some related resources to start with: 
 
-1. [YouTube-8M Dataset](https://research.google.com/youtube8m/). This is a large-scale labeled video dataset that consists of millions of YouTube video IDs, with high-quality generated annotations from a diverse vocabulary of 3800+ visual entities. As you can see from its introduction, it comes with precomputed audio-visual features from billions of frames and audio segments. In short, we can expect the following content from this dataset: 
+1. [YouTube-8M Dataset](https://research.google.com/youtube8m/) [@youtube8m]. This is a large-scale labeled video dataset that consists of millions of YouTube video IDs, with high-quality generated annotations from a diverse vocabulary of 3800+ visual entities. As you can see from its introduction, it comes with precomputed audio-visual features from billions of frames and audio segments. In short, we can expect the following content from this dataset: 
 
 * the dataset consists of 6.1M videos URLs, labeled with a vocabulary of 3863 visual entities 
 
@@ -423,11 +423,11 @@ Though the video content is not limited to education category, we can still use 
 
 Naturally, the next step would be to constrain our model to train particularly on educational content. The data needed for training may include the raw video clip, annotation/caption of the whole video content, and question + answer pairs (including the time stamps). 
 
-2. In this study [Video Captions for Online Courses: Do YouTube’s Auto-generated Captions Meet Deaf Students’ Needs?](http://jofdl.nz/index.php/JOFDL/article/download/255/198), they studied auto-generated captions generated on YouTube online courses. They find that, on average, there were 7.7 phrase errors per minute of a total 68 minutes video caption. It implies that we cannot rely on the automated caption of the video, a lot more mannual efforts are needed to fix this problem.
+2. In this study [Video Captions for Online Courses: Do YouTube’s Auto-generated Captions Meet Deaf Students’ Needs?](http://jofdl.nz/index.php/JOFDL/article/download/255/198) [@becky], they studied auto-generated captions generated on YouTube online courses. They find that, on average, there were 7.7 phrase errors per minute of a total 68 minutes video caption. It implies that we cannot rely on the automated caption of the video, a lot more mannual efforts are needed to fix this problem.
 
 Some other resources that might help: 
 
-3. [VideoMCC](http://videomcc.org/). They formulate *Video Multiple Choice Caption (VideoMCC)* as a way to assess video comprehension through an easy-to-interpret performance measure. In their paper [VideoMCC: a New Benchmark for Video Comprehension](https://arxiv.org/pdf/1606.07373.pdf), they propose to cast video understanding in the form of multiple choice tests that assess the ability of the algorithm to comprehend the semantics of the video. Example is as below: 
+3. [VideoMCC](http://videomcc.org/). They formulate *Video Multiple Choice Caption (VideoMCC)* as a way to assess video comprehension through an easy-to-interpret performance measure. In their paper [VideoMCC: a New Benchmark for Video Comprehension](https://arxiv.org/pdf/1606.07373.pdf) [@videomcc], they propose to cast video understanding in the form of multiple choice tests that assess the ability of the algorithm to comprehend the semantics of the video. Example is as below: 
 
 ![VideoMCC](img/mcc.png)
 
@@ -440,9 +440,9 @@ The 2 figures below can offer a better illustration:
 
 ![MovieQA_2](img/movieqa2.png)
 
-5. In this paper [Video Description: A Survey of Methods, Datasets and Evaluation Metrics](https://arxiv.org/pdf/1806.00186.pdf), they present multiple methods, datasets and evaluation metrics for video description task in a comprehensive survey.  
+5. In this paper [Video Description: A Survey of Methods, Datasets and Evaluation Metrics](https://arxiv.org/pdf/1806.00186.pdf) [@nayyer], they present multiple methods, datasets and evaluation metrics for video description task in a comprehensive survey.  
 
-6. Lastly, in this paper [QuAC : Question Answering in Context](https://arxiv.org/pdf/1808.07036.pdf), they present a *QuAC* dataset for QA task in Context that contains 14K information-seeking QA dialogs such as a student who poses a sequence of freeform question to learn as much as possible about a hidden Wikipedia text or a teacher who answers the questions by providing short excerpts from the text. Inspired by their idea and effort, we imagine that it is might be possible to develop a system that can also allow the learners to pause the video and to ask a information-seeking question. As a result, our system will find the answer based on the current content.
+6. Lastly, in this paper [QuAC : Question Answering in Context](https://arxiv.org/pdf/1808.07036.pdf) [@eunsol], they present a *QuAC* dataset for QA task in Context that contains 14K information-seeking QA dialogs such as a student who poses a sequence of freeform question to learn as much as possible about a hidden Wikipedia text or a teacher who answers the questions by providing short excerpts from the text. Inspired by their idea and effort, we imagine that it is might be possible to develop a system that can also allow the learners to pause the video and to ask a information-seeking question. As a result, our system will find the answer based on the current content.
 
 
 ## Knowledge Graph 
@@ -465,7 +465,7 @@ $$GRAPH_{v,e} =
 
 ### What is a Knowledge Graph(KG)?
 
-As for the knowledge graph, it is a graph representation of a knowledge base. One of the most popular knoweldge graph is the multi-relational graph used by Google and its services to enhance search engine's results with information gathered from a variety of sources. Per Wikipedia, [Google's Knowledge Graph](https://developers.google.com/knowledge-graph/#knowledge_graph_entities) uses a graph database to provide structured and detailed information about the topic in addition to a list of links to other sites. 
+As for the knowledge graph, it is a graph representation of a knowledge base. One of the most popular knoweldge graph is the multi-relational graph used by Google and its services to enhance search engine's results with information gathered from a variety of sources. Per Wikipedia, [Google's Knowledge Graph](https://developers.google.com/knowledge-graph/#knowledge_graph_entities) [@googlekg] uses a graph database to provide structured and detailed information about the topic in addition to a list of links to other sites. 
 
 In general, a knowledge graph represents a knowledge domain. It connects the objects and facts of different types in a systematic way. Knowledge graphs encode knowledge arranged in a network of nodes and links rather than tables and columns. With knowledge graphs, people and machines can easily capture and utilize a dynamically growing semantic network of facts about things. In other words, we can use it to connect the facts related to people, processes, applications, data and many other custom objects as well as their relationships among them with a structured knowledge graph.  
 
@@ -524,7 +524,7 @@ Here are some key components that worth highlighting before we dive deep into th
 
 ### Case Studies 
 
-1. In this paper [KnowEdu: A System to Construct Knowledge Graph for Education](https://ieeexplore.ieee.org/document/8362657), the authors propose a system, titled **KnowEdu**, that can automatically construct a knowledge graph for education. In short, the system is able to extract concepts of subjects or courses and then identifies the educational relations between the concepts. 
+1. In this paper [KnowEdu: A System to Construct Knowledge Graph for Education](https://ieeexplore.ieee.org/document/8362657) [@knowedu], the authors propose a system, titled **KnowEdu**, that can automatically construct a knowledge graph for education. In short, the system is able to extract concepts of subjects or courses and then identifies the educational relations between the concepts. 
 
 More importantly, it adopts the *neural sequence labeling algorithm* on pedagogical data to extract instruction concepts. They then employ *probabilistic association rule mining* on learning assessment data to identify the significance of each of the relations. 
 
@@ -555,12 +555,12 @@ Below are some papers related to Knowledge Graph embedding which is used to embe
 As for its benefits, it can help with numeraous downstream tasks i.e. KG completion and relation extraction, and hence be used to drastically improve the knowledge acquisition and mapping speed for our KG.
 
 
-2. In this paper [Generalized Embedding Model for Knowledge Graph Mining](http://www.mlgworkshop.org/2018/papers/MLG2018_paper_5.pdf), they present a model for learning neural presentation of generalized knowledge graphs using a novel *multi-shot unsupervised neural network* model, called the **Graph Embedding Network (GEN)**. This model is able to learn different types of knowlege graphs from a universal perspective and it provides flexibility in learning representations that work on graphs conforming to different domains. 
+2. In this paper [Generalized Embedding Model for Knowledge Graph Mining](http://www.mlgworkshop.org/2018/papers/MLG2018_paper_5.pdf) [@liuqiao], they present a model for learning neural presentation of generalized knowledge graphs using a novel *multi-shot unsupervised neural network* model, called the **Graph Embedding Network (GEN)**. This model is able to learn different types of knowlege graphs from a universal perspective and it provides flexibility in learning representations that work on graphs conforming to different domains. 
 
 In developing their model, they extend the traditional one-shot supervised learning mechanism by introducing a *multi-shot unsupervised learning* framework where a 2-layer MLP network for every shot. This framework can in turn be used to accommodate both homogeneous and heterogeneous networks. 
 
 
-3. In this paper [Probabilistic Knowledge Graph Embeddings](https://openreview.net/pdf?id=rJ4qXnCqFX), they explored a new type of embedding model that can link prediction in relational knowledge graph. They are set out to solve a question with their approach that even large knowledge graphs typically contain only few facts per entity, leading effectively to a small data problem where parameter uncertainty matters. As for the solution, they suggest that the knowledge graphs should be treated within a *Bayesian* framework.
+3. In this paper [Probabilistic Knowledge Graph Embeddings](https://openreview.net/pdf?id=rJ4qXnCqFX) [@anony], they explored a new type of embedding model that can link prediction in relational knowledge graph. They are set out to solve a question with their approach that even large knowledge graphs typically contain only few facts per entity, leading effectively to a small data problem where parameter uncertainty matters. As for the solution, they suggest that the knowledge graphs should be treated within a *Bayesian* framework.
 
 In short, they present a *probabilistic interpretation* of existing knowledge graph embedding models. By reformulating the models like ComplEx and DistMult, they construct the generative models for relational facts. 
 
@@ -594,7 +594,7 @@ The last 2 papers demonstrate the progress that has been made in KG embedding le
 
 ### Datasets and Annotation Suggested 
 
-1. [Knowledge Vault](https://ai.google/research/pubs/pub45634): A web-scale approach to probabilistic knowledge fusion. In this paper [Knowledge Vault: A Web-Scale Approach to Probabilistic Knowledge Fusion](https://dejanseo.com.au/wp-content/uploads/2014/08/Knowledge-Vault-A-Web-Scale-Approach-to-Probabilistic-Knowledge-Fusion.pdf), they introduce the **Knowledge Vault** that combines extraction from the Web content (obtained through analysis of text, tabular data, page structure, and human annotation) with prior knowledge derived from existing knowledge repositories. 
+1. [Knowledge Vault](https://ai.google/research/pubs/pub45634): A web-scale approach to probabilistic knowledge fusion. In this paper [Knowledge Vault: A Web-Scale Approach to Probabilistic Knowledge Fusion](https://dejanseo.com.au/wp-content/uploads/2014/08/Knowledge-Vault-A-Web-Scale-Approach-to-Probabilistic-Knowledge-Fusion.pdf) [@dongxinluna], they introduce the **Knowledge Vault** that combines extraction from the Web content (obtained through analysis of text, tabular data, page structure, and human annotation) with prior knowledge derived from existing knowledge repositories. 
 
 They employ a supervised machine learning models for fusing these distinct information sources. As a result, their system can automatically construct a web-scale probabilistic knowledge base. 
 
