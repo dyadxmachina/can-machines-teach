@@ -1,5 +1,5 @@
 --- 
-title: "Knowledge Ecosystem - Deep Learning and Education"
+title: "DeepEdu - Deep Learning and Education"
 # author: "Fanli Zheng  (Christian) & Haohan Wang"
 knit: "bookdown::render_book"
 date: "[DRAFT] `r Sys.Date()`"

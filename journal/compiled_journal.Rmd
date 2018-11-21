@@ -1,5 +1,5 @@
 ---
-title: Knowledge Ecosystem - Deep Learning and Education
+title: DeepEdu - Learning and Representation
 author:
   - name: Fanli (Christian) Zheng
     affiliation: dyad x machina
