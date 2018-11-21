@@ -129,7 +129,7 @@ In the end, deep learning really shines when it comes to many specialized resear
 
 Let's begin with question generation (QG) task. 
 
-The ideal goal of an automatic question generation is to generate a question Q that is syntactically and semantically correct, relevant to the context and meaningful to answer. 
+The ideal goal of an automatic question generation is to generate a question $Q$ that is syntactically and semantically correct, relevant to the context and meaningful to answer. 
 
 In order to achieve this goal,, we need to train an algorithm to learn the underlying conditional probability distribution
 
@@ -178,14 +178,14 @@ They refer to *the generator* part of the model as the $agent$ and the $action$ 
 
 ** Summary **
 
-In this QG section, we have discussed 3 different algorithms. Based on our learning, we can conclude that a generative seq2seq model might be a suggested model for this task. As for our objective function, we should be foumulating a conditional probability distribution that is conditioned on the provided content  (i.e. the video) and answers. As suggested, we can use a bi-directional LSTM RNN as the encoder to encode the content and use a LSTM RNN as the decoder to generate the question. 
+In this QG section, we have discussed 3 different algorithms. Based on our learning, we conclude that a generative seq2seq model might be a suitable option for this task. As for our objective function, we should be formulating a conditional probability distribution that is conditioned on the provided content  (i.e. the video) and answers. As suggested, we can use a bi-directional LSTM RNN as the encoder to encode the content and a LSTM RNN as the decoder to generate the question. 
 
 
 ### Question Answering (QA)
 
-Now, let's move on to our question answering (QA) task. The general goal of a QA model is to predict an answer to a question based on the information found in the passage, given a passage and a question. By solving this task, our system should be able to easily evaluate the answer provided by learners and achieve the full automation of the learning + feedback cycle.
+Now, let's move on to our question answering (QA) task. The general goal of QA is to predict the answer to a question based on the information found in the passage, given a passage and a question. By solving this task, our DeepEdu should be able to easily evaluate the answer provided by learners and achieve the full automation of learning + feedback cycle.
 
-Here are the overview of a basic QA model's [implementation](@qa_imp): 
+Here are the overview of a basic QA model's implementation [@qa_imp]: 
 
 1. Build representation for the passage and the question separately;
 
@@ -213,7 +213,7 @@ And the typical mechanims applied for solving such a problem include:
 
 **Visual Question Answering (VQA)**
 
-VQA is a challenging research problem that focuses on providing a natural language answer given any image and any free-form natural language question. As we are managing to handle the video educational content first, our problem will include both NLP and visual recognition tasks. Therefore, VQA should be a great area to start with. 
+VQA is a challenging research problem that focuses on providing a natural language answer given any image and any free-form natural language question. As we are managing to handle the video educational content first, our problem will include both NLP and visual recognition tasks. We figure VQA should be a great area to start with. 
 
 
 **Case Studies**
@@ -249,18 +249,19 @@ In the second step of data collection, they used the multiple-choice answers and
 
 ** Summary **
 
-By going through the previous examples, we can see that VQA and a few similar algorithms are designed to efficiently process image and text input data while making the inference based on the input.
+By going through the previous examples, we can see that VQA and a few similar algorithms are designed to efficiently process image and text input while making the inference based on it.
 
-A couple of insights learned from the research. First, key components for creating and trainnig a VQA model such as feature selection, feature pooling and specifically designed attention mechanism. The input of the mode is typically a video clip + question + answer pairs. A CNN and sometimes a RNN is needed for such a task. 
+A couple of insights drew from the research. First, key components for creating and trainnig a VQA model include feature selection, feature pooling and specifically designed attention mechanism. The input of the model is typically a video clip + question + answer pairs. A CNN and sometimes a RNN is needed for such a task. 
 
-Another important learning is that we can follow the steps they take to collect and annotate our training data by asking crowd-sourcing workers to construct the question and answer pairs. Also, more advanced algorithm like the one described above multi-stream hierarchical attention context network is in need for dealing with video input data in contrast to static pictures. 
+Another important learning is that we can follow the steps described in MovieQA example to collect and annotate our training data by asking crowd-sourcing workers to construct the question and answer pairs. Also, more advanced algorithm like multi-stream hierarchical attention context network might be necessary for a better performance. 
 
 
 
 **Dual Question-Answering Model**
 
+Both Question Generaion(QG) and Question Answering(QA) are well-defined 2 sets of problems that aim to either infer a question or an answer given the counterpart based on the context. However, they are usually explored separately despite of their intrinsic complementary relationship. However, our DeepEdu needs to take on both roles simultaneously. 
 
-Both Question Generaion(QG) and Question Answering(QA) are well-defined 2 sets of problems that aim to either infer a question or an answer given the counterpart based on the context. However, they are usually explored separately despite of their intrinsic complementary relationship. In our case, a system needs to take on both roles simultaneously.
+> How might we solve this issue?
 
 Let's look into a few algorithms are designed for this. 
 
@@ -314,7 +315,7 @@ As for the training, they first pretrain the model with cross-entropy loss and t
  
  As mentioned earlier, QG and QA tasks are intrinsically bounded and one cannot find solution for either of them without taking the other party into account. 
  
- In this section, we have discussed some approaches that many groups of people have taken to help machine operate on both tasks simultaneously. Some exciting findings have been presented here. 
+ In this section, we have discussed some approaches that many groups of people have taken to help machine operate on both tasks simultaneously. 
  
 For our problem, it is very motivating to see these progress and learn from their approaches. In sum, our general setup is similar to dual learning framework, we need to tie QG and QA part of the algorithms together. In the first diagram of the section, we can see that they connect the loss function from both sides of the model and it is very similar to the strategy adopted by [GAN](https://en.wikipedia.org/wiki/Generative_adversarial_network) (Generative adversarial network). Some advanced mechanisms are proposed as well for effectively solving these tasks i.e. symmetric hierarchical attention and policy-gradient reinforcement learning algorithm. 
 
