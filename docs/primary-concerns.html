@@ -138,9 +138,9 @@
 <li class="chapter" data-level="4.2" data-path="implementation.html"><a href="implementation.html#learning-feedback-deepedu"><i class="fa fa-check"></i><b>4.2</b> Learning + Feedback [DeepEdu]</a><ul>
 <li class="chapter" data-level="4.2.1" data-path="implementation.html"><a href="implementation.html#problem-formulation-1"><i class="fa fa-check"></i><b>4.2.1</b> Problem Formulation</a></li>
 <li class="chapter" data-level="4.2.2" data-path="implementation.html"><a href="implementation.html#the-approach"><i class="fa fa-check"></i><b>4.2.2</b> The Approach</a></li>
-<li class="chapter" data-level="4.2.3" data-path="implementation.html"><a href="implementation.html#question-generation-qg-and-question-answering-qa-overview"><i class="fa fa-check"></i><b>4.2.3</b> Question Generation (QG) and Question Answering (QA) Overview</a></li>
-<li class="chapter" data-level="4.2.4" data-path="implementation.html"><a href="implementation.html#question-generation"><i class="fa fa-check"></i><b>4.2.4</b> Question Generation</a></li>
-<li class="chapter" data-level="4.2.5" data-path="implementation.html"><a href="implementation.html#question-answering"><i class="fa fa-check"></i><b>4.2.5</b> Question Answering</a></li>
+<li class="chapter" data-level="4.2.3" data-path="implementation.html"><a href="implementation.html#qg-and-qa-overview"><i class="fa fa-check"></i><b>4.2.3</b> QG and QA Overview</a></li>
+<li class="chapter" data-level="4.2.4" data-path="implementation.html"><a href="implementation.html#question-generation-qg"><i class="fa fa-check"></i><b>4.2.4</b> Question Generation (QG)</a></li>
+<li class="chapter" data-level="4.2.5" data-path="implementation.html"><a href="implementation.html#question-answering-qa"><i class="fa fa-check"></i><b>4.2.5</b> Question Answering (QA)</a></li>
 <li class="chapter" data-level="4.2.6" data-path="implementation.html"><a href="implementation.html#summary-of-learning-and-feedback-networks"><i class="fa fa-check"></i><b>4.2.6</b> Summary of Learning and Feedback Networks</a></li>
 <li class="chapter" data-level="4.2.7" data-path="implementation.html"><a href="implementation.html#datasets-and-annotation-suggested"><i class="fa fa-check"></i><b>4.2.7</b> Datasets and Annotation Suggested</a></li>
 </ul></li>
@@ -175,7 +175,7 @@
 <li class="chapter" data-level="6.2" data-path="about-the-authors.html"><a href="about-the-authors.html#fanli-zheng-christian-ramsey"><i class="fa fa-check"></i><b>6.2</b> Fanli Zheng (Christian Ramsey)</a></li>
 <li class="chapter" data-level="6.3" data-path="about-the-authors.html"><a href="about-the-authors.html#contact-us"><i class="fa fa-check"></i><b>6.3</b> Contact Us</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="reference.html"><a href="reference.html"><i class="fa fa-check"></i><b>7</b> Reference</a></li>
+<li class="chapter" data-level="7" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>7</b> References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/dyadxmachina/can-machines-teach" target="blank">Github</a></li>
 <li><a href="https://dyadxmachina.github.io/can-machines-teach/compiled_journal.pdf" target="blank">Paper</a></li>
@@ -211,9 +211,12 @@
 <blockquote>
 <p>How would such an ecosystem insure us against passive consumption?</p>
 </blockquote>
-<p><strong>Scenario #1</strong> A learner goes online and begins watching a series on Machine Learning. How do we engage and test a user’s knowledge?</p>
-<p><em>Proposition:</em> Using advances in deep learning, we propose a dual question and answer generation framework given the educational content.</p>
-<p><em>Result:</em> A learner gets a set of questions and multiple choice answers throughout the video. Keeping the user engaged and sharp to ensure they can answer each of the questions.</p>
+<p><strong>Scenario #1</strong>
+A learner goes online and begins watching a series on Machine Learning. How do we engage and test a user’s knowledge?</p>
+<p><em>Proposition:</em>
+Using advances in deep learning, we propose a dual question and answer generation framework given the educational content.</p>
+<p><em>Result:</em>
+A learner gets a set of questions and multiple choice answers throughout the video. Keeping the user engaged and sharp to ensure they can answer each of the questions.</p>
 <p>As you can see, we’ve bundled passive consumption and untested knowledge because our proposed ecosystem approaches both of these by always testing the knowledge.</p>
 </div>
 <div id="knowledge-ecosystem-example" class="section level2">
@@ -231,14 +234,17 @@
 <blockquote>
 <p>Given most learner’s online knowledge acquisition varies and has been invisible up to now, how we can best represent their knowledge?</p>
 </blockquote>
-<p><strong>Scenario #2</strong> A learner has a degree in Public Health, but since graduating, he has been studying machine learning for the last 3 years. The learner now wants to apply to a job that requires the skills in both Health and Machine Learning. How do we represent their traditional and updated knowledge?</p>
+<p><strong>Scenario #2</strong>
+A learner has a degree in Public Health, but since graduating, he has been studying machine learning for the last 3 years. The learner now wants to apply to a job that requires the skills in both Health and Machine Learning. How do we represent their traditional and updated knowledge?</p>
 <p>This is a tricky problem that goes beyond any given algorithm. The exact design of a <strong>knowledge footprint</strong> and a <strong>knowledge journey</strong> has been attempted and we will not cover that in depth here. The proposed system presupposes the design of the knowledge footprint.</p>
 <p>There is another problem:</p>
 <blockquote>
 <p>how do we reduce someone’s knowledge (in this case a set of educational content and their respective scores) into a symbol that is representative of his/her current knowledge and could be shared across?</p>
 </blockquote>
-<p><em>Proposition:</em> We introduce <strong>knowledge journeys</strong> and the <strong>knowledge graph</strong> as a way to make sense and structure a learner’s knowledge acquisition. The collective <strong>knowledge graph</strong> will tell us about the subject the learner is studying and we can use this to compare to others and create a relative comparison.</p>
-<p><em>Result:</em> Reducing a learner’s <strong>knowledge journey</strong> into a common set of dimensions that makeup into their <strong>knowledge footprint</strong> which would look similar to those with similar journeys.</p>
+<p><em>Proposition:</em>
+We introduce <strong>knowledge journeys</strong> and the <strong>knowledge graph</strong> as a way to make sense and structure a learner’s knowledge acquisition. The collective <strong>knowledge graph</strong> will tell us about the subject the learner is studying and we can use this to compare to others and create a relative comparison.</p>
+<p><em>Result:</em>
+Reducing a learner’s <strong>knowledge journey</strong> into a common set of dimensions that makeup into their <strong>knowledge footprint</strong> which would look similar to those with similar journeys.</p>
 <p>As a result, the employer, now familiar with the footprints can check the overlap between the current employee’s and a prospective employee’s to support their decision making.</p>
 </div>
 </div>
@@ -298,7 +304,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
+    var src = "true";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');
