@@ -101,16 +101,27 @@ As deep learning researchers, we are looking forward to designing or seeing othe
 Independent deep learning researchers focused on using machine learning for the good of humanity and beyond.
 
 ## Haohan Wang
-[LinkedIn](https://www.linkedin.com/in/haohanw)
-[Tumblr](https://haohanwang.tumblr.com/)
-[Github](https://github.com/haohanwang23)
-**Email**: haohan723@gmail.com
+
+* [LinkedIn](https://www.linkedin.com/in/haohanw)
+
+
+* [Tumblr](https://haohanwang.tumblr.com/)
+
+
+* [Github](https://github.com/haohanwang23)
+
+
+* **Email**: haohan723@gmail.com
 
 ## Fanli Zheng (Christian Ramsey)
-[LinkedIn](https://www.linkedin.com/in/christianramsey/)
-[Tumblr](https://anthrochristianramsey.tumblr.com/)
-[Github](https://github.com/christianramsey)
-**Email**: thechristianramsey@gmail.com
+
+* [LinkedIn](https://www.linkedin.com/in/christianramsey/)
+
+* [Tumblr](https://anthrochristianramsey.tumblr.com/)
+
+* [Github](https://github.com/christianramsey)
+
+* **Email**: thechristianramsey@gmail.com
 
 ## Contact Us
 Feel Free to contact us if you have any questions!
