@@ -132,3 +132,5 @@ Feel Free to contact us if you have any questions!
 
 + Our Book [Mathematics for Deep Learning and Artificial Intelligence](m4dl.com)
 
+
+# Reference
