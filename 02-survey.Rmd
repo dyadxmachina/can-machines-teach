@@ -37,7 +37,7 @@ Let us now explore some of the recent research findings that would enable us to 
 
 In short, in this section we will be providing some insights on how to solve the following puzzle: 
 
- >"how can we take a single educational content and properly test a learner's knowledge while also providing insightful feedback to support their learning?". 
+ >"how can we take a single educational content (ie. video/podcast) and properly test the learner's knowledge and mastery of the content?". 
 
 
 ### The Approach
@@ -46,17 +46,16 @@ We consider learning + feedback as a key component of our ecosystem which would 
 
 Based on the above concerns we'll take a novel approach to ensure that our DeepEdu networks can do the following:
 
-
 1. Generate a set of questions and answers for any educational content (Domain: Question and Answer Generation)
 
 
-2. Evaluate closed and open ended answers (Domain: Answer Evaluation)
+2. Evaluate closed and open ended answers (Domain: Automatic Answer Evaluation)
 
 
 3. Provide a score for the content based on the learner's performance (Domain: Aggregate scoring)
  
  
-The ideal result is to provide the learner with a credible picture of their tested knowledge while creating an interactive learning experience to sharpe their mind in the knowledge acquisition proces. 
+The ideal result is to test the learner's knowledge by asking questions and evaluating responses given a set of concepts and the learner's history knowledge.
  
 Now let's start explore some solutions that are make possible with the most recent deep learning models.
 
@@ -64,10 +63,10 @@ Now let's start explore some solutions that are make possible with the most rece
 
 In previous years, deep learning research has taken up a similar problem titled Question Generation (QG) and Question Answering (QA). 
  
-Question Generation (QG) was originally part of NLP. The goal of QG is to generate questions according to some given information. It could be used in many different scenarios (i.e. generating questions for reading comprehension, generating data from large scale question-answering pairs or even generating questions from images.) Earlier approaches to QG mainly used human-crafted rules and patterns to transform a descriptive sentence to a related question. Recent neural network-based approaches represent the state-of-art of most of those tasks and these approaches have been successfully used to solve many other NLP tasks i.e. neural machine translation, summarization, etc. As the training optimization studies progress, the stability and performance improvements are guaranteed. 
+Question Generation (QG) was originally part of NLP. The goal of QG is to generate questions according to some given information. It could be used in many different scenarios (i.e. generating questions for reading comprehension, generating data from large scale question-answering pairs or even generating questions from images.) Earlier approaches to QG mainly used human-crafted rules and patterns to transform a descriptive sentence to a related question. Recent neural network-based approaches represent the state-of-art of most of those tasks and these approaches have been successfully used to solve many other NLP tasks (i.e. neural machine translation, summarization, etc.), as the training optimization studies progress, the stability and performance improvements could enhance our ability to generate reelevant questions and answers. 
  
  
-As for Question Answering (QA) task, it is one of the most popular research domains in NLP as well. Recently, QA has also been used to develop dialog systems and chatbots designed to simulate human conversation. Traditionally, most of the research used a pipeline of conventional linguistically-based NLP techniques i.e. parsing, part-of-speech tagging and coreference resolution. However, with recent advances in deep learning, neural network models have shown promising results. Further improvements (i.e.attention mechanism and memory networks) allow the network to focus on the most relevant facts such that they can reach the new state-of-art performance for QA.
+As for generating correct answers to questions, Question Answering (QA), this is one of the most popular research domains in NLP just as well. Recently, QA has also been used to develop dialog systems and chatbots designed to simulate human conversation. Traditionally, most of the research used a pipeline of conventional linguistically-based NLP techniques i.e. parsing, part-of-speech tagging and coreference resolution. However, with recent advances in deep learning, neural network models have shown promising results. Further improvements (i.e.attention mechanism and memory networks) allow the network to focus on the most relevant facts such that they can reach the new state-of-art performance for QA.
 
 Now we have some basic understanding of these 2 tasks for which we will be expanding more in depth later. Consider the next question: 
 
@@ -445,9 +444,9 @@ The 2 figures below can offer a better illustration:
 
 ## Knowledge Graph 
 
-Learning is a knowledge accumulation journey. To create an adequate knowledge ecosystem requires us to first figuring out what 'knowledge' really is and how we can represent it. *Knowledge Graph* used as one of the tools to help encode the 'knowledge' in the world and aid our understanding. You can think of knowledge graphs as a collections of relational facts, where each fact states that a certain relation holds between 2 entities.
+Learning is a journey of knowledge accumulation and experience To create an adequate knowledge ecosystem requires us to first figure out what 'knowledge' really is and how to best represent it. *Knowledge Graph* is used as one of the tools to help make sense of what type or category acquired 'knowledge' is and what it is related to. You can think of knowledge graphs as a collection of relational facts, where each fact states that a certain relation holds between 2 entities.
 
-In this part, we will be discussing how we can construct our collective knowledge graph from scratch.
+In this section, we will be discussing how we can construct our education specific  knowledge graph from scratch.
 
 ### What is a graph?
 > Graphs are networks of dots and lines - Graph Theory (Dover Books)
