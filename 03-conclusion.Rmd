@@ -111,7 +111,7 @@ Independent deep learning researchers focused on using machine learning for the 
 * [Github](https://github.com/haohanwang23)
 
 
-* **Email**: haohan723@gmail.com
+* Email: haohan723@gmail.com
 
 ## Fanli Zheng (Christian Ramsey)
 
@@ -121,7 +121,7 @@ Independent deep learning researchers focused on using machine learning for the 
 
 * [Github](https://github.com/christianramsey)
 
-* **Email**: thechristianramsey@gmail.com
+* Email: thechristianramsey@gmail.com
 
 ## Contact Us
 Feel Free to contact us if you have any questions!
