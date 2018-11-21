@@ -60,9 +60,9 @@ The ideal result is to provide a learner with a credible picture of their tested
  
 We will now explore some current research trends in deep learning that will help us solve the problem.
 
+### Question Generation (QG) and Question Answering (QA) Overview
+
 In previous years, deep learning research has taken up a similar problem titled Question Generation (QG) and Question Answering (QA). 
- 
-### Question & Answer Generation
  
 Question Generation (QG) was originally part of NLP. The goal of QG is to generate questions according to some given information. It could be used in many different scenarios i.e. generating questions for reading comprehension, generating data from large scale question-answering pairs or even generating questions from images. Earlier approaches to QG mainly used human-crafted rules and patterns to transform a descriptive sentence to a related question. Recent neural network-based approaches represent the state-of-art of most of those tasks and these approaches have been successfully used to solve many other NLP tasks i.e. neural machine translation, summarization, etc. As the training optimization studies progress, the stability and performance improvements are guaranteed. 
  
@@ -72,6 +72,10 @@ As for Question Answering (QA) task, it is one of the most popular research doma
 Now we have some basic understanding of these 2 tasks for which we will be expanding more in depth later. Consider the next question: 
 
 >"what types of questions & answers would be best to test a learner's knowledge given a piece of educational content (i.e. a lecture video)"
+
+
+**Example**
+
 
 Let's say a learner is watching a video about hypothesis testing, midway through the video the educator shows an example and provides the data needed to test the hypothesis. It would be very beneficial for a learner if during this time his/her knowledge is tested with the following possible questions: 
 
@@ -173,12 +177,13 @@ They refer to *the generator* part of the model as the $agent$ and the $action$ 
 
 
 
-**Summary**
+** Summary **
 
 In this QG section, we have discussed 3 different algorithms. Based on our learning, we can conclude that a generative seq2seq model might be a suggested model for this task. As for our objective function, we should be foumulating a conditional probability distribution that is conditioned on the provided content  (i.e. the video) and answers. As suggested, we can use a bi-directional LSTM RNN as the encoder to encode the content and use a LSTM RNN as the decoder to generate the question. 
 
 
 ### Question Answering 
+
 Now, let's move on to our question answering (QA) task. The general goal of a QA model is to predict an answer to a question based on the information found in the passage, given a passage and a question. By solving this task, our system should be able to easily evaluate the answer provided by learners and achieve the full automation of the learning + feedback cycle.
 
 Here are the overview of a basic QA model's [implementation](@qa_imp): 
@@ -243,7 +248,7 @@ They collect 408 subtitled movies and obtained their extended summaries in the f
 
 In the second step of data collection, they used the multiple-choice answers and question collected as the input to show to a different group of annotators. By doing so, annotators could re-formulate the question and answers for the sanity check. 
 
-**Summary**
+** Summary **
 
 By going through the previous examples, we can see that VQA and few similar algorithms introduced before are designed to efficiently process image and text input data while making the inference based on the input.
 
@@ -254,6 +259,7 @@ Another important learning is that we can follow the steps they take to collect 
 
 
 **Dual Question-Answering Model**
+
 
 Both Question Generaion(QG) and Question Answering(QA) are well-defined 2 sets of problems that aim to either infer a question or an answer given the counterpart based on the context. However, they are usually explored separately despite of their intrinsic complementary relationship. In our case, a system needs to take on both roles simultaneously.
 
@@ -305,7 +311,7 @@ They case both QG and QA tasks into one process by firstly matching the input pa
 As for the training, they first pretrain the model with cross-entropy loss and then they fine tune the model parameters with policy-gradient reinforcement learning to alleviate the exposure bias problem. They end up adopting a similar sampling strategy as the scheduled sampling strategy for generating the sampled output during the reinforcement learning process.
 
 
-**Summary** 
+** Summary ** 
  
  As mentioned earlier, QG and QA tasks are intrinsically bounded and one cannot find solution for either of them without taking the other party into account. 
  
@@ -377,7 +383,7 @@ During the inference step, *noise sampling* is conditioned on the dialogue histo
 In sum, their hredGAN combines both generative and retrieval-based multi-turn dialogue systems to improve the model's performance. One of the special design of the model is that the generator and the discriminator share the context and word embedding and this allows for joint end-to-end training using back-propagation. 
 
 
-**Summary**
+** Summary **
 
 Based on our limited research, we found that it is achievable for our system to generate the answers for open-ended questions based on the educational video and provide appropriate feedback/rating based on the current techniques. The first paper presents a newly developed AES model that can rate learner's writing by taking into account some special standand. It also demonstrates a possible way of enhance the AES model by training it with the adversarially crafted input. 
 
