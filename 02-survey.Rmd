@@ -60,9 +60,9 @@ The ideal result is to provide a learner with a credible picture of their tested
  
 We will now explore some current research trends in deep learning that will help us solve the problem.
 
+### Question Generation (QG) and Question Answering (QA) Overview
+
 In previous years, deep learning research has taken up a similar problem titled Question Generation (QG) and Question Answering (QA). 
- 
-### Question & Answer Generation
  
 Question Generation (QG) was originally part of NLP. The goal of QG is to generate questions according to some given information. It could be used in many different scenarios i.e. generating questions for reading comprehension, generating data from large scale question-answering pairs or even generating questions from images. Earlier approaches to QG mainly used human-crafted rules and patterns to transform a descriptive sentence to a related question. Recent neural network-based approaches represent the state-of-art of most of those tasks and these approaches have been successfully used to solve many other NLP tasks i.e. neural machine translation, summarization, etc. As the training optimization studies progress, the stability and performance improvements are guaranteed. 
  
@@ -72,6 +72,10 @@ As for Question Answering (QA) task, it is one of the most popular research doma
 Now we have some basic understanding of these 2 tasks for which we will be expanding more in depth later. Consider the next question: 
 
 >"what types of questions & answers would be best to test a learner's knowledge given a piece of educational content (i.e. a lecture video)"
+
+
+**Example**
+
 
 Let's say a learner is watching a video about hypothesis testing, midway through the video the educator shows an example and provides the data needed to test the hypothesis. It would be very beneficial for a learner if during this time his/her knowledge is tested with the following possible questions: 
 
@@ -152,7 +156,7 @@ The high-level QG-Net architecture is as below:
 ![ma](img/qgnet.png)
 
 
-2. In this paper [TOPIC-BASED QUESTION GENERATION](https://openreview.net/pdf?id=rk3pnae0b), they propose a topic-based question generation algorithm. The algorithm is able to take in a input sentence, a topic and a question type and generate a word sequence related to the topic, question type and the input sentence. 
+2. In this paper [Topic-based Question Generation](https://openreview.net/pdf?id=rk3pnae0b), they propose a topic-based question generation algorithm. The algorithm is able to take in a input sentence, a topic and a question type and generate a word sequence related to the topic, question type and the input sentence. 
 
 They formulate a conditional likelihood objective function as mentioned before to the model to learn. 
 
@@ -179,6 +183,7 @@ In this QG section, we have discussed 3 different algorithms. Based on our learn
 
 
 ### Question Answering 
+
 Now, let's move on to our question answering (QA) task. The general goal of a QA model is to predict an answer to a question based on the information found in the passage, given a passage and a question. By solving this task, our system should be able to easily evaluate the answer provided by learners and achieve the full automation of the learning + feedback cycle.
 
 Here are the overview of a basic QA model's [implementation](@qa_imp): 
@@ -203,7 +208,7 @@ And the typical mechanims applied for solving such a problem include:
 
 * Attention Mechanism 
 
-***
+
 
 **Close-ended Questions**
 
@@ -251,9 +256,10 @@ Few main insights learned through the research. First, key components for creati
 
 Another important learning is that we can follow the steps they take to collect and annotate our training data by asking crowd-sourcing workers to construct the question and answer pairs. Also, more advanced algorithm like the one described above multi-stream hierarchical attention context network is in need for dealing with video input data in contrast to static pictures. 
 
-***
+
 
 **Dual Question-Answering Model**
+
 
 Both Question Generaion(QG) and Question Answering(QA) are well-defined 2 sets of problems that aim to either infer a question or an answer given the counterpart based on the context. However, they are usually explored separately despite of their intrinsic complementary relationship. In our case, a system needs to take on both roles simultaneously.
 
@@ -313,7 +319,7 @@ As for the training, they first pretrain the model with cross-entropy loss and t
  
 For our problem, it is very motivating to see these progress and learn from their approaches. In sum, our general setup is similar to dual learning framework, we need to tie QG and QA part of the algorithms together. In the first diagram of the section, we can see that they connect the loss function from both sides of the model and it is very similar to the strategy adopted by [GAN](https://en.wikipedia.org/wiki/Generative_adversarial_network) (Generative adversarial network). Some advanced mechanisms are proposed as well for effectively solving these tasks i.e. symmetric hierarchical attention and policy-gradient reinforcement learning algorithm. 
 
-***
+
 
 **Open-ended Question** 
 

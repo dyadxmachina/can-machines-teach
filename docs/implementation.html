@@ -298,7 +298,7 @@
 <p class="caption">ma</p>
 </div>
 <ol start="2" style="list-style-type: decimal">
-<li>In this paper <a href="https://openreview.net/pdf?id=rk3pnae0b">TOPIC-BASED QUESTION GENERATION</a>, they propose a topic-based question generation algorithm. The algorithm is able to take in a input sentence, a topic and a question type and generate a word sequence related to the topic, question type and the input sentence.</li>
+<li>In this paper <a href="https://openreview.net/pdf?id=rk3pnae0b">Topic-based Question Generation</a>, they propose a topic-based question generation algorithm. The algorithm is able to take in a input sentence, a topic and a question type and generate a word sequence related to the topic, question type and the input sentence.</li>
 </ol>
 <p>They formulate a conditional likelihood objective function as mentioned before to the model to learn.</p>
 <p>Also, they go through a few general frameworks that have been employed for solving the similar problem.</p>
@@ -312,7 +312,7 @@
 </ol>
 <p>They refer to <em>the generator</em> part of the model as the <span class="math inline">\(agent\)</span> and the <span class="math inline">\(action\)</span> of the agent is to generate the next work in the question. The probability of decoding a word is <span class="math display">\[P_{\theta}(word)\]</span> with a stochastic policy.</p>
 <p><em>The evaluator</em> part of the model will in turn assign a <span class="math inline">\(reward\)</span> for the output sequence predicted using the current <span class="math inline">\(policy\)</span> by the generator. Based on the reward assigned by the evaluator, the generator updates and improves its current policy. In short, the goal in RL-based question generation is to find a policy that can maximize the sum of the <em>expected return</em> at the end of the sequence generation.</p>
-<p>** Summary **</p>
+<p><strong>Summary</strong></p>
 <p>In this QG section, we have discussed 3 different algorithms. Based on our learning, we can conclude that a generative seq2seq model might be a suggested model for this task. As for our objective function, we should be foumulating a conditional probability distribution that is conditioned on the provided content (i.e. the video) and answers. As suggested, we can use a bi-directional LSTM RNN as the encoder to encode the content and use a LSTM RNN as the decoder to generate the question.</p>
 </div>
 <div id="question-answering" class="section level3">
@@ -331,7 +331,6 @@
 <li><p>Encoder Decoder</p></li>
 <li><p>Attention Mechanism</p></li>
 </ul>
-<hr />
 <p><strong>Close-ended Questions</strong></p>
 <p><strong>Visual Question Answering (VQA)</strong></p>
 <p>VQA is a challenging research problem that focuses on providing a natural language answer given any image and any free-form natural language question. As we are managing to handle the video educational content first, our problem will include both NLP and visual recognition tasks. Therefore, VQA should be a great area to start with.</p>
@@ -361,11 +360,10 @@
 </ol>
 <p>They collect 408 subtitled movies and obtained their extended summaries in the form of <strong>plot synopses</strong>(movie summaries that fans write after watching the movie) from Wikipedia. They used plot synopses as a proxy for the movie. They have annotators create both quizzes and answers pairs by referring to the story plot. Time-stamp is also attached with each question and answer pair.</p>
 <p>In the second step of data collection, they used the multiple-choice answers and question collected as the input to show to a different group of annotators. By doing so, annotators could re-formulate the question and answers for the sanity check.</p>
-<p>** Summary **</p>
+<p><strong>Summary</strong></p>
 <p>By going through the previous examples, we can see that VQA and few similar algorithms introduced before are designed to efficiently process image and text input data while making the inference based on the input.</p>
 <p>Few main insights learned through the research. First, key components for creating and trainnig a VQA model such as feature selection, feature pooling and specifically designed attention mechanism. The input of the mode is typically a video clip + question + answer pairs. A CNN and sometimes a RNN is needed for such a task.</p>
 <p>Another important learning is that we can follow the steps they take to collect and annotate our training data by asking crowd-sourcing workers to construct the question and answer pairs. Also, more advanced algorithm like the one described above multi-stream hierarchical attention context network is in need for dealing with video input data in contrast to static pictures.</p>
-<hr />
 <p><strong>Dual Question-Answering Model</strong></p>
 <p>Both Question Generaion(QG) and Question Answering(QA) are well-defined 2 sets of problems that aim to either infer a question or an answer given the counterpart based on the context. However, they are usually explored separately despite of their intrinsic complementary relationship. In our case, a system needs to take on both roles simultaneously.</p>
 <p>Let’s look into a few algorithms are designed for this.</p>
@@ -409,11 +407,10 @@
 <p>They also leverage a <em>policy-gradient reinforcement learning</em> algorithm to overcome <em>exposure bias</em> (a major problem resulted from sequence learning with cross-entropy loss function).</p>
 <p>They case both QG and QA tasks into one process by firstly matching the input passage against the query, then generating the output based on the matching results.</p>
 <p>As for the training, they first pretrain the model with cross-entropy loss and then they fine tune the model parameters with policy-gradient reinforcement learning to alleviate the exposure bias problem. They end up adopting a similar sampling strategy as the scheduled sampling strategy for generating the sampled output during the reinforcement learning process.</p>
-<p>** Summary **</p>
+<p><strong>Summary</strong></p>
 <p>As mentioned earlier, QG and QA tasks are intrinsically bounded and one cannot find solution for either of them without taking the other party into account.</p>
 <p>In this section, we have discussed some approaches that many groups of people have taken to help machine operate on both tasks simultaneously. Some exciting findings have been presented here.</p>
 <p>For our problem, it is very motivating to see these progress and learn from their approaches. In sum, our general setup is similar to dual learning framework, we need to tie QG and QA part of the algorithms together. In the first diagram of the section, we can see that they connect the loss function from both sides of the model and it is very similar to the strategy adopted by <a href="https://en.wikipedia.org/wiki/Generative_adversarial_network">GAN</a> (Generative adversarial network). Some advanced mechanisms are proposed as well for effectively solving these tasks i.e. symmetric hierarchical attention and policy-gradient reinforcement learning algorithm.</p>
-<hr />
 <p><strong>Open-ended Question</strong></p>
 <p><strong>Problem Formulation</strong></p>
 <blockquote>
@@ -454,7 +451,7 @@
 </ol>
 <p>During the inference step, <em>noise sampling</em> is conditioned on the dialogue history and is used to perturb the generator’s latent space for generating possible responses. The final response is the one ranked the best by the discriminator.</p>
 <p>In sum, their hredGAN combines both generative and retrieval-based multi-turn dialogue systems to improve the model’s performance. One of the special design of the model is that the generator and the discriminator share the context and word embedding and this allows for joint end-to-end training using back-propagation.</p>
-<p>** Summary **</p>
+<p><strong>Summary</strong></p>
 <p>Based on our limited research, we found that it is achievable for our system to generate the answers for open-ended questions based on the educational video and provide appropriate feedback/rating based on the current techniques. The first paper presents a newly developed AES model that can rate learner’s writing by taking into account some special standand. It also demonstrates a possible way of enhance the AES model by training it with the adversarially crafted input.</p>
 <p>In the second paper, we discuss a network that can answer the open-ended questions based on the video and a given question. Their Adaptive Hierarchical Reinforced Networks are composed of hierarchical encoder networks and the reinforced decoder networks. It is possible for us to adopt their general framework trained with our educational video data specifically.</p>
 <p>Similar to the second paper, the last paper shows that it is possible to generate responses conditioned on the context. By leveraging conditional GAN model framework, their model’s performance is significantly improved.</p>
