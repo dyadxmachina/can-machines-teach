@@ -9,7 +9,7 @@ We will take a tour through a relevant set of implementations of the elements wi
 
 ## Problem Formulation
 
-Building such a knowledge ecosystem is not a trivial task. A necessary step of searching for the proper solutions would be trying to break the whole system into independent elements that we can deal with separately. As we discussed earlier, we've divided the ecosystem into the elements below:
+Building such a knowledge ecosystem is a non-trivial task. As we discussed earlier, here are a few key elements of our ecosystem:
 
 1. **Learning + Feedback [DeepEdu]** -- given a learner views a single educational content, reliably evaluate their knowledge and provide feedback for improvement to support learning (credibility, rigour) 
 
@@ -19,15 +19,15 @@ Building such a knowledge ecosystem is not a trivial task. A necessary step of s
 
 4. **Knowledge Footprint** -- given a learner's journey, collapse it into a representative symbol(s) (relatibility, stable but evolving system )
 
-Much of element two (#2) and element one (#1) are possible with the recent breakthroughs in the machine learning subfield, deep learning. Elements three (#3) and (#4) may require a different approach to tie the other elements together and there isn’t a solution that ties each of the elements together to our knowledge. We see #3 and #4 as design problems to be approached from the bottom up. In this section we will focus on the first two (#1 & #2) elements. 
+Much of element two (#2) and element one (#1) are possible with the recent breakthroughs in the machine learning and deep learning. Elements three (#3) and (#4) may require a different approach to tie the other elements together. We see #3 and #4 as design problems to be approached from the bottom up. In this section, we will be mainly focus on the first two (#1 & #2) elements. 
 
 ### Before we start...
 
-As discussed above, recent trends in deep learning have produced state-of-art results on relevant tasks that we will cover below. 
+As discussed above, recent trends in deep learning have produced state-of-art results on many of the tasks that are needed in our system. 
 
- To best illustrate the problem and possible solutions, to simplify our examples we will focus solely on educational videos (Youtube or how-to videos). Keep in mind that our ultimate goal is to apply our approach to any type of online educational content including open texts, digital texts, audio or podcasts.
+ To best illustrate the problem and the possible solutions, we will focus solely on a specifc type of educational content educational videos (i.e.Youtube or how-to videos). Keep in mind that our ultimate goal is to apply our approaches to any type of educational content including open texts, digital texts, audio or podcasts.
  
-Let us now explore some of the recent results that would enable us to design the first two (#1 & #2) elements of our ecosystem.
+Let us now explore some of the recent research findings that would enable us to bring our knowledge ecosystem to live.
 
 
 ## Learning + Feedback [DeepEdu]
@@ -42,9 +42,9 @@ In short, in this section we will be providing some insights on how to solve the
 
 ### The Approach
 
-We consider learning + feedback as a key component of the ecosystem which would settle our concerns with the issues of passive knowledge consumption and untested knowledge.
+We consider learning + feedback as a key component of our ecosystem which would settle our concerns of passive knowledge consumption and untested knowledge.
 
-Based on the above concerns we'll take a novel approach to ensure that our learning + feedback element can do the following:
+Based on the above concerns we'll take a novel approach to ensure that our DeepEdu networks can do the following:
 
 
 1. Generate a set of questions and answers for any educational content (Domain: Question and Answer Generation)
@@ -56,11 +56,11 @@ Based on the above concerns we'll take a novel approach to ensure that our learn
 3. Provide a score for the content based on the learner's performance (Domain: Aggregate scoring)
  
  
-The ideal result is to provide a learner with a credible picture of their tested knowledge and an interactive learning experience that best support their knowledge acquisition. 
+The ideal result is to provide the learner with a credible picture of their tested knowledge while creating an interactive learning experience to sharpe their mind in the knowledge acquisition proces. 
  
-We will now explore some current research trends in deep learning that will help us solve the problem.
+Now let's start explore some solutions that are make possible with the most recent deep learning models.
 
-### Question Generation (QG) and Question Answering (QA) Overview
+### QG and QA Overview
 
 In previous years, deep learning research has taken up a similar problem titled Question Generation (QG) and Question Answering (QA). 
  
@@ -126,7 +126,7 @@ The large amount content creates another problem that can be avoided with deep l
 
 In the end, deep learning really shines when it comes to many specialized research problems such as NLP, Visual Recognition and Speech recognition. For creating our ecosyestem, all those domains will possibly be involved. 
 
-### Question Generation
+### Question Generation (QG)
 
 Let's begin with question generation (QG) task. 
 
@@ -182,7 +182,7 @@ They refer to *the generator* part of the model as the $agent$ and the $action$ 
 In this QG section, we have discussed 3 different algorithms. Based on our learning, we can conclude that a generative seq2seq model might be a suggested model for this task. As for our objective function, we should be foumulating a conditional probability distribution that is conditioned on the provided content  (i.e. the video) and answers. As suggested, we can use a bi-directional LSTM RNN as the encoder to encode the content and use a LSTM RNN as the decoder to generate the question. 
 
 
-### Question Answering 
+### Question Answering (QA)
 
 Now, let's move on to our question answering (QA) task. The general goal of a QA model is to predict an answer to a question based on the information found in the passage, given a passage and a question. By solving this task, our system should be able to easily evaluate the answer provided by learners and achieve the full automation of the learning + feedback cycle.
 
@@ -385,12 +385,11 @@ In sum, their hredGAN combines both generative and retrieval-based multi-turn di
 
 ** Summary **
 
-Based on our limited research, we found that it is achievable for our system to generate the answers for open-ended questions based on the educational video and provide appropriate feedback/rating based on the current techniques. The first paper presents a newly developed AES model that can rate learner's writing by taking into account some special standand. It also demonstrates a possible way of enhance the AES model by training it with the adversarially crafted input. 
+Based on our limited research, we find that it is achievable to generate the answers for open-ended questions based on the educational video and provide appropriate feedback/rating based on the current techniques. The first paper presents a newly developed AES model that rates learner's writing by taking into account a specified metrics. It also demonstrates a possible approach to enhance any given AES model by training it with the adversarially crafted input. 
 
-In the second paper, we discuss a network that can answer the open-ended questions based on the video and a given question. Their Adaptive Hierarchical Reinforced Networks are composed of hierarchical encoder networks and the reinforced decoder networks. It is possible for us to adopt their general framework trained with our educational video data  specifically. 
+In the second paper, we investigate a network that is able to answer the open-ended questions based on the video and a given question. The Adaptive Hierarchical Reinforced Networks they proposed are composed of hierarchical encoder networks and the reinforced decoder networks. It is possible for us to adopt their general framework trained with our educational video data  specifically. 
 
-Similar to the second paper, the last paper shows that it is possible to generate responses conditioned on the context. By leveraging conditional GAN model framework, their model's performance is significantly improved. 
-
+Similar to the second paper, the last paper indicates that we can generate responses conditioned on the context. By leveraging conditional GAN framework, their model performs very well on this task. 
 
 
 ### Summary of Learning and Feedback Networks 
@@ -447,10 +446,9 @@ The 2 figures below can offer a better illustration:
 
 ## Knowledge Graph 
 
+Learning is a knowledge accumulation journey. To create an adequate knowledge ecosystem requires us to first figuring out what 'knowledge' really is and how we can represent it. *Knowledge Graph* used as one of the tools to help encode the 'knowledge' in the world and aid our understanding. You can think of knowledge graphs as a collections of relational facts, where each fact states that a certain relation holds between 2 entities.
 
-Learning is a knowledge accumulation process. To create an effective education system requires us to first figure out what is 'knowledge' and how we can represent the knowledge. *Knowledge Graph* as one of the tools that was developed to better help us understand and represent the 'knowledge' in the world.  You can think of knowledge graphs as a collections of relational facts, where each fact states that a certain relation holds between 2 entities.
-
-In this part, we will be discussion how we can create our own knowledge graph to bring our ecosystem alive. 
+In this part, we will be discussing how we can construct our collective knowledge graph from scratch.
 
 ### What is a graph?
 > Graphs are networks of dots and lines - Graph Theory (Dover Books)
@@ -469,11 +467,11 @@ As for the knowledge graph, it is a graph representation of a knowledge base. On
 
 In general, a knowledge graph represents a knowledge domain. It connects the objects and facts of different types in a systematic way. Knowledge graphs encode knowledge arranged in a network of nodes and links rather than tables and columns. With knowledge graphs, people and machines can easily capture and utilize a dynamically growing semantic network of facts about things. In other words, we can use it to connect the facts related to people, processes, applications, data and many other custom objects as well as their relationships among them with a structured knowledge graph.  
 
-Also, plenty of applications have used knowledge graph successfully and efficiently for a variety of purposes i.e. to support semantic search(i.e. Google's Knowledge Graph), personal assistant(i.e. Apple's Siri) and deep question answering (i.e. Wolfram Alpha and IBM's Watson).
+Also, plenty of successful applications show that people have applied knowledge graph successfully and efficiently to a variety of domains i.e. to support semantic search(i.e. Google's Knowledge Graph), personal assistant(i.e. Apple's Siri) and deep question answering (i.e. Wolfram Alpha and IBM's Watson).
 
 ### Problem Formulation
 
-Given we've implemented the learning and feedback module, knowing where a given piece of education content fits into the knowledge space is a vital task if we want the knowledge footprint to make a learner predictable to others as well as being able to recommend new educational content that the learner can take on successfully. We will need the following things to connect our educational content.
+Given we've implemented the learning and feedback module, knowing where a given piece of education content fits into the knowledge space is a vital task if we want the knowledge footprint to make a learner predictable to others as well as being able to recommend new educational content that the learner can take on successfully. We will need the following things to connect our educational content:
 
 * A classifier to take a piece of educational content
 
@@ -610,7 +608,7 @@ They employ a supervised machine learning models for fusing these distinct infor
 ## Knowledge Journeys 
 
 
-The collective knowledge graph is our ecosystem's backboen that can be used to serve every learner and to be applied universally to some extent, but a learner's learning journey is highly personal and unique at the individual's level. Every learner enter the system with their own set of problems that they are curious about and their specific missions towards the mastery. As a result, their knowledge journeys should vary significantly. As for our role, we need to ensure we have a system that can handle this high degrees of freedom. Or more ideally, to adaptively represent and learn from a learner's history, interests, and whom they are related to to best support their knowledge acquisition adventure. 
+A collective knowledge graph is our ecosystem's backboen. It can be applied universally to some extent, but a learner's learning journey is highly personal and unique at the individual's level. Every learner enter the system with their own set of problems that they are curious about and their specific missions towards the mastery. As a result, their knowledge journeys should vary significantly. As for our role, we need to ensure we have a system that can handle this high degrees of freedom. Or more ideally, to adaptively represent and learn from a learner's history, interests, and whom they are related to to best support their knowledge acquisition adventure. 
 
 
 ### Problem Formulation
@@ -630,9 +628,9 @@ As the outcome, a learner's knowledge journey will be available anytime for the 
 
 ## Knowledge Footprint 
 
-Just a quick review of this concept that we introduced in the first section, knowledge footprint is going to shown up as one ore more badges or symbols that is/are used to represent a learner's knowledge at a specific point in time. In a sense, this thumbnail view of a learner's knowledge will continuously evolve and change when a learner proceeds his/her learning journey. By constructing such symbol(s), a learn can easily understand their current knowledge profile relatively to their past and to others so as to timely make an adjustment to alter their future learning plan. 
+Just a quick review of the concept, a learner's knowledge footprint is going to be represented as one ore more badges or symbols that act as a thumbnail view of a learner's knowledge profile at a specific time point. In a sense, it will continuously evolve and be modified when a learner proceeds his/her learning journey. By constructing such symbol(s), a learner can easily understand their current knowledge profile relatively to their past's and to other's and to timely make an adjustment to alter their future learning plan. 
 
-As for the implmentation, we would consider using the unsupervised learning and dimensionality reduction techniques to help uncover and represent the visible and invisible dimensions of a learner's knowledge journey. In turn, the model can consolidate and collapse the journey into one or more symbols to accurately represent a learner's current knowledge profile. Still, it is not a trivial task and we believe it is going to be a teamwork that requires people like machine learning and deep learning researchers, educators, and designers to work collaboratively for the best possible outcomes.  
+As for the implmentation, we would consider employing the unsupervised learning and dimensionality reduction techniques to help uncover and represent the visible and invisible dimensions of a learner's knowledge journey. In turn, the model can consolidate and collapse the journey into one or more symbols to accurately represent a learner's current knowledge profile. Still, it is not a trivial task and we believe it is going to be a teamwork that requires people like machine learning and deep learning researchers, educators, and designers to work collaboratively for the best possible outcomes.  
 
 
 Note that we will not discuss the detailed research findings or implementation steps of Knowledge Journeys and Knowledge Footprint elements in this essay. We will leave these areas for our future research. 
