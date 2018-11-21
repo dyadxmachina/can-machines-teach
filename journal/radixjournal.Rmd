@@ -8,9 +8,12 @@ author:
     affiliation: dyad x machina
     email: haohan723@gmail.com    
 abstract: | 
-output: rticles::acm_article
+output: 
+  radix::radix_article:
+    toc: true
+    toc_depth: 1
 bibliography: book.bib
-
+citation_url: https://dyadxmachina.github.io/can-machines-teach
 ---
 
 ![ Knowledge Ecosystem ](img/knowledgeEcosystem.png) 
@@ -26,3 +29,5 @@ bibliography: book.bib
 
 ```{r child = '../04-references.Rmd'}
 ```
+
+[@xinyadu]
