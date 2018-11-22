@@ -63,10 +63,11 @@ Now let's start explore some solutions that are make possible with the most rece
 
 In previous years, deep learning research has taken up a similar problem titled Question Generation (QG) and Question Answering (QA). 
  
-Question Generation (QG) was originally part of NLP. The goal of QG is to generate questions according to some given information. It could be used in many different scenarios (i.e. generating questions for reading comprehension, generating data from large scale question-answering pairs or even generating questions from images.) Earlier approaches to QG mainly used human-crafted rules and patterns to transform a descriptive sentence to a related question. Recent neural network-based approaches represent the state-of-art of most of those tasks and these approaches have been successfully used to solve many other NLP tasks (i.e. neural machine translation, summarization, etc.), as the training optimization studies progress, the stability and performance improvements could enhance our ability to generate reelevant questions and answers. 
- 
- 
-As for generating correct answers to questions, Question Answering (QA), this is one of the most popular research domains in NLP just as well. Recently, QA has also been used to develop dialog systems and chatbots designed to simulate human conversation. Traditionally, most of the research used a pipeline of conventional linguistically-based NLP techniques i.e. parsing, part-of-speech tagging and coreference resolution. However, with recent advances in deep learning, neural network models have shown promising results. Further improvements (i.e.attention mechanism and memory networks) allow the network to focus on the most relevant facts such that they can reach the new state-of-art performance for QA.
+Question Generation (QG) was originally part of NLP. The goal of QG is to generate questions according to some given information. It could be used in many different scenarios (i.e. generating questions for reading comprehension, generating data from large scale question-answering pairs or even generating questions from images). Earlier approaches to QG mainly used human-crafted rules and patterns to transform a descriptive sentence to a related question. Recent neural network-based approaches represent the state-of-art of most of those tasks and these approaches have been successfully used to solve many other NLP tasks (i.e. neural machine translation, summarization, etc.), as the training optimization studies progress, the stability and performance improvements could enhance our ability to generate reelevant questions and answers. 
+
+As for generating correct answers to questions, Question Answering (QA), this is one of the most popular research domains in NLP just as well. Recently, QA has also been used to develop dialog systems and chatbots designed to simulate human conversation. 
+
+Traditionally, most of the research used a collection of conventional linguistically-based NLP techniques (i.e. parsing, part-of-speech tagging and coreference resolution. However, with recent advances in deep learning, neural network models have shown promising results. Further improvements (i.e.attention mechanism and memory networks) allow the network to focus on the most relevant facts such that they can reach the new state-of-art performance for QA.
 
 Now we have some basic understanding of these 2 tasks for which we will be expanding more in depth later. Consider the next question: 
 
@@ -76,18 +77,18 @@ Now we have some basic understanding of these 2 tasks for which we will be expan
 **Example**
 
 
-Let's say a learner is watching a video about hypothesis testing, midway through the video the educator shows an example and provides the data needed to test the hypothesis. It would be very beneficial for a learner if during this time his/her knowledge is tested with the following possible questions: 
+Imagine a learner is watching a video about hypothesis testing and, midway through the video, the educator shows an example and provides the data needed to test the hypothesis. It would be very beneficial for a learner if during this time his/her knowledge is tested with the following example questions: 
 
 
-1. What is the definition of the p-value? (and provide multiple choices for learner to choose from)
+1. What is the definition of the p-value? (multiple choice)
 
-2. Is this a 1-sided test? (answers provided would be: YES or NO)
+2. Is this a 1-sided test? (YES or NO)
 
-3. How would you interpret the p-value in the context of this example.
+3. How would you interpret the p-value in the context of this example? (open-ended)
 
-4. What is the difference between null hypothesis and alternative hypothesis based on the previous comparison?
+4. What is the difference between null hypothesis and alternative hypothesis based on the previous comparison? (open-ended)
 
-5. Give me a quick summary about what you have learned through this video or this example.  (It is also helpful to ask learner the question like this after showing the solution)
+5. Give me a quick summary about what you have learned through this video or this example.  (Open-ended)
 
 
 As shown above, we would call questions #1 and #2 the close-ended questions; question #3 and #4 the specific open-ended questions; and question #5 a general open-ended question.
@@ -104,11 +105,11 @@ Based the above information, we can update our question formulation into:
 3. Evaluate and comment on the general open-ended answers 
 
 
-In terms of the close-ended questions, the answers can be well defined and evaluated. However, the process might be a little bit tricky when it comes to the open-ended ones. We will approach each of them here from the current research perspective.  
+In terms of the close-ended questions, the answers can be well defined and evaluated. However, the process might be more complex for the open-ended ones. We will approach each of them here from the current research perspective.  
 
 **Why deep learning? **
 
-As we stated above, deep learning has achieved state-of-art performance in both QG and QA tasks. But how? 
+As we stated above, deep learning has achieved state-of-art performance in both QG and QA tasks, but how? 
 
 If you pay close attention to QG and QA type of problems, you can easily reframe the problem into the one in which the model is expected to learn the relationship between the input (educational content) and the output (meaningful question & answer pairs). In other words, if we can provide the needed data for the model, the model will learn a function that captures the relationship between our input and output, or, appropriately map the educational content to the desired question and answer pairs. 
 
@@ -122,31 +123,31 @@ Specifically, deep learning outperforms other techniques when the training data 
 
 Having a large amount of training data is very troublesome if you plan to do feature engineering manually. When there is lack of domain understanding for feature introspection, deep learning is preferable. 
 
-In the end, deep learning really shines when it comes to many specialized research problems such as NLP, Visual Recognition and Speech recognition. For creating our DeepEdu, all those domains will possibly be involved. 
+In the end, deep learning really shines when it comes to many specialized research problems such as NLP, Visual Recognition and Speech recognition. For creating our DeepEdu, all those domains will be involved. 
 
 ### Question Generation (QG)
 
 Let's begin with question generation (QG) task. 
 
-The ideal goal of an automatic question generation is to generate a question $Q$ that is syntactically and semantically correct, relevant to the context and meaningful to answer. 
+The ideal goal of an automatic question generation is to generate a question $Q$ that is syntactically and semantically correct, relevant to the context and match to a set of answers. 
 
-In order to achieve this goal,, we need to train an algorithm to learn the underlying conditional probability distribution
+In order to achieve this goal, we need to train an algorithm to learn the underlying conditional probability distribution
 
 $$P_{\theta}(Q|X)$$
 
 parametrized by $\theta$. In other words, we can think of this problem as the one that requires the model to learn a function (with a set of parameters) $\theta$ during the training stage using content-question and/or answer sets so that the probability/likelihood $P_{\theta}(Q|P)$ is maximized over the given training dataset. 
 
-We can also think of this problem as a typical seq2seq (sequence-to-sequence) learning problem since both the input and the output are a sequence of text character that the model needs to process and learn from. 
+We can also think of this problem as a typical seq2seq (sequence-to-sequence) learning problem since both the input and the output are a sequence of text character that the model needs to process and learn from. But in our case, we would like to take any media type and map it to a character output.
 
 **Case Studies**
 
 1. In this paper [QG-Net: A Data-Driven Question Generation Model for Educational Content](http://www.princeton.edu/~shitingl/papers/18l@s-qgen.pdf) [@zichaowang]. They use a bi-directional LSTM network to process the input context words sequence. Encoding the answer into context word vectors.
 
-QG-Net generates questions by iteratively sampling question words from the conditional probability distribution $$P(Q|C,A,\theta)$$ where $\theta$ denotes a set of parameters. In order to construct the probability distribution, they first create a **context reader** that process each word $c_j$ in the input context and turns it into a fix-sized representation $h_j$
+QG-Net generates questions by iteratively sampling question words from the conditional probability distribution $$P(Q|C,A,\theta)$$ where $\theta$ denotes a set of parameters. In order to construct the probability distribution, they first create a **context reader** that processes each word $c_j$ in the input context and turns it into a fix-sized representation $h_j$
 
-Meanwhile, they also have a **question generator** generates the question text word-by-word, given all context word representation and all question words in previous time steps. 
+Meanwhile, they also have a **question generator** that generates the question text word-by-word, given all context word representation and the set of question words in previous time steps. 
 
-As for the quantitative evaluation, they aim to minimize the difference between the generated question and the true question in the training set during training. They use the standard back-propagation through time with the mini-batch stochastic gradient descent algorithm to learn the model parameters. To ensure the performance, they employ *teacher forcing* procedure for training the LSTMs and they implement beam search, a greedy but effective approximation, to exhaustively search and select the top 25 candidate output question sentences. The final one would be the one with the lowest negative log likelihood. 
+As for quantitative evaluation, they aimed to minimize the difference between the generated question and the true question in the training set during training using the standard back-propagation through time with mini-batch stochastic gradient descent algorithm to learn the model parameters. To ensure the performance, they employ *teacher forcing* procedure for training the LSTM with a standard implementation of beam search, a greedy but effective approximation, to exhaustively search and select the top 25 candidate output question sentences. The final one would be the one with the lowest negative log likelihood. 
 
 The high-level QG-Net architecture is as below: 
 
@@ -162,7 +163,7 @@ Also, they go through a few general frameworks that have been employed for solvi
 
 * The first one is *seq2seq model* that uses a bidirectional LSTM as the encoder to encode a sentence and a LSTM RNN (Recurrent Neural Network) as the decoder to generate the target question. 
  
-* The second approach is *question pattern prediction and question topic selection algorithms*. It takes in an automatically selected phrase Q and fill this phrase into the pattern that was predicted from pre-mined patterns.
+* The second approach is *question pattern prediction and question topic selection algorithms*. They take in an automatically selected phrase Q and fill this phrase into the pattern that was predicted from pre-mined patterns.
 
 * The last approach is *multi-source seq2seq learning* which aims to integrate information from multiple sources to boost learning. 
 
@@ -171,7 +172,7 @@ Also, they go through a few general frameworks that have been employed for solvi
 
 They refer to *the generator* part of the model as the $agent$ and the $action$ of the agent is to generate the next work in the question. The probability of decoding a word is $$P_{\theta}(word)$$ with a stochastic policy. 
 
-*The evaluator* part of the model will in turn assign a $reward$ for the output sequence predicted using the current $policy$ by the generator. Based on the reward assigned by the evaluator, the generator updates and improves its current policy. In short, the goal in RL-based question generation is to find a policy that can maximize the sum of the *expected return* at the end of the sequence generation. 
+*The evaluator* part of the model then assigns a $reward$ to the output sequence predicted using the current $policy$ given by the generator. Based on the reward assigned by the evaluator, the generator updates and improves its current policy. In short, the goal in RL-based question generation is to find a policy that can maximize the sum of the *expected return* at the end of the sequence generation. 
 
 
 
@@ -182,9 +183,9 @@ In this QG section, we have discussed 3 different algorithms. Based on our learn
 
 ### Question Answering (QA)
 
-Now, let's move on to our question answering (QA) task. The general goal of QA is to predict the answer to a question based on the information found in the passage, given a passage and a question. By solving this task, our DeepEdu should be able to easily evaluate the answer provided by learners and achieve the full automation of learning + feedback cycle.
+Now, let's move on to our question answering (QA) task. The general goal of QA is to predict the answer to a question based on the information found in the passage, given a passage and a question. By solving this task, our DeepEdu network should be able to easily evaluate the answer provided by learners and achieve full automation of learning + feedback cycle.
 
-Here are the overview of a basic QA model's implementation [@qa_imp]: 
+Here is an overview of a basic QA model's implementation [@qa_imp]: 
 
 1. Build representation for the passage and the question separately;
 
@@ -198,7 +199,7 @@ Here are the overview of a basic QA model's implementation [@qa_imp]:
 4. Generate the answer.
 
 
-And the typical mechanims applied for solving such a problem include: 
+And the typical mechanisms applied for solving such a problem include: 
 
 * Embedding 
 
@@ -212,14 +213,14 @@ And the typical mechanims applied for solving such a problem include:
 
 **Visual Question Answering (VQA)**
 
-VQA is a challenging research problem that focuses on providing a natural language answer given any image and any free-form natural language question. As we are managing to handle the video educational content first, our problem will include both NLP and visual recognition tasks. We figure VQA should be a great area to start with. 
+VQA is a challenging research problem that focuses on providing a natural language answer given any image and any free-form natural language question. As we are focused on video educational content first, our problem will include both NLP and visual recognition tasks. We figure VQA should be a great approach to start with. 
 
 
 **Case Studies**
 
 1. In this paper [Deep Attention Neural Tensor Network for Visual Question Answering](http://openaccess.thecvf.com/content_ECCV_2018/papers/Yalong_Bai_Deep_Attention_Neural_ECCV_2018_paper.pdf) [@yalong], they propose a novel *deep attention neural tensor network* that can discover the joint correlation over images, questions and answers with tensor-based representation. 
 
-As for their workflow, they model one of the pairwise interaction (i.e. between image and question) by **bilinear features**, which is further encoded with the third dimension (i.e. answer) to be a triplet using bilinear tensor product. During this step, the model takes in a question + a corresponding image + candidate answers as the input. A CNN (convolutional neural network) a GRU RNN are used for extracting feature vectors and question respectively. Then the representation is passed on as a *multi-modal feature* and integrated by a **bilinear pooling** module. Moreover, they decompose the correlation of triplets by their question and answer types with a **slice-wise attention module** on tensor to select the most discriminative reasoning process inference. 
+As for their workflow, they model one of the pairwise interaction (i.e. between image and question) by **bilinear features**, which is further encoded with the third dimension (i.e. answer) to be a triplet using bilinear tensor product. During this step, the model takes in a question + a corresponding image + candidate answers as the input. A CNN (convolutional neural network) and a GRU RNN are used for extracting feature vectors and question respectively. Then the representation is passed on as a *multi-modal feature* and integrated by a **bilinear pooling** module. Moreover, they decompose the correlation of triplets by their question and answer types with a **slice-wise attention module** on the tensor to select the most discriminative reasoning process inference. 
 
 In the end, they optimize the proposed network by learning a label regression with KL-divergence losses. They claime that these techniques enable them to do scalable training and fast convergence over a large number of answer set. During the inference stage, they feed the embeddings of all candidate answer into the network and then select the answer which has the biggest triplet relevance score as the final answer. 
 
@@ -229,7 +230,7 @@ The high-level network architecture is as follows:
 
 2. In this paper [Question Type Guided Attention in Visual Question Answering](https://arxiv.org/pdf/1804.02088.pdf), they propose a model called **Question Type-guided Attention (QTA)**. This model utilizes the information of question type to dynamically balance visual features from both top-down and bottom-up orders. 
 
-Also, they propose a *multi-task extension* that is trained to predict question types from the lexical inputs during training which generalizes the network into applications that lack question type, with a minimal performance loss. 
+Also, they propose a *multi-task extension* that is trained to predict question types from the lexical inputs during training which generalizes into applications that lack question type, with a minimal performance loss. 
 
 As for their main contribution, they focus on developing an attention mechanism that can exploit high-level semantic information on the question type to guide the visual encoding process. 
 
@@ -238,27 +239,25 @@ Specifically, they introduce a novel VQA architecture that can dynamically gate 
 
 3. In this paper [Multi-Turn Video Question Answering via Multi-Stream Hierarchical Attention Context Network](https://www.ijcai.org/proceedings/2018/0513.pdf) [@yangshi], they propose a hierarchical attention context network for context-aware question understanding by modeling the hierarchically sequential conversation context structure. They incorporate the multi-step reasoning process into **the multi-stream hierarchical attention context network** to enable the progressive joint representation learning of the multi-stream attentional video and context-aware question embedding. 
 
-To construct their dataset, they collect the conversational video question answering datasets from [YouTubeClips](http://upplysingaoflun.ecn.purdue.edu/~yu239/) and [TACoS-MultiLevel](https://www.mpi-inf.mpg.de/departments/computer-vision-and-multimodal-computing/research/vision-and-language/tacos-multi-level-corpus/). The first dataset has 1987 videos and the second dataset has 1303 videos. They invite 5 pairs of crowd-sourcing workers to construct 5 different conversational dialogs. In total, they have collected 37228 video question answering pairs for TACoS-MultiLevel data and 66806 ones for YouTubeClips data. 
+To construct their dataset, they collected conversational video question answering datasets from [YouTubeClips](http://upplysingaoflun.ecn.purdue.edu/~yu239/) and [TACoS-MultiLevel](https://www.mpi-inf.mpg.de/departments/computer-vision-and-multimodal-computing/research/vision-and-language/tacos-multi-level-corpus/). The first dataset has 1987 videos and the second dataset has 1303 videos. They invited 5 pairs of crowd-sourcing workers to construct 5 different conversational dialogs. In total, they collected 37228 video question answering pairs for TACoS-MultiLevel data and 66806 for YouTubeClips data. 
 
 4. In this paper [MovieQA: Understanding Stories in Movies through Question-Answering](https://arxiv.org/pdf/1512.02902.pdf) [@makarand], they construct a new dataset ** MovieQA** dataset that can be used to evaluate automatic story comprehension from both video and text.  
 
 They collect 408 subtitled movies and obtained their extended summaries in the form of **plot synopses**(movie summaries that fans write after watching the movie) from Wikipedia. They used plot synopses as a proxy for the movie. They have annotators create both quizzes and answers pairs by referring to the story plot. Time-stamp is also attached with each question and answer pair. 
 
-In the second step of data collection, they used the multiple-choice answers and question collected as the input to show to a different group of annotators. By doing so, annotators could re-formulate the question and answers for the sanity check. 
+In the second step of data collection, they used the multiple-choice answers and question collected as the input to show to a different group of annotators. By doing so, annotators could re-formulate the question and answers for a sanity check. 
 
 ** Summary **
 
 By going through the previous examples, we can see that VQA and a few similar algorithms are designed to efficiently process image and text input while making the inference based on it.
 
-A couple of insights drew from the research. First, key components for creating and trainnig a VQA model include feature selection, feature pooling and specifically designed attention mechanism. The input of the model is typically a video clip + question + answer pairs. A CNN and sometimes a RNN is needed for such a task. 
+First, the key components for creating and training a VQA model include feature selection, feature pooling and a specially designed attention mechanism. The input of the model is typically a video clip + question + answer pairs. A CNN and sometimes a RNN is needed for such a task. 
 
-Another important learning is that we can follow the steps described in MovieQA example to collect and annotate our training data by asking crowd-sourcing workers to construct the question and answer pairs. Also, more advanced algorithm like multi-stream hierarchical attention context network might be necessary for a better performance. 
-
-
+Another important learning is that we can follow the steps described in MovieQA example to collect and annotate our training data by asking crowd-sourcing workers to construct the question and answer pairs. Also, more advanced algorithms like multi-stream hierarchical attention context network might be necessary for a better performance. 
 
 **Dual Question-Answering Model**
 
-Both Question Generaion(QG) and Question Answering(QA) are well-defined 2 sets of problems that aim to either infer a question or an answer given the counterpart based on the context. However, they are usually explored separately despite of their intrinsic complementary relationship. However, our DeepEdu needs to take on both roles simultaneously. 
+Both Question Generaion(QG) and Question Answering(QA) are two well-defined sets of problems that aim to either infer a question or an answer given the counterpart based on the context. However, they are usually explored separately despite of their intrinsic complementary relationship. However, our DeepEdu network needs to take on both roles simultaneously. 
 
 > How might we solve this issue?
 
@@ -277,10 +276,10 @@ The high-level architecture of the model is illustrated as below:
 
 ![Dual Ask-Answer Network 2](img/daan.png)
 
-In short, the model is composed of the following components: embedding layer, encoding layer, attention layer and output layer. The model is fed with a question-context-answer triplet $(Q,C,A)$ and the decoded Q and A from the output layer. Their loss function consists of 2 parts: 
+In short, the model is composed of the following components: embedding layer, encoding layer, attention layer and output layer. The model is fed with a question-context-answer triplet $(Q,C,A)$ and the decoded Q and A from the output layer. Their loss function consists of two parts: 
 
 - negative log-likelihood loss 
-- a coverage loss to penalize repetition of the generated text
+- a coverage loss (penalize repetition of the generated text)
 
 2. In this paper [Harvesting Paragraph-Level Question-Answer Pairs from Wikipedia](https://arxiv.org/pdf/1805.05942.pdf) [@duxinya], they apply their question-answer pair generation system to 10000 top-ranking Wikipedia articles and create over a million question-answer pairs. 
 
@@ -291,7 +290,9 @@ In their task formulation part, they clarify that they break this task into 2 su
 
 To complete the tasks, they first identify a set of question-worthy candidate answer set $ans = (A1, A2,...Ai)$. For each candidate answer $A_i$, they then aim to generate a question $Q$ -a sequence of tokens ${y1,y2,...yn}$ - based on the sentence S that contains candidate $A_i$ such that 
 - Q asks about an aspect of $A_i$ (of potential interest to a human) 
-- Q might rely on information from sentences that precedes S in the paragraph. Mathematically, they compose a function $$Q = argmax_Q P(Q|S,C)$$.
+- Q might rely on information from sentences that precedes S in the paragraph. 
+
+Mathematically, they compose a function $$Q = argmax_Q P(Q|S,C)$$.
 
 3. In this paper [Visual Question Generation as Dual Task of Visual Question Answering](http://cvboy.com/pdf/publications/cvpr2018_iqan.pdf) [@liyikang], they propose an end-to-end unified model, **Invertible Question Answering (iQAN)** to introduce question generation as a dual task of question answering to improve VQA performance. 
 
@@ -307,7 +308,7 @@ They also leverage a *policy-gradient reinforcement learning* algorithm to overc
 
 They case both QG and QA tasks into one process by firstly matching the input passage against the query, then generating the output based on the matching results. 
 
-As for the training, they first pretrain the model with cross-entropy loss and then they fine tune the model parameters with policy-gradient reinforcement learning to alleviate the exposure bias problem. They end up adopting a similar sampling strategy as the scheduled sampling strategy for generating the sampled output during the reinforcement learning process.
+As for the training, they first pretrain the model with cross-entropy loss and then fine-tune the model parameters with policy-gradient reinforcement learning to alleviate the exposure bias problem. They end up adopting a similar sampling strategy as the scheduled sampling strategy for generating the sampled output during the reinforcement learning process.
 
 
 ** Summary ** 
@@ -316,7 +317,7 @@ As for the training, they first pretrain the model with cross-entropy loss and t
  
  In this section, we have discussed some approaches that many groups of people have taken to help machine operate on both tasks simultaneously. 
  
-For our problem, it is very motivating to see these progress and learn from their approaches. In sum, our general setup is similar to dual learning framework, we need to tie QG and QA part of the algorithms together. In the first diagram of the section, we can see that they connect the loss function from both sides of the model and it is very similar to the strategy adopted by [GAN](https://en.wikipedia.org/wiki/Generative_adversarial_network) (Generative adversarial network). Some advanced mechanisms are proposed as well for effectively solving these tasks i.e. symmetric hierarchical attention and policy-gradient reinforcement learning algorithm. 
+For our problem, it is very motivating to see the current progress and how much we can learn from their approaches. In sum, our general setup is most similar to dual learning framework. We need to tie QG and QA together and also map it to concepts. In the first diagram of the section, we can see that they connect the loss function from both sides of the model and it is very similar to the strategy adopted by [GAN](https://en.wikipedia.org/wiki/Generative_adversarial_network) (Generative adversarial network). Some advanced mechanisms are proposed as well for effectively solving these tasks (i.e. symmetric hierarchical attention and policy-gradient reinforcement learning algorithm. 
 
 
 
@@ -326,17 +327,19 @@ For our problem, it is very motivating to see these progress and learn from thei
 
 > Open-ended questions bring clarity.
 
-As we mentioned above, the open-ended question could be roughly split into 2 categories. A general open-ended question or a specific open-ended question.
+As we mentioned above, the open-ended question could be roughly split into two categories. A general open-ended question or a specific open-ended question.
 
-Technically specking, these 2 categories are not that particular distinct since both problems require the system to draw some conclusion based on the context and question provided; As for the answer, it is allowed to have a pretty high degree of freedom. Therefore, our system should be able to evaluate the answer with relatively flexible rules or standards. 
+Technically speaking, these two categories are not that particular distinct since both problems require the system to draw a conclusion based on the context and question provided. As for the answer, it is allowed to have a pretty high degree of freedom. Therefore, our system should be able to evaluate the answer with relatively flexible rules or standards including flexibility in media type. 
 
-Based our assumptions, we will combine these 2 problems into 1 for now for our further investigation. 
+Based our assumptions, we will combine these two problems into one for our investigation. 
 
-It may appear unapproachable at the first glance to teach a system to have answers for or evaluate this type of problems. Again, we need to reframe our problem and then break it apart.
+It may appear unapproachable at first glance to teach a system to generate correct answers for and evaluate open-ended answers. Again, we need to reframe our problem and then break it apart.
 
-Based on our research, we believe it is helpful to think of this type of issue as a particular type of QA problem; the difference is that after the QA procedure, we need to match and evaluate the answers generated by machine and the learner such that we can provide an adequate evaluation.  
+Based on our research, we believe it is helpful to think of this type of issue as a particular type of QA problem; the difference is that after the QA procedure, we need to match and evaluate the answers generated by the machine and the learner such that we can provide an adequate evaluation.  
 
-Let's start by looking at an existing knowledge evaluation system that has been used for grading the essays automatically - **Automated essay scoring (AES)**. AES focuses on automatically analyzing the quality and assigning a score of a piece of writing . AES systems could rely not only on grammars, but also on more complex features such as semantics, discourse and pragmatics. It has four general types: 
+Let's start by looking at an existing knowledge evaluation system that has been used for grading the essays automatically - **Automated essay scoring (AES)**. AES focuses on automatically analyzing the quality and assigning a score to a given writing. AES systems rely not only on grammars, but also on more complex features such as semantics, discourse and pragmatics. 
+
+It has four general types: 
 
 * Essay Grade:  it is known as the first AES system.
 
@@ -348,7 +351,6 @@ Let's start by looking at an existing knowledge evaluation system that has been 
 
 
 * IntelliMetric: it is developed and used by the College Board for placement purposes.
-
 
 Below are some research findings we consider as useful for our unified goal. 
 
@@ -466,7 +468,7 @@ As for the knowledge graph, it is a graph representation of a knowledge base. On
 
 In general, a knowledge graph represents a knowledge domain. It connects the objects and facts of different types in a systematic way. Knowledge graphs encode knowledge arranged in a network of nodes and links rather than tables and columns. With knowledge graphs, people and machines can easily capture and utilize a dynamically growing semantic network of facts about things. In other words, we can use it to connect the facts related to people, processes, applications, data and many other custom objects as well as their relationships among them with a structured knowledge graph.  
 
-Also, plenty of successful applications show that people have applied knowledge graph successfully and efficiently to a variety of domains i.e. to support semantic search(i.e. Google's Knowledge Graph), personal assistant(i.e. Apple's Siri) and deep question answering (i.e. Wolfram Alpha and IBM's Watson).
+Also, plenty of successful applications show that people have applied knowledge graph successfully and efficiently to a variety of domains (i.e. to support semantic search(i.e. Google's Knowledge Graph), personal assistant(i.e. Apple's Siri) and deep question answering (i.e. Wolfram Alpha and IBM's Watson).
 
 ### Problem Formulation
 
@@ -476,7 +478,7 @@ Given we've implemented the learning and feedback module, knowing where a given 
 
 * A hierarchical algorithm that can map the relationship of the related content based on their hierarchy in the knowledge graph
 
-* (optional) A probabilistic algorithm i.e. Bayesian network to map the strength/significance of their relationship with each other
+* (optional) A probabilistic algorithm (i.e. Bayesian network to map the strength/significance of their relationship with each other
 
 
 In our case, a graph dedicated to education should do the following:
@@ -551,7 +553,7 @@ A snapshot of the knowledge graph for mathematics generated by knowedu system.
 
 Below are some papers related to Knowledge Graph embedding which is used to embed components of a KG including entities and relations into continuous vector space so as to simply the manipulation while preserving the inherent structure of a KG. 
 
-As for its benefits, it can help with numeraous downstream tasks i.e. KG completion and relation extraction, and hence be used to drastically improve the knowledge acquisition and mapping speed for our KG.
+As for its benefits, it can help with numeraous downstream tasks (i.e. KG completion and relation extraction, and hence be used to drastically improve the knowledge acquisition and mapping speed for our KG.
 
 
 2. In this paper [Generalized Embedding Model for Knowledge Graph Mining](http://www.mlgworkshop.org/2018/papers/MLG2018_paper_5.pdf) [@liuqiao], they present a model for learning neural presentation of generalized knowledge graphs using a novel *multi-shot unsupervised neural network* model, called the **Graph Embedding Network (GEN)**. This model is able to learn different types of knowlege graphs from a universal perspective and it provides flexibility in learning representations that work on graphs conforming to different domains. 
@@ -580,12 +582,12 @@ The last 2 papers demonstrate the progress that has been made in KG embedding le
 
 **Key Takeaways**
 
-1. In terms of entity recognition task, We need to first get the data from the reliable open semantic sources i.e. Wikipedia or Freebase. Or we can crawl the data on our own to collect more high quality training data. 
+1. In terms of entity recognition task, We need to first get the data from the reliable open semantic sources (i.e. Wikipedia or Freebase. Or we can crawl the data on our own to collect more high quality training data. 
 
-2. Next, we need to apply the models to extract and map the entities. Besides the models mentioned above, there are plenty of great githubs that we can refer to to help us with this task. Or we can look for the tools developed for this task i.e. *node.js* and *Wolfram Mathematica embedded symbolic functions* or just simply build your own with *TensorFlow*.  Some useful techniques that we should keep in mind are NLP and semantic data tagging/labeling techniques. 
+2. Next, we need to apply the models to extract and map the entities. Besides the models mentioned above, there are plenty of great githubs that we can refer to to help us with this task. Or we can look for the tools developed for this task (i.e. *node.js* and *Wolfram Mathematica embedded symbolic functions* or just simply build your own with *TensorFlow*.  Some useful techniques that we should keep in mind are NLP and semantic data tagging/labeling techniques. 
 
 
-3. After the entity extraction and mapping, we need one or more algorithms to learn and capture the relationship among all entities i.e. a probabilistic model. 
+3. After the entity extraction and mapping, we need one or more algorithms to learn and capture the relationship among all entities (i.e. a probabilistic model. 
 
 
 4. The last but the not the least, visuallize our map.
