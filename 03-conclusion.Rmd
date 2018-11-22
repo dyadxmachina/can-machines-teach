@@ -2,7 +2,7 @@
 # Next Steps
 
 ## Overview
-We have now proposed one approach to better represent a modern individual's knowledge by taking the world of unstructured educational content (Youtube videos, Medium articles, etc), classifying it by it's concepts which belong to one or more subjects from a education-based knowledge graph.
+We have now proposed one approach to better represent a modern individual's knowledge by taking the world of unstructured educational content (Youtube videos, Medium articles, etc), classifying it by its concepts which belong to one or more subjects from an education-based knowledge graph.
 
 We surveyed some of the relevant machine and deep learning research, proposed the Educational Content to Questions and Answers (DeepEdu) network, a novel neural network for taking in any type of educational content and generating a set of questions, answers, and the evaluation of a learner's knowledge understanding without the need for the educator be involved.
 
@@ -23,11 +23,11 @@ There will be many challenges in coming up with solutions to enable knowledge ac
 
 + DeepEdu network
 
-For our purposes we will focus on the DeepEdu network and dataset as the main focus from here.
+For our purposes, we will focus on the DeepEdu network and dataset as the main focus from here.
 
 ## DeepEdu dataset
 
-The success of deep learning techniques are predicated on the assumption that one needs a significant amount of data to train a large neural network to learn the representation that can capture a set of admissible functions needed to learn the given concepts.
+The success of deep learning techniques is predicated on the assumption that one needs a significant amount of data to train a large neural network to learn the representation that can capture a set of admissible functions needed to learn the given concepts.
 
 The DeepEdu network will also face the same challenges. It requires a large dataset of educational content (i.e. Youtube videos, Wikipedia pages, Medium articles) along with a set of questions that have a set of correct and incorrect answers for each question.
 
@@ -50,7 +50,7 @@ dt <- head(read.csv('img/DeepEdu_dataset.csv', check.names = FALSE), 2)
 knitr::kable(dt[-2], format = "latex") 
 ```
 
-However, there are many approaches we can decreate the amount of data needed while still learning a good representation of the concepts. We will present an approach that we believe can best utilise the intrinsic structure of educational content and use the minimal amount of data.
+However, there are many approaches we can decrease the amount of data needed while still learning a good representation of the concepts. We will present an approach that we believe can best utilise the intrinsic structure of educational content and use the minimal amount of data.
 
 1. The network can be trained on unstructured educational content without questions or answers to create an *education embedding* by employing unsupervised techniques like variational auto-encoder (VAE). This requires a dataset of educational content, possibly many media types(audio/video/text). This could also be done by using a semi-supervised technique by supervising the media type and learning representations for the types of educational content.
 
@@ -63,7 +63,7 @@ However, there are many approaches we can decreate the amount of data needed whi
 
 ## Education Partners
 
-The second (#2) approach requires a large amount of existing educational content paired with existing questions and answers. This data is rich and informative; it could help us learn an early representation and create a strong baseline model. Most of these datasets have been created by experts and educators and their efforts could be valuable for our model to learn from. For this purpose, we would need to partner with large (in terms of library of content) educational institutions (i.e. Udacity, Coursera, MOOCs, Edx, Khan Academy) to work with their datasets for pretraining and collaborate on how we annotate the space of unstructured educational content.
+The second (#2) approach requires a large amount of existing educational content paired with existing questions and answers. This data is rich and informative; it could help us learn an early representation and create a strong baseline model. Most of these datasets have been created by experts and educators and their efforts could be valuable for our model to learn from. For this purpose, we would need to partner with large (in terms of a library of content) educational institutions (i.e. Udacity, Coursera, MOOCs, Edx, Khan Academy) to work with their datasets for pretraining and collaborate on how we annotate the space of unstructured educational content.
 
 ## Educator Enrichment
 
@@ -87,7 +87,7 @@ cat("<br/>")
 
 ## Conclusion
 
-In conclusion, we presented a new perspective on knowledge acquisition and representation, and proposed the concept of a modern and adoptive *knowledge ecosystem* that a learner can rely on through their entire educational life-time.
+In conclusion, we presented a new perspective on knowledge acquisition and representation,  proposed the concept of a modern and adoptive *knowledge ecosystem* that a learner can rely on upon through their entire educational lifetime.
 
 Our main task was to take an individual and begin to get a true depiction of their knowledge beyond their traditional degree, which is only a small percentage of one's education.
 

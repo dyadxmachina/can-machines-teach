@@ -2,27 +2,28 @@
 ![DeepEdu Network](img/deepedu.png)
 
 ## A Future
-Let's start with a future view of an individual's education. Many of us have used the internet to educate ourselves with the abundance of medium from high quality videos, papers, articles, podcasts to how-tos being uploaded from numerous individuals, groups, and institutions like never before (60 hours of video are uploaded to youtube.com every minute).
+Let's start with a future view of an individual's education. Many of us have used the internet to educate ourselves with the many media from high-quality videos, papers, articles, podcasts to how-tos being uploaded from numerous individuals, groups, and institutions like never before (60 hours of video are uploaded to youtube.com every minute).
 
 Let us imagine that all of what you have learned online, throughout the entirety of your life, from the hundreds of Youtube videos, Wikipedia articles, Nature papers, and podcasts you've read, watched, or listened to, were all added structurally to your **knowledge journey**, and what if that journey could be consolidated into what we might call a **knowledge footprint** that could be shared with others? Could this replace static degrees? Or augment them to be more inclusive of a learner's true knowledge? How might we test such knowledge? Could we even predict and provide the guidance on what an individual should be learning next to best support their knowledge acquisition?
 
 
 ## A Comparison
-Now, let's go back to our current approach to education. Many of us treat knowledge acquisition like a chapter in the individual's life that is limited to one or more formal places i.e. universities. This is misleading since we accrue knowledge from everywhere and most recently the internet has become a primary source of knowledge acquisition but has gone mostly unaccounted for in terms of recognition (i.e. watching a whole series of Youtube lectures on the Information Theory or Discrete Mathematics goes mostly unnoticed when someone views one's resume or by simply looking at their degree). The current approach makes it much harder for people to switch to working and exploring the domains or professional fields outside of their degree area. Knowing rigourous mathematics and not having a degree in it, is said to be surprising, therefore the current "thumbnail view" of an individual's knowledge is necessarily inadequate to the new mediums of knowledge acquisition.
+Now, let's go back to our current approach to education. Many of us treat knowledge acquisition like a chapter in the individual's life that is limited to one or more formal places i.e. universities. This is misleading since we accrue knowledge from everywhere and most recently the internet has become a primary source of knowledge acquisition but has gone mostly unaccounted for in terms of recognition (i.e. watching a whole series of Youtube lectures on the Information Theory or Discrete Mathematics goes mostly unnoticed when someone views one's resume or by simply looking at his or her degree). The current approach makes it much harder for people to switch to working and exploring the domains or professional fields outside of their degree area. Knowing rigorous mathematics and not having a degree in it, is said to be surprising, therefore the current "thumbnail view" of an individual's knowledge is necessarily inadequate to the new mediums of knowledge acquisition.
+
 ![Example at aminer.com](img/aminer.png)
-The ideas behind this *knowledge ecosystem*, presents only one of many possible solutions to bringing our education system into modernity. The goal of it would be to promote the long held idea of the **life-long learner**. Moving away from the "education chapter"" of an individual's life to the individual as an evolving learner; learning the necessary skills for what life presents them with today or might tomorrow. It would (combined with traditional education) show us a more accurate depiction of a learner's knowledge and therefore that of a society's collective knowledge. 
+The ideas behind this *knowledge ecosystem*, presents only one of many possible solutions to bringing our education system into modernity. The goal of it would be to promote the long-held idea of the **life-long learner**. Moving away from the "education chapter"" of an individual's life to the individual as an evolving learner; learning the necessary skills for what life presents them with today or might tomorrow. It would (combined with traditional education) show us a more accurate depiction of a learner's knowledge and therefore that of a society's collective knowledge. 
  
  
- Visualised over time, we could begin to capture a learner's so called **knowledge journey**. Composed of every piece of content they've gained knowledge from mapped to the *human knowledge graph*. Showing how an individual has traversed through the world of human knowledge.
+ Visualised over time, we could begin to capture a learner's so-called **knowledge journey**. Composed of every piece of content they've gained knowledge from mapped to the *human knowledge graph*. Showing how an individual has traversed through the world of human knowledge.
  
- This would also serve as a way for others, who may be on a similar **knowledge journey** to connect with "their" cohort which may not need to be bounded by geography or demography. This could be the start of meetups, study groups, flexible class models and so on.
+ This would also serve as a way for others, who may be on a similar **knowledge journey** to connect with "their" cohort which may not need to be bound by geography or demography. This could be the start of meetups, study groups, flexible class models and so on.
  
 For those who are looking for a change, they may find different journeys that help them decide what step to take next. You would also be able to connect someone's occupation to their **knowledge journey**. 
  
 On aggregate, we could begin to cluster similar **knowledge journeys** through unsupervised learning, which might lead to completely new journeys that others may be inspired to follow.
  
 ## Knowledge Ecosystem
-In this essay, we will propose a **knowledge ecosystem**, a new way of approaching education that attempts to build a more accurate depiction of a learner's true knowledge. It will require significant effort to bring to life but we believe the benefits will outweigh the costs. We will talk about how we can use machine learning, deep learning in particular, to help create and support a **knowledge ecosystem** which is made up of the learner's **knowledge footprint**, **knowledge journeys**, and a **collective human knowledge graph**. We will walk you through some most recent research findings that would enable us to take the space of unstructured educational content on the web and do the following:
+In this essay, we will propose a **knowledge ecosystem**, a new way of approaching education that attempts to build a more accurate depiction of a learner's true knowledge. It will require significant effort to bring to life but we believe the benefits will outweigh the costs. We will talk about how we can use machine learning, deep learning, in particular, to help create and support a **knowledge ecosystem** which is made up of the learner's **knowledge footprint**, **knowledge journeys**, and a **collective human knowledge graph**. We will walk you through some most recent research findings that would enable us to take the space of unstructured educational content on the web and do the following:
 
 
 - classify content to higher level subjects
@@ -38,22 +39,22 @@ We will also argue that this imagined future is not only **desirable** for socie
 
 Let us not forget, that even software engineering is currently being recreated with machine learning as a key pillar which wasn't much of a thought 5-10 years ago.
 
-It is going to be tantamount if we have an adaptive system that can represent our current knowledge and also make us predictable to others given the future pushes us to knowing more than ever and knowing who to collaborate with to apply such knowledge.
+It is going to be tantamount if we have an adaptive system that can represent our current knowledge and also make us predictable to others given the future pushes us to know more than ever and knowing whom to collaborate with to apply such knowledge.
 
 This hypothetical future isn't just conceptual, most of what we will present to you today is currently feasible due to the most recent advances in machine learning, and in particular deep learning
 
-In the last section of this essay I will review what has been proposed and also call other researchers, educators, and designers to collaborate on such an ecosystem, even if it is just in part. 
+In the last section of this essay, I will review what has been proposed and also call other researchers, educators, and designers to collaborate on such an ecosystem, even if it is just in part. 
 
 <small>*Note: For the purpose of this essay we will talk mostly about digital knowledge acquisition and leave the reader to extend the basics to knowledge obtained elsewhere.</small>
 
 
 # Primary Concerns
 
- There are 3 main concerns that we will attempt to address in this article about online knowledge acquisition that stand in the way of having an adaptive and reliable knowledge ecosystem. We will attempt to present a system that can sufficiently overcome each of the concerns here and in the implementation section.
+ There are 3 main concerns that we will attempt to address in this article about online knowledge acquisition that stands in the way of having an adaptive and reliable knowledge ecosystem. We will attempt to present a system that can sufficiently overcome each of the concerns here and in the implementation section.
 
 There are as follows:
 
-- **Passive Consumption** - most of online content is viewed passively by the learner and the result of passive consumption is that a learner does not grasp the concepts being taught.
+- **Passive Consumption** - most of the online content is viewed passively by the learner and the result of passive consumption is that a learner does not grasp the concepts being taught.
 
 
 
@@ -66,7 +67,7 @@ There are as follows:
 
 ## Passive Consumption and Untested Knowledge
 
-> How would such an ecosystem insure us against passive consumption?
+> How would such an ecosystem ensure us against passive consumption?
 
 **Scenario #1**
 A learner goes online and begins watching a series on Machine Learning. How do we engage and test a user's knowledge?
@@ -86,7 +87,7 @@ As you can see, we've bundled passive consumption and untested knowledge because
 
 Given a piece of educational content, our knowledge system will generate a set of questions and answers that theoretically capture the major concepts and facts that the learner should know after viewing a part of the content in whole. 
 
-You can imagine watching a Youtube video and after a learner views 15 minutes of an hour long lecture on Computational Complexity a quiz is presented (i.e. conditioned on the past 15 minutes of video), and the score is recorded.  In the future we would also be able to use the knowledge graph to bring in learner's existing knowledge in order to generate more complex questions and answers with these priors and the current educational content. 
+You can imagine watching a Youtube video and after a learner views 15 minutes of an hour-long lecture on Computational Complexity a quiz is presented (i.e. conditioned on the past 15 minutes of video), and the score is recorded.  In the future, we would also be able to use the knowledge graph to bring in learner's existing knowledge in order to generate more complex questions and answers with these priors and the current educational content. 
 
 As the first step, our knowledge system would only consider content that is currently in use for now. 
 
@@ -109,7 +110,7 @@ There is another problem:
 We introduce **knowledge journeys** and the **knowledge graph** as a way to make sense and structure a learner's knowledge acquisition. The collective **knowledge graph** will tell us about the subject the learner is studying and we can use this to compare to others and create a relative comparison. 
 
 *Result:*
-Reducing a learner's **knowledge journey** into a common set of dimensions that makeup into their **knowledge footprint** which would look similar to those with similar journeys. 
+Reducing a learner's **knowledge journey** into a common set of dimensions that make up into their **knowledge footprint** which would look similar to those with similar journeys. 
 
 As a result, the employer, now familiar with the footprints can check the overlap between the current employee's and a prospective employee's to support their decision making. 
 
@@ -144,13 +145,13 @@ This concept also helps address the knowledge representation concern. This time 
 ## Collective Human Knowledge Graph
 ![Image title](img/knowledge_graphy.png)
 
-The collective human knowledge graph can be compared to [Google's Search Knowledge Graph](@googlekg) which points unstructured information towards structure. The graph should have all existing subjects that we are currently aware of (i.e. Mathematics, Computer Science, Art, and Sociology). Since each piece of educational content will be classified into one more sub-subject(s), all subjects will coexist within the knowledge graph. 
+The collective human knowledge graph can be compared to [Google's Search Knowledge Graph](@googlekg) which points unstructured information towards the structure. The graph should have all existing subjects that we are currently aware of (i.e. Mathematics, Computer Science, Art, and Sociology). Since each piece of educational content will be classified into one more sub-subject(s), all subjects will coexist within the knowledge graph. 
 
 On the other hand, we could also use these subjects that are associated with that piece of content to help create the knowledge footprint for the learner. 
 
 
 ## DeepEdu Network 
-We showed our idea of this novel DeepEdu network earlier because currently we would have to cobble together multiple networks to make this work. Instead we can use one network framework, DeepEdu, to solve the problem of generating questions and answer pairs for any given educational content (text, video, image, pdf, etc). 
+We showed our idea of this novel DeepEdu network earlier because currently, we would have to cobble together multiple networks to make this work. Instead, we can use one network framework, DeepEdu, to solve the problem of generating questions and answer pairs for any given educational content (text, video, image, pdf, etc). 
 
 The possible implementation solutions are introduced in the implementation section. 
 
@@ -164,7 +165,7 @@ Now that we are aware of each of the elements, let's talk about how they work in
 
 A learner watches a video titled 'Depression' by Robert Sapolsky.
 
-- The video is classified by a neural network as the following subjects [Neuroscience, Mental Health, Psychology];
+- The video is classified by a neural network like the following subjects [Neuroscience, Mental Health, Psychology];
 
 - The subjects and the content are then mapped to the **collective knowledge graph** to continuously update it as more information collected about each subject;
 
@@ -180,6 +181,6 @@ A learner watches a video titled 'Depression' by Robert Sapolsky.
 
 - Eventually, the system will add this content to the learner's **knowledge journey** and update his/her *knowledge footprint* based on the scores;
 
-- A learner now have aquired a new piece of content and updated his/her knowledge footprint and knowledge graph.
+- A learner now has acquired a new piece of content and updated his/her knowledge footprint and knowledge graph.
 
 
