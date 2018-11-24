@@ -178,7 +178,7 @@ They refer to *the generator* part of the model as the $agent$ and the $action$ 
 
 ** Summary **
 
-In this QG section, we have discussed 3 different algorithms. Based on our learning, we conclude that a generative seq2seq model might be a suitable option for this task. As for our objective function, we should be formulating a conditional probability distribution that is conditioned on the provided content  (i.e. the video) and answers. As suggested, we can use a bi-directional LSTM RNN as the encoder to encode the content and an LSTM RNN as the decoder to generate the question. 
+In this QG section, we have discussed 3 different algorithms. Based on our learning, we conclude that a generative seq2seq model might be a suitable option for this task. As for the objective function, we should be formulating a conditional probability distribution that is conditioned on the provided content  (i.e. the video) and answers. As suggested, we can use a bi-directional LSTM RNN as the encoder to encode the content and an LSTM RNN as the decoder to generate the question. 
 
 
 ### Question Answering (QA)
@@ -609,7 +609,7 @@ They employ a supervised machine learning models for fusing these distinct infor
 ## Knowledge Journeys 
 
 
-A collective knowledge graph is our ecosystem's backbone. It can be applied universally to some extent, but a learner's learning journey is highly personal and unique at the individual's level. Every learner enters the system with their own set of problems that they are curious about and their specific missions towards the mastery. As a result, their knowledge journeys should vary significantly. As for our role, we need to ensure we have a system that can handle these high degrees of freedom. Or more ideally, to adaptively represent and learn from a learner's history, interests, and whom they are related to best support their knowledge acquisition adventure. 
+A collective knowledge graph is our ecosystem's backbone. It can be applied universally to some extent, but a learner's learning journey is highly personal and unique at the individual's level. Every learner enters the system with their own set of problems that they are curious about and their specific missions towards the mastery. As a result, their knowledge journeys should vary significantly. As for our role, we need to ensure we have a system that can handle these high degrees of freedom and uncertainty. Or more ideally, to adaptively represent and learn from a learner's history, interests, and whom they are related to best support their knowledge acquisition adventure. 
 
 
 ### Problem Formulation
@@ -622,9 +622,9 @@ Below are few key makeups of our knowledge journeys:
 
 3. Unfold the timestamps and map the previous generated static knowledge graph onto a timeline and display a learner's knowledge as a personal knowledge acquisition storyline/gallery;
 
-4. Adaptively update the journey along with a learner's learning progress.
+4. Adaptively update the journey along with a learner's knowledge acquisition progress.
 
-As the outcome, a learner's knowledge journey will be available anytime for the learner to look through and it makes it possible for them to easily go back in time to review a particular piece of content they have learned and for others to unfold their learning journey along the timeline for more details.
+As the outcome, a learner's knowledge journey will be available anytime for a learner to look through and it makes it possible for them to easily go back in time to review a particular piece of content they have learned. Besides, a learner can easily look into the details of another learner's journey that he/she might intend to learn from and to get inspired of.
 
 
 ## Knowledge Footprint 
